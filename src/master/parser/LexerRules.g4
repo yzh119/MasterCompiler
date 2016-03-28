@@ -1,6 +1,5 @@
 lexer grammar LexerRules;
 
-
 IF:         'if';
 ELSE:       'else';
 BREAK:      'break';
@@ -32,14 +31,14 @@ LESS_EQ:    '<=';
 EQ:         '==';
 NEQ:        '!=';
 
-LAND:    '&&';
-LOR:     '||';
+AND:       '&&';
+OR:        '||';
 NOT:        '!';
 
 LSHIFT:     '<<';
 RSHIFT:     '>>';
-ANTI:        '~';
-AND:        '&';
+ANTI:       '~';
+BAND:        '&';
 BOR:        '|';
 XOR:        '^';
 
@@ -56,17 +55,43 @@ LBRACE:     '{';
 RBRACE:     '}';
 LPAREN:     '(';
 RPAREN:     ')';
+LRPAREN:    '()';
 DOT:        '.';
 
-ID:             [a-zA-Z] [a-zA-Z0-9_]* ;
-INT_LITERAL:    [0-9]+;
-STRING_LITERAL: '"' [a-zA-Z]* '"';
-PREDICATE:      'true'
-         |      'false'
-         ;
+SIZE:       'size';
 
-NEWLINE: '\r'? '\n' -> skip;
+ID
+    : [a-zA-Z] [a-zA-Z0-9_]* ;
 
-LINE_COMMENT:   '//' .*? '\r'? '\n' -> skip;
+INT_LITERAL
+    : [0-9]+;
 
-WS: [ \t] -> skip;
+STRING_LITERAL
+    : '"' SCHARSEQ? '"';
+
+SCHARSEQ
+    : SCHAR+;
+
+SCHAR
+    : ~['\\\r\n]
+    | ESCSEQ
+    ;
+
+ESCSEQ
+    : '\\'  ['"?abfnrtv\\]
+    ;
+
+
+PREDICATE
+    :   'true'
+    |   'false'
+    ;
+
+NEWLINE
+    :   '\r'? '\n' -> skip;
+
+LINE_COMMENT
+    :   '//' .*? '\r'? '\n' -> skip;
+
+WS
+    :   [ \t] -> skip;
