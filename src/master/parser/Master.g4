@@ -33,8 +33,7 @@ variable_decl_list
 function_head
     : type_specifier ID LPAREN parameter_list RPAREN
     | type_specifier ID LRPAREN
-    | VOID ID LPAREN parameter_list RPAREN
-    | VOID ID LRPAREN
+    | VOID ID LPAREN parameter_list? RPAREN
     ;
 
 parameter_list
@@ -179,6 +178,7 @@ primary
     : constant
     | LPAREN expr RPAREN
     | ID LPAREN param_list? RPAREN
+    | ID LRPAREN
     | NEW type_specifier dim_expr?
     | ID DOT SIZE LRPAREN
     ;

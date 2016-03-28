@@ -16,6 +16,11 @@ BOOLEAN:    'bool';
 VOID:       'void';
 CLASS:      'class';
 
+PREDICATE
+    : 'true'
+    | 'false'
+    ;
+
 PLUS:       '+';
 MINUS:      '-';
 MULTIPLY:   '*';
@@ -69,29 +74,27 @@ INT_LITERAL
 STRING_LITERAL
     : '"' SCHARSEQ? '"';
 
+fragment
 SCHARSEQ
     : SCHAR+;
 
+fragment
 SCHAR
     : ~['\\\r\n]
     | ESCSEQ
     ;
 
+fragment
 ESCSEQ
     : '\\'  ['"?abfnrtv\\]
-    ;
-
-
-PREDICATE
-    :   'true'
-    |   'false'
     ;
 
 NEWLINE
     :   '\r'? '\n' -> skip;
 
 LINE_COMMENT
-    :   '//' .*? '\r'? '\n' -> skip;
+    :   '//' .*? '\r'? '\n' -> skip
+    ;
 
 WS
     :   [ \t] -> skip;
