@@ -21,11 +21,11 @@ PREDICATE
     | 'false'
     ;
 
-PLUS:       '+';
-MINUS:      '-';
-MULTIPLY:   '*';
-DIVIDE:     '/';
-MODULO:     '%';
+ADD:        '+';
+SUB:        '-';
+MUL:        '*';
+DIV:        '/';
+MOD:        '%';
 INC:        '++';
 DEC:        '--';
 
@@ -36,15 +36,15 @@ LESS_EQ:    '<=';
 EQ:         '==';
 NEQ:        '!=';
 
-AND:       '&&';
-OR:        '||';
-NOT:        '!';
+LOG_AND:       '&&';
+LOG_OR:        '||';
+LOG_NOT:       '!';
 
 LSHIFT:     '<<';
 RSHIFT:     '>>';
-ANTI:       '~';
-BAND:        '&';
-BOR:        '|';
+BIT_NOT:    '~';
+BIT_AND:    '&';
+BIT_OR:     '|';
 XOR:        '^';
 
 ASSIGN:     '=';
@@ -64,9 +64,6 @@ LRPAREN:    '()';
 DOT:        '.';
 
 SIZE:       'size';
-
-ID
-    : [a-zA-Z] [a-zA-Z0-9_]* ;
 
 INT_LITERAL
     : [0-9]+;
@@ -88,6 +85,9 @@ fragment
 ESCSEQ
     : '\\'  ['"?abfnrtv\\]
     ;
+
+ID
+    : [a-zA-Z] [a-zA-Z0-9_]* ;
 
 NEWLINE
     :   '\r'? '\n' -> skip;
