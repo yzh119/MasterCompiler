@@ -3,5 +3,5 @@ package Master.AST.Dec;
 /**
  * Created by expye(Zihao Ye) on 2016/3/30.
  */
-public class FuncDec extends Dec {
+public class FuncDec extends DecWithScopeAndPos implements Dec {
 }

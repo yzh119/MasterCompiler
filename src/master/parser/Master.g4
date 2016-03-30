@@ -6,11 +6,11 @@ grammar Master;
 import LexerRules;
 
 program
-    : component
-    | program component
+    : decl
+    | program decl
     ;
 
-component
+decl
     : class_def
     | function_def
     | variable_decl
@@ -89,38 +89,33 @@ iteration_stmt
     ;
 
 jump_stmt
-    : RETURN expr SEMICOLON
-    | BREAK SEMICOLON
-    | CONTINUE SEMICOLON
+    : RETURN expr SEMICOLON                                     #returnJump
+    | BREAK SEMICOLON                                           #breakJump
+    | CONTINUE SEMICOLON                                        #continueJump
     ;
 
 expr
-    : LPAREN expr RPAREN
-    | op = (INC | DEC | ADD | SUB | BIT_NOT | LOG_NOT ) expr
-    | expr op = (INC | DEC)
-    | expr op = (MUL | DIV | MOD) expr
-    | expr op = (ADD | SUB) expr
-    | expr op = (LSHIFT | RSHIFT) expr
-    | expr op = (LESS | LESS_EQ | GREATER | GREATER_EQ) expr
-    | expr op = (EQ | NEQ) expr
-    | expr op = BIT_AND expr
-    | expr op = XOR expr
-    | expr op = BIT_OR expr
-    | expr op = LOG_AND expr
-    | expr op = LOG_OR expr
-    | expr op = ASSIGN expr
-    | constant
-    | NEW type_specifier dim_expr?
-    | prefix
-    ;
-
-prefix
-    : ID
-    | prefix LBRACKET expr RBRACKET
-    | prefix LPAREN param_list RPAREN
-    | prefix LRPAREN
-    | prefix DOT ID
-    | prefix DOT SIZE LRPAREN
+    : LPAREN expr RPAREN                                        #parenExpr
+    | expr LBRACKET expr LBRACKET                               #subsExpr
+    | expr LPAREN param_list RPAREN                             #withParaFuncExpr
+    | expr LRPAREN                                              #noParaFuncExpr
+    | expr DOT expr                                             #fieldExpr
+    | op = (INC | DEC | ADD | SUB | BIT_NOT | LOG_NOT ) expr    #preUnaryExpr
+    | expr op = (INC | DEC)                                     #posUnaryExpr
+    | expr op = (MUL | DIV | MOD) expr                          #mulDivModExpr
+    | expr op = (ADD | SUB) expr                                #addSubExpr
+    | expr op = (LSHIFT | RSHIFT) expr                          #shiftExpr
+    | expr op = (LESS | LESS_EQ | GREATER | GREATER_EQ) expr    #compExpr
+    | expr op = (EQ | NEQ) expr                                 #eqNeqExpr
+    | expr op = BIT_AND expr                                    #bitAndExpr
+    | expr op = XOR expr                                        #xorExpr
+    | expr op = BIT_OR expr                                     #bitOrExpr
+    | expr op = LOG_AND expr                                    #logAndExpr
+    | expr op = LOG_OR expr                                     #logOrExpr
+    | <assoc = right>expr op = ASSIGN expr                      #assignExpr
+    | NEW type_specifier dim_expr?                              #newExpr
+    | constant                                                  #constExpr
+    | ID                                                        #identifierExpr
     ;
 
 constant

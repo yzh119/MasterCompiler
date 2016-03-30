@@ -63,8 +63,6 @@ RPAREN:     ')';
 LRPAREN:    '()';
 DOT:        '.';
 
-SIZE:       'size';
-
 INT_LITERAL
     : [0-9]+;
 
