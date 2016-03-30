@@ -5,13 +5,12 @@ import Master.Type.Type;
 /**
  * Created by expye(Zihao Ye) on 2016/3/30.
  */
-public class IntType extends BasicType {
-    public static IntType instance = new IntType();
+public class BoolType extends BasicType{
+    public static BoolType instance = new BoolType();
 
     public boolean isSuitable(Type rhs) {
-        if (rhs instanceof IntType)
+        if (rhs instanceof BoolType)
             return true;
         return false;
     }
-
 }
