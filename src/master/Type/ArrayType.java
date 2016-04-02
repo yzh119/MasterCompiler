@@ -1,19 +1,26 @@
 package Master.Type;
 
+import Master.Exception.CompilationError;
 import Master.Type.BasicType.BasicType;
 
 /**
  * Created by expye(Zihao Ye) on 2016/3/30.
  */
 public class ArrayType extends Type{
-    BasicType type;
-    int dim;
+    Type baseType;
 
     public boolean isSuitable(Type rhs) {
-        if (rhs instanceof ArrayType) {
-            if (dim == ((ArrayType) rhs).dim)
-                return type.isSuitable(rhs);
-        }
+        if (rhs instanceof ArrayType)
+            return baseType.isSuitable(((ArrayType) rhs).baseType);
+        if (rhs == null) return true;
         return false;
+    }
+
+    public ArrayType(Type type, int dim) {
+        if (dim == 1)
+            baseType = type;
+        else {
+            baseType = new ArrayType(type, dim - 1);
+        }
     }
 }

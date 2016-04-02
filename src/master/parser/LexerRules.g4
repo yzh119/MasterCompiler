@@ -8,6 +8,8 @@ CONTINUE:   'continue';
 WHILE:      'while';
 FOR:        'for';
 NEW:        'new';
+EXTENDS:    'extends';
+THIS:       'this';
 
 INTEGER:    'int';
 STRING:     'string';
@@ -45,7 +47,7 @@ RSHIFT:     '>>';
 BIT_NOT:    '~';
 BIT_AND:    '&';
 BIT_OR:     '|';
-XOR:        '^';
+BIT_XOR:    '^';
 
 ASSIGN:     '=';
 

@@ -4,7 +4,6 @@ import Master.AST.ASTnode;
 import Master.AST.Dec.Dec;
 
 import java.util.List;
-import java.util.stream.Collectors;
 
 /**
  * Created by expye(Zihao Ye) on 2016/3/30.
@@ -12,8 +11,12 @@ import java.util.stream.Collectors;
 public class Prog implements ASTnode {
     public static Prog instance = new Prog();
     List<Dec> list;
-
-    Prog() {
-
-    }
+/*
+    @Override
+    public boolean check() {
+        return list
+                .stream()
+                .map(ASTnode::check)
+                .reduce(true, (a, b)-> a && b);
+    }*/
 }

@@ -1,5 +1,6 @@
 package Master.Environment;
 
+import Master.Type.Name;
 import Master.Type.Type;
 
 /**
@@ -7,4 +8,8 @@ import Master.Type.Type;
  */
 public class ClassSymbol extends Symbol {
     Type classType;
+    public ClassSymbol(Name name, Type type) {
+        super(name);
+        classType = type;
+    }
 }

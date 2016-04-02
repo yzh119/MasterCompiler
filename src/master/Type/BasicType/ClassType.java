@@ -3,6 +3,7 @@ package Master.Type.BasicType;
 import Master.Type.Name;
 import Master.Type.Type;
 
+import java.util.ArrayList;
 import java.util.Dictionary;
 import java.util.Hashtable;
 
@@ -11,35 +12,31 @@ import java.util.Hashtable;
  */
 public class ClassType extends BasicType{
     private ClassType par;
-    private int lv;
     private Dictionary<Name, Type> member=
         new Hashtable<Name, Type>();
 
-    ClassType (ClassType _par) {
-        par = _par;
-        if (par == null)
-            lv = 0;
-        else
-            lv = par.lv + 1;
+    public void addMember(Name name, Type type) {
+        member.put(name, type);
     }
 
-    public void addMember(Name _name, Type _type) {
-        member.put(_name, _type);
-    }
-
-    public Type getMemberType(Name _name) {
-        return member.get(_name);
+    public Type getMemberType(Name name) {
+        return member.get(name);
     }
 
     public boolean isSuitable(Type rhs) {
+        if (rhs == null) {
+            return true;
+        }
         if (rhs instanceof ClassType) {
-            ClassType _rhs = (ClassType) rhs;
-            if (lv > _rhs.lv)
-                return false;
-            while (lv < _rhs.lv)
-                _rhs = _rhs.par;
-            if (this == _rhs) return true;
+            while (rhs != null) {
+                if (rhs == this) return true;
+                rhs = ((ClassType) rhs).par;
+            }
         }
         return false;
+    }
+
+    public ClassType(ClassType par) {
+        this.par = par;
     }
 }

@@ -1,0 +1,12 @@
+class A {
+    int a;
+    int b;
+    string x;
+}
+
+class B extends A{
+    int c;
+    void go() {
+        print(c);
+    }
+}
