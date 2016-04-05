@@ -2,11 +2,30 @@ class A {
     int a;
     int b;
     string x;
+    class K{
+
+    }
 }
 
-class B extends A{
+class B {
     int c;
     void go() {
         print(c);
     }
+    class C {
+        int x;
+        void go() {}
+    }
+    class D {
+        int x;
+        void go() {}
+    }
+}
+
+class D {
+    int mama;
+}
+
+class E {
+    D mama;
 }

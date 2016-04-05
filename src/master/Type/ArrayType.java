@@ -16,6 +16,10 @@ public class ArrayType extends Type{
         return false;
     }
 
+    public Type getBaseType() {
+        return baseType;
+    }
+
     public ArrayType(Type type, int dim) {
         if (dim == 1)
             baseType = type;

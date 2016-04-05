@@ -57,12 +57,10 @@ COMMA:      ',';
 SEMICOLON:  ';';
 LBRACKET:   '[';
 RBRACKET:   ']';
-LRBRACKET:  '[]';
 LBRACE:     '{';
 RBRACE:     '}';
 LPAREN:     '(';
 RPAREN:     ')';
-LRPAREN:    '()';
 DOT:        '.';
 
 INT_LITERAL

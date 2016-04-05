@@ -5,61 +5,61 @@ grammar Master;
 
 import LexerRules;
 
-program
-    : decl
-    | program decl
+program: (decl = class_def | function_def | method_def | variable_decl )*;
+class_body: (decl = class_def | function_def | method_def | variable_decl)*;
+
+function_def: function_head LBRACE stmt_list RBRACE;
+method_def: method_head LBRACE stmt_list RBRACE;
+
+class_def: CLASS ID LBRACE class_body RBRACE;
+
+function_head: type_specifier ID LPAREN parameter_list? RPAREN;
+method_head: VOID ID LPAREN parameter_list? RPAREN;
+
+parameter_list: (paramdecl_comma = parameter_decl COMMA)* parameter_decl ;
+
+parameter_decl: type_specifier ID;
+
+expr
+    : LPAREN expr RPAREN                                        #parenExpr
+    | expr LBRACKET expr LBRACKET                               #subsExpr
+    | expr LPAREN param_list? RPAREN                            #ParaFuncExpr
+    | expr DOT expr                                             #fieldExpr
+    | op = (INC | DEC | ADD | SUB | BIT_NOT | LOG_NOT ) expr    #preUnaryExpr
+    | expr op = (INC | DEC)                                     #posUnaryExpr
+    | expr op = (MUL | DIV | MOD) expr                          #mulDivModExpr
+    | expr op = (ADD | SUB) expr                                #addSubExpr
+    | expr op = (LSHIFT | RSHIFT) expr                          #shiftExpr
+    | expr op = (LESS | LESS_EQ | GREATER | GREATER_EQ) expr    #compExpr
+    | expr op = (EQ | NEQ) expr                                 #eqNeqExpr
+    | expr op = BIT_AND expr                                    #bitAndExpr
+    | expr op = BIT_XOR expr                                    #bitXorExpr
+    | expr op = BIT_OR expr                                     #bitOrExpr
+    | expr op = LOG_AND expr                                    #logAndExpr
+    | expr op = LOG_OR expr                                     #logOrExpr
+    | <assoc = right>expr op = ASSIGN expr                      #assignExpr
+    | NEW type_specifier dim_expr?                              #newExpr
+    | constant                                                  #constExpr
+    | ID                                                        #identifierExpr
+    | THIS DOT ID                                               #thisIdentifierExpr
     ;
 
-decl
-    : class_def
-    | function_def
-    | variable_decl
-    ;
-
-function_def
-    : function_head block
-    ;
-
-class_def
-    : CLASS ID LBRACE variable_decl_list RBRACE;
-
-variable_decl_list
-    : variable_decl
-    | variable_decl_list variable_decl
-    ;
-
-function_head
-    : type_specifier ID LRPAREN
-    | type_specifier ID LPAREN parameter_list RPAREN
-    | VOID ID LRPAREN
-    | VOID ID LPAREN parameter_list? RPAREN
-    ;
-
-parameter_list
-    : parameter_decl
-    | parameter_list COMMA parameter_decl
-    ;
-
-parameter_decl
-    : type_specifier ID;
+dim_expr: (dim_expr_entry = LBRACKET expr RBRACKET)+ (dim_no_expr_entry = LBRACKET RBRACKET)*;
 
 variable_decl
-    : type_specifier ID SEMICOLON
-    | type_specifier ID ASSIGN expr SEMICOLON
+    : type_specifier ID SEMICOLON                                       #varDeclWithNoInit
+    | type_specifier ID ASSIGN expr SEMICOLON                           #varDeclWithInit
     ;
 
 type_specifier
-    : INTEGER
-    | STRING
-    | BOOLEAN
-    | ID
-    | type_specifier LRBRACKET
+    : INTEGER                                                           #integerType
+    | STRING                                                            #stringType
+    | BOOLEAN                                                           #boolType
+    | ID                                                                #classType
+    | type_specifier (lrbracket = LBRACKET RBRACKET)+                   #arrayType
     ;
 
-stmt_list
-    : stmt
-    | stmt stmt_list
-    ;
+stmt_list: stmt*;
 
 stmt
     : block
@@ -71,66 +71,28 @@ stmt
     | SEMICOLON
     ;
 
-block
-    : LBRACE stmt_list? RBRACE
-    ;
+block: LBRACE stmt_list RBRACE;
 
-expr_stmt
-    : expr SEMICOLON;
+expr_stmt: expr SEMICOLON;
 
-selection_stmt
-    : IF LPAREN expr RPAREN stmt
-    | IF LPAREN expr RPAREN stmt ELSE stmt
-    ;
+selection_stmt: IF LPAREN expr RPAREN stmt (else_stmt = ELSE stmt)?;
 
 iteration_stmt
-    : WHILE LPAREN expr RPAREN stmt
-    | FOR LPAREN expr? SEMICOLON expr? SEMICOLON expr? RPAREN stmt
+    : WHILE LPAREN expr RPAREN stmt                                     #whileIteration
+    | FOR LPAREN expr? SEMICOLON expr? SEMICOLON expr? RPAREN stmt      #forIteration
     ;
 
 jump_stmt
-    : RETURN expr SEMICOLON                                     #returnJump
+    : RETURN expr? SEMICOLON                                    #returnJump
     | BREAK SEMICOLON                                           #breakJump
     | CONTINUE SEMICOLON                                        #continueJump
     ;
 
-expr
-    : LPAREN expr RPAREN                                        #parenExpr
-    | expr LBRACKET expr LBRACKET                               #subsExpr
-    | expr LPAREN param_list RPAREN                             #withParaFuncExpr
-    | expr LRPAREN                                              #noParaFuncExpr
-    | expr DOT expr                                             #fieldExpr
-    | op = (INC | DEC | ADD | SUB | BIT_NOT | LOG_NOT ) expr    #preUnaryExpr
-    | expr op = (INC | DEC)                                     #posUnaryExpr
-    | expr op = (MUL | DIV | MOD) expr                          #mulDivModExpr
-    | expr op = (ADD | SUB) expr                                #addSubExpr
-    | expr op = (LSHIFT | RSHIFT) expr                          #shiftExpr
-    | expr op = (LESS | LESS_EQ | GREATER | GREATER_EQ) expr    #compExpr
-    | expr op = (EQ | NEQ) expr                                 #eqNeqExpr
-    | expr op = BIT_AND expr                                    #bitAndExpr
-    | expr op = XOR expr                                        #xorExpr
-    | expr op = BIT_OR expr                                     #bitOrExpr
-    | expr op = LOG_AND expr                                    #logAndExpr
-    | expr op = LOG_OR expr                                     #logOrExpr
-    | <assoc = right>expr op = ASSIGN expr                      #assignExpr
-    | NEW type_specifier dim_expr?                              #newExpr
-    | constant                                                  #constExpr
-    | ID                                                        #identifierExpr
-    ;
-
 constant
-    : NULL
-    | INT_LITERAL
-    | PREDICATE
-    | STRING_LITERAL
+    : NULL                                                      #nullConst
+    | INT_LITERAL                                               #intConst
+    | PREDICATE                                                 #boolConst
+    | STRING_LITERAL                                            #stringConst
     ;
 
-dim_expr
-    : LBRACKET expr RBRACKET
-    | dim_expr LBRACKET expr RBRACKET
-    ;
-
-param_list
-    : expr
-    | param_list COMMA expr
-    ;
+param_list: (expr_comma = expr COMMA)* expr;

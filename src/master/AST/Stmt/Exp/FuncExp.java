@@ -16,5 +16,6 @@ public class FuncExp extends Exp {
             if (!(paraList.get(i).type.isSuitable(fs.getParaType(i))))
                 throw new CompilationError("Parameters' types don't match!");
         }
+        type = fs.getRetType();
     }
 }

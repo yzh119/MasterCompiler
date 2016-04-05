@@ -1,5 +1,8 @@
 package Master.Environment;
 
+import Master.Exception.CompilationError;
+import Master.Type.BasicType.BasicType;
+import Master.Type.BasicType.ClassType;
 import Master.Type.Name;
 import Master.Type.Type;
 
@@ -17,15 +20,23 @@ public class MethodSymbol extends Symbol {
             this.type = type;
         }
     }
-    ArrayList<Pair> paraList = new ArrayList<Pair>();
+    public ArrayList<Pair> paraList = new ArrayList<Pair>();
 
-    public void addPara(Name name, Type type) {
+    public void addPara(Name name, Type type) throws CompilationError {
         paraList.add(new Pair(name, type));
     }
 
-    public Type getParaType(int idx) {
+    public Name getName(int idx) throws CompilationError {
+        if (idx >= paraList.size())
+            throw new CompilationError("Two many parameters!");
+        return paraList.get(idx).name;
+    }
+    public Type getParaType(int idx) throws CompilationError {
+        if (idx >= paraList.size())
+            throw new CompilationError("Too many parameters!");
         return paraList.get(idx).type;
     }
+
     public MethodSymbol(Name name) {
         super(name);
     }

@@ -11,6 +11,10 @@ import java.util.ArrayList;
 
 public class FuncSymbol extends MethodSymbol {
     Type retType;
+
+    public Type getRetType() {
+        return retType;
+    }
     public FuncSymbol(Name name, Type retType) {
         super(name);
         this.retType = retType;
