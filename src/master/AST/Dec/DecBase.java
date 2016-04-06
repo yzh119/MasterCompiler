@@ -8,4 +8,8 @@ import Master.Exception.CompilationError;
  */
 public class DecBase implements Dec{
     public Scope currentScope;
+    public String name;
+    public String getName() {
+        return name;
+    }
 }

@@ -11,6 +11,6 @@ import java.util.List;
 * Created by expye(Zihao Ye) on 2016/3/30.
         */
 public class Prog implements ASTnode {
-    ArrayList<Dec> list = new ArrayList<>();
+    public List<Dec> list = new ArrayList<>();
     public Scope currentScope = new Scope(null);
 }

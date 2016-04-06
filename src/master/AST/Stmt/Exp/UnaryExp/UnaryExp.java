@@ -9,5 +9,6 @@ public class UnaryExp extends Exp {
     Exp op;
     UnaryExp (Exp op) {
         this.op = op;
+        this.type = op.type;
     }
 }

@@ -8,4 +8,5 @@ import Master.Exception.CompilationError;
  * Created by expye(Zihao Ye) on 2016/3/30.
  */
 public interface Dec extends ASTnode {
+    String getName();
 }

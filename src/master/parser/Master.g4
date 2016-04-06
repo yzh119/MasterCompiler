@@ -5,25 +5,21 @@ grammar Master;
 
 import LexerRules;
 
-program: (decl = class_def | function_def | method_def | variable_decl )*;
-class_body: (decl = class_def | function_def | method_def | variable_decl)*;
+program: (class_def | function_def | method_def | variable_decl )*;
+class_body: (class_def | function_def | method_def | variable_decl)*;
 
-function_def: function_head LBRACE stmt_list RBRACE;
-method_def: method_head LBRACE stmt_list RBRACE;
-
+function_def: type_specifier ID LPAREN parameter_list? RPAREN LBRACE stmt_list RBRACE;
+method_def: VOID ID LPAREN parameter_list? RPAREN LBRACE stmt_list RBRACE;
 class_def: CLASS ID LBRACE class_body RBRACE;
 
-function_head: type_specifier ID LPAREN parameter_list? RPAREN;
-method_head: VOID ID LPAREN parameter_list? RPAREN;
-
-parameter_list: (paramdecl_comma = parameter_decl COMMA)* parameter_decl ;
+parameter_list: (parameter_decl COMMA)* parameter_decl ;
 
 parameter_decl: type_specifier ID;
 
 expr
     : LPAREN expr RPAREN                                        #parenExpr
-    | expr LBRACKET expr LBRACKET                               #subsExpr
-    | expr LPAREN param_list? RPAREN                            #ParaFuncExpr
+    | expr (LBRACKET expr RBRACKET)+                            #subsExpr
+    | expr LPAREN param_list? RPAREN                            #funcExpr
     | expr DOT expr                                             #fieldExpr
     | op = (INC | DEC | ADD | SUB | BIT_NOT | LOG_NOT ) expr    #preUnaryExpr
     | expr op = (INC | DEC)                                     #posUnaryExpr
@@ -41,22 +37,18 @@ expr
     | NEW type_specifier dim_expr?                              #newExpr
     | constant                                                  #constExpr
     | ID                                                        #identifierExpr
-    | THIS DOT ID                                               #thisIdentifierExpr
     ;
 
-dim_expr: (dim_expr_entry = LBRACKET expr RBRACKET)+ (dim_no_expr_entry = LBRACKET RBRACKET)*;
+dim_expr: (LBRACKET expr RBRACKET)+ (LBRACKET RBRACKET)*;
 
-variable_decl
-    : type_specifier ID SEMICOLON                                       #varDeclWithNoInit
-    | type_specifier ID ASSIGN expr SEMICOLON                           #varDeclWithInit
-    ;
+variable_decl: type_specifier ID (ASSIGN expr)? SEMICOLON;
 
 type_specifier
     : INTEGER                                                           #integerType
     | STRING                                                            #stringType
     | BOOLEAN                                                           #boolType
     | ID                                                                #classType
-    | type_specifier (lrbracket = LBRACKET RBRACKET)+                   #arrayType
+    | type_specifier (LBRACKET RBRACKET)+                               #arrayType
     ;
 
 stmt_list: stmt*;
@@ -75,7 +67,7 @@ block: LBRACE stmt_list RBRACE;
 
 expr_stmt: expr SEMICOLON;
 
-selection_stmt: IF LPAREN expr RPAREN stmt (else_stmt = ELSE stmt)?;
+selection_stmt: IF LPAREN expr RPAREN stmt (ELSE stmt)?;
 
 iteration_stmt
     : WHILE LPAREN expr RPAREN stmt                                     #whileIteration
@@ -95,4 +87,4 @@ constant
     | STRING_LITERAL                                            #stringConst
     ;
 
-param_list: (expr_comma = expr COMMA)* expr;
+param_list: (expr COMMA)* expr;

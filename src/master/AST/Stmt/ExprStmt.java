@@ -7,7 +7,7 @@ import Master.AST.Stmt.Exp.Exp;
  */
 public class ExprStmt extends StmtBase {
     Exp expr;
-    ExprStmt(Exp expr) {
+    public ExprStmt(Exp expr) {
         this.expr = expr;
     }
 }

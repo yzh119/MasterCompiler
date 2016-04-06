@@ -2,24 +2,27 @@ package Master.AST.Dec;
 
 import Master.AST.Stmt.CompoundStmt;
 import Master.AST.Stmt.Stmt;
-import Master.Environment.MethodSymbol;
-import Master.Environment.Scope;
-import Master.Environment.VarSymbol;
+import Master.AST.VarDec.VarDec;
 import Master.Exception.CompilationError;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by expye(Zihao Ye) on 2016/4/3.
  */
 public class MethodDec extends DecBase {
-    CompoundStmt body = new CompoundStmt();
-    MethodSymbol ms = null;
+    public List<Stmt> body = null;
+    public List<VarDec> para = null;
 
-    public void addBody(Stmt stmt) {
-        body.addStmts(stmt);
+    public MethodDec(List<VarDec> vd, List<Stmt> body, String name) {
+        para = vd;
+        this.body = body;
+        this.name = name;
     }
 
-    public MethodDec(MethodSymbol ms) throws CompilationError {
-        this.ms = ms;
-        ms.addRef(this);
+    @Override
+    public String getName() {
+        return super.getName();
     }
 }

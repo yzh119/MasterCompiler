@@ -2,26 +2,21 @@ package Master.AST.Dec;
 
 import Master.AST.Stmt.CompoundStmt;
 import Master.AST.Stmt.Stmt;
-import Master.Environment.FuncSymbol;
-import Master.Environment.Scope;
-import Master.Environment.VarSymbol;
+import Master.AST.VarDec.VarDec;
 import Master.Exception.CompilationError;
-import Master.Type.BasicType.ClassType;
-import Master.Type.Type;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by expye(Zihao Ye) on 2016/3/30.
  */
-public class FuncDec extends DecBase{
-    CompoundStmt body = new CompoundStmt();
-    public FuncSymbol fs = null;
-
-    public void addBody(Stmt stmt) {
-        body.addStmts(stmt);
-    }
-
-    public FuncDec(FuncSymbol fs) throws CompilationError {
-        this.fs = fs;
-        fs.addRef(this);
+public class FuncDec extends MethodDec{
+    public List<Stmt> body = null;
+    ClassDec retType = null;
+    public FuncDec(ClassDec retType, List<VarDec> vd , List<Stmt> body, String name) {
+        super(vd, body, name);
+        this.retType = retType;
+        this.name = name;
     }
 }

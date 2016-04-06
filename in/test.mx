@@ -1,31 +1,20 @@
-class A {
-    int a;
-    int b;
-    string x;
-    class K{
+int a;
+class haha{
+    void ha() {
+    }
+    class sese{
 
     }
 }
-
-class B {
-    int c;
-    void go() {
-        print(c);
-    }
-    class C {
-        int x;
-        void go() {}
-    }
-    class D {
-        int x;
-        void go() {}
+void hah(haha[][] x) {
+    if (1 == 1) {
+//        int a;
+    } else {
+//        int b;
     }
 }
 
-class D {
-    int mama;
+int[][][] ha(int x) {
 }
 
-class E {
-    D mama;
-}
+int d;

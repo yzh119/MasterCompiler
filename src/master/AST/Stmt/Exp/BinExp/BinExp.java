@@ -1,7 +1,7 @@
 package Master.AST.Stmt.Exp.BinExp;
 
+import Master.AST.Dec.ClassDec;
 import Master.AST.Stmt.Exp.Exp;
-import Master.Type.Type;
 
 /**
  * Created by expye(Zihao Ye) on 2016/3/31.
@@ -9,8 +9,9 @@ import Master.Type.Type;
 public class BinExp extends Exp{
     public Exp lhs, rhs;
 
-    BinExp (Exp lhs, Exp rhs) {
+    BinExp (Exp lhs, Exp rhs, ClassDec type) {
         this.lhs = lhs;
         this.rhs = rhs;
+        this.type = type;
     }
 }

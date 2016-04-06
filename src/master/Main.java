@@ -1,7 +1,5 @@
 package Master;
 
-import Master.AST.Prog.Prog;
-import Master.Environment.Symbol;
 import Master.Exception.CompilationError;
 import Master.Parser.*;
 import org.antlr.v4.runtime.*;

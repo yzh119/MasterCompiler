@@ -1,31 +1,37 @@
 package Master.AST.Dec;
 
-import Master.Environment.ClassSymbol;
-import Master.Environment.Scope;
-import Master.Type.BasicType.BasicType;
+import Master.Utility;
 
 import java.util.ArrayList;
+import java.util.IdentityHashMap;
+import java.util.Map;
 
 /**
  * Created by expye(Zihao Ye) on 2016/3/30.
  */
 public class ClassDec extends DecBase {
-    public static ClassDec IntegerDec
-            = new ClassDec(ClassSymbol.IntClassSymbol);
-    public static ClassDec StringDec
-            = new ClassDec(ClassSymbol.StringClassSymbol);
-    public static ClassDec BoolDec
-            = new ClassDec(ClassSymbol.BoolClassSymbol);
-    ArrayList<Dec> declarations =
-            new ArrayList<>();
-    public ClassSymbol cs = null;
+    public static ClassDec intClass =
+            new ClassDec("int".intern());
+    public static ClassDec boolClass =
+            new ClassDec("bool".intern());
+    public static ClassDec stringClass =
+            new ClassDec("string".intern());
+    public static ClassDec nullClass =
+            new ClassDec("null".intern());
 
-    public ClassDec(ClassSymbol cs) {
-        this.cs = cs;
-        cs.addRef(this);
+    public Map<String, Dec> declarations =
+            new IdentityHashMap<>();
+
+    public ClassDec(String name) {
+        this.name = name;
     }
 
-    public void addComponent(Dec decl) {
-        declarations.add(decl);
+    public void addDecl(String name, Dec decl) {
+        declarations.put(name, decl);
+    }
+
+    @Override
+    public String getName() {
+        return super.getName();
     }
 }

@@ -58,26 +58,6 @@ public interface MasterListener extends ParseTreeListener {
 	 */
 	void exitClass_def(MasterParser.Class_defContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link MasterParser#function_head}.
-	 * @param ctx the parse tree
-	 */
-	void enterFunction_head(MasterParser.Function_headContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link MasterParser#function_head}.
-	 * @param ctx the parse tree
-	 */
-	void exitFunction_head(MasterParser.Function_headContext ctx);
-	/**
-	 * Enter a parse tree produced by {@link MasterParser#method_head}.
-	 * @param ctx the parse tree
-	 */
-	void enterMethod_head(MasterParser.Method_headContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link MasterParser#method_head}.
-	 * @param ctx the parse tree
-	 */
-	void exitMethod_head(MasterParser.Method_headContext ctx);
-	/**
 	 * Enter a parse tree produced by {@link MasterParser#parameter_list}.
 	 * @param ctx the parse tree
 	 */
@@ -121,6 +101,18 @@ public interface MasterListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	void exitAddSubExpr(MasterParser.AddSubExprContext ctx);
+	/**
+	 * Enter a parse tree produced by the {@code funcExpr}
+	 * labeled alternative in {@link MasterParser#expr}.
+	 * @param ctx the parse tree
+	 */
+	void enterFuncExpr(MasterParser.FuncExprContext ctx);
+	/**
+	 * Exit a parse tree produced by the {@code funcExpr}
+	 * labeled alternative in {@link MasterParser#expr}.
+	 * @param ctx the parse tree
+	 */
+	void exitFuncExpr(MasterParser.FuncExprContext ctx);
 	/**
 	 * Enter a parse tree produced by the {@code logAndExpr}
 	 * labeled alternative in {@link MasterParser#expr}.
@@ -230,18 +222,6 @@ public interface MasterListener extends ParseTreeListener {
 	 */
 	void exitPreUnaryExpr(MasterParser.PreUnaryExprContext ctx);
 	/**
-	 * Enter a parse tree produced by the {@code thisIdentifierExpr}
-	 * labeled alternative in {@link MasterParser#expr}.
-	 * @param ctx the parse tree
-	 */
-	void enterThisIdentifierExpr(MasterParser.ThisIdentifierExprContext ctx);
-	/**
-	 * Exit a parse tree produced by the {@code thisIdentifierExpr}
-	 * labeled alternative in {@link MasterParser#expr}.
-	 * @param ctx the parse tree
-	 */
-	void exitThisIdentifierExpr(MasterParser.ThisIdentifierExprContext ctx);
-	/**
 	 * Enter a parse tree produced by the {@code compExpr}
 	 * labeled alternative in {@link MasterParser#expr}.
 	 * @param ctx the parse tree
@@ -277,18 +257,6 @@ public interface MasterListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	void exitPosUnaryExpr(MasterParser.PosUnaryExprContext ctx);
-	/**
-	 * Enter a parse tree produced by the {@code ParaFuncExpr}
-	 * labeled alternative in {@link MasterParser#expr}.
-	 * @param ctx the parse tree
-	 */
-	void enterParaFuncExpr(MasterParser.ParaFuncExprContext ctx);
-	/**
-	 * Exit a parse tree produced by the {@code ParaFuncExpr}
-	 * labeled alternative in {@link MasterParser#expr}.
-	 * @param ctx the parse tree
-	 */
-	void exitParaFuncExpr(MasterParser.ParaFuncExprContext ctx);
 	/**
 	 * Enter a parse tree produced by the {@code bitAndExpr}
 	 * labeled alternative in {@link MasterParser#expr}.
@@ -360,29 +328,15 @@ public interface MasterListener extends ParseTreeListener {
 	 */
 	void exitDim_expr(MasterParser.Dim_exprContext ctx);
 	/**
-	 * Enter a parse tree produced by the {@code varDeclWithNoInit}
-	 * labeled alternative in {@link MasterParser#variable_decl}.
+	 * Enter a parse tree produced by {@link MasterParser#variable_decl}.
 	 * @param ctx the parse tree
 	 */
-	void enterVarDeclWithNoInit(MasterParser.VarDeclWithNoInitContext ctx);
+	void enterVariable_decl(MasterParser.Variable_declContext ctx);
 	/**
-	 * Exit a parse tree produced by the {@code varDeclWithNoInit}
-	 * labeled alternative in {@link MasterParser#variable_decl}.
+	 * Exit a parse tree produced by {@link MasterParser#variable_decl}.
 	 * @param ctx the parse tree
 	 */
-	void exitVarDeclWithNoInit(MasterParser.VarDeclWithNoInitContext ctx);
-	/**
-	 * Enter a parse tree produced by the {@code varDeclWithInit}
-	 * labeled alternative in {@link MasterParser#variable_decl}.
-	 * @param ctx the parse tree
-	 */
-	void enterVarDeclWithInit(MasterParser.VarDeclWithInitContext ctx);
-	/**
-	 * Exit a parse tree produced by the {@code varDeclWithInit}
-	 * labeled alternative in {@link MasterParser#variable_decl}.
-	 * @param ctx the parse tree
-	 */
-	void exitVarDeclWithInit(MasterParser.VarDeclWithInitContext ctx);
+	void exitVariable_decl(MasterParser.Variable_declContext ctx);
 	/**
 	 * Enter a parse tree produced by the {@code arrayType}
 	 * labeled alternative in {@link MasterParser#type_specifier}.

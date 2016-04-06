@@ -8,8 +8,6 @@ CONTINUE:   'continue';
 WHILE:      'while';
 FOR:        'for';
 NEW:        'new';
-EXTENDS:    'extends';
-THIS:       'this';
 
 INTEGER:    'int';
 STRING:     'string';

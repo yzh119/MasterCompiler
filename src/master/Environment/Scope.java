@@ -1,8 +1,9 @@
 package Master.Environment;
 
-import Master.Type.Name;
+import Master.AST.ASTnode;
 
 import java.util.HashMap;
+import java.util.IdentityHashMap;
 import java.util.Map;
 
 /**
@@ -10,15 +11,15 @@ import java.util.Map;
  */
 public class Scope {
     Scope previous = null;
-    Map<Name, Symbol> dict =
-            new HashMap<>();
+    Map<String, ASTnode> dict =
+            new IdentityHashMap<>();
 
     public Scope(Scope previous) {
         this.previous = previous;
     }
 
-    public Symbol lookUp(Name name) {
-        Symbol ret = dict.get(name);
+    public ASTnode lookUp(String name) {
+        ASTnode ret = dict.get(name);
         if (previous == null)
             return ret;
         if (ret == null)
@@ -26,11 +27,11 @@ public class Scope {
         return null;
     }
 
-    public Symbol lookUpInThisScope(Name name) {
+    public ASTnode lookUpInThisScope(String name) {
         return dict.get(name);
     }
 
-    public void addEntry(Name name, Symbol symbol) {
+    public void addEntry(String name, ASTnode symbol) {
         dict.put(name, symbol);
     }
 }

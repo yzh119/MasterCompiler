@@ -1,13 +1,14 @@
 package Master.AST.Stmt.Exp.LvalueExp;
 
-import Master.Type.Name;
-import Master.Type.Type;
+import Master.AST.Dec.ClassDec;
+import Master.AST.VarDec.VarDec;
 
 /**
  * Created by expye(Zihao Ye) on 2016/3/30.
  */
 public class SimpleVarExp extends LvalueExp {
-    SimpleVarExp(Type type) {
-        this.type = type;
+    VarDec pt;
+    public SimpleVarExp(VarDec pt) {
+        this.pt = pt;
     }
 }

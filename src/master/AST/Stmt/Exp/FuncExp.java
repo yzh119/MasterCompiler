@@ -1,21 +1,20 @@
 package Master.AST.Stmt.Exp;
 
-import Master.Environment.FuncSymbol;
+import Master.AST.Dec.FuncDec;
 import Master.Exception.CompilationError;
+import Master.Utility;
 
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by expye(Zihao Ye) on 2016/3/31.
  */
 public class FuncExp extends Exp {
-    ArrayList<Exp> paraList;
-    FuncExp(FuncSymbol fs, ArrayList<Exp> paraList) throws CompilationError {
+    List<Exp> paraList;
+    FuncDec fd;
+    FuncExp(FuncDec fd, List<Exp> paraList) {
+        this.fd = fd;
         this.paraList = paraList;
-        for (int i = 0; i < paraList.size(); i++) {
-            if (!(paraList.get(i).type.isSuitable(fs.getParaType(i))))
-                throw new CompilationError("Parameters' types don't match!");
-        }
-        type = fs.getRetType();
     }
 }

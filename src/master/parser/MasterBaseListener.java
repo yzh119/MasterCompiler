@@ -1,4 +1,4 @@
-// Generated from C:/Users/Ҷ�Ӻ�/IdeaProjects/MasterCompiler/src/Master/Parser\Master.g4 by ANTLR 4.5.1
+// Generated from C:/Users/Ҷ�Ӻ�/IdeaProjects/MasterCompiler/src/Master/Parser\Master.g4 by ANTLR 4.5.1
 package Master.Parser;
 
 import org.antlr.v4.runtime.ParserRuleContext;
@@ -53,7 +53,7 @@ public class MasterBaseListener implements MasterListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void enterMethod_def(MasterParser.Method_defContext ctx) { }
-	/**f
+	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
@@ -71,30 +71,6 @@ public class MasterBaseListener implements MasterListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitClass_def(MasterParser.Class_defContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void enterFunction_head(MasterParser.Function_headContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void exitFunction_head(MasterParser.Function_headContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void enterMethod_head(MasterParser.Method_headContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void exitMethod_head(MasterParser.Method_headContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
@@ -143,6 +119,18 @@ public class MasterBaseListener implements MasterListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitAddSubExpr(MasterParser.AddSubExprContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterFuncExpr(MasterParser.FuncExprContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitFuncExpr(MasterParser.FuncExprContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
@@ -256,18 +244,6 @@ public class MasterBaseListener implements MasterListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterThisIdentifierExpr(MasterParser.ThisIdentifierExprContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void exitThisIdentifierExpr(MasterParser.ThisIdentifierExprContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
 	@Override public void enterCompExpr(MasterParser.CompExprContext ctx) { }
 	/**
 	 * {@inheritDoc}
@@ -299,18 +275,6 @@ public class MasterBaseListener implements MasterListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitPosUnaryExpr(MasterParser.PosUnaryExprContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void enterParaFuncExpr(MasterParser.ParaFuncExprContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void exitParaFuncExpr(MasterParser.ParaFuncExprContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
@@ -388,25 +352,13 @@ public class MasterBaseListener implements MasterListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterVarDeclWithNoInit(MasterParser.VarDeclWithNoInitContext ctx) { }
+	@Override public void enterVariable_decl(MasterParser.Variable_declContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitVarDeclWithNoInit(MasterParser.VarDeclWithNoInitContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void enterVarDeclWithInit(MasterParser.VarDeclWithInitContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void exitVarDeclWithInit(MasterParser.VarDeclWithInitContext ctx) { }
+	@Override public void exitVariable_decl(MasterParser.Variable_declContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *

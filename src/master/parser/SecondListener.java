@@ -1,27 +1,34 @@
 package Master.Parser;
 
+import Master.AST.ASTnode;
+import Master.AST.Dec.ArrayDec;
 import Master.AST.Dec.ClassDec;
-import Master.AST.Dec.Dec;
 import Master.AST.Dec.FuncDec;
 import Master.AST.Dec.MethodDec;
 import Master.AST.Prog.Prog;
+import Master.AST.VarDec.VarDec;
 import Master.Environment.*;
 import Master.Exception.CompilationError;
-import Master.Type.ArrayType;
-import Master.Type.Name;
-import Master.Type.Type;
 
+import java.lang.reflect.Method;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Stack;
 
 /**
  * Created by expye(Zihao Ye) on 2016/4/4.
  */
-public class SecondListener extends MasterBaseListener {
-    Stack<Scope> scopes = new Stack<>();
+public class SecondListener extends BaseListener {
+    private Stack<Scope> scopes = new Stack<>();
 
     @Override
     public void enterProgram(MasterParser.ProgramContext ctx) {
         scopes.add(((Prog)CST2AST.dict.get(ctx)).currentScope);
+    }
+
+    @Override
+    public void exitProgram(MasterParser.ProgramContext ctx) {
+        scopes.pop();
     }
 
     @Override
@@ -35,71 +42,102 @@ public class SecondListener extends MasterBaseListener {
     }
 
     @Override
-    public void exitFunction_def(MasterParser.Function_defContext ctx) {
-        Scope currentScope = scopes.peek();
-        Name funcName =
-                Name.getSymbolName(ctx.function_head().ID().getText());
-        if (currentScope.lookUpInThisScope(funcName) != null)
-            throw new CompilationError("Function name exists!");
-        Type retType =
-                ((ClassDec) CST2AST.dict.get(ctx.function_head().type_specifier())).cs.type;
-        FuncSymbol thisSymbol = new FuncSymbol(funcName, retType);
-        FuncDec now = new FuncDec(thisSymbol);
-
-        CST2AST.dict.put(ctx, now);
-        currentScope.addEntry(funcName, thisSymbol);
-        now.currentScope = new Scope(currentScope);
-    }
-
-    @Override
     public void enterIntegerType(MasterParser.IntegerTypeContext ctx) {
-        CST2AST.dict.put(ctx, ClassDec.IntegerDec);
+        CST2AST.dict.put(ctx, ClassDec.intClass);
     }
 
     @Override
     public void enterStringType(MasterParser.StringTypeContext ctx) {
-        CST2AST.dict.put(ctx, ClassDec.StringDec);
+        CST2AST.dict.put(ctx, ClassDec.stringClass);
     }
 
     @Override
     public void enterBoolType(MasterParser.BoolTypeContext ctx) {
-        CST2AST.dict.put(ctx, ClassDec.BoolDec);
+        CST2AST.dict.put(ctx, ClassDec.boolClass);
     }
 
     @Override
     public void enterClassType(MasterParser.ClassTypeContext ctx) {
         Scope currentScope = scopes.peek();
-        Name className =
-                Name.getSymbolName(ctx.ID().getText());
-        Symbol inquiry = currentScope.lookUp(className);
-        if (inquiry == null || !(inquiry instanceof ClassSymbol))
-            throw new CompilationError("Class doesn't find!");
-        CST2AST.dict.put(ctx, ((ClassSymbol) inquiry).getRef());
+        String className =
+                ctx.ID().getText().intern();
+        ASTnode thisClass = currentScope.lookUp(className);
+        if (thisClass == null)
+            throw new CompilationError(currentPlace + "Type not defined!");
+        if (!(thisClass instanceof ClassDec))
+            throw new CompilationError(currentPlace + "It's not a class type!");
+        CST2AST.dict.put(ctx, thisClass);
     }
 
     @Override
     public void exitArrayType(MasterParser.ArrayTypeContext ctx) {
-        Type baseType =
-                ((ClassDec)CST2AST.dict.get(ctx.type_specifier())).cs.type;
-        CST2AST.dict.put(ctx, new ClassDec(new ClassSymbol(null, new ArrayType(baseType, ctx.LBRACKET().size()))));
+        Scope currentScope = scopes.peek();
+        ASTnode type = CST2AST.dict.get(ctx.type_specifier());
+        if (type == null)
+            throw new CompilationError("Something happened unfortunately!");
+        ClassDec baseType = (ClassDec)type;
+        int dim = ctx.LBRACKET().size();
+        ArrayDec now = new ArrayDec(baseType, dim);
+        CST2AST.dict.put(ctx, now);
+    }
+
+    @Override
+    public void exitFunction_def(MasterParser.Function_defContext ctx) {
+        Scope currentScope = scopes.peek();
+        String funcName =
+                ctx.ID().getText().intern();
+        ASTnode thisFunc = currentScope.lookUpInThisScope(funcName);
+        if (thisFunc != null)
+            throw new CompilationError(currentPlace + "This function name has been used!");
+
+        ASTnode type = CST2AST.dict.get(ctx.type_specifier());
+        if (type == null)
+            throw new CompilationError("Something happened unfortunately!");
+
+        ClassDec retType = (ClassDec)type;
+        List<VarDec> paraList = new ArrayList<>();
+        if (ctx.parameter_list() != null)
+            for (MasterParser.Parameter_declContext paraDecl: ctx.parameter_list().parameter_decl()) {
+                type = CST2AST.dict.get(paraDecl.type_specifier());
+                if (type == null)
+                    throw new CompilationError("Something happened unfortunately!");
+                paraList.add(new VarDec((ClassDec)type, paraDecl.ID().getText().intern()));
+            }
+        FuncDec now = new FuncDec(retType, paraList, null, funcName);
+        CST2AST.dict.put(ctx, now);
+        now.currentScope = new Scope(currentScope);
+        for (VarDec para: paraList) {
+            if (now.currentScope.lookUpInThisScope(para.getName().intern()) == null)
+                now.currentScope.addEntry(para.getName().intern(), para);
+            else throw new CompilationError("Parameters with the same id!");
+        }
+        currentScope.addEntry(funcName, now);
     }
 
     @Override
     public void exitMethod_def(MasterParser.Method_defContext ctx) {
         Scope currentScope = scopes.peek();
-        Name methodName =
-                Name.getSymbolName(ctx.method_head().ID().getText());
-        if (currentScope.lookUpInThisScope(methodName) != null)
-            throw new CompilationError("method name exists!");
-        MethodSymbol thisSymbol = new MethodSymbol(methodName);
-        MethodDec now = new MethodDec(thisSymbol);
+        String methodName =
+                ctx.ID().getText().intern();
+        ASTnode thisMethod = currentScope.lookUpInThisScope(methodName);
+        if (thisMethod != null)
+            throw new CompilationError(currentPlace + "This function name has been used!");
+        List<VarDec> paraList = new ArrayList<>();
+        if (ctx.parameter_list() != null)
+            for (MasterParser.Parameter_declContext paraDecl: ctx.parameter_list().parameter_decl()) {
+                ASTnode type = CST2AST.dict.get(paraDecl.type_specifier());
+                if (CST2AST.dict.get(paraDecl.type_specifier()) == null)
+                    throw new CompilationError("Something happened unfortunately!");
+                paraList.add(new VarDec((ClassDec)type, paraDecl.ID().getText().intern()));
+            }
+        MethodDec now = new MethodDec(paraList, null, methodName);
         CST2AST.dict.put(ctx, now);
-        currentScope.addEntry(methodName, thisSymbol);
         now.currentScope = new Scope(currentScope);
-    }
-
-    @Override
-    public void exitProgram(MasterParser.ProgramContext ctx) {
-        scopes.pop();
+        for (VarDec para: paraList) {
+            if (now.currentScope.lookUpInThisScope(para.getName().intern()) == null)
+                now.currentScope.addEntry(para.getName().intern(), para);
+            else throw new CompilationError("Parameters with the same id!");
+        }
+        currentScope.addEntry(methodName, now);
     }
 }
