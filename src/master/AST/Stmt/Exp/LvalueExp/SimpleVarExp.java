@@ -10,5 +10,6 @@ public class SimpleVarExp extends LvalueExp {
     VarDec pt;
     public SimpleVarExp(VarDec pt) {
         this.pt = pt;
+        this.type = pt.cd;
     }
 }

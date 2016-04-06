@@ -1,20 +1,28 @@
-int a;
-class haha{
-    void ha() {
-    }
-    class sese{
-
-    }
-}
-void hah(haha[][] x) {
-    if (1 == 1) {
-//        int a;
-    } else {
-//        int b;
-    }
+int pa() {
+    return 1;
 }
 
-int[][][] ha(int x) {
+int ha(int x) {
+    int[][] xi;
+    int[] b;
+    xi[0] = b;
+    b[0] = 1;
+    while (true) {
+        int a;
+        int b;
+        b = a = 2;
+        a++;
+    }
+    int t;
+    string c;
+    print(c);
+    println(c);
+    getString();
+    getInt();
+//    c.length();
+//    c.substring(1, 2);
+//    c.parseInt();
+//    c.ord(5);
 }
 
 int d;

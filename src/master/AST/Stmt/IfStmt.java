@@ -7,8 +7,9 @@ import Master.Exception.CompilationError;
  * Created by expye(Zihao Ye) on 2016/3/30.
  */
 public class IfStmt extends StmtBase {
-    Exp condition;
-    Stmt stmt1, stmt2;
+    public Exp condition;
+    public Stmt stmt1;
+    public Stmt stmt2;
     public IfStmt(Exp cond, Stmt yes, Stmt no) {
         condition = cond;
         stmt1 = yes;

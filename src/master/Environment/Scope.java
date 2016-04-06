@@ -24,7 +24,7 @@ public class Scope {
             return ret;
         if (ret == null)
             return previous.lookUp(name);
-        return null;
+        else return ret;
     }
 
     public ASTnode lookUpInThisScope(String name) {

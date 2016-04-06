@@ -10,7 +10,7 @@ import Master.Environment.Scope;
  */
 public class VarDec implements Dec, Stmt{
     public Scope currentScope = null;
-    ClassDec cd;
+    public ClassDec cd;
     String name;
 
     public VarDec(ClassDec cd, String name) {
