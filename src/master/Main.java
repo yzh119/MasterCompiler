@@ -13,9 +13,9 @@ import java.io.InputStream;
  * Created by expye(Zihao Ye) on 2016/4/1.
  */
 public class Main {
-    public static void main(String[] args) throws IOException, CompilationError {
+    public static void main(String[] args) throws Exception {
         try {
-            InputStream is = new FileInputStream("in/test.mx");
+            InputStream is = new FileInputStream("bin/test.mx");
             ANTLRInputStream input = new ANTLRInputStream(is);
             MasterLexer lexer = new MasterLexer(input);
             CommonTokenStream tokens = new CommonTokenStream(lexer);
@@ -29,10 +29,11 @@ public class Main {
             walker.walk(fl, tree);
             walker.walk(sl, tree);
             walker.walk(tl, tree);
-        } catch (IOException e) {
+        } catch (Error e) {
             e.printStackTrace();
-            throw new CompilationError("Cannot find test.mx!");
+            System.exit(1);
         }
-        System.out.println("Successful!");
+//        System.out.println("Successful!");
+        System.exit(0);
     }
 }

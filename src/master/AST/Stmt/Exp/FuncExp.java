@@ -13,8 +13,9 @@ import java.util.List;
 public class FuncExp extends Exp {
     List<Exp> paraList;
     FuncDec fd;
-    FuncExp(FuncDec fd, List<Exp> paraList) {
+    public FuncExp(FuncDec fd, List<Exp> paraList) {
         this.fd = fd;
         this.paraList = paraList;
+        this.type = fd.retType;
     }
 }

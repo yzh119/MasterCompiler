@@ -1,6 +1,8 @@
 package Master.Parser;
 
 import Master.AST.Dec.ClassDec;
+import Master.AST.Dec.Dec;
+import Master.AST.Dec.FuncDec;
 import Master.AST.Prog.Prog;
 import Master.Environment.Scope;
 import Master.Exception.CompilationError;

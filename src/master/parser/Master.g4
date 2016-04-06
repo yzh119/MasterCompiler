@@ -19,8 +19,8 @@ parameter_decl: type_specifier ID;
 expr
     : LPAREN expr RPAREN                                        #parenExpr
     | expr (LBRACKET expr RBRACKET)+                            #subsExpr
-    | expr LPAREN param_list? RPAREN                            #funcExpr
-    | expr DOT expr                                             #fieldExpr
+    | ID LPAREN param_list? RPAREN                              #funcExpr
+    | expr DOT ID (LPAREN param_list? RPAREN)?                  #fieldExpr
     | op = (INC | DEC | ADD | SUB | BIT_NOT | LOG_NOT ) expr    #preUnaryExpr
     | expr op = (INC | DEC)                                     #posUnaryExpr
     | expr op = (MUL | DIV | MOD) expr                          #mulDivModExpr
@@ -55,13 +55,18 @@ stmt_list: stmt*;
 
 stmt
     : block
+    | method_stmt
     | expr_stmt
+    | field_method_stmt
     | selection_stmt
     | iteration_stmt
     | jump_stmt
     | variable_decl
     | SEMICOLON
     ;
+
+method_stmt: ID LPAREN param_list? RPAREN SEMICOLON;
+field_method_stmt: expr DOT ID LPAREN param_list? RPAREN SEMICOLON;
 
 block: LBRACE stmt_list RBRACE;
 
@@ -70,8 +75,8 @@ expr_stmt: expr SEMICOLON;
 selection_stmt: IF LPAREN expr RPAREN stmt (ELSE stmt)?;
 
 iteration_stmt
-    : WHILE LPAREN expr RPAREN stmt                                     #whileIteration
-    | FOR LPAREN expr? SEMICOLON expr? SEMICOLON expr? RPAREN stmt      #forIteration
+    : WHILE LPAREN expr RPAREN stmt                                                                   #whileIteration
+    | FOR LPAREN (expr1 = expr)? SEMICOLON (expr2 = expr)? SEMICOLON (expr3 = expr)? RPAREN stmt      #forIteration
     ;
 
 jump_stmt
@@ -84,7 +89,10 @@ constant
     : NULL                                                      #nullConst
     | INT_LITERAL                                               #intConst
     | PREDICATE                                                 #boolConst
-    | STRING_LITERAL                                            #stringConst
+    | String_Literal                                            #stringConst
     ;
 
 param_list: (expr COMMA)* expr;
+
+String_Literal
+    : '"' SCHARSEQ? '"';

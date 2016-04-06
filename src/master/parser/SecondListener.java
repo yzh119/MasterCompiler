@@ -9,6 +9,7 @@ import Master.AST.Prog.Prog;
 import Master.AST.VarDec.VarDec;
 import Master.Environment.*;
 import Master.Exception.CompilationError;
+import Master.Exception.InternalError;
 
 import java.lang.reflect.Method;
 import java.util.ArrayList;
@@ -71,10 +72,9 @@ public class SecondListener extends BaseListener {
 
     @Override
     public void exitArrayType(MasterParser.ArrayTypeContext ctx) {
-        Scope currentScope = scopes.peek();
         ASTnode type = CST2AST.dict.get(ctx.type_specifier());
         if (type == null)
-            throw new CompilationError("Something happened unfortunately!");
+            throw new InternalError("Something happened unfortunately!");
         ClassDec baseType = (ClassDec)type;
         int dim = ctx.LBRACKET().size();
         ArrayDec now = new ArrayDec(baseType, dim);
@@ -92,7 +92,7 @@ public class SecondListener extends BaseListener {
 
         ASTnode type = CST2AST.dict.get(ctx.type_specifier());
         if (type == null)
-            throw new CompilationError("Something happened unfortunately!");
+            throw new InternalError("Something happened unfortunately!");
 
         ClassDec retType = (ClassDec)type;
         List<VarDec> paraList = new ArrayList<>();
@@ -100,7 +100,7 @@ public class SecondListener extends BaseListener {
             for (MasterParser.Parameter_declContext paraDecl: ctx.parameter_list().parameter_decl()) {
                 type = CST2AST.dict.get(paraDecl.type_specifier());
                 if (type == null)
-                    throw new CompilationError("Something happened unfortunately!");
+                    throw new InternalError("Something happened unfortunately!");
                 paraList.add(new VarDec((ClassDec)type, paraDecl.ID().getText().intern()));
             }
         FuncDec now = new FuncDec(retType, paraList, null, funcName);
@@ -127,7 +127,7 @@ public class SecondListener extends BaseListener {
             for (MasterParser.Parameter_declContext paraDecl: ctx.parameter_list().parameter_decl()) {
                 ASTnode type = CST2AST.dict.get(paraDecl.type_specifier());
                 if (CST2AST.dict.get(paraDecl.type_specifier()) == null)
-                    throw new CompilationError("Something happened unfortunately!");
+                    throw new InternalError("Something happened unfortunately!");
                 paraList.add(new VarDec((ClassDec)type, paraDecl.ID().getText().intern()));
             }
         MethodDec now = new MethodDec(paraList, null, methodName);

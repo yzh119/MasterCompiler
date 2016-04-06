@@ -1,5 +1,6 @@
 package Master.AST.Dec;
 
+import Master.AST.ASTnode;
 import Master.Utility;
 
 import java.util.ArrayList;
@@ -33,5 +34,10 @@ public class ClassDec extends DecBase {
     @Override
     public String getName() {
         return super.getName();
+    }
+
+    @Override
+    public String toString() {
+        return this.name;
     }
 }

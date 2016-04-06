@@ -1,6 +1,7 @@
 package Master.Environment;
 
 import Master.AST.ASTnode;
+import Master.AST.Dec.Dec;
 
 import java.util.HashMap;
 import java.util.IdentityHashMap;
@@ -11,15 +12,15 @@ import java.util.Map;
  */
 public class Scope {
     Scope previous = null;
-    Map<String, ASTnode> dict =
+    public Map<String, Dec> dict =
             new IdentityHashMap<>();
 
     public Scope(Scope previous) {
         this.previous = previous;
     }
 
-    public ASTnode lookUp(String name) {
-        ASTnode ret = dict.get(name);
+    public Dec lookUp(String name) {
+        Dec ret = dict.get(name);
         if (previous == null)
             return ret;
         if (ret == null)
@@ -27,11 +28,11 @@ public class Scope {
         else return ret;
     }
 
-    public ASTnode lookUpInThisScope(String name) {
+    public Dec lookUpInThisScope(String name) {
         return dict.get(name);
     }
 
-    public void addEntry(String name, ASTnode symbol) {
+    public void addEntry(String name, Dec symbol) {
         dict.put(name, symbol);
     }
 }

@@ -13,7 +13,7 @@ import java.util.List;
  */
 public class FuncDec extends MethodDec{
     public List<Stmt> body = null;
-    ClassDec retType = null;
+    public ClassDec retType = null;
     public FuncDec(ClassDec retType, List<VarDec> vd , List<Stmt> body, String name) {
         super(vd, body, name);
         this.retType = retType;

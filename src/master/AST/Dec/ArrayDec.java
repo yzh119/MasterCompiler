@@ -12,10 +12,16 @@ public class ArrayDec extends ClassDec{
         super(null);
         this.baseType = baseType;
         this.dim = dim;
+        this.addDecl("size", Utility.sizeDec);
     }
 
     @Override
     public void addDecl(String name, Dec decl) {
         super.addDecl(name, decl);
+    }
+
+    @Override
+    public String toString() {
+        return baseType.toString() + String.valueOf(dim);
     }
 }

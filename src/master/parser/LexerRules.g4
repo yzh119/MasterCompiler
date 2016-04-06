@@ -64,22 +64,19 @@ DOT:        '.';
 INT_LITERAL
     : [0-9]+;
 
-STRING_LITERAL
-    : '"' SCHARSEQ? '"';
-
 fragment
 SCHARSEQ
     : SCHAR+;
 
 fragment
 SCHAR
-    : ~['\\\r\n]
-    | ESCSEQ
+    :   ~["\\\r\n]
+    |   ESCSEQ
     ;
 
 fragment
 ESCSEQ
-    : '\\'  ['"?abfnrtv\\]
+    : '\\' ['"?abfnrtv\\]
     ;
 
 ID

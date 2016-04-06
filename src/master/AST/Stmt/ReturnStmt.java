@@ -10,14 +10,9 @@ import Master.Exception.CompilationError;
  * Created by expye(Zihao Ye) on 2016/3/30.
  */
 public class ReturnStmt extends StmtBase {
-    Dec backPoint = null;
     Exp ret = null;
-    ReturnStmt(Dec backPoint) {
-        this.backPoint = backPoint;
-    }
-
-    ReturnStmt(Dec backPoint, Exp ret) throws CompilationError {
-        this.backPoint = backPoint;
+    public ReturnStmt(Exp ret) {
         this.ret = ret;
     }
+    public ReturnStmt() {}
 }

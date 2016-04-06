@@ -1,5 +1,6 @@
 package Master.AST.Stmt;
 
+import Master.AST.Dec.MethodDec;
 import Master.AST.Stmt.Exp.Exp;
 import Master.Exception.CompilationError;
 
@@ -11,9 +12,9 @@ import java.util.List;
  */
 public class MethodStmt extends StmtBase {
     List<Exp> paraList;
-    String name;
-    MethodStmt(String name, List<Exp> paraList) {
-        this.name = name;
+    MethodDec method;
+    public MethodStmt(MethodDec method, List<Exp> paraList) {
+        this.method = method;
         this.paraList = paraList;
     }
 }

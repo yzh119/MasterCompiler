@@ -112,18 +112,6 @@ public class MasterBaseListener implements MasterListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterAddSubExpr(MasterParser.AddSubExprContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void exitAddSubExpr(MasterParser.AddSubExprContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
 	@Override public void enterFuncExpr(MasterParser.FuncExprContext ctx) { }
 	/**
 	 * {@inheritDoc}
@@ -131,6 +119,18 @@ public class MasterBaseListener implements MasterListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitFuncExpr(MasterParser.FuncExprContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterAddSubExpr(MasterParser.AddSubExprContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitAddSubExpr(MasterParser.AddSubExprContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
@@ -443,6 +443,30 @@ public class MasterBaseListener implements MasterListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitStmt(MasterParser.StmtContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterMethod_stmt(MasterParser.Method_stmtContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitMethod_stmt(MasterParser.Method_stmtContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterField_method_stmt(MasterParser.Field_method_stmtContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitField_method_stmt(MasterParser.Field_method_stmtContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
