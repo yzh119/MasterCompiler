@@ -1,4 +1,4 @@
-// Generated from C:/Users/Ò¶×ÓºÀ/IdeaProjects/MasterCompiler/src/Master/Parser\Master.g4 by ANTLR 4.5.1
+
 package Master.Parser;
 
 import org.antlr.v4.runtime.ParserRuleContext;
