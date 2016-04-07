@@ -2,230 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f058b886-d1bc-433e-8f45-9c67b8bdd78d" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/Master/AST/ASTnode.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/Master/AST/Dec/ArrayDec.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/Master/AST/Dec/ClassDec.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/Master/AST/Dec/Dec.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/Master/AST/Dec/DecBase.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/Master/AST/Dec/FuncDec.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/Master/AST/Dec/MethodDec.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/Master/AST/Prog/Prog.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/Master/AST/Stmt/BreakStmt.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/Master/AST/Stmt/CompoundStmt.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/Master/AST/Stmt/ContinueStmt.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/Master/AST/Stmt/Exp/BinExp/AddExp.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/Master/AST/Stmt/Exp/BinExp/AssignExp.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/Master/AST/Stmt/Exp/BinExp/BinExp.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/Master/AST/Stmt/Exp/BinExp/BitAndExp.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/Master/AST/Stmt/Exp/BinExp/BitOrExp.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/Master/AST/Stmt/Exp/BinExp/BitXorExp.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/Master/AST/Stmt/Exp/BinExp/DivExp.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/Master/AST/Stmt/Exp/BinExp/EqExp.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/Master/AST/Stmt/Exp/BinExp/GreaterExp.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/Master/AST/Stmt/Exp/BinExp/GreaterThanExp.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/Master/AST/Stmt/Exp/BinExp/LessExp.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/Master/AST/Stmt/Exp/BinExp/LessThanExp.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/Master/AST/Stmt/Exp/BinExp/LogAndExp.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/Master/AST/Stmt/Exp/BinExp/LogOrExp.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/Master/AST/Stmt/Exp/BinExp/LshiftExp.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/Master/AST/Stmt/Exp/BinExp/ModExp.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/Master/AST/Stmt/Exp/BinExp/MulExp.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/Master/AST/Stmt/Exp/BinExp/NeqExp.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/Master/AST/Stmt/Exp/BinExp/RshiftExp.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/Master/AST/Stmt/Exp/BinExp/SubExp.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/Master/AST/Stmt/Exp/BoolExp.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/Master/AST/Stmt/Exp/ClassFieldExp.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/Master/AST/Stmt/Exp/Exp.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/Master/AST/Stmt/Exp/FuncExp.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/Master/AST/Stmt/Exp/IntExp.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/Master/AST/Stmt/Exp/NullExp.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/Master/AST/Stmt/Exp/SimpleVarExp.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/Master/AST/Stmt/Exp/StringExp.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/Master/AST/Stmt/Exp/SubscriptVarExp.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/Master/AST/Stmt/Exp/UnaryExp/BitNotExp.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/Master/AST/Stmt/Exp/UnaryExp/LogNotExp.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/Master/AST/Stmt/Exp/UnaryExp/MinusExp.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/Master/AST/Stmt/Exp/UnaryExp/PosDecExp.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/Master/AST/Stmt/Exp/UnaryExp/PosIncExp.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/Master/AST/Stmt/Exp/UnaryExp/PreDecExp.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/Master/AST/Stmt/Exp/UnaryExp/PreIncExp.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/Master/AST/Stmt/Exp/UnaryExp/UnaryExp.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/Master/AST/Stmt/Exp/newExp.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/Master/AST/Stmt/ExprStmt.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/Master/AST/Stmt/FieldMethodStmt.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/Master/AST/Stmt/ForStmt.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/Master/AST/Stmt/IfStmt.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/Master/AST/Stmt/MethodStmt.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/Master/AST/Stmt/ReturnStmt.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/Master/AST/Stmt/Stmt.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/Master/AST/Stmt/StmtBase.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/Master/AST/Stmt/WhileStmt.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/Master/AST/VarDec/VarDec.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/Master/Environment/Scope.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/Master/Exception/CompilationError.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/Master/Exception/InternalError.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/Master/Main.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/Master/Parser/BaseListener.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/Master/Parser/CST2AST.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/Master/Parser/FirstListener.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/Master/Parser/LexerRules.g4" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/Master/Parser/Master.g4" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/Master/Parser/Master.tokens" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/Master/Parser/MasterBaseListener.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/Master/Parser/MasterLexer.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/Master/Parser/MasterLexer.tokens" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/Master/Parser/MasterListener.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/Master/Parser/MasterParser$AddSubExprContext.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/Master/Parser/MasterParser$ArrayTypeContext.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/Master/Parser/MasterParser$AssignExprContext.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/Master/Parser/MasterParser$BitAndExprContext.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/Master/Parser/MasterParser$BitOrExprContext.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/Master/Parser/MasterParser$BitXorExprContext.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/Master/Parser/MasterParser$BlockContext.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/Master/Parser/MasterParser$BoolConstContext.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/Master/Parser/MasterParser$BoolTypeContext.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/Master/Parser/MasterParser$BreakJumpContext.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/Master/Parser/MasterParser$ClassTypeContext.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/Master/Parser/MasterParser$Class_bodyContext.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/Master/Parser/MasterParser$Class_defContext.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/Master/Parser/MasterParser$CompExprContext.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/Master/Parser/MasterParser$ConstExprContext.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/Master/Parser/MasterParser$ConstantContext.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/Master/Parser/MasterParser$ContinueJumpContext.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/Master/Parser/MasterParser$Dim_exprContext.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/Master/Parser/MasterParser$EqNeqExprContext.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/Master/Parser/MasterParser$ExprContext.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/Master/Parser/MasterParser$Expr_stmtContext.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/Master/Parser/MasterParser$FieldExprContext.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/Master/Parser/MasterParser$Field_method_stmtContext.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/Master/Parser/MasterParser$ForIterationContext.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/Master/Parser/MasterParser$FuncExprContext.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/Master/Parser/MasterParser$Function_defContext.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/Master/Parser/MasterParser$IdentifierExprContext.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/Master/Parser/MasterParser$IntConstContext.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/Master/Parser/MasterParser$IntegerTypeContext.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/Master/Parser/MasterParser$Iteration_stmtContext.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/Master/Parser/MasterParser$Jump_stmtContext.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/Master/Parser/MasterParser$LogAndExprContext.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/Master/Parser/MasterParser$LogOrExprContext.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/Master/Parser/MasterParser$Method_defContext.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/Master/Parser/MasterParser$Method_stmtContext.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/Master/Parser/MasterParser$MulDivModExprContext.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/Master/Parser/MasterParser$NewExprContext.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/Master/Parser/MasterParser$NullConstContext.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/Master/Parser/MasterParser$Param_listContext.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/Master/Parser/MasterParser$Parameter_declContext.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/Master/Parser/MasterParser$Parameter_listContext.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/Master/Parser/MasterParser$ParenExprContext.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/Master/Parser/MasterParser$PosUnaryExprContext.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/Master/Parser/MasterParser$PreUnaryExprContext.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/Master/Parser/MasterParser$ProgramContext.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/Master/Parser/MasterParser$ReturnJumpContext.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/Master/Parser/MasterParser$Selection_stmtContext.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/Master/Parser/MasterParser$ShiftExprContext.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/Master/Parser/MasterParser$StmtContext.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/Master/Parser/MasterParser$Stmt_listContext.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/Master/Parser/MasterParser$StringConstContext.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/Master/Parser/MasterParser$StringTypeContext.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/Master/Parser/MasterParser$SubsExprContext.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/Master/Parser/MasterParser$Type_specifierContext.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/Master/Parser/MasterParser$Variable_declContext.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/Master/Parser/MasterParser$WhileIterationContext.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/Master/Parser/MasterParser.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/Master/Parser/SecondListener.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/Master/Parser/ThirdListener.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/Master/Utility.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/master/AST/ASTnode.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/master/AST/Dec/ArrayDec.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/master/AST/Dec/ClassDec.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/master/AST/Dec/Dec.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/master/AST/Dec/DecBase.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/master/AST/Dec/FuncDec.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/master/AST/Dec/MethodDec.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/master/AST/Prog/Prog.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/master/AST/Stmt/BreakStmt.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/master/AST/Stmt/CompoundStmt.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/master/AST/Stmt/ContinueStmt.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/master/AST/Stmt/Exp/BinExp/AddExp.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/master/AST/Stmt/Exp/BinExp/AssignExp.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/master/AST/Stmt/Exp/BinExp/BinExp.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/master/AST/Stmt/Exp/BinExp/BitAndExp.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/master/AST/Stmt/Exp/BinExp/BitOrExp.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/master/AST/Stmt/Exp/BinExp/BitXorExp.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/master/AST/Stmt/Exp/BinExp/DIvExp.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/master/AST/Stmt/Exp/BinExp/EqExp.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/master/AST/Stmt/Exp/BinExp/GreaterExp.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/master/AST/Stmt/Exp/BinExp/GreaterThanExp.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/master/AST/Stmt/Exp/BinExp/LessExp.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/master/AST/Stmt/Exp/BinExp/LessThanExp.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/master/AST/Stmt/Exp/BinExp/LogAndExp.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/master/AST/Stmt/Exp/BinExp/LogOrExp.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/master/AST/Stmt/Exp/BinExp/LshiftExp.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/master/AST/Stmt/Exp/BinExp/ModExp.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/master/AST/Stmt/Exp/BinExp/MulExp.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/master/AST/Stmt/Exp/BinExp/NeqExp.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/master/AST/Stmt/Exp/BinExp/RshiftExp.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/master/AST/Stmt/Exp/BinExp/SubExp.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/master/AST/Stmt/Exp/BoolExp.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/master/AST/Stmt/Exp/ClassFieldExp.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/master/AST/Stmt/Exp/Exp.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/master/AST/Stmt/Exp/FuncExp.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/master/AST/Stmt/Exp/IntExp.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/master/AST/Stmt/Exp/NullExp.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/master/AST/Stmt/Exp/SimpleVarExp.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/master/AST/Stmt/Exp/StringExp.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/master/AST/Stmt/Exp/SubscriptVarExp.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/master/AST/Stmt/Exp/UnaryExp/BitNotExp.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/master/AST/Stmt/Exp/UnaryExp/LogNotExp.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/master/AST/Stmt/Exp/UnaryExp/MinusExp.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/master/AST/Stmt/Exp/UnaryExp/PosDecExp.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/master/AST/Stmt/Exp/UnaryExp/PosIncExp.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/master/AST/Stmt/Exp/UnaryExp/PreDecExp.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/master/AST/Stmt/Exp/UnaryExp/PreIncExp.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/master/AST/Stmt/Exp/UnaryExp/UnaryExp.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/master/AST/Stmt/Exp/newExp.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/master/AST/Stmt/ExprStmt.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/master/AST/Stmt/FieldMethodStmt.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/master/AST/Stmt/ForStmt.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/master/AST/Stmt/IfStmt.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/master/AST/Stmt/MethodStmt.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/master/AST/Stmt/ReturnStmt.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/master/AST/Stmt/Stmt.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/master/AST/Stmt/StmtBase.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/master/AST/Stmt/WhileStmt.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/master/AST/VarDec/VarDec.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/master/Environment/Scope.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/master/Exception/CompilationError.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/master/Exception/InternalError.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/master/Main.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/master/Utility.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/master/parser/BaseListener.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/master/parser/CST2AST.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/master/parser/FirstListener.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/master/parser/LexerRules.g4" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/master/parser/Master.g4" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/master/parser/Master.tokens" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/master/parser/MasterBaseListener.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/master/parser/MasterLexer.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/master/parser/MasterLexer.tokens" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/master/parser/MasterListener.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/master/parser/MasterParser.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/master/parser/SecondListener.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/master/parser/ThirdListener.java" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/com/expye/compiler2016/Main.class" afterPath="$PROJECT_DIR$/out/production/MasterCompiler/com/expye/compiler2016/Main.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Makefile" afterPath="$PROJECT_DIR$/Makefile" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MasterCompiler.iml" afterPath="$PROJECT_DIR$/MasterCompiler.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/midtermvars.sh" afterPath="$PROJECT_DIR$/midtermvars.sh" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/expye/compiler2016/AST/Dec/FuncDec.java" afterPath="$PROJECT_DIR$/src/com/expye/compiler2016/AST/Dec/FuncDec.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/expye/compiler2016/Parser/Master.g4" afterPath="$PROJECT_DIR$/src/com/expye/compiler2016/Parser/Master.g4" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/expye/compiler2016/Parser/MasterBaseListener.java" afterPath="$PROJECT_DIR$/src/com/expye/compiler2016/Parser/MasterBaseListener.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/expye/compiler2016/Parser/MasterLexer.java" afterPath="$PROJECT_DIR$/src/com/expye/compiler2016/Parser/MasterLexer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/expye/compiler2016/Parser/MasterListener.java" afterPath="$PROJECT_DIR$/src/com/expye/compiler2016/Parser/MasterListener.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/expye/compiler2016/Parser/MasterParser.java" afterPath="$PROJECT_DIR$/src/com/expye/compiler2016/Parser/MasterParser.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/expye/compiler2016/Parser/SecondListener.java" afterPath="$PROJECT_DIR$/src/com/expye/compiler2016/Parser/SecondListener.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/expye/compiler2016/Parser/ThirdListener.java" afterPath="$PROJECT_DIR$/src/com/expye/compiler2016/Parser/ThirdListener.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/expye/compiler2016/Utility.java" afterPath="$PROJECT_DIR$/src/com/expye/compiler2016/Utility.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/test/SemanticChecker.java" afterPath="$PROJECT_DIR$/test/test/SemanticChecker.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/expye/compiler2016/Main.java" afterPath="$PROJECT_DIR$/src/com/expye/compiler2016/Main.java" />
     </list>
     <ignored path="MasterCompiler.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -310,21 +89,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/expye/compiler2016/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
-              <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+            <state relative-caret-position="498">
+              <caret line="24" column="25" selection-start-line="24" selection-start-column="25" selection-end-line="24" selection-end-column="25" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SemanticChecker.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="SemanticChecker.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/test/SemanticChecker.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="324">
-              <caret line="52" column="16" selection-start-line="52" selection-start-column="16" selection-end-line="52" selection-end-column="16" />
+            <state relative-caret-position="566">
+              <caret line="71" column="46" selection-start-line="71" selection-start-column="46" selection-end-line="71" selection-end-column="46" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -352,7 +131,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/Master/AST/Stmt/Exp/UnaryExp/MinusExp.java" />
         <option value="$PROJECT_DIR$/src/Master/AST/Stmt/Exp/LvalueExp/SimpleVarExp.java" />
         <option value="$PROJECT_DIR$/src/Master/Utility.java" />
         <option value="$PROJECT_DIR$/src/Master/AST/Stmt/Exp/NullExp.java" />
@@ -396,13 +174,14 @@
         <option value="$PROJECT_DIR$/src/com/expye/compiler2016/Parser/Master.g4" />
         <option value="$PROJECT_DIR$/src/com/expye/compiler2016/Utility.java" />
         <option value="$PROJECT_DIR$/src/com/expye/compiler2016/Parser/SecondListener.java" />
-        <option value="$PROJECT_DIR$/test/test/SemanticChecker.java" />
         <option value="$PROJECT_DIR$/src/com/expye/compiler2016/Parser/ThirdListener.java" />
         <option value="$PROJECT_DIR$/Makefile" />
         <option value="$PROJECT_DIR$/src/com/expye/compiler2016/Parser/MasterBaseListener.java" />
         <option value="$PROJECT_DIR$/src/com/expye/compiler2016/Parser/MasterLexer.java" />
         <option value="$PROJECT_DIR$/src/com/expye/compiler2016/Parser/MasterListener.java" />
         <option value="$PROJECT_DIR$/src/com/expye/compiler2016/Parser/MasterParser.java" />
+        <option value="$PROJECT_DIR$/src/com/expye/compiler2016/Main.java" />
+        <option value="$PROJECT_DIR$/test/test/SemanticChecker.java" />
       </list>
     </option>
   </component>
@@ -576,7 +355,7 @@
       <recent name="Master.AST.Stmt" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.SemanticChecker.testPass">
+  <component name="RunManager" selected="JUnit.SemanticChecker">
     <configuration default="false" name="Main" type="Application" factoryName="Application" temporary="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -1084,9 +863,9 @@
     </list>
     <recent_temporary>
       <list size="4">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.SemanticChecker.testPass" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.SemanticChecker.data" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.SemanticChecker" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.SemanticChecker" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.SemanticChecker.testPass" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.SemanticChecker.data" />
         <item index="3" class="java.lang.String" itemvalue="Application.Main" />
       </list>
     </recent_temporary>
@@ -1124,7 +903,7 @@
       <workItem from="1459947293891" duration="19284000" />
       <workItem from="1460000535072" duration="1796000" />
       <workItem from="1460024794024" duration="4993000" />
-      <workItem from="1460030539274" duration="396000" />
+      <workItem from="1460030539274" duration="1630000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1459069552195</created>
@@ -1231,23 +1010,23 @@
     <history-entry file="SemanticChecker - 2016.04.07 at 20h 03m 19s.xml">
       <configuration name="SemanticChecker" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="SemanticChecker - 2016.04.07 at 20h 27m 10s.xml">
+      <configuration name="SemanticChecker" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="SemanticChecker - 2016.04.07 at 20h 32m 03s.xml">
+      <configuration name="SemanticChecker" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="SemanticChecker - 2016.04.07 at 20h 32m 23s.xml">
+      <configuration name="SemanticChecker" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="SemanticChecker - 2016.04.07 at 20h 33m 06s.xml">
+      <configuration name="SemanticChecker" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="SemanticChecker - 2016.04.07 at 20h 33m 29s.xml">
+      <configuration name="SemanticChecker" configurationId="JUnit" />
+    </history-entry>
     <history-entry file="SemanticChecker_data - 2016.04.07 at 20h 07m 35s.xml">
       <configuration name="SemanticChecker.data" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="SemanticChecker_testPass - 2016.04.07 at 19h 30m 58s.xml">
-      <configuration name="SemanticChecker.testPass" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="SemanticChecker_testPass - 2016.04.07 at 19h 38m 07s.xml">
-      <configuration name="SemanticChecker.testPass" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="SemanticChecker_testPass - 2016.04.07 at 19h 44m 08s.xml">
-      <configuration name="SemanticChecker.testPass" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="SemanticChecker_testPass - 2016.04.07 at 19h 46m 05s.xml">
-      <configuration name="SemanticChecker.testPass" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="SemanticChecker_testPass - 2016.04.07 at 19h 47m 11s.xml">
-      <configuration name="SemanticChecker.testPass" configurationId="JUnit" />
     </history-entry>
     <history-entry file="SemanticChecker_testPass - 2016.04.07 at 20h 02m 54s.xml">
       <configuration name="SemanticChecker.testPass" configurationId="JUnit" />
@@ -1260,7 +1039,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="106907000" />
+    <option name="totallyTimeSpent" value="108141000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1652,14 +1431,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/expye/compiler2016/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Makefile">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="408">
@@ -1708,11 +1479,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/test/test/SemanticChecker.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="52" column="16" selection-start-line="52" selection-start-column="16" selection-end-line="52" selection-end-column="16" />
+        <state relative-caret-position="566">
+          <caret line="71" column="46" selection-start-line="71" selection-start-column="46" selection-end-line="71" selection-end-column="46" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/expye/compiler2016/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="498">
+          <caret line="24" column="25" selection-start-line="24" selection-start-column="25" selection-end-line="24" selection-end-column="25" />
+          <folding />
         </state>
       </provider>
     </entry>

@@ -9,20 +9,24 @@ import org.antlr.v4.runtime.tree.*;
  */
 public class Main {
     public static void main(String[] args) throws Exception {
-        ANTLRInputStream input = new ANTLRInputStream(System.in);
-        MasterLexer lexer = new MasterLexer(input);
-        CommonTokenStream tokens = new CommonTokenStream(lexer);
-        MasterParser parser = new MasterParser(tokens);
-        parser.setErrorHandler(new BailErrorStrategy());
-        ParseTree tree = parser.program();
+        try {
+            ANTLRInputStream input = new ANTLRInputStream(System.in);
+            MasterLexer lexer = new MasterLexer(input);
+            CommonTokenStream tokens = new CommonTokenStream(lexer);
+            MasterParser parser = new MasterParser(tokens);
+            parser.setErrorHandler(new BailErrorStrategy());
+            ParseTree tree = parser.program();
 
-        ParseTreeWalker walker = new ParseTreeWalker();
-        FirstListener fl = new FirstListener();
-        SecondListener sl = new SecondListener();
-        ThirdListener tl = new ThirdListener();
-        walker.walk(fl, tree);
-        walker.walk(sl, tree);
-        walker.walk(tl, tree);
-        System.out.println("Successful!");
+            ParseTreeWalker walker = new ParseTreeWalker();
+            FirstListener fl = new FirstListener();
+            SecondListener sl = new SecondListener();
+            ThirdListener tl = new ThirdListener();
+            walker.walk(fl, tree);
+            walker.walk(sl, tree);
+            walker.walk(tl, tree);
+        } catch (Error | Exception e) {
+            System.exit(1);
+        }
+        System.exit(0);
     }
 }
