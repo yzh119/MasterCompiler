@@ -1,4 +1,3 @@
-
 package com.expye.compiler2016.Parser;
 
 import org.antlr.v4.runtime.ParserRuleContext;
@@ -47,18 +46,6 @@ public class MasterBaseListener implements MasterListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitFunction_def(MasterParser.Function_defContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void enterMethod_def(MasterParser.Method_defContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void exitMethod_def(MasterParser.Method_defContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
@@ -424,6 +411,18 @@ public class MasterBaseListener implements MasterListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
+	@Override public void enterNullType(MasterParser.NullTypeContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitNullType(MasterParser.NullTypeContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
 	@Override public void enterStmt_list(MasterParser.Stmt_listContext ctx) { }
 	/**
 	 * {@inheritDoc}
@@ -443,30 +442,6 @@ public class MasterBaseListener implements MasterListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitStmt(MasterParser.StmtContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void enterMethod_stmt(MasterParser.Method_stmtContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void exitMethod_stmt(MasterParser.Method_stmtContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void enterField_method_stmt(MasterParser.Field_method_stmtContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void exitField_method_stmt(MasterParser.Field_method_stmtContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *

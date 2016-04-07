@@ -25,7 +25,7 @@ import java.util.Stack;
  */
 public class ThirdListener extends BaseListener {
     Stack<Scope> scopes = new Stack<>();
-    Stack<Dec> recentFunOrMethodDec = new Stack<>();
+    Stack<Dec> recentFuncDec = new Stack<>();
     Stack<Stmt> recentIteration = new Stack<>();
 
     @Override
@@ -46,6 +46,8 @@ public class ThirdListener extends BaseListener {
         if (MAIN == null)
             throw new CompilationError("Where is the main function!");
         if (!(MAIN instanceof FuncDec))
+            throw new CompilationError("Tan Haoqiang?");
+        if (((FuncDec)MAIN).retType != ClassDec.intClass)
             throw new CompilationError("Tan Haoqiang?");
         scopes.pop();
     }
@@ -72,7 +74,7 @@ public class ThirdListener extends BaseListener {
     public void enterFunction_def(MasterParser.Function_defContext ctx) {
         FuncDec now = (FuncDec)CST2AST.dict.get(ctx);
         scopes.add(now.currentScope);
-        recentFunOrMethodDec.add(now);
+        recentFuncDec.add(now);
     }
 
     @Override
@@ -86,29 +88,7 @@ public class ThirdListener extends BaseListener {
                 now.body.add((Stmt) ask);
         }
         scopes.pop();
-        recentFunOrMethodDec.pop();
-    }
-
-    @Override
-    public void enterMethod_def(MasterParser.Method_defContext ctx) {
-        MethodDec now = (MethodDec) CST2AST.dict.get(ctx);
-        scopes.add(now.currentScope);
-        recentFunOrMethodDec.add(now);
-    }
-
-    @Override
-    public void exitMethod_def(MasterParser.Method_defContext ctx) {
-        MethodDec now = (MethodDec)CST2AST.dict.get(ctx);
-        now.body = new ArrayList<Stmt>();
-        if (ctx.stmt_list().getChildCount() != 0) {
-            for (ParseTree child : ctx.stmt_list().children) {
-                ASTnode ask = CST2AST.dict.get(child);
-                if (ask != null)
-                    now.body.add((Stmt) ask);
-            }
-        }
-        scopes.pop();
-        recentFunOrMethodDec.pop();
+        recentFuncDec.pop();
     }
 
     @Override
@@ -381,37 +361,7 @@ public class ThirdListener extends BaseListener {
             CST2AST.dict.put(ctx, ((FuncDec) ask));
             return ;
         }
-        if (ask instanceof MethodDec) {
-            CST2AST.dict.put(ctx, ((MethodDec) ask));
-            return ;
-        }
         throw new CompilationError(currentPlace + "Variable was wrong!");
-    }
-
-    @Override
-    public void exitMethod_stmt(MasterParser.Method_stmtContext ctx) {
-        Scope currentScope = scopes.peek();
-        ASTnode method = currentScope.lookUp(ctx.ID().getText().intern());
-        if (method == null)
-            throw new CompilationError(currentPlace + "No such method exists!");
-        if (!(method instanceof MethodDec))
-            throw new CompilationError(currentPlace + "Invalid Method call!");
-        List<Exp> para = new ArrayList<>();
-        if (ctx.param_list() == null) {
-            if (((MethodDec)method).para.size() > 0)
-                throw new CompilationError(currentPlace + "Arguments' number doesn't match!");
-        } else {
-            if (ctx.param_list().expr().size() != ((MethodDec) method).para.size())
-                throw new CompilationError(currentPlace + "Arguments' number doesn't match!");
-            for (int i = 0; i < ctx.param_list().expr().size(); i++) {
-                Exp thisPara = (Exp) CST2AST.dict.get(ctx.param_list().expr(i));
-                if (Utility.match(((MethodDec) method).para.get(i).cd, thisPara.type))
-                    para.add(thisPara);
-                else
-                    throw new CompilationError(currentPlace + "Arguments' type doesn't match!");
-            }
-        }
-        CST2AST.dict.put(ctx, new MethodStmt((MethodDec)method , para));
     }
 
     @Override
@@ -502,52 +452,12 @@ public class ThirdListener extends BaseListener {
             return ;
         }
 
-        if (next instanceof MethodDec)
-            throw new CompilationError(currentPlace + "It has to be a function!");
-
         if (next instanceof VarDec) {
             if (ctx.LPAREN() != null)
                 throw new CompilationError(currentPlace + "Too many arguments!");
             ClassFieldExp now = new ClassFieldExp(lhs, ctx.ID().getText().intern(), ((VarDec)next).cd);
             CST2AST.dict.put(ctx, now);
         }
-    }
-
-    @Override
-    public void exitField_method_stmt(MasterParser.Field_method_stmtContext ctx) {
-        if (!(CST2AST.dict.get(ctx.expr()) instanceof Exp))
-            throw new CompilationError(currentPlace + "It has to be an expression!");
-        Exp lhs = (Exp) CST2AST.dict.get(ctx.expr());
-        Dec next = lhs.type.declarations.get(ctx.ID().getText().intern());
-        if (next == null)
-            throw new CompilationError(currentPlace + "Can't find that field!");
-        if (next instanceof ClassDec)
-            throw new CompilationError(currentPlace + "Classname can't be returned!");
-        if (next instanceof FuncDec)
-            throw new CompilationError(currentPlace + "It has to be a method!");
-        if (next instanceof MethodDec) {
-            List<Exp> para = new ArrayList<>();
-            int l = 0;
-            if (ctx.param_list() != null)
-                l = ctx.param_list().expr().size();
-
-            if (l != ((MethodDec)next).para.size())
-                throw new CompilationError(currentPlace + "Arguments' num doesn't match!");
-
-            for (int i = 0; i < l; i++) {
-                Exp thisPara = (Exp) CST2AST.dict.get(ctx.param_list().expr(i));
-                if (Utility.match(((MethodDec)next).para.get(i).cd, thisPara.type))
-                    para.add(thisPara);
-                else
-                    throw new CompilationError(currentPlace + "Arguments' type doesn't match!");
-            }
-
-            FieldMethodStmt now = new FieldMethodStmt(lhs, ctx.ID().getText().intern());
-            now.para = para;
-            CST2AST.dict.put(ctx, now);
-            return ;
-        }
-        throw new CompilationError(currentPlace + "It has to be a method!");
     }
 
     @Override
@@ -691,19 +601,20 @@ public class ThirdListener extends BaseListener {
         Exp ret = null;
         if (ctx.expr() != null)
             ret = (Exp) CST2AST.dict.get(ctx.expr());
-        if (recentFunOrMethodDec.empty())
+        if (recentFuncDec.empty())
             throw new CompilationError(currentPlace + "You shouldn't return here!");
-        Dec recentDec = recentFunOrMethodDec.peek();
+        Dec recentDec = recentFuncDec.peek();
         if (recentDec instanceof FuncDec) {
-            if (ret != null)
-                if (Utility.match(((FuncDec)recentDec).retType, ret.type)) {
+            if (ret != null) {
+                if (Utility.match(((FuncDec) recentDec).retType, ret.type)) {
                     CST2AST.dict.put(ctx, new ReturnStmt(ret));
                     return;
                 }
-        } else {
-            if (ret == null) {
-                CST2AST.dict.put(ctx, new ReturnStmt());
-                return;
+            }   else    {
+                if (Utility.match(((FuncDec) recentDec).retType, ClassDec.nullClass)) {
+                    CST2AST.dict.put(ctx, new ReturnStmt(new NullExp()));
+                    return;
+                }
             }
         }
         throw new CompilationError(currentPlace + "You return wrong type!");
@@ -749,6 +660,8 @@ public class ThirdListener extends BaseListener {
         Scope currentScope = scopes.peek();
         String varName = ctx.ID().getText().intern();
         ClassDec type = (ClassDec) CST2AST.dict.get(ctx.type_specifier());
+        if (type == ClassDec.nullClass)
+            throw new CompilationError("Define a null is not welcomed!");
         Dec ask = currentScope.lookUpInThisScope(varName);
         if (ask == null) {
             VarDec now;

@@ -2,7 +2,230 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f058b886-d1bc-433e-8f45-9c67b8bdd78d" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/test.mx" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/Master/AST/ASTnode.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/Master/AST/Dec/ArrayDec.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/Master/AST/Dec/ClassDec.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/Master/AST/Dec/Dec.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/Master/AST/Dec/DecBase.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/Master/AST/Dec/FuncDec.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/Master/AST/Dec/MethodDec.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/Master/AST/Prog/Prog.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/Master/AST/Stmt/BreakStmt.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/Master/AST/Stmt/CompoundStmt.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/Master/AST/Stmt/ContinueStmt.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/Master/AST/Stmt/Exp/BinExp/AddExp.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/Master/AST/Stmt/Exp/BinExp/AssignExp.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/Master/AST/Stmt/Exp/BinExp/BinExp.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/Master/AST/Stmt/Exp/BinExp/BitAndExp.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/Master/AST/Stmt/Exp/BinExp/BitOrExp.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/Master/AST/Stmt/Exp/BinExp/BitXorExp.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/Master/AST/Stmt/Exp/BinExp/DivExp.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/Master/AST/Stmt/Exp/BinExp/EqExp.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/Master/AST/Stmt/Exp/BinExp/GreaterExp.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/Master/AST/Stmt/Exp/BinExp/GreaterThanExp.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/Master/AST/Stmt/Exp/BinExp/LessExp.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/Master/AST/Stmt/Exp/BinExp/LessThanExp.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/Master/AST/Stmt/Exp/BinExp/LogAndExp.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/Master/AST/Stmt/Exp/BinExp/LogOrExp.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/Master/AST/Stmt/Exp/BinExp/LshiftExp.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/Master/AST/Stmt/Exp/BinExp/ModExp.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/Master/AST/Stmt/Exp/BinExp/MulExp.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/Master/AST/Stmt/Exp/BinExp/NeqExp.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/Master/AST/Stmt/Exp/BinExp/RshiftExp.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/Master/AST/Stmt/Exp/BinExp/SubExp.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/Master/AST/Stmt/Exp/BoolExp.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/Master/AST/Stmt/Exp/ClassFieldExp.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/Master/AST/Stmt/Exp/Exp.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/Master/AST/Stmt/Exp/FuncExp.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/Master/AST/Stmt/Exp/IntExp.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/Master/AST/Stmt/Exp/NullExp.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/Master/AST/Stmt/Exp/SimpleVarExp.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/Master/AST/Stmt/Exp/StringExp.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/Master/AST/Stmt/Exp/SubscriptVarExp.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/Master/AST/Stmt/Exp/UnaryExp/BitNotExp.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/Master/AST/Stmt/Exp/UnaryExp/LogNotExp.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/Master/AST/Stmt/Exp/UnaryExp/MinusExp.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/Master/AST/Stmt/Exp/UnaryExp/PosDecExp.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/Master/AST/Stmt/Exp/UnaryExp/PosIncExp.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/Master/AST/Stmt/Exp/UnaryExp/PreDecExp.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/Master/AST/Stmt/Exp/UnaryExp/PreIncExp.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/Master/AST/Stmt/Exp/UnaryExp/UnaryExp.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/Master/AST/Stmt/Exp/newExp.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/Master/AST/Stmt/ExprStmt.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/Master/AST/Stmt/FieldMethodStmt.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/Master/AST/Stmt/ForStmt.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/Master/AST/Stmt/IfStmt.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/Master/AST/Stmt/MethodStmt.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/Master/AST/Stmt/ReturnStmt.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/Master/AST/Stmt/Stmt.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/Master/AST/Stmt/StmtBase.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/Master/AST/Stmt/WhileStmt.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/Master/AST/VarDec/VarDec.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/Master/Environment/Scope.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/Master/Exception/CompilationError.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/Master/Exception/InternalError.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/Master/Main.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/Master/Parser/BaseListener.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/Master/Parser/CST2AST.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/Master/Parser/FirstListener.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/Master/Parser/LexerRules.g4" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/Master/Parser/Master.g4" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/Master/Parser/Master.tokens" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/Master/Parser/MasterBaseListener.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/Master/Parser/MasterLexer.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/Master/Parser/MasterLexer.tokens" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/Master/Parser/MasterListener.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/Master/Parser/MasterParser$AddSubExprContext.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/Master/Parser/MasterParser$ArrayTypeContext.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/Master/Parser/MasterParser$AssignExprContext.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/Master/Parser/MasterParser$BitAndExprContext.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/Master/Parser/MasterParser$BitOrExprContext.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/Master/Parser/MasterParser$BitXorExprContext.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/Master/Parser/MasterParser$BlockContext.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/Master/Parser/MasterParser$BoolConstContext.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/Master/Parser/MasterParser$BoolTypeContext.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/Master/Parser/MasterParser$BreakJumpContext.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/Master/Parser/MasterParser$ClassTypeContext.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/Master/Parser/MasterParser$Class_bodyContext.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/Master/Parser/MasterParser$Class_defContext.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/Master/Parser/MasterParser$CompExprContext.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/Master/Parser/MasterParser$ConstExprContext.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/Master/Parser/MasterParser$ConstantContext.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/Master/Parser/MasterParser$ContinueJumpContext.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/Master/Parser/MasterParser$Dim_exprContext.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/Master/Parser/MasterParser$EqNeqExprContext.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/Master/Parser/MasterParser$ExprContext.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/Master/Parser/MasterParser$Expr_stmtContext.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/Master/Parser/MasterParser$FieldExprContext.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/Master/Parser/MasterParser$Field_method_stmtContext.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/Master/Parser/MasterParser$ForIterationContext.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/Master/Parser/MasterParser$FuncExprContext.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/Master/Parser/MasterParser$Function_defContext.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/Master/Parser/MasterParser$IdentifierExprContext.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/Master/Parser/MasterParser$IntConstContext.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/Master/Parser/MasterParser$IntegerTypeContext.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/Master/Parser/MasterParser$Iteration_stmtContext.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/Master/Parser/MasterParser$Jump_stmtContext.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/Master/Parser/MasterParser$LogAndExprContext.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/Master/Parser/MasterParser$LogOrExprContext.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/Master/Parser/MasterParser$Method_defContext.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/Master/Parser/MasterParser$Method_stmtContext.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/Master/Parser/MasterParser$MulDivModExprContext.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/Master/Parser/MasterParser$NewExprContext.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/Master/Parser/MasterParser$NullConstContext.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/Master/Parser/MasterParser$Param_listContext.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/Master/Parser/MasterParser$Parameter_declContext.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/Master/Parser/MasterParser$Parameter_listContext.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/Master/Parser/MasterParser$ParenExprContext.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/Master/Parser/MasterParser$PosUnaryExprContext.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/Master/Parser/MasterParser$PreUnaryExprContext.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/Master/Parser/MasterParser$ProgramContext.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/Master/Parser/MasterParser$ReturnJumpContext.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/Master/Parser/MasterParser$Selection_stmtContext.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/Master/Parser/MasterParser$ShiftExprContext.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/Master/Parser/MasterParser$StmtContext.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/Master/Parser/MasterParser$Stmt_listContext.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/Master/Parser/MasterParser$StringConstContext.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/Master/Parser/MasterParser$StringTypeContext.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/Master/Parser/MasterParser$SubsExprContext.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/Master/Parser/MasterParser$Type_specifierContext.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/Master/Parser/MasterParser$Variable_declContext.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/Master/Parser/MasterParser$WhileIterationContext.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/Master/Parser/MasterParser.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/Master/Parser/SecondListener.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/Master/Parser/ThirdListener.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/Master/Utility.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/master/AST/ASTnode.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/master/AST/Dec/ArrayDec.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/master/AST/Dec/ClassDec.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/master/AST/Dec/Dec.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/master/AST/Dec/DecBase.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/master/AST/Dec/FuncDec.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/master/AST/Dec/MethodDec.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/master/AST/Prog/Prog.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/master/AST/Stmt/BreakStmt.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/master/AST/Stmt/CompoundStmt.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/master/AST/Stmt/ContinueStmt.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/master/AST/Stmt/Exp/BinExp/AddExp.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/master/AST/Stmt/Exp/BinExp/AssignExp.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/master/AST/Stmt/Exp/BinExp/BinExp.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/master/AST/Stmt/Exp/BinExp/BitAndExp.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/master/AST/Stmt/Exp/BinExp/BitOrExp.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/master/AST/Stmt/Exp/BinExp/BitXorExp.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/master/AST/Stmt/Exp/BinExp/DIvExp.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/master/AST/Stmt/Exp/BinExp/EqExp.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/master/AST/Stmt/Exp/BinExp/GreaterExp.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/master/AST/Stmt/Exp/BinExp/GreaterThanExp.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/master/AST/Stmt/Exp/BinExp/LessExp.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/master/AST/Stmt/Exp/BinExp/LessThanExp.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/master/AST/Stmt/Exp/BinExp/LogAndExp.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/master/AST/Stmt/Exp/BinExp/LogOrExp.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/master/AST/Stmt/Exp/BinExp/LshiftExp.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/master/AST/Stmt/Exp/BinExp/ModExp.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/master/AST/Stmt/Exp/BinExp/MulExp.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/master/AST/Stmt/Exp/BinExp/NeqExp.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/master/AST/Stmt/Exp/BinExp/RshiftExp.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/master/AST/Stmt/Exp/BinExp/SubExp.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/master/AST/Stmt/Exp/BoolExp.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/master/AST/Stmt/Exp/ClassFieldExp.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/master/AST/Stmt/Exp/Exp.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/master/AST/Stmt/Exp/FuncExp.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/master/AST/Stmt/Exp/IntExp.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/master/AST/Stmt/Exp/NullExp.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/master/AST/Stmt/Exp/SimpleVarExp.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/master/AST/Stmt/Exp/StringExp.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/master/AST/Stmt/Exp/SubscriptVarExp.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/master/AST/Stmt/Exp/UnaryExp/BitNotExp.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/master/AST/Stmt/Exp/UnaryExp/LogNotExp.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/master/AST/Stmt/Exp/UnaryExp/MinusExp.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/master/AST/Stmt/Exp/UnaryExp/PosDecExp.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/master/AST/Stmt/Exp/UnaryExp/PosIncExp.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/master/AST/Stmt/Exp/UnaryExp/PreDecExp.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/master/AST/Stmt/Exp/UnaryExp/PreIncExp.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/master/AST/Stmt/Exp/UnaryExp/UnaryExp.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/master/AST/Stmt/Exp/newExp.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/master/AST/Stmt/ExprStmt.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/master/AST/Stmt/FieldMethodStmt.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/master/AST/Stmt/ForStmt.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/master/AST/Stmt/IfStmt.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/master/AST/Stmt/MethodStmt.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/master/AST/Stmt/ReturnStmt.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/master/AST/Stmt/Stmt.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/master/AST/Stmt/StmtBase.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/master/AST/Stmt/WhileStmt.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/master/AST/VarDec/VarDec.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/master/Environment/Scope.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/master/Exception/CompilationError.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/master/Exception/InternalError.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/master/Main.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/master/Utility.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/master/parser/BaseListener.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/master/parser/CST2AST.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/master/parser/FirstListener.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/master/parser/LexerRules.g4" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/master/parser/Master.g4" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/master/parser/Master.tokens" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/master/parser/MasterBaseListener.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/master/parser/MasterLexer.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/master/parser/MasterLexer.tokens" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/master/parser/MasterListener.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/master/parser/MasterParser.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/master/parser/SecondListener.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/master/parser/ThirdListener.java" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Makefile" afterPath="$PROJECT_DIR$/Makefile" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MasterCompiler.iml" afterPath="$PROJECT_DIR$/MasterCompiler.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/midtermvars.sh" afterPath="$PROJECT_DIR$/midtermvars.sh" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/expye/compiler2016/AST/Dec/FuncDec.java" afterPath="$PROJECT_DIR$/src/com/expye/compiler2016/AST/Dec/FuncDec.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/expye/compiler2016/Parser/Master.g4" afterPath="$PROJECT_DIR$/src/com/expye/compiler2016/Parser/Master.g4" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/expye/compiler2016/Parser/MasterBaseListener.java" afterPath="$PROJECT_DIR$/src/com/expye/compiler2016/Parser/MasterBaseListener.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/expye/compiler2016/Parser/MasterLexer.java" afterPath="$PROJECT_DIR$/src/com/expye/compiler2016/Parser/MasterLexer.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/expye/compiler2016/Parser/MasterListener.java" afterPath="$PROJECT_DIR$/src/com/expye/compiler2016/Parser/MasterListener.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/expye/compiler2016/Parser/MasterParser.java" afterPath="$PROJECT_DIR$/src/com/expye/compiler2016/Parser/MasterParser.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/expye/compiler2016/Parser/SecondListener.java" afterPath="$PROJECT_DIR$/src/com/expye/compiler2016/Parser/SecondListener.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/expye/compiler2016/Parser/ThirdListener.java" afterPath="$PROJECT_DIR$/src/com/expye/compiler2016/Parser/ThirdListener.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/expye/compiler2016/Utility.java" afterPath="$PROJECT_DIR$/src/com/expye/compiler2016/Utility.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/test/SemanticChecker.java" afterPath="$PROJECT_DIR$/test/test/SemanticChecker.java" />
     </list>
     <ignored path="MasterCompiler.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -26,81 +249,85 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="600">
       <file leaf-file-name="Utility.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Master/Utility.java">
+        <entry file="file://$PROJECT_DIR$/src/com/expye/compiler2016/Utility.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="612">
-              <caret line="27" column="50" selection-start-line="27" selection-start-column="50" selection-end-line="27" selection-end-column="50" />
+            <state relative-caret-position="1088">
+              <caret line="39" column="33" selection-start-line="39" selection-start-column="33" selection-end-line="39" selection-end-column="33" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FirstListener.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Master/Parser/FirstListener.java">
+      <file leaf-file-name="FirstListener.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/expye/compiler2016/Parser/FirstListener.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="578">
-              <caret line="31" column="30" selection-start-line="31" selection-start-column="30" selection-end-line="31" selection-end-column="30" />
+            <state relative-caret-position="1326">
+              <caret line="47" column="0" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="MasterBaseListener.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Master/Parser/MasterBaseListener.java">
+        <entry file="file://$PROJECT_DIR$/src/com/expye/compiler2016/Parser/MasterBaseListener.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="748">
+              <caret line="24" column="7" selection-start-line="24" selection-start-column="7" selection-end-line="24" selection-end-column="7" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MasterLexer.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Master/Parser/MasterLexer.java">
+      <file leaf-file-name="midtermvars.sh" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/midtermvars.sh">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <caret line="0" column="23" selection-start-line="0" selection-start-column="23" selection-end-line="0" selection-end-column="23" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MasterListener.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Master/Parser/MasterListener.java">
+      <file leaf-file-name="ThirdListener.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/expye/compiler2016/Parser/ThirdListener.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MasterParser.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Master/Parser/MasterParser.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="19" column="45" selection-start-line="19" selection-start-column="45" selection-end-line="19" selection-end-column="45" />
-              <folding />
+            <state relative-caret-position="21794">
+              <caret line="663" column="73" selection-start-line="663" selection-start-column="73" selection-end-line="663" selection-end-column="73" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="SecondListener.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Master/Parser/SecondListener.java">
+        <entry file="file://$PROJECT_DIR$/src/com/expye/compiler2016/Parser/SecondListener.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="628">
-              <caret line="124" column="35" selection-start-line="124" selection-start-column="35" selection-end-line="124" selection-end-column="35" />
+            <state relative-caret-position="1224">
+              <caret line="58" column="66" selection-start-line="58" selection-start-column="66" selection-end-line="58" selection-end-column="66" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Makefile" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Makefile">
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/expye/compiler2016/Main.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="510">
-              <caret line="15" column="6" selection-start-line="15" selection-start-column="6" selection-end-line="15" selection-end-column="6" />
+              <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SemanticChecker.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/test/test/SemanticChecker.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="324">
+              <caret line="52" column="16" selection-start-line="52" selection-start-column="16" selection-end-line="52" selection-end-column="16" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -125,18 +352,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/Master/AST/Stmt/Exp/UnaryExp/LogNotExp.java" />
-        <option value="$PROJECT_DIR$/src/Master/AST/Stmt/Exp/UnaryExp/PosDecExp.java" />
-        <option value="$PROJECT_DIR$/src/Master/AST/Stmt/Exp/UnaryExp/PosIncExp.java" />
-        <option value="$PROJECT_DIR$/src/Master/AST/Stmt/Exp/UnaryExp/PreDecExp.java" />
-        <option value="$PROJECT_DIR$/src/Master/AST/Stmt/Exp/UnaryExp/PreIncExp.java" />
-        <option value="$PROJECT_DIR$/src/Master/AST/Stmt/CompoundStmt.java" />
-        <option value="$PROJECT_DIR$/src/Master/AST/Stmt/Exp/LvalueExp/SubscriptVarExp.java" />
-        <option value="$PROJECT_DIR$/src/Master/AST/Prog/Prog.java" />
-        <option value="$PROJECT_DIR$/src/Master/AST/Dec/DecBase.java" />
-        <option value="$PROJECT_DIR$/src/Master/AST/Dec/Dec.java" />
-        <option value="$PROJECT_DIR$/src/Master/AST/Dec/FuncDec.java" />
-        <option value="$PROJECT_DIR$/src/Master/AST/Dec/MethodDec.java" />
         <option value="$PROJECT_DIR$/src/Master/AST/Stmt/Exp/UnaryExp/MinusExp.java" />
         <option value="$PROJECT_DIR$/src/Master/AST/Stmt/Exp/LvalueExp/SimpleVarExp.java" />
         <option value="$PROJECT_DIR$/src/Master/Utility.java" />
@@ -176,6 +391,18 @@
         <option value="$PROJECT_DIR$/src/Master/Parser/MasterListener.java" />
         <option value="$PROJECT_DIR$/src/Master/Parser/MasterParser.java" />
         <option value="$PROJECT_DIR$/src/Master/Main.java" />
+        <option value="$PROJECT_DIR$/src/com/expye/compiler2016/AST/Dec/MethodDec.java" />
+        <option value="$PROJECT_DIR$/src/com/expye/compiler2016/AST/Dec/FuncDec.java" />
+        <option value="$PROJECT_DIR$/src/com/expye/compiler2016/Parser/Master.g4" />
+        <option value="$PROJECT_DIR$/src/com/expye/compiler2016/Utility.java" />
+        <option value="$PROJECT_DIR$/src/com/expye/compiler2016/Parser/SecondListener.java" />
+        <option value="$PROJECT_DIR$/test/test/SemanticChecker.java" />
+        <option value="$PROJECT_DIR$/src/com/expye/compiler2016/Parser/ThirdListener.java" />
+        <option value="$PROJECT_DIR$/Makefile" />
+        <option value="$PROJECT_DIR$/src/com/expye/compiler2016/Parser/MasterBaseListener.java" />
+        <option value="$PROJECT_DIR$/src/com/expye/compiler2016/Parser/MasterLexer.java" />
+        <option value="$PROJECT_DIR$/src/com/expye/compiler2016/Parser/MasterListener.java" />
+        <option value="$PROJECT_DIR$/src/com/expye/compiler2016/Parser/MasterParser.java" />
       </list>
     </option>
   </component>
@@ -251,6 +478,10 @@
               <option name="myItemId" value="MasterCompiler" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="External Libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -259,6 +490,24 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="MasterCompiler" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MasterCompiler" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MasterCompiler" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -276,29 +525,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Master" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="MasterCompiler" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="MasterCompiler" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Master" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Parser" />
+              <option name="myItemId" value="compiler2016" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -315,7 +542,7 @@
     <property name="$PROJECT_DIR$/src/master/parser/master.g4::/auto-gen" value="false" />
     <property name="$PROJECT_DIR$/src/master/parser/master.g4::/gen-listener" value="false" />
     <property name="$PROJECT_DIR$/src/master/parser/master.g4::/gen-visitor" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/lib/junit-4.12.jar!/" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src" />
     <property name="$PROJECT_DIR$/src/master/parser/Master.g4::/auto-gen" value="false" />
     <property name="$PROJECT_DIR$/src/master/parser/Master.g4::/gen-listener" value="true" />
     <property name="$PROJECT_DIR$/src/master/parser/Master.g4::/gen-visitor" value="false" />
@@ -336,21 +563,28 @@
     <property name="$PROJECT_DIR$/src/Master/Parser/Master.g4::/gen-visitor" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="$PROJECT_DIR$/src/com/expye/compiler2016/Parser/Master.g4::/auto-gen" value="false" />
+    <property name="$PROJECT_DIR$/src/com/expye/compiler2016/Parser/Master.g4::/output-dir" value="C:\Users\叶子豪\IdeaProjects\MasterCompiler\src" />
+    <property name="$PROJECT_DIR$/src/com/expye/compiler2016/Parser/Master.g4::/gen-listener" value="true" />
+    <property name="$PROJECT_DIR$/src/com/expye/compiler2016/Parser/Master.g4::/gen-visitor" value="false" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\叶子豪\IdeaProjects\MasterCompiler\lib" />
+    </key>
     <key name="CreateClassDialog.RecentsKey">
       <recent name="Master.AST.Stmt" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Main">
-    <configuration default="false" name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.SemanticChecker.testPass">
+    <configuration default="false" name="Main" type="Application" factoryName="Application" temporary="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
-          <option name="PATTERN" value="Master.*" />
+          <option name="PATTERN" value="com.expye.compiler2016.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="MAIN_CLASS_NAME" value="Master.Main" />
+      <option name="MAIN_CLASS_NAME" value="com.expye.compiler2016.Main" />
       <option name="VM_PARAMETERS" value="" />
       <option name="PROGRAM_PARAMETERS" value="" />
       <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
@@ -361,6 +595,84 @@
       <option name="PASS_PARENT_ENVS" value="true" />
       <module name="MasterCompiler" />
       <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="SemanticChecker.testPass" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="MasterCompiler" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="test" />
+      <option name="MAIN_CLASS_NAME" value="test.SemanticChecker" />
+      <option name="METHOD_NAME" value="testPass" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="SemanticChecker" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="MasterCompiler" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="test" />
+      <option name="MAIN_CLASS_NAME" value="test.SemanticChecker" />
+      <option name="METHOD_NAME" value="testPass" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="SemanticChecker.data" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="MasterCompiler" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="test" />
+      <option name="MAIN_CLASS_NAME" value="test.SemanticChecker" />
+      <option name="METHOD_NAME" value="data" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
       <method />
     </configuration>
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
@@ -764,12 +1076,18 @@
     <configuration default="true" type="osgi.bnd.run" factoryName="Test Launcher (JUnit)">
       <method />
     </configuration>
-    <list size="1">
+    <list size="4">
       <item index="0" class="java.lang.String" itemvalue="Application.Main" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.SemanticChecker.testPass" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.SemanticChecker" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.SemanticChecker.data" />
     </list>
     <recent_temporary>
-      <list size="1">
-        <item index="0" class="java.lang.String" itemvalue="Application.Main" />
+      <list size="4">
+        <item index="0" class="java.lang.String" itemvalue="JUnit.SemanticChecker.testPass" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.SemanticChecker.data" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.SemanticChecker" />
+        <item index="3" class="java.lang.String" itemvalue="Application.Main" />
       </list>
     </recent_temporary>
   </component>
@@ -805,6 +1123,8 @@
       <workItem from="1459908516440" duration="33316000" />
       <workItem from="1459947293891" duration="19284000" />
       <workItem from="1460000535072" duration="1796000" />
+      <workItem from="1460024794024" duration="4993000" />
+      <workItem from="1460030539274" duration="396000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1459069552195</created>
@@ -908,36 +1228,39 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="SemanticCheckerTest - 2016.04.07 at 01h 22m 49s.xml">
-      <configuration name="SemanticCheckerTest" configurationId="JUnit" />
+    <history-entry file="SemanticChecker - 2016.04.07 at 20h 03m 19s.xml">
+      <configuration name="SemanticChecker" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="SemanticCheckerTest - 2016.04.07 at 01h 25m 25s.xml">
-      <configuration name="SemanticCheckerTest" configurationId="JUnit" />
+    <history-entry file="SemanticChecker_data - 2016.04.07 at 20h 07m 35s.xml">
+      <configuration name="SemanticChecker.data" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="SemanticCheckerTest - 2016.04.07 at 01h 25m 41s.xml">
-      <configuration name="SemanticCheckerTest" configurationId="JUnit" />
+    <history-entry file="SemanticChecker_testPass - 2016.04.07 at 19h 30m 58s.xml">
+      <configuration name="SemanticChecker.testPass" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="SemanticCheckerTest - 2016.04.07 at 01h 45m 07s.xml">
-      <configuration name="SemanticCheckerTest" configurationId="JUnit" />
+    <history-entry file="SemanticChecker_testPass - 2016.04.07 at 19h 38m 07s.xml">
+      <configuration name="SemanticChecker.testPass" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="SemanticCheckerTest - 2016.04.07 at 01h 59m 33s.xml">
-      <configuration name="SemanticCheckerTest" configurationId="JUnit" />
+    <history-entry file="SemanticChecker_testPass - 2016.04.07 at 19h 44m 08s.xml">
+      <configuration name="SemanticChecker.testPass" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="SemanticCheckerTest - 2016.04.07 at 01h 59m 50s.xml">
-      <configuration name="SemanticCheckerTest" configurationId="JUnit" />
+    <history-entry file="SemanticChecker_testPass - 2016.04.07 at 19h 46m 05s.xml">
+      <configuration name="SemanticChecker.testPass" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="SemanticCheckerTest - 2016.04.07 at 02h 00m 50s.xml">
-      <configuration name="SemanticCheckerTest" configurationId="JUnit" />
+    <history-entry file="SemanticChecker_testPass - 2016.04.07 at 19h 47m 11s.xml">
+      <configuration name="SemanticChecker.testPass" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="SemanticCheckerTest - 2016.04.07 at 02h 04m 50s.xml">
-      <configuration name="SemanticCheckerTest" configurationId="JUnit" />
+    <history-entry file="SemanticChecker_testPass - 2016.04.07 at 20h 02m 54s.xml">
+      <configuration name="SemanticChecker.testPass" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="SemanticCheckerTest - 2016.04.07 at 02h 07m 15s.xml">
-      <configuration name="SemanticCheckerTest" configurationId="JUnit" />
+    <history-entry file="SemanticChecker_testPass - 2016.04.07 at 20h 07m 46s.xml">
+      <configuration name="SemanticChecker.testPass" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="SemanticChecker_testPass - 2016.04.07 at 20h 07m 55s.xml">
+      <configuration name="SemanticChecker.testPass" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="101518000" />
+    <option name="totallyTimeSpent" value="106907000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -950,7 +1273,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-13" y="-13" width="2762" height="1770" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3291639" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -961,7 +1284,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32192233" sideWeight="0.50754714" order="11" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32982224" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32982224" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32982224" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32917213" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -1038,7 +1361,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="5" />
+      <option name="time" value="6" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1047,239 +1370,131 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Master/AST/Stmt/Exp/BinExp/AssignExp.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Master/AST/Stmt/Exp/NullExp.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="9" column="39" selection-start-line="9" selection-start-column="39" selection-end-line="9" selection-end-column="39" />
-          <folding>
-            <element signature="e#170#171#0" expanded="false" />
-            <element signature="e#216#217#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Master/AST/Stmt/Exp/IntExp.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Master/AST/Stmt/Exp/UnaryExp/UnaryExp.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="8" column="7" selection-start-line="8" selection-start-column="7" selection-end-line="8" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Master/AST/Stmt/Exp/FuncExp.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="16" column="21" selection-start-line="16" selection-start-column="21" selection-end-line="16" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Master/AST/ASTnode.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Master/AST/Stmt/Exp/LvalueExp/LvalueExp.java" />
-    <entry file="file://$PROJECT_DIR$/src/Master/AST/Stmt/Exp/SimpleVarExp.java">
+    <entry file="file://$PROJECT_DIR$/src/com/expye/compiler2016/AST/Stmt/Exp/SimpleVarExp.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="442">
           <caret line="13" column="28" selection-start-line="13" selection-start-column="28" selection-end-line="13" selection-end-column="28" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Master/Environment/Scope.java">
+    <entry file="file://$PROJECT_DIR$/src/com/expye/compiler2016/Environment/Scope.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="578">
           <caret line="24" column="17" selection-start-line="24" selection-start-column="17" selection-end-line="24" selection-end-column="17" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Master/AST/Stmt/Exp/SubscriptVarExp.java">
+    <entry file="file://$PROJECT_DIR$/src/com/expye/compiler2016/AST/Stmt/Exp/SubscriptVarExp.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
           <caret line="13" column="49" selection-start-line="13" selection-start-column="49" selection-end-line="13" selection-end-column="49" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Master/AST/Stmt/Exp/newExp.java">
+    <entry file="file://$PROJECT_DIR$/src/com/expye/compiler2016/AST/Stmt/Exp/newExp.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
           <caret line="14" column="43" selection-start-line="14" selection-start-column="43" selection-end-line="14" selection-end-column="43" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Master/AST/Stmt/WhileStmt.java">
+    <entry file="file://$PROJECT_DIR$/src/com/expye/compiler2016/AST/Stmt/WhileStmt.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
           <caret line="8" column="41" selection-start-line="8" selection-start-column="41" selection-end-line="8" selection-end-column="41" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Master/AST/Stmt/ForStmt.java">
+    <entry file="file://$PROJECT_DIR$/src/com/expye/compiler2016/AST/Stmt/ForStmt.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
           <caret line="7" column="39" selection-start-line="7" selection-start-column="39" selection-end-line="7" selection-end-column="39" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Master/AST/Stmt/BreakStmt.java">
+    <entry file="file://$PROJECT_DIR$/src/com/expye/compiler2016/AST/Stmt/BreakStmt.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
           <caret line="7" column="41" selection-start-line="7" selection-start-column="41" selection-end-line="7" selection-end-column="41" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Master/AST/Stmt/ReturnStmt.java">
+    <entry file="file://$PROJECT_DIR$/src/com/expye/compiler2016/AST/Stmt/ReturnStmt.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="408">
           <caret line="16" column="11" selection-start-line="16" selection-start-column="11" selection-end-line="16" selection-end-column="11" />
-          <folding>
-            <element signature="e#338#339#0" expanded="false" />
-            <element signature="e#368#369#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Master/AST/Stmt/CompoundStmt.java">
+    <entry file="file://$PROJECT_DIR$/src/com/expye/compiler2016/AST/Stmt/CompoundStmt.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
           <caret line="9" column="28" selection-start-line="9" selection-start-column="28" selection-end-line="9" selection-end-column="28" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#246#247#0" expanded="true" />
-            <element signature="e#280#281#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Master/AST/Stmt/StmtBase.java">
+    <entry file="file://$PROJECT_DIR$/src/com/expye/compiler2016/AST/Stmt/StmtBase.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
           <caret line="9" column="1" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Master/AST/Stmt/Exp/Exp.java">
+    <entry file="file://$PROJECT_DIR$/src/com/expye/compiler2016/AST/Stmt/Exp/Exp.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="4" column="32" selection-start-line="4" selection-start-column="32" selection-end-line="4" selection-end-column="32" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Master/AST/Stmt/ContinueStmt.java">
+    <entry file="file://$PROJECT_DIR$/src/com/expye/compiler2016/AST/Stmt/ContinueStmt.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="5" column="44" selection-start-line="5" selection-start-column="44" selection-end-line="5" selection-end-column="44" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Master/Parser/LexerRules.g4">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="829">
-          <caret line="79" column="5" selection-start-line="79" selection-start-column="5" selection-end-line="79" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Master/AST/Stmt/Exp/StringExp.java">
+    <entry file="file://$PROJECT_DIR$/src/com/expye/compiler2016/AST/Stmt/Exp/StringExp.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="442">
           <caret line="13" column="1" selection-start-line="13" selection-start-column="1" selection-end-line="13" selection-end-column="1" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/in/test.mx" />
-    <entry file="file://$PROJECT_DIR$/src/Master/Exception/InternalError.java">
+    <entry file="file://$PROJECT_DIR$/src/com/expye/compiler2016/Exception/InternalError.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
-          <folding>
-            <element signature="e#160#161#0" expanded="false" />
-            <element signature="e#188#189#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Master/AST/Stmt/MethodStmt.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="12" column="42" selection-start-line="12" selection-start-column="42" selection-end-line="12" selection-end-column="42" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Master/AST/Stmt/FieldMethodStmt.java">
+    <entry file="file://$PROJECT_DIR$/src/com/expye/compiler2016/AST/Stmt/FieldMethodStmt.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="442">
           <caret line="13" column="39" selection-start-line="13" selection-start-column="39" selection-end-line="13" selection-end-column="39" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Master/AST/Stmt/Exp/ClassFieldExp.java">
+    <entry file="file://$PROJECT_DIR$/src/com/expye/compiler2016/AST/Stmt/Exp/ClassFieldExp.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
           <caret line="13" column="32" selection-start-line="13" selection-start-column="32" selection-end-line="13" selection-end-column="32" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Master/Exception/CompilationError.java">
+    <entry file="file://$PROJECT_DIR$/src/com/expye/compiler2016/Exception/CompilationError.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="5" column="45" selection-start-line="5" selection-start-column="45" selection-end-line="8" selection-end-column="5" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Master/AST/Dec/ClassDec.java">
+    <entry file="file://$PROJECT_DIR$/src/com/expye/compiler2016/AST/Dec/ClassDec.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="748">
           <caret line="22" column="35" selection-start-line="22" selection-start-column="35" selection-end-line="22" selection-end-column="35" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Master/AST/Dec/MethodDec.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="19" column="25" selection-start-line="19" selection-start-column="25" selection-end-line="19" selection-end-column="25" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1290,62 +1505,32 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Master/AST/VarDec/VarDec.java">
+    <entry file="file://$PROJECT_DIR$/src/com/expye/compiler2016/AST/VarDec/VarDec.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
           <caret line="13" column="21" selection-start-line="13" selection-start-column="21" selection-end-line="13" selection-end-column="21" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Master/AST/Dec/FuncDec.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="17" column="20" selection-start-line="17" selection-start-column="20" selection-end-line="17" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Master/AST/Dec/ArrayDec.java">
+    <entry file="file://$PROJECT_DIR$/src/com/expye/compiler2016/AST/Dec/ArrayDec.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="476">
           <caret line="14" column="46" selection-start-line="14" selection-start-column="46" selection-end-line="14" selection-end-column="46" />
-          <folding>
-            <element signature="e#521#522#0" expanded="true" />
-            <element signature="e#585#586#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bin/test.mx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Master/AST/Stmt/IfStmt.java">
+    <entry file="file://$PROJECT_DIR$/bin/test.mx" />
+    <entry file="file://$PROJECT_DIR$/src/com/expye/compiler2016/AST/Stmt/IfStmt.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
           <caret line="8" column="38" selection-start-line="8" selection-start-column="38" selection-end-line="8" selection-end-column="38" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Master/Parser/CST2AST.java">
+    <entry file="file://$PROJECT_DIR$/src/com/expye/compiler2016/Parser/CST2AST.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
           <caret line="11" column="29" selection-start-line="11" selection-start-column="29" selection-end-line="11" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Master/Parser/Master.g4">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="14" column="39" selection-start-line="14" selection-start-column="39" selection-end-line="14" selection-end-column="39" />
-          <folding>
-            <element signature="e#0#3943#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1365,85 +1550,169 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/test/Master/FrontEnd/SemanticCheckerTest.java" />
     <entry file="file://$PROJECT_DIR$/src/Master/FrontEnd/SemanticChecker.java" />
-    <entry file="file://$PROJECT_DIR$/Makefile">
+    <entry file="jar://$PROJECT_DIR$/lib/antlr-4.5.2-complete.jar!/org/antlr/v4/runtime/BailErrorStrategy.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="15" column="6" selection-start-line="15" selection-start-column="6" selection-end-line="15" selection-end-column="6" />
+        <state relative-caret-position="324">
+          <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://JAVA/Master">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JAVA</ID>
+          <OriginalElement>Master</OriginalElement>
+          <nodes>
+            <node x="" y="">Master.Utility</node>
+            <node x="" y="">Master.AST</node>
+            <node x="" y="">Master.Exception</node>
+            <node x="" y="">Master.Environment</node>
+            <node x="" y="">Master.Parser</node>
+            <node x="" y="">Master.Main</node>
+          </nodes>
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="1.0" x="192.0" y="228.0" />
+          <SelectedNodes />
+          <Categories />
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>private</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/expye/compiler2016/AST/Dec/MethodDec.java" />
+    <entry file="file://$PROJECT_DIR$/src/com/expye/compiler2016/AST/Dec/DecBase.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/expye/compiler2016/AST/Dec/FuncDec.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="578">
+          <caret line="20" column="5" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/expye/compiler2016/Parser/BaseListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="13" column="5" selection-start-line="13" selection-start-column="5" selection-end-line="13" selection-end-column="5" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Master/Parser/MasterBaseListener.java">
+    <entry file="file://$PROJECT_DIR$/src/com/expye/compiler2016/AST/Stmt/MethodStmt.java" />
+    <entry file="file://$PROJECT_DIR$/src/com/expye/compiler2016/Parser/LexerRules.g4">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="2686">
+          <caret line="79" column="5" selection-start-line="79" selection-start-column="5" selection-end-line="79" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/expye/compiler2016/Parser/FirstListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1326">
+          <caret line="47" column="0" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Master/Parser/MasterLexer.java">
+    <entry file="file://$PROJECT_DIR$/src/com/expye/compiler2016/Utility.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="1088">
+          <caret line="39" column="33" selection-start-line="39" selection-start-column="33" selection-end-line="39" selection-end-column="33" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Master/Parser/MasterListener.java">
+    <entry file="file://$PROJECT_DIR$/src/com/expye/compiler2016/Parser/Master.g4">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="475">
+          <caret line="80" column="22" selection-start-line="80" selection-start-column="22" selection-end-line="80" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/expye/compiler2016/Parser/SecondListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1224">
+          <caret line="58" column="66" selection-start-line="58" selection-start-column="66" selection-end-line="58" selection-end-column="66" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Master/Parser/MasterParser.java">
+    <entry file="file://$PROJECT_DIR$/src/com/expye/compiler2016/Parser/ThirdListener.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="19" column="45" selection-start-line="19" selection-start-column="45" selection-end-line="19" selection-end-column="45" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Master/Parser/SecondListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="628">
-          <caret line="124" column="35" selection-start-line="124" selection-start-column="35" selection-end-line="124" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Master/Parser/ThirdListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="31" column="0" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
+        <state relative-caret-position="21794">
+          <caret line="663" column="73" selection-start-line="663" selection-start-column="73" selection-end-line="663" selection-end-column="73" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Master/Utility.java">
+    <entry file="file://$PROJECT_DIR$/src/com/expye/compiler2016/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="612">
-          <caret line="27" column="50" selection-start-line="27" selection-start-column="50" selection-end-line="27" selection-end-column="50" />
+        <state relative-caret-position="510">
+          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Master/Main.java">
+    <entry file="file://$PROJECT_DIR$/Makefile">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="408">
-          <caret line="19" column="32" selection-start-line="19" selection-start-column="32" selection-end-line="19" selection-end-column="32" />
+          <caret line="12" column="58" selection-start-line="12" selection-start-column="58" selection-end-line="12" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/expye/compiler2016/Parser/MasterParser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Master/Parser/FirstListener.java">
+    <entry file="file://$PROJECT_DIR$/src/com/expye/compiler2016/Parser/MasterListener.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="578">
-          <caret line="31" column="30" selection-start-line="31" selection-start-column="30" selection-end-line="31" selection-end-column="30" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/expye/compiler2016/Parser/MasterLexer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/expye/compiler2016/Parser/MasterBaseListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="748">
+          <caret line="24" column="7" selection-start-line="24" selection-start-column="7" selection-end-line="24" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/midtermvars.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="23" selection-start-line="0" selection-start-column="23" selection-end-line="0" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/test/SemanticChecker.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="52" column="16" selection-start-line="52" selection-start-column="16" selection-end-line="52" selection-end-column="16" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1523,7 +1792,7 @@
       </state>
       <state key="ProjectLibrariesConfigurable.UI">
         <settings>
-          <last-edited>junit-4.12</last-edited>
+          <last-edited>hamcrest-core-1.3</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

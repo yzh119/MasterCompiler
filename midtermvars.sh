@@ -1,1 +1,1 @@
-$CCHK="java -jar Master.jar"
+export $CCHK="java -jar Master.jar"

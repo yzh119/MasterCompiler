@@ -1,4 +1,3 @@
-
 package com.expye.compiler2016.Parser;
 import org.antlr.v4.runtime.tree.ParseTreeListener;
 
@@ -37,16 +36,6 @@ public interface MasterListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	void exitFunction_def(MasterParser.Function_defContext ctx);
-	/**
-	 * Enter a parse tree produced by {@link MasterParser#method_def}.
-	 * @param ctx the parse tree
-	 */
-	void enterMethod_def(MasterParser.Method_defContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link MasterParser#method_def}.
-	 * @param ctx the parse tree
-	 */
-	void exitMethod_def(MasterParser.Method_defContext ctx);
 	/**
 	 * Enter a parse tree produced by {@link MasterParser#class_def}.
 	 * @param ctx the parse tree
@@ -398,6 +387,18 @@ public interface MasterListener extends ParseTreeListener {
 	 */
 	void exitClassType(MasterParser.ClassTypeContext ctx);
 	/**
+	 * Enter a parse tree produced by the {@code nullType}
+	 * labeled alternative in {@link MasterParser#type_specifier}.
+	 * @param ctx the parse tree
+	 */
+	void enterNullType(MasterParser.NullTypeContext ctx);
+	/**
+	 * Exit a parse tree produced by the {@code nullType}
+	 * labeled alternative in {@link MasterParser#type_specifier}.
+	 * @param ctx the parse tree
+	 */
+	void exitNullType(MasterParser.NullTypeContext ctx);
+	/**
 	 * Enter a parse tree produced by {@link MasterParser#stmt_list}.
 	 * @param ctx the parse tree
 	 */
@@ -417,26 +418,6 @@ public interface MasterListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	void exitStmt(MasterParser.StmtContext ctx);
-	/**
-	 * Enter a parse tree produced by {@link MasterParser#method_stmt}.
-	 * @param ctx the parse tree
-	 */
-	void enterMethod_stmt(MasterParser.Method_stmtContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link MasterParser#method_stmt}.
-	 * @param ctx the parse tree
-	 */
-	void exitMethod_stmt(MasterParser.Method_stmtContext ctx);
-	/**
-	 * Enter a parse tree produced by {@link MasterParser#field_method_stmt}.
-	 * @param ctx the parse tree
-	 */
-	void enterField_method_stmt(MasterParser.Field_method_stmtContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link MasterParser#field_method_stmt}.
-	 * @param ctx the parse tree
-	 */
-	void exitField_method_stmt(MasterParser.Field_method_stmtContext ctx);
 	/**
 	 * Enter a parse tree produced by {@link MasterParser#block}.
 	 * @param ctx the parse tree

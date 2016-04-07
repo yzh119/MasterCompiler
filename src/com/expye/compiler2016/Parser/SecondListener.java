@@ -4,7 +4,6 @@ import com.expye.compiler2016.AST.ASTnode;
 import com.expye.compiler2016.AST.Dec.ArrayDec;
 import com.expye.compiler2016.AST.Dec.ClassDec;
 import com.expye.compiler2016.AST.Dec.FuncDec;
-import com.expye.compiler2016.AST.Dec.MethodDec;
 import com.expye.compiler2016.AST.Prog.Prog;
 import com.expye.compiler2016.AST.VarDec.VarDec;
 import com.expye.compiler2016.Exception.CompilationError;
@@ -55,6 +54,9 @@ public class SecondListener extends BaseListener {
     public void enterBoolType(MasterParser.BoolTypeContext ctx) {
         CST2AST.dict.put(ctx, ClassDec.boolClass);
     }
+
+    @Override
+    public void enterNullType(MasterParser.NullTypeContext ctx) { CST2AST.dict.put(ctx, ClassDec.nullClass); }
 
     @Override
     public void enterClassType(MasterParser.ClassTypeContext ctx) {
@@ -111,32 +113,5 @@ public class SecondListener extends BaseListener {
             else throw new CompilationError("Parameters with the same id!");
         }
         currentScope.addEntry(funcName, now);
-    }
-
-    @Override
-    public void exitMethod_def(MasterParser.Method_defContext ctx) {
-        Scope currentScope = scopes.peek();
-        String methodName =
-                ctx.ID().getText().intern();
-        ASTnode thisMethod = currentScope.lookUpInThisScope(methodName);
-        if (thisMethod != null)
-            throw new CompilationError(currentPlace + "This function name has been used!");
-        List<VarDec> paraList = new ArrayList<>();
-        if (ctx.parameter_list() != null)
-            for (MasterParser.Parameter_declContext paraDecl: ctx.parameter_list().parameter_decl()) {
-                ASTnode type = CST2AST.dict.get(paraDecl.type_specifier());
-                if (CST2AST.dict.get(paraDecl.type_specifier()) == null)
-                    throw new InternalError("Something happened unfortunately!");
-                paraList.add(new VarDec((ClassDec)type, paraDecl.ID().getText().intern()));
-            }
-        MethodDec now = new MethodDec(paraList, null, methodName);
-        CST2AST.dict.put(ctx, now);
-        now.currentScope = new Scope(currentScope);
-        for (VarDec para: paraList) {
-            if (now.currentScope.lookUpInThisScope(para.getName().intern()) == null)
-                now.currentScope.addEntry(para.getName().intern(), para);
-            else throw new CompilationError("Parameters with the same id!");
-        }
-        currentScope.addEntry(methodName, now);
     }
 }

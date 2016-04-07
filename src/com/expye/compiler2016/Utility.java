@@ -3,7 +3,6 @@ package com.expye.compiler2016;
 import com.expye.compiler2016.AST.Dec.ArrayDec;
 import com.expye.compiler2016.AST.Dec.ClassDec;
 import com.expye.compiler2016.AST.Dec.FuncDec;
-import com.expye.compiler2016.AST.Dec.MethodDec;
 import com.expye.compiler2016.AST.VarDec.VarDec;
 
 import java.util.ArrayList;
@@ -22,8 +21,8 @@ public class Utility {
     public static List<VarDec> oneStr = Arrays.asList(strDec);
     public static List<VarDec> oneInt = Arrays.asList(intDec);
     public static List<VarDec> twoInt = Arrays.asList(intDec, intDec);
-    public static MethodDec printDec = new MethodDec(oneStr, null, "print");
-    public static MethodDec printlnDec = new MethodDec(oneStr, null, "println");
+    public static FuncDec printDec = new FuncDec(ClassDec.nullClass, oneStr, null, "print");
+    public static FuncDec printlnDec = new FuncDec(ClassDec.nullClass, oneStr , null, "println");
     public static FuncDec getStringDec = new FuncDec(ClassDec.stringClass, noPara, null, "getString");
     public static FuncDec getIntDec = new FuncDec(ClassDec.intClass, noPara, null, "getInt");
     public static FuncDec toStringDec = new FuncDec(ClassDec.stringClass, oneInt, null, "toString");
