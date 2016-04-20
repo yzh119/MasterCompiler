@@ -1,6 +1,7 @@
 package com.expye.compiler2016.AST.Stmt.Exp;
 
 import com.expye.compiler2016.AST.Dec.ClassDec;
+import com.expye.compiler2016.AST.VarDec.VarDec;
 
 import java.util.List;
 
@@ -9,11 +10,12 @@ import java.util.List;
  */
 public class ClassFieldExp extends Exp {
     Exp le = null;
-    public List<Exp> para = null;
-    String field;
+    int offset;
     public ClassFieldExp(Exp le, String field, ClassDec type) {
         this.le = le;
-        this.field = field;
+        for (int i = 0; i < le.type.declNames.size(); i++)
+            if (le.type.declNames.get(i).equals(field))
+                this.offset = i;
         this.type = type;
         if (le.isLvalue) this.isLvalue = true;
     }

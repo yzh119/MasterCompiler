@@ -2,9 +2,47 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f058b886-d1bc-433e-8f45-9c67b8bdd78d" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/expye/compiler2016/AST/constructAST.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/expye/compiler2016/IR/CFG/CFGVertex.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/expye/compiler2016/IR/Instruction/IRinstruction.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/expye/compiler2016/IR/Instruction/ThreeAddrIns/AddReg.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/expye/compiler2016/IR/Instruction/ThreeAddrIns/BitAndReg.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/expye/compiler2016/IR/Instruction/ThreeAddrIns/BitOrReg.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/expye/compiler2016/IR/Instruction/ThreeAddrIns/DivReg.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/expye/compiler2016/IR/Instruction/ThreeAddrIns/EqReg.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/expye/compiler2016/IR/Instruction/ThreeAddrIns/GTEReg.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/expye/compiler2016/IR/Instruction/ThreeAddrIns/GTReg.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/expye/compiler2016/IR/Instruction/ThreeAddrIns/LTEReg.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/expye/compiler2016/IR/Instruction/ThreeAddrIns/LTReg.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/expye/compiler2016/IR/Instruction/ThreeAddrIns/LshiftReg.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/expye/compiler2016/IR/Instruction/ThreeAddrIns/ModReg.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/expye/compiler2016/IR/Instruction/ThreeAddrIns/MulReg.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/expye/compiler2016/IR/Instruction/ThreeAddrIns/NeqReg.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/expye/compiler2016/IR/Instruction/ThreeAddrIns/RshiftReg.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/expye/compiler2016/IR/Instruction/ThreeAddrIns/SubReg.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/expye/compiler2016/IR/Instruction/ThreeAddrIns/ThreeAddrIns.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/expye/compiler2016/IR/Instruction/TwoAddrIns/BitNotReg.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/expye/compiler2016/IR/Instruction/TwoAddrIns/MinusReg.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/expye/compiler2016/IR/Instruction/TwoAddrIns/TwoAddrIns.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/expye/compiler2016/IR/constructILOC.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/expye/compiler2016/IR/convertILOCtoCFG.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/com/expye/compiler2016/AST/Dec/ArrayDec.class" afterPath="$PROJECT_DIR$/out/production/MasterCompiler/com/expye/compiler2016/AST/Dec/ArrayDec.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/com/expye/compiler2016/AST/Dec/ClassDec.class" afterPath="$PROJECT_DIR$/out/production/MasterCompiler/com/expye/compiler2016/AST/Dec/ClassDec.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/com/expye/compiler2016/AST/Stmt/Exp/ClassFieldExp.class" afterPath="$PROJECT_DIR$/out/production/MasterCompiler/com/expye/compiler2016/AST/Stmt/Exp/ClassFieldExp.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/com/expye/compiler2016/AST/Stmt/Exp/newExp.class" afterPath="$PROJECT_DIR$/out/production/MasterCompiler/com/expye/compiler2016/AST/Stmt/Exp/newExp.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/com/expye/compiler2016/Main.class" afterPath="$PROJECT_DIR$/out/production/MasterCompiler/com/expye/compiler2016/Main.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/com/expye/compiler2016/Parser/FirstListener.class" afterPath="$PROJECT_DIR$/out/production/MasterCompiler/com/expye/compiler2016/Parser/FirstListener.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/com/expye/compiler2016/Parser/ThirdListener.class" afterPath="$PROJECT_DIR$/out/production/MasterCompiler/com/expye/compiler2016/Parser/ThirdListener.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/com/expye/compiler2016/Utility.class" afterPath="$PROJECT_DIR$/out/production/MasterCompiler/com/expye/compiler2016/Utility.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/expye/compiler2016/AST/Dec/ArrayDec.java" afterPath="$PROJECT_DIR$/src/com/expye/compiler2016/AST/Dec/ArrayDec.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/expye/compiler2016/AST/Dec/ClassDec.java" afterPath="$PROJECT_DIR$/src/com/expye/compiler2016/AST/Dec/ClassDec.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/expye/compiler2016/AST/Stmt/Exp/ClassFieldExp.java" afterPath="$PROJECT_DIR$/src/com/expye/compiler2016/AST/Stmt/Exp/ClassFieldExp.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/expye/compiler2016/AST/Stmt/Exp/newExp.java" afterPath="$PROJECT_DIR$/src/com/expye/compiler2016/AST/Stmt/Exp/newExp.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/expye/compiler2016/Main.java" afterPath="$PROJECT_DIR$/src/com/expye/compiler2016/Main.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/expye/compiler2016/Parser/FirstListener.java" afterPath="$PROJECT_DIR$/src/com/expye/compiler2016/Parser/FirstListener.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/expye/compiler2016/Parser/ThirdListener.java" afterPath="$PROJECT_DIR$/src/com/expye/compiler2016/Parser/ThirdListener.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/expye/compiler2016/Utility.java" afterPath="$PROJECT_DIR$/src/com/expye/compiler2016/Utility.java" />
     </list>
     <ignored path="MasterCompiler.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -27,41 +65,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="600">
-      <file leaf-file-name="Utility.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/expye/compiler2016/Utility.java">
+      <file leaf-file-name="convertILOCtoCFG.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/expye/compiler2016/IR/convertILOCtoCFG.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1088">
-              <caret line="39" column="33" selection-start-line="39" selection-start-column="33" selection-end-line="39" selection-end-column="33" />
+            <state relative-caret-position="238">
+              <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FirstListener.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/expye/compiler2016/Parser/FirstListener.java">
+      <file leaf-file-name="IRInstruction.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/expye/compiler2016/IR/Instruction/IRInstruction.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1326">
-              <caret line="47" column="0" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MasterBaseListener.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/expye/compiler2016/Parser/MasterBaseListener.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="748">
-              <caret line="24" column="7" selection-start-line="24" selection-start-column="7" selection-end-line="24" selection-end-column="7" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="midtermvars.sh" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/midtermvars.sh">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="23" selection-start-line="0" selection-start-column="23" selection-end-line="0" selection-end-column="23" />
+            <state relative-caret-position="272">
+              <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -70,8 +88,18 @@
       <file leaf-file-name="ThirdListener.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/expye/compiler2016/Parser/ThirdListener.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="21794">
-              <caret line="663" column="73" selection-start-line="663" selection-start-column="73" selection-end-line="663" selection-end-column="73" />
+            <state relative-caret-position="983">
+              <caret line="455" column="28" selection-start-line="455" selection-start-column="28" selection-end-line="455" selection-end-column="28" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/expye/compiler2016/Main.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="340">
+              <caret line="12" column="8" selection-start-line="12" selection-start-column="8" selection-end-line="12" selection-end-column="8" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -79,31 +107,51 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SecondListener.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/expye/compiler2016/Parser/SecondListener.java">
+      <file leaf-file-name="constructILOC.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/expye/compiler2016/IR/constructILOC.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1224">
-              <caret line="58" column="66" selection-start-line="58" selection-start-column="66" selection-end-line="58" selection-end-column="66" />
+            <state relative-caret-position="340">
+              <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/com/expye/compiler2016/Main.java">
+      <file leaf-file-name="ASTnode.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/expye/compiler2016/AST/ASTnode.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="498">
-              <caret line="24" column="25" selection-start-line="24" selection-start-column="25" selection-end-line="24" selection-end-column="25" />
+            <state relative-caret-position="204">
+              <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SemanticChecker.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test/test/SemanticChecker.java">
+      <file leaf-file-name="FirstListener.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/expye/compiler2016/Parser/FirstListener.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="566">
-              <caret line="71" column="46" selection-start-line="71" selection-start-column="46" selection-end-line="71" selection-end-column="46" />
+            <state relative-caret-position="884">
+              <caret line="41" column="0" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CFGVertex.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/expye/compiler2016/IR/CFG/CFGVertex.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="374">
+              <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="constructAST.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/expye/compiler2016/AST/constructAST.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="782">
+              <caret line="28" column="34" selection-start-line="28" selection-start-column="34" selection-end-line="28" selection-end-column="34" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -131,39 +179,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/Master/AST/Stmt/Exp/LvalueExp/SimpleVarExp.java" />
-        <option value="$PROJECT_DIR$/src/Master/Utility.java" />
-        <option value="$PROJECT_DIR$/src/Master/AST/Stmt/Exp/NullExp.java" />
-        <option value="$PROJECT_DIR$/src/Master/AST/Stmt/Exp/FuncExp.java" />
-        <option value="$PROJECT_DIR$/src/Master/AST/Stmt/MethodStmt.java" />
-        <option value="$PROJECT_DIR$/src/Master/AST/Stmt/Exp/Exp.java" />
-        <option value="$PROJECT_DIR$/src/Master/AST/Stmt/Exp/SimpleVarExp.java" />
-        <option value="$PROJECT_DIR$/src/Master/AST/Stmt/Exp/SubscriptVarExp.java" />
-        <option value="$PROJECT_DIR$/src/Master/AST/Dec/ClassDec.java" />
-        <option value="$PROJECT_DIR$/src/Master/Environment/Scope.java" />
-        <option value="$PROJECT_DIR$/src/Master/AST/Stmt/Exp/newExp.java" />
-        <option value="$PROJECT_DIR$/src/Master/AST/VarDec/VarDec.java" />
-        <option value="$PROJECT_DIR$/src/Master/AST/Stmt/WhileStmt.java" />
-        <option value="$PROJECT_DIR$/src/Master/AST/Stmt/ForStmt.java" />
-        <option value="$PROJECT_DIR$/src/Master/AST/Stmt/IfStmt.java" />
-        <option value="$PROJECT_DIR$/src/Master/AST/Stmt/StmtBase.java" />
-        <option value="$PROJECT_DIR$/src/Master/AST/Stmt/ContinueStmt.java" />
-        <option value="$PROJECT_DIR$/src/Master/AST/Stmt/BreakStmt.java" />
-        <option value="$PROJECT_DIR$/src/Master/AST/Stmt/ReturnStmt.java" />
-        <option value="$PROJECT_DIR$/in/test.mx" />
-        <option value="$PROJECT_DIR$/src/Master/AST/Stmt/Exp/StringExp.java" />
-        <option value="$PROJECT_DIR$/src/Master/Parser/LexerRules.g4" />
-        <option value="$PROJECT_DIR$/src/Master/Exception/InternalError.java" />
-        <option value="$PROJECT_DIR$/src/Master/Parser/SecondListener.java" />
-        <option value="$PROJECT_DIR$/src/Master/AST/Stmt/FieldMethodStmt.java" />
-        <option value="$PROJECT_DIR$/src/Master/AST/Stmt/Exp/ClassFieldExp.java" />
-        <option value="$PROJECT_DIR$/src/Master/AST/Dec/ArrayDec.java" />
-        <option value="$PROJECT_DIR$/src/Master/Parser/Master.g4" />
-        <option value="$PROJECT_DIR$/src/Master/Parser/FirstListener.java" />
-        <option value="$PROJECT_DIR$/src/Master/Parser/ThirdListener.java" />
-        <option value="$PROJECT_DIR$/bin/test.mx" />
-        <option value="$PROJECT_DIR$/test/Master/FrontEnd/SemanticCheckerTest.java" />
-        <option value="$PROJECT_DIR$/src/Master/FrontEnd/SemanticChecker.java" />
         <option value="$PROJECT_DIR$/src/Master/Parser/MasterBaseListener.java" />
         <option value="$PROJECT_DIR$/src/Master/Parser/MasterLexer.java" />
         <option value="$PROJECT_DIR$/src/Master/Parser/MasterListener.java" />
@@ -172,16 +187,49 @@
         <option value="$PROJECT_DIR$/src/com/expye/compiler2016/AST/Dec/MethodDec.java" />
         <option value="$PROJECT_DIR$/src/com/expye/compiler2016/AST/Dec/FuncDec.java" />
         <option value="$PROJECT_DIR$/src/com/expye/compiler2016/Parser/Master.g4" />
-        <option value="$PROJECT_DIR$/src/com/expye/compiler2016/Utility.java" />
         <option value="$PROJECT_DIR$/src/com/expye/compiler2016/Parser/SecondListener.java" />
-        <option value="$PROJECT_DIR$/src/com/expye/compiler2016/Parser/ThirdListener.java" />
         <option value="$PROJECT_DIR$/Makefile" />
         <option value="$PROJECT_DIR$/src/com/expye/compiler2016/Parser/MasterBaseListener.java" />
         <option value="$PROJECT_DIR$/src/com/expye/compiler2016/Parser/MasterLexer.java" />
         <option value="$PROJECT_DIR$/src/com/expye/compiler2016/Parser/MasterListener.java" />
         <option value="$PROJECT_DIR$/src/com/expye/compiler2016/Parser/MasterParser.java" />
-        <option value="$PROJECT_DIR$/src/com/expye/compiler2016/Main.java" />
         <option value="$PROJECT_DIR$/test/test/SemanticChecker.java" />
+        <option value="$PROJECT_DIR$/src/com/expye/compiler2016/IR/Instruction/IRinstruction.java" />
+        <option value="$PROJECT_DIR$/src/com/expye/compiler2016/IR/Instruction/IRInstruction.java" />
+        <option value="$PROJECT_DIR$/src/com/expye/compiler2016/IR/Instruction/ThreeAddressInstruction/DivReg.java" />
+        <option value="$PROJECT_DIR$/src/com/expye/compiler2016/IR/Instruction/TripleAddrIns/SubReg.java" />
+        <option value="$PROJECT_DIR$/src/com/expye/compiler2016/IR/Instruction/ThreeAddrIns/AddReg.java" />
+        <option value="$PROJECT_DIR$/src/com/expye/compiler2016/IR/Instruction/ThreeAddrIns/BitAndReg.java" />
+        <option value="$PROJECT_DIR$/src/com/expye/compiler2016/IR/Instruction/ThreeAddrIns/BitOrReg.java" />
+        <option value="$PROJECT_DIR$/src/com/expye/compiler2016/IR/Instruction/ThreeAddrIns/DivReg.java" />
+        <option value="$PROJECT_DIR$/src/com/expye/compiler2016/IR/Instruction/ThreeAddrIns/EqReg.java" />
+        <option value="$PROJECT_DIR$/src/com/expye/compiler2016/IR/Instruction/ThreeAddrIns/GTEReg.java" />
+        <option value="$PROJECT_DIR$/src/com/expye/compiler2016/IR/Instruction/ThreeAddrIns/GTReg.java" />
+        <option value="$PROJECT_DIR$/src/com/expye/compiler2016/IR/Instruction/ThreeAddrIns/LshiftReg.java" />
+        <option value="$PROJECT_DIR$/src/com/expye/compiler2016/IR/Instruction/ThreeAddrIns/LTEReg.java" />
+        <option value="$PROJECT_DIR$/src/com/expye/compiler2016/IR/Instruction/ThreeAddrIns/LTReg.java" />
+        <option value="$PROJECT_DIR$/src/com/expye/compiler2016/IR/Instruction/ThreeAddrIns/ModReg.java" />
+        <option value="$PROJECT_DIR$/src/com/expye/compiler2016/IR/Instruction/ThreeAddrIns/MulReg.java" />
+        <option value="$PROJECT_DIR$/src/com/expye/compiler2016/IR/Instruction/ThreeAddrIns/NeqReg.java" />
+        <option value="$PROJECT_DIR$/src/com/expye/compiler2016/IR/Instruction/ThreeAddrIns/RshiftReg.java" />
+        <option value="$PROJECT_DIR$/src/com/expye/compiler2016/IR/Instruction/ThreeAddrIns/SubReg.java" />
+        <option value="$PROJECT_DIR$/src/com/expye/compiler2016/IR/Instruction/TwoAddrIns/BitNotReg.java" />
+        <option value="$PROJECT_DIR$/src/com/expye/compiler2016/IR/Instruction/TwoAddrIns/MinusReg.java" />
+        <option value="$PROJECT_DIR$/src/com/expye/compiler2016/AST/Stmt/Exp/newExp.java" />
+        <option value="$PROJECT_DIR$/src/com/expye/compiler2016/AST/Dec/ClassDec.java" />
+        <option value="$PROJECT_DIR$/src/com/expye/compiler2016/Parser/FirstListener.java" />
+        <option value="$PROJECT_DIR$/src/com/expye/compiler2016/AST/Dec/ArrayDec.java" />
+        <option value="$PROJECT_DIR$/src/com/expye/compiler2016/Utility.java" />
+        <option value="$PROJECT_DIR$/src/com/expye/compiler2016/IR/CFG/CFGVertex.java" />
+        <option value="$PROJECT_DIR$/src/com/expye/compiler2016/IR/constructIR.java" />
+        <option value="$PROJECT_DIR$/src/com/expye/compiler2016/AST/Stmt/Exp/ClassFieldExp.java" />
+        <option value="$PROJECT_DIR$/src/com/expye/compiler2016/Parser/ThirdListener.java" />
+        <option value="$PROJECT_DIR$/src/com/expye/compiler2016/IR/convertLinearIRtoCFG.java" />
+        <option value="$PROJECT_DIR$/src/com/expye/compiler2016/Main.java" />
+        <option value="$PROJECT_DIR$/src/com/expye/compiler2016/AST/constructAST.java" />
+        <option value="$PROJECT_DIR$/src/com/expye/compiler2016/IR/constructLinearIR.java" />
+        <option value="$PROJECT_DIR$/src/com/expye/compiler2016/IR/ILOC.java" />
+        <option value="$PROJECT_DIR$/src/com/expye/compiler2016/IR/constructILOC.java" />
       </list>
     </option>
   </component>
@@ -250,6 +298,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -269,6 +318,46 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="MasterCompiler" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MasterCompiler" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MasterCompiler" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="testcase" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="semantic" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="passed" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MasterCompiler" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MasterCompiler" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="testcase" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="semantic" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -308,11 +397,128 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MasterCompiler" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MasterCompiler" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="compiler2016" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Parser" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MasterCompiler" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MasterCompiler" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="compiler2016" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="IR" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MasterCompiler" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MasterCompiler" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="compiler2016" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="IR" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Instruction" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MasterCompiler" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MasterCompiler" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="compiler2016" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="IR" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CFG" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MasterCompiler" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MasterCompiler" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="compiler2016" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AST" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="Scope" />
       <pane id="Scratches" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -348,14 +554,14 @@
     <property name="$PROJECT_DIR$/src/com/expye/compiler2016/Parser/Master.g4::/gen-visitor" value="false" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\叶子豪\IdeaProjects\MasterCompiler\lib" />
-    </key>
     <key name="CreateClassDialog.RecentsKey">
       <recent name="Master.AST.Stmt" />
     </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\叶子豪\IdeaProjects\MasterCompiler\lib" />
+    </key>
   </component>
-  <component name="RunManager" selected="JUnit.SemanticChecker">
+  <component name="RunManager" selected="Application.Main">
     <configuration default="false" name="Main" type="Application" factoryName="Application" temporary="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -863,10 +1069,10 @@
     </list>
     <recent_temporary>
       <list size="4">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.SemanticChecker" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.SemanticChecker.testPass" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.SemanticChecker.data" />
-        <item index="3" class="java.lang.String" itemvalue="Application.Main" />
+        <item index="0" class="java.lang.String" itemvalue="Application.Main" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.SemanticChecker" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.SemanticChecker.testPass" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.SemanticChecker.data" />
       </list>
     </recent_temporary>
   </component>
@@ -904,6 +1110,15 @@
       <workItem from="1460000535072" duration="1796000" />
       <workItem from="1460024794024" duration="4993000" />
       <workItem from="1460030539274" duration="1630000" />
+      <workItem from="1460043195795" duration="1801000" />
+      <workItem from="1460110349828" duration="938000" />
+      <workItem from="1460112863272" duration="89000" />
+      <workItem from="1460770147841" duration="7132000" />
+      <workItem from="1460889766599" duration="1236000" />
+      <workItem from="1460915984276" duration="570000" />
+      <workItem from="1460991749488" duration="1688000" />
+      <workItem from="1461137747638" duration="13348000" />
+      <workItem from="1461158365135" duration="4838000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1459069552195</created>
@@ -1007,39 +1222,39 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="SemanticChecker - 2016.04.07 at 20h 03m 19s.xml">
+    <history-entry file="SemanticChecker - 2016.04.20 at 19h 50m 31s.xml">
       <configuration name="SemanticChecker" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="SemanticChecker - 2016.04.07 at 20h 27m 10s.xml">
+    <history-entry file="SemanticChecker - 2016.04.20 at 19h 51m 59s.xml">
       <configuration name="SemanticChecker" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="SemanticChecker - 2016.04.07 at 20h 32m 03s.xml">
+    <history-entry file="SemanticChecker - 2016.04.20 at 19h 53m 18s.xml">
       <configuration name="SemanticChecker" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="SemanticChecker - 2016.04.07 at 20h 32m 23s.xml">
+    <history-entry file="SemanticChecker - 2016.04.20 at 19h 54m 01s.xml">
       <configuration name="SemanticChecker" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="SemanticChecker - 2016.04.07 at 20h 33m 06s.xml">
+    <history-entry file="SemanticChecker - 2016.04.20 at 19h 54m 43s.xml">
       <configuration name="SemanticChecker" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="SemanticChecker - 2016.04.07 at 20h 33m 29s.xml">
+    <history-entry file="SemanticChecker - 2016.04.20 at 19h 54m 51s.xml">
       <configuration name="SemanticChecker" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="SemanticChecker_data - 2016.04.07 at 20h 07m 35s.xml">
-      <configuration name="SemanticChecker.data" configurationId="JUnit" />
+    <history-entry file="SemanticChecker - 2016.04.20 at 19h 55m 22s.xml">
+      <configuration name="SemanticChecker" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="SemanticChecker_testPass - 2016.04.07 at 20h 02m 54s.xml">
-      <configuration name="SemanticChecker.testPass" configurationId="JUnit" />
+    <history-entry file="SemanticChecker - 2016.04.20 at 19h 56m 15s.xml">
+      <configuration name="SemanticChecker" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="SemanticChecker_testPass - 2016.04.07 at 20h 07m 46s.xml">
-      <configuration name="SemanticChecker.testPass" configurationId="JUnit" />
+    <history-entry file="SemanticChecker - 2016.04.20 at 20h 38m 03s.xml">
+      <configuration name="SemanticChecker" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="SemanticChecker_testPass - 2016.04.07 at 20h 07m 55s.xml">
-      <configuration name="SemanticChecker.testPass" configurationId="JUnit" />
+    <history-entry file="SemanticChecker - 2016.04.20 at 20h 38m 10s.xml">
+      <configuration name="SemanticChecker" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="108141000" />
+    <option name="totallyTimeSpent" value="139781000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1057,13 +1272,11 @@
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3291639" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Tool Output" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32784727" sideWeight="0.49849057" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32784727" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32192233" sideWeight="0.50754714" order="11" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32982224" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32982224" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32917213" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -1075,12 +1288,14 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24981132" sideWeight="0.5038835" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.399605" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.399605" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32784727" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3285056" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Thumbnails" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32982224" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3285056" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
@@ -1149,300 +1364,10 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Master/AST/Stmt/Exp/LvalueExp/LvalueExp.java" />
-    <entry file="file://$PROJECT_DIR$/src/com/expye/compiler2016/AST/Stmt/Exp/SimpleVarExp.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="13" column="28" selection-start-line="13" selection-start-column="28" selection-end-line="13" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/expye/compiler2016/Environment/Scope.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="578">
-          <caret line="24" column="17" selection-start-line="24" selection-start-column="17" selection-end-line="24" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/expye/compiler2016/AST/Stmt/Exp/SubscriptVarExp.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="13" column="49" selection-start-line="13" selection-start-column="49" selection-end-line="13" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/expye/compiler2016/AST/Stmt/Exp/newExp.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="14" column="43" selection-start-line="14" selection-start-column="43" selection-end-line="14" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/expye/compiler2016/AST/Stmt/WhileStmt.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="8" column="41" selection-start-line="8" selection-start-column="41" selection-end-line="8" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/expye/compiler2016/AST/Stmt/ForStmt.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="7" column="39" selection-start-line="7" selection-start-column="39" selection-end-line="7" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/expye/compiler2016/AST/Stmt/BreakStmt.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="7" column="41" selection-start-line="7" selection-start-column="41" selection-end-line="7" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/expye/compiler2016/AST/Stmt/ReturnStmt.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="16" column="11" selection-start-line="16" selection-start-column="11" selection-end-line="16" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/expye/compiler2016/AST/Stmt/CompoundStmt.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="9" column="28" selection-start-line="9" selection-start-column="28" selection-end-line="9" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/expye/compiler2016/AST/Stmt/StmtBase.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="9" column="1" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/expye/compiler2016/AST/Stmt/Exp/Exp.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="4" column="32" selection-start-line="4" selection-start-column="32" selection-end-line="4" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/expye/compiler2016/AST/Stmt/ContinueStmt.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="5" column="44" selection-start-line="5" selection-start-column="44" selection-end-line="5" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/expye/compiler2016/AST/Stmt/Exp/StringExp.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="13" column="1" selection-start-line="13" selection-start-column="1" selection-end-line="13" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/in/test.mx" />
-    <entry file="file://$PROJECT_DIR$/src/com/expye/compiler2016/Exception/InternalError.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/expye/compiler2016/AST/Stmt/FieldMethodStmt.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="13" column="39" selection-start-line="13" selection-start-column="39" selection-end-line="13" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/expye/compiler2016/AST/Stmt/Exp/ClassFieldExp.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="13" column="32" selection-start-line="13" selection-start-column="32" selection-end-line="13" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/expye/compiler2016/Exception/CompilationError.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="5" column="45" selection-start-line="5" selection-start-column="45" selection-end-line="8" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/expye/compiler2016/AST/Dec/ClassDec.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="748">
-          <caret line="22" column="35" selection-start-line="22" selection-start-column="35" selection-end-line="22" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/lib/antlr-4.5.2-complete.jar!/org/antlr/v4/runtime/tree/ParseTreeWalker.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="782">
-          <caret line="31" column="51" selection-start-line="31" selection-start-column="51" selection-end-line="31" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/expye/compiler2016/AST/VarDec/VarDec.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="13" column="21" selection-start-line="13" selection-start-column="21" selection-end-line="13" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/expye/compiler2016/AST/Dec/ArrayDec.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="14" column="46" selection-start-line="14" selection-start-column="46" selection-end-line="14" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bin/test.mx" />
-    <entry file="file://$PROJECT_DIR$/src/com/expye/compiler2016/AST/Stmt/IfStmt.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="8" column="38" selection-start-line="8" selection-start-column="38" selection-end-line="8" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/expye/compiler2016/Parser/CST2AST.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="11" column="29" selection-start-line="11" selection-start-column="29" selection-end-line="11" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_65/src.zip!/java/lang/ClassLoader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
-          <caret line="759" column="0" selection-start-line="759" selection-start-column="0" selection-end-line="759" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MasterCompiler.iml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/Master/FrontEnd/SemanticCheckerTest.java" />
-    <entry file="file://$PROJECT_DIR$/src/Master/FrontEnd/SemanticChecker.java" />
-    <entry file="jar://$PROJECT_DIR$/lib/antlr-4.5.2-complete.jar!/org/antlr/v4/runtime/BailErrorStrategy.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="uml://JAVA/Master">
-      <provider selected="true" editor-type-id="UmlEditorProvider">
-        <state>
-          <ID>JAVA</ID>
-          <OriginalElement>Master</OriginalElement>
-          <nodes>
-            <node x="" y="">Master.Utility</node>
-            <node x="" y="">Master.AST</node>
-            <node x="" y="">Master.Exception</node>
-            <node x="" y="">Master.Environment</node>
-            <node x="" y="">Master.Parser</node>
-            <node x="" y="">Master.Main</node>
-          </nodes>
-          <notes />
-          <edges />
-          <settings layout="Hierarchic Group" zoom="1.0" x="192.0" y="228.0" />
-          <SelectedNodes />
-          <Categories />
-          <SCOPE>All</SCOPE>
-          <VISIBILITY>private</VISIBILITY>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/expye/compiler2016/AST/Dec/MethodDec.java" />
-    <entry file="file://$PROJECT_DIR$/src/com/expye/compiler2016/AST/Dec/DecBase.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/expye/compiler2016/AST/Dec/FuncDec.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="578">
-          <caret line="20" column="5" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/expye/compiler2016/Parser/BaseListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="13" column="5" selection-start-line="13" selection-start-column="5" selection-end-line="13" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/expye/compiler2016/AST/Stmt/MethodStmt.java" />
-    <entry file="file://$PROJECT_DIR$/src/com/expye/compiler2016/Parser/LexerRules.g4">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2686">
-          <caret line="79" column="5" selection-start-line="79" selection-start-column="5" selection-end-line="79" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/expye/compiler2016/Parser/FirstListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1326">
-          <caret line="47" column="0" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/expye/compiler2016/Utility.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1088">
-          <caret line="39" column="33" selection-start-line="39" selection-start-column="33" selection-end-line="39" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/expye/compiler2016/Parser/Master.g4">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="475">
-          <caret line="80" column="22" selection-start-line="80" selection-start-column="22" selection-end-line="80" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/expye/compiler2016/Parser/SecondListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1224">
-          <caret line="58" column="66" selection-start-line="58" selection-start-column="66" selection-end-line="58" selection-end-column="66" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/expye/compiler2016/Parser/ThirdListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="21794">
-          <caret line="663" column="73" selection-start-line="663" selection-start-column="73" selection-end-line="663" selection-end-column="73" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Makefile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="12" column="58" selection-start-line="12" selection-start-column="58" selection-end-line="12" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/expye/compiler2016/Parser/MasterParser.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1457,7 +1382,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1465,7 +1389,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="748">
           <caret line="24" column="7" selection-start-line="24" selection-start-column="7" selection-end-line="24" selection-end-column="7" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1473,14 +1396,253 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="23" selection-start-line="0" selection-start-column="23" selection-end-line="0" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/expye/compiler2016/IR/Instruction/Call.java" />
+    <entry file="file://$PROJECT_DIR$/src/com/expye/compiler2016/IR/Instruction/Def.java" />
+    <entry file="file://$PROJECT_DIR$/src/com/expye/compiler2016/IR/Instruction/FetchReturn.java" />
+    <entry file="file://$PROJECT_DIR$/src/com/expye/compiler2016/IR/Instruction/Nop.java" />
+    <entry file="file://$PROJECT_DIR$/src/com/expye/compiler2016/IR/Instruction/NopForBranch.java" />
+    <entry file="file://$PROJECT_DIR$/src/com/expye/compiler2016/IR/Instruction/PhiFunction.java" />
+    <entry file="file://$PROJECT_DIR$/src/com/expye/compiler2016/IR/Instruction/PushStack.java" />
+    <entry file="file://$PROJECT_DIR$/src/com/expye/compiler2016/IR/Instruction/ThreeAddrIns/ThreeAddrIns.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="5" column="25" selection-start-line="5" selection-start-column="25" selection-end-line="5" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/expye/compiler2016/IR/Instruction/ThreeAddrIns/AddReg.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="5" column="40" selection-start-line="5" selection-start-column="40" selection-end-line="5" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/expye/compiler2016/IR/Instruction/ThreeAddrIns/BitAndReg.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="5" column="43" selection-start-line="5" selection-start-column="43" selection-end-line="5" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/expye/compiler2016/IR/Instruction/ThreeAddrIns/BitOrReg.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="5" column="42" selection-start-line="5" selection-start-column="42" selection-end-line="5" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/expye/compiler2016/IR/Instruction/ThreeAddrIns/DivReg.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="5" column="40" selection-start-line="5" selection-start-column="40" selection-end-line="5" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/expye/compiler2016/IR/Instruction/ThreeAddrIns/EqReg.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="5" column="39" selection-start-line="5" selection-start-column="39" selection-end-line="5" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/expye/compiler2016/IR/Instruction/ThreeAddrIns/GTEReg.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="5" column="40" selection-start-line="5" selection-start-column="40" selection-end-line="5" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/expye/compiler2016/IR/Instruction/ThreeAddrIns/GTReg.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="5" column="39" selection-start-line="5" selection-start-column="39" selection-end-line="5" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/expye/compiler2016/IR/Instruction/ThreeAddrIns/LshiftReg.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="5" column="43" selection-start-line="5" selection-start-column="43" selection-end-line="5" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/expye/compiler2016/IR/Instruction/ThreeAddrIns/LTEReg.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="5" column="40" selection-start-line="5" selection-start-column="40" selection-end-line="5" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/expye/compiler2016/IR/Instruction/ThreeAddrIns/LTReg.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="5" column="39" selection-start-line="5" selection-start-column="39" selection-end-line="5" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/expye/compiler2016/IR/Instruction/ThreeAddrIns/ModReg.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="5" column="40" selection-start-line="5" selection-start-column="40" selection-end-line="5" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/expye/compiler2016/IR/Instruction/ThreeAddrIns/MulReg.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="5" column="40" selection-start-line="5" selection-start-column="40" selection-end-line="5" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/expye/compiler2016/IR/Instruction/ThreeAddrIns/NeqReg.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="5" column="40" selection-start-line="5" selection-start-column="40" selection-end-line="5" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/expye/compiler2016/IR/Instruction/ThreeAddrIns/RshiftReg.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="5" column="43" selection-start-line="5" selection-start-column="43" selection-end-line="5" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/expye/compiler2016/IR/Instruction/ThreeAddrIns/SubReg.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="5" column="40" selection-start-line="5" selection-start-column="40" selection-end-line="5" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/expye/compiler2016/IR/Instruction/TwoAddrIns/TwoAddrIns.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="5" column="23" selection-start-line="5" selection-start-column="23" selection-end-line="5" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/expye/compiler2016/AST/Stmt/Exp/IntExp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/expye/compiler2016/IR/Instruction/TwoAddrIns/MinusReg.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/expye/compiler2016/IR/Instruction/TwoAddrIns/BitNotReg.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="5" column="41" selection-start-line="5" selection-start-column="41" selection-end-line="5" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/testcase/semantic/passed/builtin-5140519064-youyurong.mx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="2" column="36" selection-start-line="2" selection-start-column="36" selection-end-line="2" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/expye/compiler2016/Utility.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="612">
+          <caret line="25" column="46" selection-start-line="25" selection-start-column="46" selection-end-line="25" selection-end-column="46" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/expye/compiler2016/Parser/SecondListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="104" column="28" selection-start-line="104" selection-start-column="25" selection-end-line="104" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/expye/compiler2016/AST/Stmt/Exp/newExp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="15" column="25" selection-start-line="15" selection-start-column="25" selection-end-line="15" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/expye/compiler2016/AST/Dec/ArrayDec.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="612">
+          <caret line="18" column="33" selection-start-line="18" selection-start-column="33" selection-end-line="18" selection-end-column="33" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test/test/SemanticChecker.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="566">
-          <caret line="71" column="46" selection-start-line="71" selection-start-column="46" selection-end-line="71" selection-end-column="46" />
+        <state relative-caret-position="398">
+          <caret line="68" column="0" selection-start-line="68" selection-start-column="0" selection-end-line="68" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/expye/compiler2016/AST/Dec/ClassDec.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="807">
+          <caret line="30" column="43" selection-start-line="30" selection-start-column="43" selection-end-line="30" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/expye/compiler2016/AST/Stmt/Exp/SubscriptVarExp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="14" column="29" selection-start-line="14" selection-start-column="29" selection-end-line="14" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/expye/compiler2016/AST/Stmt/Exp/ClassFieldExp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="16" column="55" selection-start-line="16" selection-start-column="55" selection-end-line="16" selection-end-column="55" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/expye/compiler2016/AST/ASTnode.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/expye/compiler2016/IR/convertILOCtoCFG.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/expye/compiler2016/AST/constructAST.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="782">
+          <caret line="28" column="34" selection-start-line="28" selection-start-column="34" selection-end-line="28" selection-end-column="34" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1489,8 +1651,79 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/expye/compiler2016/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="498">
-          <caret line="24" column="25" selection-start-line="24" selection-start-column="25" selection-end-line="24" selection-end-column="25" />
+        <state relative-caret-position="340">
+          <caret line="12" column="8" selection-start-line="12" selection-start-column="8" selection-end-line="12" selection-end-column="8" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/expye/compiler2016/IR/Instruction/IRInstruction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/expye/compiler2016/IR/CFG/CFGVertex.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/expye/compiler2016/Parser/FirstListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="884">
+          <caret line="41" column="0" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/expye/compiler2016/Parser/ThirdListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="983">
+          <caret line="455" column="28" selection-start-line="455" selection-start-column="28" selection-end-line="455" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://JAVA/com.expye.compiler2016">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JAVA</ID>
+          <OriginalElement>com.expye.compiler2016</OriginalElement>
+          <nodes>
+            <node x="486.0" y="772.0">com.expye.compiler2016.Main</node>
+            <node x="0.0" y="772.0">com.expye.compiler2016.AST</node>
+            <node x="254.0" y="772.0">com.expye.compiler2016.IR</node>
+            <node x="0.0" y="672.0">com.expye.compiler2016.Exception</node>
+            <node x="0.0" y="0.0">com.expye.compiler2016.Utility</node>
+            <node x="530.0" y="0.0">com.expye.compiler2016.Environment</node>
+            <node x="623.0" y="672.0">com.expye.compiler2016.Parser</node>
+            <node x="320.0" y="672.0">com.expye.compiler2016.Register</node>
+          </nodes>
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="1.0" x="-540.5" y="-195.5" />
+          <SelectedNodes>
+            <node>com.expye.compiler2016.Register</node>
+          </SelectedNodes>
+          <Categories>
+            <Category>Fields</Category>
+          </Categories>
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>private</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/expye/compiler2016/IR/constructILOC.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
           <folding />
         </state>
       </provider>

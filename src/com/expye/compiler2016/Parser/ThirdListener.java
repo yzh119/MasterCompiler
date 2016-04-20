@@ -65,7 +65,9 @@ public class ThirdListener extends BaseListener {
         for (ParseTree child: ctx.class_body().children) {
             ASTnode ask = CST2AST.dict.get(child);
             if (ask == null) throw new InternalError("Something happened unfortunately!");
-            now.declarations.put(((Dec)ask).getName(), (Dec)ask);
+            if (!(ask instanceof VarDec))
+                throw new CompilationError(currentPlace + "I haven't support nested method or function, I'm angry!");
+            now.addDecl(((Dec)ask).getName(), (VarDec)ask);
         }
         scopes.pop();
     }
@@ -422,7 +424,12 @@ public class ThirdListener extends BaseListener {
         if (!(CST2AST.dict.get(ctx.expr()) instanceof Exp))
             throw new CompilationError(currentPlace + "It's has to be an expression!");
         Exp lhs = (Exp) CST2AST.dict.get(ctx.expr());
-        Dec next = lhs.type.declarations.get(ctx.ID().getText().intern());
+
+        if (lhs.type.currentScope == null) {
+            throw new CompilationError(currentPlace);
+        }
+
+        Dec next = lhs.type.currentScope.lookUpInThisScope(ctx.ID().getText().intern());
         if (next == null)
             throw new CompilationError(currentPlace + "Can't find that field!");
         if (next instanceof ClassDec)
@@ -430,24 +437,23 @@ public class ThirdListener extends BaseListener {
         if (next instanceof FuncDec) {
             ClassDec type = ((FuncDec)next).retType;
             List<Exp> para = new ArrayList<>();
-
+            para.add(lhs);
             int l = 0;
             if (ctx.param_list() != null)
                 l = ctx.param_list().expr().size();
 
-            if (l != ((FuncDec)next).para.size())
-                throw new CompilationError(currentPlace + "Arguments' num doesn't match!");
+            if (l + 1 != ((FuncDec)next).para.size())
+                throw new CompilationError(currentPlace + ((FuncDec) next).name + "Arguments' num doesn't match!");
 
             for (int i = 0; i < l; i++) {
                 Exp thisPara = (Exp) CST2AST.dict.get(ctx.param_list().expr(i));
-                if (Utility.match(((FuncDec)next).para.get(i).cd, thisPara.type))
+                if (Utility.match(((FuncDec)next).para.get(i + 1).cd, thisPara.type))
                     para.add(thisPara);
                 else
                     throw new CompilationError(currentPlace + "Arguments' type doesn't match!");
             }
 
-            ClassFieldExp now = new ClassFieldExp(lhs, ctx.ID().getText().intern(), type);
-            now.para = para;
+            FuncExp now = new FuncExp((FuncDec)next, para);
             CST2AST.dict.put(ctx, now);
             return ;
         }

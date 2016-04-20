@@ -15,25 +15,22 @@ import java.util.List;
 public class Utility {
 // retType varDec body
 // varDec body
-    public static VarDec strDec = new VarDec(ClassDec.stringClass, "str".intern());
-    public static VarDec intDec = new VarDec(ClassDec.intClass, "int".intern());
-    public static List<VarDec> noPara = new ArrayList<>();
-    public static List<VarDec> oneStr = Arrays.asList(strDec);
-    public static List<VarDec> oneInt = Arrays.asList(intDec);
-    public static List<VarDec> twoInt = Arrays.asList(intDec, intDec);
-    public static FuncDec printDec = new FuncDec(ClassDec.nullClass, oneStr, null, "print");
-    public static FuncDec printlnDec = new FuncDec(ClassDec.nullClass, oneStr , null, "println");
-    public static FuncDec getStringDec = new FuncDec(ClassDec.stringClass, noPara, null, "getString");
-    public static FuncDec getIntDec = new FuncDec(ClassDec.intClass, noPara, null, "getInt");
-    public static FuncDec toStringDec = new FuncDec(ClassDec.stringClass, oneInt, null, "toString");
+    public static VarDec strDec = new VarDec(ClassDec.stringClass, null);
+    public static VarDec intDec = new VarDec(ClassDec.intClass, null);
+    public static VarDec arrayDec = null;
 
-    public static FuncDec sizeDec = new FuncDec(ClassDec.intClass, noPara, null, "size");
+    public static FuncDec printDec = new FuncDec(ClassDec.nullClass, Arrays.asList(strDec), null, "print");
+    public static FuncDec printlnDec = new FuncDec(ClassDec.nullClass, Arrays.asList(strDec) , null, "println");
+    public static FuncDec getStringDec = new FuncDec(ClassDec.stringClass, Arrays.asList(), null, "getString");
+    public static FuncDec getIntDec = new FuncDec(ClassDec.intClass, Arrays.asList(), null, "getInt");
+    public static FuncDec toStringDec = new FuncDec(ClassDec.stringClass, Arrays.asList(intDec), null, "toString");
 
-    public static FuncDec stringLength = new FuncDec(ClassDec.intClass, noPara, null, "length");
-    public static FuncDec stringSubstring = new FuncDec(ClassDec.stringClass, twoInt, null, "substring");
-    public static FuncDec stringParseInt = new FuncDec(ClassDec.intClass, noPara, null, "parseInt");
-    public static FuncDec stringOrd = new FuncDec(ClassDec.intClass, oneInt, null, "ord");
+    public static FuncDec sizeDec = new FuncDec(ClassDec.intClass, Arrays.asList(arrayDec), null, "size");
 
+    public static FuncDec stringLength = new FuncDec(ClassDec.intClass, Arrays.asList(strDec), null, "length");
+    public static FuncDec stringSubstring = new FuncDec(ClassDec.stringClass, Arrays.asList(strDec, intDec, intDec), null, "substring");
+    public static FuncDec stringParseInt = new FuncDec(ClassDec.intClass, Arrays.asList(strDec), null, "parseInt");
+    public static FuncDec stringOrd = new FuncDec(ClassDec.intClass, Arrays.asList(strDec, intDec), null, "ord");
 
     public static boolean match(ClassDec x, ClassDec y) {
         if (x != ClassDec.boolClass && x != ClassDec.intClass && x != ClassDec.stringClass) {
@@ -41,6 +38,8 @@ public class Utility {
         }
         if (x == y) return true;
         if (x instanceof ArrayDec && y instanceof ArrayDec) {
+            // This statement is used for array.size()
+            // if (x == ArrayDec.arrayClass) return true;
             return (((ArrayDec)x).baseType == ((ArrayDec)y).baseType)
                     && (((ArrayDec)x).dim == ((ArrayDec)y).dim);
         }

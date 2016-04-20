@@ -1,5 +1,8 @@
 package com.expye.compiler2016.AST.Dec;
 
+import com.expye.compiler2016.AST.VarDec.VarDec;
+
+import java.util.ArrayList;
 import java.util.IdentityHashMap;
 import java.util.Map;
 
@@ -16,15 +19,18 @@ public class ClassDec extends DecBase {
     public static ClassDec nullClass =
             new ClassDec("null".intern());
 
-    public Map<String, Dec> declarations =
-            new IdentityHashMap<>();
+    public ArrayList<String> declNames = new
+            ArrayList<>();
+    public ArrayList<VarDec> declElems = new
+            ArrayList<>();
 
     public ClassDec(String name) {
         this.name = name;
     }
 
-    public void addDecl(String name, Dec decl) {
-        declarations.put(name, decl);
+    public void addDecl(String name, VarDec decl) {
+        declNames.add(name.intern());
+        declElems.add(decl);
     }
 
     @Override

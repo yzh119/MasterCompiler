@@ -33,10 +33,12 @@ public class FirstListener extends BaseListener {
         now.currentScope.addEntry("getInt".intern(), Utility.getIntDec);
         now.currentScope.addEntry("toString".intern(), Utility.toStringDec);
 
-        ClassDec.stringClass.addDecl("length".intern(), Utility.stringLength);
-        ClassDec.stringClass.addDecl("substring".intern(), Utility.stringSubstring);
-        ClassDec.stringClass.addDecl("parseInt".intern(), Utility.stringParseInt);
-        ClassDec.stringClass.addDecl("ord".intern(), Utility.stringOrd);
+
+        ClassDec.stringClass.currentScope = new Scope(globalScope);
+        ClassDec.stringClass.currentScope.addEntry("length".intern(), Utility.stringLength);
+        ClassDec.stringClass.currentScope.addEntry("substring".intern(), Utility.stringSubstring);
+        ClassDec.stringClass.currentScope.addEntry("parseInt".intern(), Utility.stringParseInt);
+        ClassDec.stringClass.currentScope.addEntry("ord".intern(), Utility.stringOrd);
 
         scopes.add(globalScope);
     }
