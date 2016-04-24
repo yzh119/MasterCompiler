@@ -10,4 +10,7 @@ public class AssignExp extends BinExp {
     public AssignExp(Exp lhs, Exp rhs, ClassDec type) {
         super(lhs, rhs, type);
     }
+
+    @Override
+    public void toILOC() {}
 }

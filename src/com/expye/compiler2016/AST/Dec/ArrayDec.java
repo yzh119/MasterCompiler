@@ -23,4 +23,7 @@ public class ArrayDec extends ClassDec{
     public String toString() {
         return baseType.toString() + String.valueOf(dim);
     }
+
+    @Override
+    public void toILOC() {}
 }

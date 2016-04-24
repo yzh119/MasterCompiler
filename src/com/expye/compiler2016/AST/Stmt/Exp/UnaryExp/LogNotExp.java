@@ -9,4 +9,7 @@ public class LogNotExp extends UnaryExp {
     public LogNotExp(Exp op) {
         super(op);
     }
+
+    @Override
+    public void toILOC() {}
 }

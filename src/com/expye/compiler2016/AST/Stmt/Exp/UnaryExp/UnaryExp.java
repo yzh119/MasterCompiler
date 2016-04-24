@@ -11,4 +11,7 @@ public class UnaryExp extends Exp {
         this.op = op;
         this.type = op.type;
     }
+
+    @Override
+    public void toILOC() {}
 }

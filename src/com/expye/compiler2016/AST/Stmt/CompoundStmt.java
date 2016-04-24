@@ -10,4 +10,11 @@ public class CompoundStmt extends StmtBase {
     public CompoundStmt(List<Stmt> stmts) {
         this.stmts = stmts;
     }
+
+    @Override
+    public void toILOC() {
+        for (Stmt stmt: stmts) {
+            stmt.toILOC();
+        }
+    }
 }

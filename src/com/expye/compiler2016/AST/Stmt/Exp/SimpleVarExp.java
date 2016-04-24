@@ -11,5 +11,9 @@ public class SimpleVarExp extends Exp {
         this.pt = pt;
         this.type = pt.cd;
         this.isLvalue = true;
+        this.reg = pt.reg;
     }
+
+    @Override
+    public void toILOC() {}
 }

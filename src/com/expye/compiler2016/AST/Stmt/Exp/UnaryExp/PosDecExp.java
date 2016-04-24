@@ -9,4 +9,7 @@ public class PosDecExp extends UnaryExp {
     public PosDecExp(Exp op) {
         super(op);
     }
+
+    @Override
+    public void toILOC() {}
 }

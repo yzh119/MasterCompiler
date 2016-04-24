@@ -14,6 +14,6 @@ public class SubscriptVarExp extends Exp {
         this.le = le;
         this.offset = offset;
         this.type = type;
-        if (le.isLvalue) this.isLvalue = true;
+        this.isLvalue = true;
     }
 }

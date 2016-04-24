@@ -18,6 +18,7 @@ public class FirstListener extends BaseListener {
     @Override
     public void enterProgram(MasterParser.ProgramContext ctx) {
         Prog now = new Prog();
+        Prog.ProgInstance = now;
         Scope globalScope = new Scope(null);
 
         now.currentScope = globalScope;

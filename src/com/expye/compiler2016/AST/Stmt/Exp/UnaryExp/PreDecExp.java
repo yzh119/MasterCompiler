@@ -9,4 +9,7 @@ public class PreDecExp extends UnaryExp {
     public PreDecExp(Exp op) {
         super(op);
     }
+
+    @Override
+    public void toILOC() {}
 }

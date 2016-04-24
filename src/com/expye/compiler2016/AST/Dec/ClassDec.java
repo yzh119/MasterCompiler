@@ -1,6 +1,7 @@
 package com.expye.compiler2016.AST.Dec;
 
 import com.expye.compiler2016.AST.VarDec.VarDec;
+import com.expye.compiler2016.IR.ILOC.Label;
 
 import java.util.ArrayList;
 import java.util.IdentityHashMap;
@@ -19,8 +20,6 @@ public class ClassDec extends DecBase {
     public static ClassDec nullClass =
             new ClassDec("null".intern());
 
-    public ArrayList<String> declNames = new
-            ArrayList<>();
     public ArrayList<VarDec> declElems = new
             ArrayList<>();
 
@@ -28,8 +27,7 @@ public class ClassDec extends DecBase {
         this.name = name;
     }
 
-    public void addDecl(String name, VarDec decl) {
-        declNames.add(name.intern());
+    public void addDecl(VarDec decl) {
         declElems.add(decl);
     }
 
@@ -42,4 +40,7 @@ public class ClassDec extends DecBase {
     public String toString() {
         return this.name;
     }
+
+    @Override
+    public void toILOC() {}
 }

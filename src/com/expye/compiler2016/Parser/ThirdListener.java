@@ -26,7 +26,7 @@ import java.util.Stack;
 public class ThirdListener extends BaseListener {
     Stack<Scope> scopes = new Stack<>();
     Stack<Dec> recentFuncDec = new Stack<>();
-    Stack<Stmt> recentIteration = new Stack<>();
+    Stack<IterationStmt> recentIteration = new Stack<>();
 
     @Override
     public void enterProgram(MasterParser.ProgramContext ctx) {
@@ -67,7 +67,7 @@ public class ThirdListener extends BaseListener {
             if (ask == null) throw new InternalError("Something happened unfortunately!");
             if (!(ask instanceof VarDec))
                 throw new CompilationError(currentPlace + "I haven't support nested method or function, I'm angry!");
-            now.addDecl(((Dec)ask).getName(), (VarDec)ask);
+            now.addDecl((VarDec)ask);
         }
         scopes.pop();
     }
@@ -82,7 +82,7 @@ public class ThirdListener extends BaseListener {
     @Override
     public void exitFunction_def(MasterParser.Function_defContext ctx) {
         FuncDec now = (FuncDec)CST2AST.dict.get(ctx);
-        now.body = new ArrayList<Stmt>();
+        now.body = new ArrayList<>();
         if (ctx.stmt_list().getChildCount() != 0)
         for (ParseTree child: ctx.stmt_list().children) {
             ASTnode ask = CST2AST.dict.get(child);
@@ -91,6 +91,12 @@ public class ThirdListener extends BaseListener {
         }
         scopes.pop();
         recentFuncDec.pop();
+    }
+
+    @Override
+    public void exitStmt(MasterParser.StmtContext ctx) {
+        ASTnode now = CST2AST.dict.get(ctx.getChild(0));
+        CST2AST.dict.put(ctx, now);
     }
 
     @Override
@@ -105,16 +111,34 @@ public class ThirdListener extends BaseListener {
         if (lhs == null || rhs == null)
             throw new InternalError("Something happened unfortunately!");
         if (lhs.type == ClassDec.intClass && rhs.type == ClassDec.intClass) {
-            CST2AST.dict.put(ctx,
-                    (ctx.op.getType() == MasterParser.ADD) ?
-                            new AddExp(lhs, rhs, ClassDec.intClass) : new SubExp(lhs, rhs, ClassDec.intClass));
+            if (lhs instanceof IntExp && rhs instanceof IntExp)
+                CST2AST.dict.put(ctx,
+                        (ctx.op.getType() == MasterParser.ADD) ?
+                                new IntExp(((IntExp) lhs).val + ((IntExp) rhs).val):
+                                new IntExp(((IntExp) lhs).val - ((IntExp) rhs).val)
+                );
+            else {
+                if (lhs instanceof IntExp) {
+                    Exp tmp = lhs;
+                    lhs = rhs;
+                    rhs = tmp;
+                }
+                CST2AST.dict.put(ctx,
+                        (ctx.op.getType() == MasterParser.ADD) ?
+                                new AddExp(lhs, rhs, ClassDec.intClass) : new SubExp(lhs, rhs, ClassDec.intClass));
+            }
             return;
         }
         if (lhs.type == ClassDec.stringClass && rhs.type == ClassDec.stringClass) {
             if (ctx.op.getType() == MasterParser.SUB)
                 throw new CompilationError(currentPlace + "Strings can't be substracted!");
-            CST2AST.dict.put(ctx,
-                    new AddExp(lhs, rhs, ClassDec.stringClass));
+            if (lhs instanceof StringExp && rhs instanceof StringExp)
+                CST2AST.dict.put(ctx,
+                                new StringExp(((StringExp) lhs).val + ((StringExp) rhs).val)
+                );
+            else
+                CST2AST.dict.put(ctx,
+                        new AddExp(lhs, rhs, ClassDec.stringClass));
             return;
         }
         throw new CompilationError(currentPlace + "Operands must be integers or strings");
@@ -127,19 +151,40 @@ public class ThirdListener extends BaseListener {
         if (lhs == null || rhs == null)
             throw new InternalError("Something happened unfortunately!");
         if (lhs.type == ClassDec.intClass && rhs.type == ClassDec.intClass) {
-            switch (ctx.op.getType()) {
-                case MasterParser.MUL:
-                    CST2AST.dict.put(ctx, new MulExp(lhs, rhs, ClassDec.intClass));
-                    break;
-                case MasterParser.DIV:
-                    CST2AST.dict.put(ctx, new DivExp(lhs, rhs, ClassDec.intClass));
-                    break;
-                case MasterParser.MOD:
-                    CST2AST.dict.put(ctx, new ModExp(lhs, rhs, ClassDec.intClass));
-                    break;
-                default:
-                    throw new InternalError("Something happened unfortunately!");
-            }
+
+            if (lhs instanceof IntExp && rhs instanceof IntExp) {
+                switch (ctx.op.getType()) {
+                    case MasterParser.MUL:
+                        CST2AST.dict.put(ctx, new IntExp(((IntExp) lhs).val * ((IntExp) rhs).val));
+                        break;
+                    case MasterParser.DIV:
+                        CST2AST.dict.put(ctx, new IntExp(((IntExp) lhs).val / ((IntExp) rhs).val));
+                        break;
+                    case MasterParser.MOD:
+                        CST2AST.dict.put(ctx, new IntExp(((IntExp) lhs).val % ((IntExp) rhs).val));
+                        break;
+                    default:
+                        throw new InternalError("Something happened unfortunately!");
+                }
+            } else
+                switch (ctx.op.getType()) {
+                    case MasterParser.MUL:
+                        if (lhs instanceof IntExp) {
+                            Exp tmp = lhs;
+                            lhs = rhs;
+                            rhs = tmp;
+                        }
+                        CST2AST.dict.put(ctx, new MulExp(lhs, rhs, ClassDec.intClass));
+                        break;
+                    case MasterParser.DIV:
+                        CST2AST.dict.put(ctx, new DivExp(lhs, rhs, ClassDec.intClass));
+                        break;
+                    case MasterParser.MOD:
+                        CST2AST.dict.put(ctx, new ModExp(lhs, rhs, ClassDec.intClass));
+                        break;
+                    default:
+                        throw new InternalError("Something happened unfortunately!");
+                }
             return ;
         }
         throw new CompilationError(currentPlace + "Operands must be integers!");
@@ -152,9 +197,15 @@ public class ThirdListener extends BaseListener {
         if (lhs == null || rhs == null)
             throw new InternalError("Something happened unfortunately!");
         if (lhs.type == ClassDec.intClass && rhs.type == ClassDec.intClass) {
-            CST2AST.dict.put(ctx,
-                    (ctx.op.getType() == MasterParser.LSHIFT) ?
-                            new LshiftExp(lhs, rhs, ClassDec.intClass) : new RshiftExp(lhs, rhs, ClassDec.intClass));
+            if (lhs instanceof IntExp && rhs instanceof IntExp) {
+                CST2AST.dict.put(ctx,
+                        (ctx.op.getType() == MasterParser.LSHIFT) ?
+                            new IntExp(((IntExp) lhs).val << ((IntExp) rhs).val) :
+                            new IntExp(((IntExp) lhs).val >> ((IntExp) rhs).val));
+            } else
+                CST2AST.dict.put(ctx,
+                        (ctx.op.getType() == MasterParser.LSHIFT) ?
+                                new LshiftExp(lhs, rhs, ClassDec.intClass) : new RshiftExp(lhs, rhs, ClassDec.intClass));
             return;
         }
         throw new CompilationError(currentPlace + "Operands must be integers!");
@@ -167,7 +218,18 @@ public class ThirdListener extends BaseListener {
         if (lhs == null || rhs == null)
             throw new InternalError("Something happened unfortunately!");
         if (lhs.type == ClassDec.intClass && rhs.type == ClassDec.intClass) {
-            CST2AST.dict.put(ctx, new BitAndExp(lhs, rhs, ClassDec.intClass));
+            if (lhs instanceof IntExp && rhs instanceof IntExp) {
+                CST2AST.dict.put(ctx,
+                        new IntExp(((IntExp) lhs).val &
+                                ((IntExp) rhs).val));
+            } else {
+                if (lhs instanceof IntExp) {
+                    Exp tmp = lhs;
+                    lhs = rhs;
+                    rhs = tmp;
+                }
+                CST2AST.dict.put(ctx, new BitAndExp(lhs, rhs, ClassDec.intClass));
+            }
             return;
         }
         throw new CompilationError(currentPlace + "Operands must be integers!");
@@ -180,7 +242,17 @@ public class ThirdListener extends BaseListener {
         if (lhs == null || rhs == null)
             throw new InternalError("Something happened unfortunately!");
         if (lhs.type == ClassDec.intClass && rhs.type == ClassDec.intClass) {
-            CST2AST.dict.put(ctx, new BitXorExp(lhs, rhs, ClassDec.intClass));
+            if (lhs instanceof IntExp && rhs instanceof IntExp) {
+                CST2AST.dict.put(ctx,
+                        new IntExp(((IntExp) lhs).val ^ ((IntExp) rhs).val));
+            } else {
+                if (lhs instanceof IntExp) {
+                    Exp tmp = lhs;
+                    lhs = rhs;
+                    rhs = tmp;
+                }
+                CST2AST.dict.put(ctx, new BitXorExp(lhs, rhs, ClassDec.intClass));
+            }
             return;
         }
         throw new CompilationError(currentPlace + "Operands must be integers!");
@@ -193,7 +265,17 @@ public class ThirdListener extends BaseListener {
         if (lhs == null || rhs == null)
             throw new InternalError("Something happened unfortunately!");
         if (lhs.type == ClassDec.intClass && rhs.type == ClassDec.intClass) {
-            CST2AST.dict.put(ctx, new BitOrExp(lhs, rhs, ClassDec.intClass));
+            if (lhs instanceof IntExp && rhs instanceof IntExp) {
+                CST2AST.dict.put(ctx,
+                        new IntExp(((IntExp) lhs).val | ((IntExp) rhs).val));
+            } else {
+                if (lhs instanceof IntExp) {
+                    Exp tmp = lhs;
+                    lhs = rhs;
+                    rhs = tmp;
+                }
+                CST2AST.dict.put(ctx, new BitOrExp(lhs, rhs, ClassDec.intClass));
+            }
             return;
         }
         throw new CompilationError(currentPlace + "Operands must be integers!");
@@ -206,7 +288,17 @@ public class ThirdListener extends BaseListener {
         if (lhs == null || rhs == null)
             throw new InternalError("Something happened unfortunately!");
         if (lhs.type == ClassDec.boolClass && rhs.type == ClassDec.boolClass) {
-            CST2AST.dict.put(ctx, new LogAndExp(lhs, rhs, ClassDec.boolClass));
+            if (lhs instanceof BoolExp && rhs instanceof BoolExp) {
+                CST2AST.dict.put(ctx,
+                        new BoolExp(((BoolExp) lhs).val && ((BoolExp) rhs).val));
+            } else {
+                if (lhs instanceof IntExp) {
+                    Exp tmp = lhs;
+                    lhs = rhs;
+                    rhs = tmp;
+                }
+                CST2AST.dict.put(ctx, new LogAndExp(lhs, rhs, ClassDec.boolClass));
+            }
             return;
         }
         throw new CompilationError(currentPlace + "Operands must be booleans!");
@@ -219,7 +311,17 @@ public class ThirdListener extends BaseListener {
         if (lhs == null || rhs == null)
             throw new InternalError("Something happened unfortunately!");
         if (lhs.type == ClassDec.boolClass && rhs.type == ClassDec.boolClass) {
-            CST2AST.dict.put(ctx, new LogOrExp(lhs, rhs, ClassDec.boolClass));
+            if (lhs instanceof BoolExp && rhs instanceof BoolExp) {
+                CST2AST.dict.put(ctx,
+                        new BoolExp(((BoolExp) lhs).val || ((BoolExp) rhs).val));
+            } else {
+                if (lhs instanceof IntExp) {
+                    Exp tmp = lhs;
+                    lhs = rhs;
+                    rhs = tmp;
+                }
+                CST2AST.dict.put(ctx, new LogOrExp(lhs, rhs, ClassDec.boolClass));
+            }
             return;
         }
         throw new CompilationError(currentPlace + "Operands must be booleans!");
@@ -233,6 +335,52 @@ public class ThirdListener extends BaseListener {
             throw new InternalError("Something happened unfortunately!");
         if ((lhs.type == ClassDec.intClass && rhs.type == ClassDec.intClass)
             || (lhs.type == ClassDec.stringClass && rhs.type == ClassDec.stringClass)) {
+            if ((lhs instanceof IntExp && rhs instanceof IntExp)
+                    || (lhs instanceof StringExp && rhs instanceof StringExp)) {
+                if (lhs instanceof IntExp) {
+                    switch (ctx.op.getType()) {
+                        case MasterParser.GREATER:
+                            CST2AST.dict.put(ctx,
+                                    new BoolExp(((IntExp) lhs).val > ((IntExp) rhs).val));
+                            break;
+                        case MasterParser.GREATER_EQ:
+                            CST2AST.dict.put(ctx,
+                                    new BoolExp(((IntExp) lhs).val >= ((IntExp) rhs).val));
+                            break;
+                        case MasterParser.LESS:
+                            CST2AST.dict.put(ctx,
+                                    new BoolExp(((IntExp) lhs).val < ((IntExp) rhs).val));
+                            break;
+                        case MasterParser.LESS_EQ:
+                            CST2AST.dict.put(ctx,
+                                    new BoolExp(((IntExp) lhs).val <= ((IntExp) rhs).val));
+                            break;
+                        default:
+                            throw new CompilationError(currentPlace + "Incorrect use of compare symbols!");
+                    }
+                } else {
+                    switch (ctx.op.getType()) {
+                        case MasterParser.GREATER:
+                            CST2AST.dict.put(ctx,
+                                    new BoolExp(((StringExp) lhs).val.compareTo(((StringExp) rhs).val) > 0));
+                            break;
+                        case MasterParser.GREATER_EQ:
+                            CST2AST.dict.put(ctx,
+                                    new BoolExp(((StringExp) lhs).val.compareTo(((StringExp) rhs).val) >= 0));
+                            break;
+                        case MasterParser.LESS:
+                            CST2AST.dict.put(ctx,
+                                    new BoolExp(((StringExp) lhs).val.compareTo(((StringExp) rhs).val) < 0));
+                            break;
+                        case MasterParser.LESS_EQ:
+                            CST2AST.dict.put(ctx,
+                                    new BoolExp(((StringExp) lhs).val.compareTo(((StringExp) rhs).val) <= 0));
+                            break;
+                        default:
+                            throw new CompilationError(currentPlace + "Incorrect use of compare symbols!");
+                    }
+                }
+            } else
             switch (ctx.op.getType()) {
                 case MasterParser.GREATER:
                     CST2AST.dict.put(ctx, new GreaterExp(lhs, rhs, ClassDec.boolClass));
@@ -264,6 +412,34 @@ public class ThirdListener extends BaseListener {
         if (lhs == null || rhs == null)
             throw new InternalError("Something happened unfortunately!");
         if (Utility.match(lhs.type, rhs.type) || Utility.match(rhs.type, lhs.type)) {
+            if ((lhs instanceof IntExp && rhs instanceof IntExp)
+                    || (lhs instanceof BoolExp && rhs instanceof BoolExp)
+                    || (lhs instanceof StringExp && rhs instanceof StringExp)) {
+                if (lhs instanceof IntExp) {
+                    CST2AST.dict.put(ctx,
+                            (ctx.op.getType() == MasterParser.EQ) ?
+                                    new BoolExp(((IntExp) lhs).val == ((IntExp) rhs).val):
+                                    new BoolExp(((IntExp) lhs).val != ((IntExp) rhs).val)
+                    );
+                }
+
+                if (lhs instanceof BoolExp) {
+                    CST2AST.dict.put(ctx,
+                            (ctx.op.getType() == MasterParser.EQ) ?
+                                    new BoolExp(((BoolExp) lhs).val == ((BoolExp) rhs).val):
+                                    new BoolExp(((BoolExp) lhs).val != ((BoolExp) rhs).val)
+                    );
+                }
+
+                if (lhs instanceof StringExp) {
+                    CST2AST.dict.put(ctx,
+                            (ctx.op.getType() == MasterParser.EQ) ?
+                                    new BoolExp(((StringExp) lhs).val == ((StringExp) rhs).val):
+                                    new BoolExp(((StringExp) lhs).val != ((StringExp) rhs).val)
+                    );
+                }
+
+            } else
             switch (ctx.op.getType()) {
                 case MasterParser.EQ:
                     CST2AST.dict.put(ctx, new EqExp(lhs, rhs, ClassDec.boolClass));
@@ -305,10 +481,16 @@ public class ThirdListener extends BaseListener {
                     CST2AST.dict.put(ctx, obj);
                     break;
                 case MasterParser.SUB:
-                    CST2AST.dict.put(ctx, new MinusExp(obj));
+                    if (obj instanceof IntExp) {
+                        CST2AST.dict.put(ctx, new IntExp(-((IntExp) obj).val));
+                    } else
+                        CST2AST.dict.put(ctx, new MinusExp(obj));
                     break;
                 case MasterParser.BIT_NOT:
-                    CST2AST.dict.put(ctx, new BitNotExp(obj));
+                    if (obj instanceof IntExp) {
+                        CST2AST.dict.put(ctx, new IntExp(~((IntExp) obj).val));
+                    } else
+                        CST2AST.dict.put(ctx, new BitNotExp(obj));
                     break;
                 default:
                     throw new CompilationError(currentPlace + "Incorrect use of prefix operators!");
@@ -618,7 +800,7 @@ public class ThirdListener extends BaseListener {
                 }
             }   else    {
                 if (Utility.match(((FuncDec) recentDec).retType, ClassDec.nullClass)) {
-                    CST2AST.dict.put(ctx, new ReturnStmt(new NullExp()));
+                    CST2AST.dict.put(ctx, new ReturnStmt());
                     return;
                 }
             }
@@ -630,14 +812,14 @@ public class ThirdListener extends BaseListener {
     public void exitBreakJump(MasterParser.BreakJumpContext ctx) {
         if (recentIteration.empty())
             throw new CompilationError(currentPlace + "Abnormal Jump!");
-        CST2AST.dict.put(ctx, new BreakStmt());
+        CST2AST.dict.put(ctx, new BreakStmt(recentIteration.peek()));
     }
 
     @Override
     public void exitContinueJump(MasterParser.ContinueJumpContext ctx) {
         if (recentIteration.empty())
             throw new CompilationError(currentPlace + "Abnormal Jump!");
-        CST2AST.dict.put(ctx, new ContinueStmt());
+        CST2AST.dict.put(ctx, new ContinueStmt(recentIteration.peek()));
     }
 
     @Override

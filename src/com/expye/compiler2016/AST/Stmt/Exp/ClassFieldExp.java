@@ -13,10 +13,19 @@ public class ClassFieldExp extends Exp {
     int offset;
     public ClassFieldExp(Exp le, String field, ClassDec type) {
         this.le = le;
-        for (int i = 0; i < le.type.declNames.size(); i++)
-            if (le.type.declNames.get(i).equals(field))
-                this.offset = i;
+        offset = 0;
+        for (VarDec elem: le.type.declElems) {
+            if (elem.getName().equals(field))
+                break;
+            if (elem.cd == ClassDec.boolClass)
+                offset++;
+            else
+                offset += 4;
+        }
         this.type = type;
-        if (le.isLvalue) this.isLvalue = true;
+        this.isLvalue = true;
     }
+
+    @Override
+    public void toILOC() {}
 }

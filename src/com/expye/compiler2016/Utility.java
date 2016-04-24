@@ -13,6 +13,7 @@ import java.util.List;
  * Created by expye(Zihao Ye) on 2016/4/5.
  */
 public class Utility {
+    public static int i8 = 1, i32 = 4;
 // retType varDec body
 // varDec body
     public static VarDec strDec = new VarDec(ClassDec.stringClass, null);

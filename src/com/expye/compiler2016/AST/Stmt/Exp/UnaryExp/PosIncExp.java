@@ -9,4 +9,7 @@ public class PosIncExp extends UnaryExp {
     public PosIncExp(Exp op) {
         super(op);
     }
+
+    @Override
+    public void toILOC() {}
 }

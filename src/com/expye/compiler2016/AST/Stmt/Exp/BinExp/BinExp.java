@@ -14,4 +14,7 @@ public class BinExp extends Exp {
         this.rhs = rhs;
         this.type = type;
     }
+
+    @Override
+    public void toILOC() {}
 }

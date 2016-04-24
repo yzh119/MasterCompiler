@@ -11,4 +11,7 @@ public class ReturnStmt extends StmtBase {
         this.ret = ret;
     }
     public ReturnStmt() {}
+
+    @Override
+    public void toILOC() {}
 }

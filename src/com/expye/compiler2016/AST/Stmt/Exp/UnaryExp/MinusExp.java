@@ -9,4 +9,7 @@ public class MinusExp extends UnaryExp {
     public MinusExp(Exp op) {
         super(op);
     }
+
+    @Override
+    public void toILOC() {}
 }

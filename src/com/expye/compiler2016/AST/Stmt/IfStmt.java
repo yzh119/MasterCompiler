@@ -14,4 +14,7 @@ public class IfStmt extends StmtBase {
         stmt1 = yes;
         stmt2 = no;
     }
+
+    @Override
+    public void toILOC() {}
 }

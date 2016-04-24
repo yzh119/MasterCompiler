@@ -10,4 +10,9 @@ public class ExprStmt extends StmtBase {
     public ExprStmt(Exp expr) {
         this.expr = expr;
     }
+
+    @Override
+    public void toILOC() {
+        expr.toILOC();
+    }
 }

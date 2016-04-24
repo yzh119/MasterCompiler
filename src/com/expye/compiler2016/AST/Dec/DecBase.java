@@ -11,4 +11,9 @@ public class DecBase implements Dec{
     public String getName() {
         return name;
     }
+
+    @Override
+    public void toILOC() {
+
+    }
 }

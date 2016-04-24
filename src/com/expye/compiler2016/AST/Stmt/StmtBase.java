@@ -7,4 +7,7 @@ import com.expye.compiler2016.Environment.Scope;
  */
 public class StmtBase implements Stmt {
     public Scope currentScope = null;
+
+    @Override
+    public void toILOC() {}
 }

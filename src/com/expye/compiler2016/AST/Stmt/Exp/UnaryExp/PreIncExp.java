@@ -9,4 +9,7 @@ public class PreIncExp extends UnaryExp {
     public PreIncExp(Exp op) {
         super(op);
     }
+
+    @Override
+    public void toILOC() {}
 }
