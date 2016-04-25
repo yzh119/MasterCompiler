@@ -13,5 +13,5 @@ public class Exp extends StmtBase {
     public ClassDec type = null;
 
     @Override
-    public void toILOC() {}
+    public void emit() {}
 }

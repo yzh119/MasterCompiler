@@ -9,5 +9,5 @@ public class StmtBase implements Stmt {
     public Scope currentScope = null;
 
     @Override
-    public void toILOC() {}
+    public void emit() {}
 }

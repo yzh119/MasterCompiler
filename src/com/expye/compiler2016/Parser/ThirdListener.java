@@ -386,13 +386,13 @@ public class ThirdListener extends BaseListener {
                     CST2AST.dict.put(ctx, new GreaterExp(lhs, rhs, ClassDec.boolClass));
                     break;
                 case MasterParser.GREATER_EQ:
-                    CST2AST.dict.put(ctx, new GreaterThanExp(lhs, rhs, ClassDec.boolClass));
+                    CST2AST.dict.put(ctx, new GreaterOrEqualExp(lhs, rhs, ClassDec.boolClass));
                     break;
                 case MasterParser.LESS:
                     CST2AST.dict.put(ctx, new LessExp(lhs, rhs, ClassDec.boolClass));
                     break;
                 case MasterParser.LESS_EQ:
-                    CST2AST.dict.put(ctx, new LessThanExp(lhs, rhs, ClassDec.boolClass));
+                    CST2AST.dict.put(ctx, new LessOrEqualThanExp(lhs, rhs, ClassDec.boolClass));
                     break;
                 default:
                     throw new CompilationError(currentPlace + "Incorrect use of compare symbols!");
@@ -499,7 +499,9 @@ public class ThirdListener extends BaseListener {
         }
         if (obj.type == ClassDec.boolClass) {
             if (ctx.op.getType() == MasterParser.LOG_NOT) {
-                CST2AST.dict.put(ctx, new LogNotExp(obj));
+                if (obj instanceof BoolExp) {
+                    CST2AST.dict.put(ctx, new BoolExp(!((BoolExp) obj).val));
+                } else CST2AST.dict.put(ctx, new LogNotExp(obj));
             } else
                 throw new CompilationError(currentPlace + "Incorrect use of prefix operators!");
             return ;
@@ -617,7 +619,6 @@ public class ThirdListener extends BaseListener {
         if (next instanceof ClassDec)
             throw new CompilationError(currentPlace + "Classname can't be returned!");
         if (next instanceof FuncDec) {
-            ClassDec type = ((FuncDec)next).retType;
             List<Exp> para = new ArrayList<>();
             para.add(lhs);
             int l = 0;
@@ -643,7 +644,7 @@ public class ThirdListener extends BaseListener {
         if (next instanceof VarDec) {
             if (ctx.LPAREN() != null)
                 throw new CompilationError(currentPlace + "Too many arguments!");
-            ClassFieldExp now = new ClassFieldExp(lhs, ctx.ID().getText().intern(), ((VarDec)next).cd);
+            ClassFieldExp now = new ClassFieldExp(lhs, ctx.ID().getText().intern());
             CST2AST.dict.put(ctx, now);
         }
     }
@@ -654,8 +655,11 @@ public class ThirdListener extends BaseListener {
         Exp rhs = (Exp) CST2AST.dict.get(ctx.expr(1));
         if (!(lhs.isLvalue))
             throw new CompilationError(currentPlace + "Only lvalue can be assigned!");
-        if (!Utility.match(lhs.type, rhs.type))
+        if (!Utility.match(lhs.type, rhs.type)) {
+            System.out.println(lhs.type);
+            System.out.println(rhs.type);
             throw new CompilationError(currentPlace + "Assignment must be implemented on the same type!");
+        }
         CST2AST.dict.put(ctx, new AssignExp(lhs, rhs, lhs.type));
     }
 

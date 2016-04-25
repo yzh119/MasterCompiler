@@ -3,11 +3,12 @@ package com.expye.compiler2016.Register;
 /**
  * Created by expye(Zihao Ye) on 2016/4/24.
  */
-public class AddressWithOffset extends Address {
+public class AddressWithOffset extends IRRegister {
     public Immediate offset;
+    int type;
     public AddressWithOffset(Immediate offset, int size) {
-        super(size);
         this.offset = offset;
+        type = size;
     }
 
     @Override

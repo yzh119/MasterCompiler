@@ -5,16 +5,12 @@ import com.expye.compiler2016.AST.Dec.Dec;
 import com.expye.compiler2016.AST.Stmt.Exp.*;
 import com.expye.compiler2016.AST.Stmt.Stmt;
 import com.expye.compiler2016.Environment.Scope;
-import com.expye.compiler2016.IR.ILOC.ILOC;
-import com.expye.compiler2016.IR.ILOC.Memory.LoadI;
-import com.expye.compiler2016.IR.ILOC.RegisterToRegisterCopy.I2I;
-import com.expye.compiler2016.Register.Address;
+import com.expye.compiler2016.IR.YIR.Memory.Li;
+import com.expye.compiler2016.IR.YIR.Move;
+import com.expye.compiler2016.IR.YIR.YIR;
 import com.expye.compiler2016.Register.Immediate;
-import com.expye.compiler2016.Register.ValRegister;
+import com.expye.compiler2016.Register.IRRegister;
 import com.expye.compiler2016.Register.VirtualRegister;
-
-import static com.expye.compiler2016.Utility.i32;
-import static com.expye.compiler2016.Utility.i8;
 
 /**
  * Created by expye(Zihao Ye) on 2016/3/31.
@@ -30,9 +26,9 @@ public class VarDec implements Dec, Stmt{
         this.name = name;
 
         if (cd == ClassDec.intClass || cd == ClassDec.boolClass) {
-            reg = new ValRegister();
+            reg = new IRRegister();
         } else {
-            reg = new Address((cd == ClassDec.boolClass)? i8: i32);
+            reg = new IRRegister();
         }
     }
 
@@ -41,9 +37,9 @@ public class VarDec implements Dec, Stmt{
         this.name = name;
         this.init = init;
         if (cd == ClassDec.intClass || cd == ClassDec.boolClass) {
-            reg = new ValRegister();
+            reg = new IRRegister();
         } else {
-            reg = new Address((cd == ClassDec.boolClass)? i8: i32);
+            reg = new IRRegister();
         }
     }
 
@@ -53,16 +49,16 @@ public class VarDec implements Dec, Stmt{
     }
 
     @Override
-    public void toILOC() {
+    public void emit() {
         if (init != null) {
-            init.toILOC();
+            init.emit();
             if (init.reg instanceof Immediate) {
-                ILOC.ILOCinstance.addIns(
-                        new LoadI((Immediate) init.reg, (ValRegister) this.reg)
+                YIR.YIRInstance.addIns(
+                        new Li((IRRegister) this.reg, (Immediate) init.reg)
                 );
             } else {
-                ILOC.ILOCinstance.addIns(
-                        new I2I(init.reg, this.reg)
+                YIR.YIRInstance.addIns(
+                        new Move((IRRegister) this.reg, (IRRegister) init.reg)
                 );
             }
         }

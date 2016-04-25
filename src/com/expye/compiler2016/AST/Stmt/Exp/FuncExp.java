@@ -1,8 +1,11 @@
 package com.expye.compiler2016.AST.Stmt.Exp;
 
+import com.expye.compiler2016.AST.Dec.ClassDec;
 import com.expye.compiler2016.AST.Dec.FuncDec;
-import com.expye.compiler2016.IR.ILOC.Call;
-import com.expye.compiler2016.IR.ILOC.ILOC;
+import com.expye.compiler2016.IR.YIR.Call;
+import com.expye.compiler2016.IR.YIR.YIR;
+import com.expye.compiler2016.Register.IRRegister;
+import com.expye.compiler2016.Register.ReturnRegister;
 
 import java.util.List;
 import java.util.stream.Collectors;
@@ -17,15 +20,17 @@ public class FuncExp extends Exp {
         this.fd = fd;
         this.paraList = paraList;
         this.type = fd.retType;
+        if (fd.retType != ClassDec.nullClass) this.reg = new IRRegister();
     }
 
     @Override
-    public void toILOC() {
+    public void emit() {
         for (Exp exp: paraList) {
-            exp.toILOC();
+            exp.emit();
         }
-        ILOC.ILOCinstance.addIns(
-                new Call(fd.label ,
+
+        YIR.YIRInstance.addIns(
+                new Call((IRRegister) this.reg, fd.label ,
                         paraList.stream().map((x)->(x.reg)).collect(Collectors.toList())));
     }
 }

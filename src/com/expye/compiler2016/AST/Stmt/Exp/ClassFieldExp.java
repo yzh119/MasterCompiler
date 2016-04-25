@@ -11,21 +11,14 @@ import java.util.List;
 public class ClassFieldExp extends Exp {
     Exp le = null;
     int offset;
-    public ClassFieldExp(Exp le, String field, ClassDec type) {
+    public ClassFieldExp(Exp le, String field) {
         this.le = le;
-        offset = 0;
-        for (VarDec elem: le.type.declElems) {
-            if (elem.getName().equals(field))
-                break;
-            if (elem.cd == ClassDec.boolClass)
-                offset++;
-            else
-                offset += 4;
-        }
-        this.type = type;
+        this.type = le.type;
+        this.offset = this.type.getOffset(field);
+        System.out.println(this.offset);
         this.isLvalue = true;
     }
 
     @Override
-    public void toILOC() {}
+    public void emit() {}
 }

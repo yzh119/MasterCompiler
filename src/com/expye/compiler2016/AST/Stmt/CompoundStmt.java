@@ -12,9 +12,9 @@ public class CompoundStmt extends StmtBase {
     }
 
     @Override
-    public void toILOC() {
+    public void emit() {
         for (Stmt stmt: stmts) {
-            stmt.toILOC();
+            stmt.emit();
         }
     }
 }

@@ -2,8 +2,9 @@ package com.expye.compiler2016.AST.Dec;
 
 import com.expye.compiler2016.AST.Stmt.Stmt;
 import com.expye.compiler2016.AST.VarDec.VarDec;
-import com.expye.compiler2016.IR.ILOC.ILOC;
-import com.expye.compiler2016.IR.ILOC.Label;
+import com.expye.compiler2016.IR.YIR.YIR;
+import com.expye.compiler2016.IR.YIR.Label;
+import com.expye.compiler2016.IR.YIR.FuncLabel;
 
 import java.util.List;
 
@@ -11,8 +12,8 @@ import java.util.List;
  * Created by expye(Zihao Ye) on 2016/3/30.
  */
 public class FuncDec extends DecBase{
-    public Label label;
-
+    public FuncLabel label;
+    public Label startLabel;
     public List<VarDec> para = null;
     public List<Stmt> body = null;
     public ClassDec retType = null;
@@ -22,7 +23,8 @@ public class FuncDec extends DecBase{
         this.name = name;
         this.retType = retType;
         this.name = name;
-        this.label = Label.procLabel();
+        this.label = new FuncLabel(this, name);
+        this.startLabel = Label.funcStartLabel(this.name);
     }
 
     @Override
@@ -31,13 +33,11 @@ public class FuncDec extends DecBase{
     }
 
     @Override
-    public void toILOC() {
-        ILOC.ILOCinstance.addIns(label);
-        for (VarDec arg: para) {
-            arg.toILOC();
-        }
+    public void emit() {
+        YIR.YIRInstance.addIns(label);
+        YIR.YIRInstance.addIns(startLabel);
         for (Stmt stmt: body) {
-            stmt.toILOC();
+            stmt.emit();
         }
     }
 }

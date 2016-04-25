@@ -13,7 +13,7 @@ public class DecBase implements Dec{
     }
 
     @Override
-    public void toILOC() {
+    public void emit() {
 
     }
 }

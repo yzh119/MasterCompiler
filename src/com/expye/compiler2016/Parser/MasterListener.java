@@ -1,3 +1,4 @@
+// Generated from C:/Users/Ò¶×ÓºÀ/IdeaProjects/MasterCompiler/src/com/expye/compiler2016/Parser\Master.g4 by ANTLR 4.5.1
 package com.expye.compiler2016.Parser;
 import org.antlr.v4.runtime.tree.ParseTreeListener;
 

@@ -89,5 +89,9 @@ LINE_COMMENT
     :   '//' .*? '\r'? '\n' -> skip
     ;
 
+BlockComment
+	:	'/*' .*? '*/' -> skip
+	;
+
 WS
     :   [ \t] -> skip;

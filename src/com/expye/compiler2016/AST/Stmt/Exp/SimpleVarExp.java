@@ -15,5 +15,5 @@ public class SimpleVarExp extends Exp {
     }
 
     @Override
-    public void toILOC() {}
+    public void emit() {}
 }

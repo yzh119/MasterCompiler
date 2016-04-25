@@ -12,7 +12,7 @@ public class ExprStmt extends StmtBase {
     }
 
     @Override
-    public void toILOC() {
-        expr.toILOC();
+    public void emit() {
+        expr.emit();
     }
 }

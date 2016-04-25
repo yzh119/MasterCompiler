@@ -1,9 +1,6 @@
 package com.expye.compiler2016.AST.Stmt.Exp;
 
 import com.expye.compiler2016.AST.Dec.ClassDec;
-import com.expye.compiler2016.Environment.Scope;
-import com.expye.compiler2016.Register.Address;
-import com.expye.compiler2016.Utility;
 
 import java.util.List;
 
@@ -24,5 +21,5 @@ public class newExp extends Exp {
     }
 
     @Override
-    public void toILOC() {}
+    public void emit() {}
 }

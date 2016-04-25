@@ -7,8 +7,11 @@ import com.expye.compiler2016.Utility;
  * Created by expye(Zihao Ye) on 2016/4/6.
  */
 public class ArrayDec extends ClassDec{
+    /*
     public static ArrayDec arrayClass =
             new ArrayDec(null, -1);
+            */
+
     public ClassDec baseType;
     public int dim;
     public ArrayDec(ClassDec baseType, int dim) {
@@ -25,5 +28,5 @@ public class ArrayDec extends ClassDec{
     }
 
     @Override
-    public void toILOC() {}
+    public void emit() {}
 }

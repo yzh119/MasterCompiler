@@ -1,7 +1,6 @@
 package com.expye.compiler2016.AST.Stmt.Exp;
 
 import com.expye.compiler2016.AST.Dec.ClassDec;
-import com.expye.compiler2016.Register.Address;
 
 /**
  * Created by expye(Zihao Ye) on 2016/3/30.
@@ -20,5 +19,5 @@ public class StringExp extends Exp {
     }
 
     @Override
-    public void toILOC() {}
+    public void emit() {}
 }

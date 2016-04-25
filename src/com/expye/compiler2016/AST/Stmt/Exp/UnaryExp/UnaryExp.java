@@ -13,5 +13,5 @@ public class UnaryExp extends Exp {
     }
 
     @Override
-    public void toILOC() {}
+    public void emit() {}
 }
