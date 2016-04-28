@@ -4,13 +4,16 @@ import com.expye.compiler2016.AST.Dec.ClassDec;
 import com.expye.compiler2016.AST.Dec.Dec;
 import com.expye.compiler2016.AST.Stmt.Exp.*;
 import com.expye.compiler2016.AST.Stmt.Stmt;
+import com.expye.compiler2016.AST.constructAST;
 import com.expye.compiler2016.Environment.Scope;
 import com.expye.compiler2016.IR.YIR.Memory.Li;
 import com.expye.compiler2016.IR.YIR.Move;
 import com.expye.compiler2016.IR.YIR.YIR;
+import com.expye.compiler2016.Register.GlobalRegister;
 import com.expye.compiler2016.Register.Immediate;
 import com.expye.compiler2016.Register.IRRegister;
 import com.expye.compiler2016.Register.VirtualRegister;
+import com.expye.compiler2016.Utility;
 
 /**
  * Created by expye(Zihao Ye) on 2016/3/31.
@@ -24,20 +27,15 @@ public class VarDec implements Dec, Stmt{
     public VarDec(ClassDec cd, String name) {
         this.cd = cd;
         this.name = name;
-
-        if (cd == ClassDec.intClass || cd == ClassDec.boolClass) {
-            reg = new IRRegister();
-        } else {
-            reg = new IRRegister();
-        }
+        reg = new IRRegister();
     }
 
     public VarDec(ClassDec cd, String name, Exp init) {
         this.cd = cd;
         this.name = name;
         this.init = init;
-        if (cd == ClassDec.intClass || cd == ClassDec.boolClass) {
-            reg = new IRRegister();
+        if (currentScope == constructAST.globalScope) {
+            reg = new GlobalRegister();
         } else {
             reg = new IRRegister();
         }
@@ -50,7 +48,7 @@ public class VarDec implements Dec, Stmt{
 
     @Override
     public void emit() {
-        if (init != null) {
+        if (init != null && this.reg != init.reg) {
             init.emit();
             if (init.reg instanceof Immediate) {
                 YIR.YIRInstance.addIns(

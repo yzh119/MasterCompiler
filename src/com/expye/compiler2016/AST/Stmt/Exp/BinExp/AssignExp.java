@@ -7,6 +7,7 @@ import com.expye.compiler2016.IR.YIR.Move;
 import com.expye.compiler2016.IR.YIR.YIR;
 import com.expye.compiler2016.Register.IRRegister;
 import com.expye.compiler2016.Register.Immediate;
+import com.expye.compiler2016.Utility;
 
 /**
  * Created by expye(Zihao Ye) on 2016/3/31.
@@ -19,7 +20,6 @@ public class AssignExp extends BinExp {
 
     @Override
     public void emit() {
-        lhs.emit();
         rhs.emit();
         if (rhs.reg instanceof Immediate) {
             YIR.YIRInstance.addIns(
@@ -30,5 +30,8 @@ public class AssignExp extends BinExp {
                     new Move((IRRegister) lhs.reg, (IRRegister) rhs.reg)
             );
         }
+        Utility.ldsdL0R1 = 0;
+        lhs.emit();
+        Utility.ldsdL0R1 = 1;
     }
 }

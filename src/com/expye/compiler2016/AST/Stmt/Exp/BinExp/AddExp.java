@@ -20,8 +20,7 @@ public class AddExp extends BinExp {
 
     @Override
     public void emit() {
-        lhs.emit();
-        rhs.emit();
+        super.emit();
         if (this.type == ClassDec.intClass) {
             YIR.YIRInstance.addIns(
                     new AddIns((IRRegister) this.reg, (IRRegister) lhs.reg, rhs.reg)

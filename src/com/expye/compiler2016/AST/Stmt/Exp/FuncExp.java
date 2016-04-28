@@ -6,6 +6,7 @@ import com.expye.compiler2016.IR.YIR.Call;
 import com.expye.compiler2016.IR.YIR.YIR;
 import com.expye.compiler2016.Register.IRRegister;
 import com.expye.compiler2016.Register.ReturnRegister;
+import com.expye.compiler2016.Register.VirtualRegister;
 
 import java.util.List;
 import java.util.stream.Collectors;
@@ -20,7 +21,8 @@ public class FuncExp extends Exp {
         this.fd = fd;
         this.paraList = paraList;
         this.type = fd.retType;
-        if (fd.retType != ClassDec.nullClass) this.reg = new IRRegister();
+        if (fd.retType != ClassDec.nullClass) //this.reg = new IRRegister();
+            this.reg = ReturnRegister.returnInstance;
     }
 
     @Override

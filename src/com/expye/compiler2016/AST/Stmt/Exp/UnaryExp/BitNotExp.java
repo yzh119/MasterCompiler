@@ -16,7 +16,7 @@ public class BitNotExp extends UnaryExp {
 
     @Override
     public void emit() {
-        op.emit();
+        super.emit();
         YIR.YIRInstance.addIns(
                 new NotIns((IRRegister) this.reg, (IRRegister) op.reg)
         );

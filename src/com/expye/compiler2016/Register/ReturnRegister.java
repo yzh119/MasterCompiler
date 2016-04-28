@@ -13,6 +13,6 @@ public class ReturnRegister extends IRRegister {
 
     @Override
     public String toString() {
-        return "v0";
+        return "$v0";
     }
 }

@@ -9,8 +9,6 @@ import java.util.List;
  * Created by expye(Zihao Ye) on 2016/4/25.
  */
 public class Program {
-    public static List<CFG> functions =
-            new ArrayList<>();
-    public static List<Instruction> globalMem =
-            new ArrayList<>();
+    public static List<CFG> functions;
+    public static List<Instruction> globalMem;
 }

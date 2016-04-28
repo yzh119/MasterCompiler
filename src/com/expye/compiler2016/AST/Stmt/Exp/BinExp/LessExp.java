@@ -22,8 +22,7 @@ public class LessExp extends BinExp {
 
     @Override
     public void emit() {
-        lhs.emit();
-        rhs.emit();
+        super.emit();
         if (lhs instanceof IntExp) {
             IRRegister newReg = new IRRegister();
             YIR.YIRInstance.addIns(

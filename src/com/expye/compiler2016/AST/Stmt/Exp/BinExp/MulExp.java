@@ -17,8 +17,7 @@ public class MulExp extends BinExp {
 
     @Override
     public void emit() {
-        lhs.emit();
-        rhs.emit();
+        super.emit();
         YIR.YIRInstance.addIns(
                 new MultIns((IRRegister) this.reg, (IRRegister) lhs.reg, rhs.reg)
         );

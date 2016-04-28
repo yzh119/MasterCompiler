@@ -17,8 +17,7 @@ public class BitAndExp extends BinExp {
 
     @Override
     public void emit() {
-        lhs.emit();
-        rhs.emit();
+        super.emit();
         YIR.YIRInstance.addIns(
                 new AndIns((IRRegister) this.reg, (IRRegister) lhs.reg, rhs.reg)
         );

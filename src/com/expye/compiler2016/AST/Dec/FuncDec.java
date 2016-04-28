@@ -5,6 +5,8 @@ import com.expye.compiler2016.AST.VarDec.VarDec;
 import com.expye.compiler2016.IR.YIR.YIR;
 import com.expye.compiler2016.IR.YIR.Label;
 import com.expye.compiler2016.IR.YIR.FuncLabel;
+import com.expye.compiler2016.Register.IRRegister;
+import com.expye.compiler2016.Register.VirtualRegister;
 
 import java.util.List;
 
@@ -18,6 +20,8 @@ public class FuncDec extends DecBase{
     public List<Stmt> body = null;
     public ClassDec retType = null;
     public FuncDec(ClassDec retType, List<VarDec> vd , List<Stmt> body, String name) {
+//        Let's fuck it!
+//        VirtualRegister.init();
         this.para = vd;
         this.body = body;
         this.name = name;

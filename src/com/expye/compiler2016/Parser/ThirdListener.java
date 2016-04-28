@@ -644,7 +644,7 @@ public class ThirdListener extends BaseListener {
         if (next instanceof VarDec) {
             if (ctx.LPAREN() != null)
                 throw new CompilationError(currentPlace + "Too many arguments!");
-            ClassFieldExp now = new ClassFieldExp(lhs, ctx.ID().getText().intern());
+            ClassFieldExp now = new ClassFieldExp(lhs, ctx.ID().getText().intern(), ((VarDec)next).cd);
             CST2AST.dict.put(ctx, now);
         }
     }
@@ -656,8 +656,6 @@ public class ThirdListener extends BaseListener {
         if (!(lhs.isLvalue))
             throw new CompilationError(currentPlace + "Only lvalue can be assigned!");
         if (!Utility.match(lhs.type, rhs.type)) {
-            System.out.println(lhs.type);
-            System.out.println(rhs.type);
             throw new CompilationError(currentPlace + "Assignment must be implemented on the same type!");
         }
         CST2AST.dict.put(ctx, new AssignExp(lhs, rhs, lhs.type));

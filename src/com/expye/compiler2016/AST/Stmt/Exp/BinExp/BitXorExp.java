@@ -17,8 +17,7 @@ public class BitXorExp extends BinExp {
 
     @Override
     public void emit() {
-        lhs.emit();
-        rhs.emit();
+        super.emit();
         YIR.YIRInstance.addIns(
                 new XorIns((IRRegister) this.reg, (IRRegister) lhs.reg, rhs.reg)
         );

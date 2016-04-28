@@ -5,8 +5,13 @@ package com.expye.compiler2016.Register;
  */
 public class IRRegister extends VirtualRegister {
     int uID;
+    public Address addr;
     public IRRegister() {
         uID = cID++;
+    }
+    public IRRegister(Address addr) {
+        uID = cID++;
+        this.addr = addr;
     }
 
     @Override

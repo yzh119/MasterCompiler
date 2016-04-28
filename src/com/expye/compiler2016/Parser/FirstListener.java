@@ -2,9 +2,14 @@ package com.expye.compiler2016.Parser;
 
 import com.expye.compiler2016.AST.Dec.ClassDec;
 import com.expye.compiler2016.AST.Prog.Prog;
+import com.expye.compiler2016.AST.constructAST;
 import com.expye.compiler2016.Environment.Scope;
 import com.expye.compiler2016.Exception.CompilationError;
+import com.expye.compiler2016.IR.YIR.Label;
+import com.expye.compiler2016.IR.YIR.YIR;
+import com.expye.compiler2016.Register.VirtualRegister;
 import com.expye.compiler2016.Utility;
+import org.antlr.v4.runtime.tree.ParseTreeProperty;
 
 import java.util.Stack;
 
@@ -19,9 +24,13 @@ public class FirstListener extends BaseListener {
     public void enterProgram(MasterParser.ProgramContext ctx) {
         Prog now = new Prog();
         Prog.ProgInstance = now;
-        Scope globalScope = new Scope(null);
+        constructAST.globalScope = new Scope(null);
+        CST2AST.dict = new ParseTreeProperty<>();
+        YIR.YIRInstance = new YIR();
+        Label.init();
+        VirtualRegister.init();
 
-        now.currentScope = globalScope;
+        now.currentScope = constructAST.globalScope;
         CST2AST.dict.put(ctx, now);
 
         now.currentScope.addEntry("int".intern(), ClassDec.intClass);
@@ -35,13 +44,13 @@ public class FirstListener extends BaseListener {
         now.currentScope.addEntry("toString".intern(), Utility.toStringDec);
 
 
-        ClassDec.stringClass.currentScope = new Scope(globalScope);
+        ClassDec.stringClass.currentScope = new Scope(constructAST.globalScope);
         ClassDec.stringClass.currentScope.addEntry("length".intern(), Utility.stringLength);
         ClassDec.stringClass.currentScope.addEntry("substring".intern(), Utility.stringSubstring);
         ClassDec.stringClass.currentScope.addEntry("parseInt".intern(), Utility.stringParseInt);
         ClassDec.stringClass.currentScope.addEntry("ord".intern(), Utility.stringOrd);
 
-        scopes.add(globalScope);
+        scopes.add(constructAST.globalScope);
     }
 
     @Override

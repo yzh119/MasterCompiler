@@ -16,17 +16,8 @@ import java.util.List;
  * Created by expye(Zihao Ye) on 2016/4/20.
  */
 public class convertYIRtoCFG {
-
+    public static int cnt = 0;
     public static void printIR(PrintStream out) {
-        /*
-        This procedure is used for global variables.
-
-        System.out.println("global:");
-        for (Instruction ins: Program.globalMem) {
-            System.out.println(ins);
-        }
-        System.out.println();
-        */
         for (CFG cfg: Program.functions) {
             out.println("func " + cfg.flable +
                     cfg.flable.prototype.para.stream().map(x -> x.reg.toString()).reduce("", (x, y)-> x + " " + y) + " {");
@@ -42,6 +33,8 @@ public class convertYIRtoCFG {
     }
 
     public static void main(String[] args) {
+        Program.functions = new ArrayList<>();
+        Program.globalMem = new ArrayList<>();
         List<Instruction> basicBlock = null;
         List<BasicBlock> thisFunction = null;
         boolean inGlobal = true;

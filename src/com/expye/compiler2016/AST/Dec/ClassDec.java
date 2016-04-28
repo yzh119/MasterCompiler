@@ -11,6 +11,7 @@ import java.util.HashMap;
  */
 public class ClassDec extends DecBase {
     int cnt = 0;
+    public int size = 0;
     public static ClassDec intClass =
             new ClassDec("int".intern());
     public static ClassDec boolClass =
@@ -30,6 +31,7 @@ public class ClassDec extends DecBase {
 
     public void addDecl(VarDec decl) {
         declElems.add(decl);
+        size += Utility.i32;
     }
 
     public Integer getOffset(String s) {
@@ -38,7 +40,7 @@ public class ClassDec extends DecBase {
             int calOffset = 0;
             for (VarDec decl: this.declElems) {
                 offsetTable.put(decl.getName(), calOffset);
-                calOffset += (decl.cd == ClassDec.boolClass) ? Utility.i8 : Utility.i32;
+                calOffset += Utility.i32;
             }
         }
         return offsetTable.get(s);

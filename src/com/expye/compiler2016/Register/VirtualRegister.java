@@ -6,6 +6,9 @@ package com.expye.compiler2016.Register;
 public class VirtualRegister {
     public static int cID = 0;
 
+    public static void init() {
+        cID = 0;
+    }
     @Override
     public String toString() {
         return super.toString();
