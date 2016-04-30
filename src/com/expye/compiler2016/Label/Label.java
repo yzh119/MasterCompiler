@@ -1,4 +1,6 @@
-package com.expye.compiler2016.IR.YIR;
+package com.expye.compiler2016.Label;
+
+import com.expye.compiler2016.IR.YIR.Instruction;
 
 /**
  * Created by expye(Zihao Ye) on 2016/4/21.

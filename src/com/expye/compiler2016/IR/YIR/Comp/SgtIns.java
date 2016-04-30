@@ -6,10 +6,10 @@ import com.expye.compiler2016.Register.VirtualRegister;
 /**
  * Created by expye(Zihao Ye) on 2016/4/24.
  */
-public class Sge extends Comp {
+public class SgtIns extends Comp {
     IRRegister r1, rd;
     VirtualRegister r2;
-    public Sge (IRRegister rd, IRRegister r1, VirtualRegister r2) {
+    public SgtIns(IRRegister rd, IRRegister r1, VirtualRegister r2) {
         this.r1 = r1;
         this.r2 = r2;
         this.rd = rd;
@@ -17,6 +17,6 @@ public class Sge extends Comp {
 
     @Override
     public String toString() {
-        return rd.toString() + " = sge " + r1.toString() + " " + r2.toString();
+        return rd.toString() + " = sgt " + r1.toString() + " " + r2.toString();
     }
 }

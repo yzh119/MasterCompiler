@@ -7,10 +7,10 @@ import com.expye.compiler2016.Register.IRRegister;
 /**
  * Created by expye(Zihao Ye) on 2016/4/24.
  */
-public class Li extends Memory {
+public class LoadImmediate extends Memory {
     IRRegister rd;
     Immediate imm;
-    public Li(IRRegister rd, Immediate imm) {
+    public LoadImmediate(IRRegister rd, Immediate imm) {
         this.rd = rd;
         this.imm = imm;
     }
