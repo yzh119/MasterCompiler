@@ -9,6 +9,7 @@ import com.expye.compiler2016.AST.VarDec.VarDec;
 import com.expye.compiler2016.Exception.CompilationError;
 import com.expye.compiler2016.Exception.InternalError;
 import com.expye.compiler2016.Environment.Scope;
+import com.expye.compiler2016.Register.ArgsRegister;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -84,6 +85,7 @@ public class SecondListener extends BaseListener {
 
     @Override
     public void exitFunction_def(MasterParser.Function_defContext ctx) {
+        ArgsRegister.init();
         Scope currentScope = scopes.peek();
         String funcName =
                 ctx.ID().getText().intern();
@@ -102,7 +104,7 @@ public class SecondListener extends BaseListener {
                 type = CST2AST.dict.get(paraDecl.type_specifier());
                 if (type == null)
                     throw new InternalError("Something happened unfortunately!");
-                paraList.add(new VarDec((ClassDec)type, paraDecl.ID().getText().intern()));
+                paraList.add(new VarDec((ClassDec)type, paraDecl.ID().getText().intern(), new ArgsRegister(0)));
             }
         FuncDec now = new FuncDec(retType, paraList, null, funcName);
         CST2AST.dict.put(ctx, now);

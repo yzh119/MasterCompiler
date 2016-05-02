@@ -8,4 +8,8 @@ public class Instruction {
     public String toString() {
         return super.toString();
     }
+
+    public String CISCResolve() {
+        return "";
+    }
 }

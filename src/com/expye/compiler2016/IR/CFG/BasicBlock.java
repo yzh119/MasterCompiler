@@ -1,7 +1,7 @@
 package com.expye.compiler2016.IR.CFG;
 
 import com.expye.compiler2016.IR.YIR.Instruction;
-import com.expye.compiler2016.IR.YIR.Label;
+import com.expye.compiler2016.Label.Label;
 
 import java.util.ArrayList;
 import java.util.List;

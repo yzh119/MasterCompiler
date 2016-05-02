@@ -2,11 +2,14 @@ package com.expye.compiler2016.AST.Stmt;
 
 import com.expye.compiler2016.AST.Stmt.Exp.Exp;
 import com.expye.compiler2016.IR.YIR.ControlFlow.Cbr;
-import com.expye.compiler2016.IR.YIR.ControlFlow.Jump;
-import com.expye.compiler2016.IR.YIR.Label;
+import com.expye.compiler2016.IR.YIR.ControlFlow.JumpIns;
+import com.expye.compiler2016.IR.YIR.Instruction;
+import com.expye.compiler2016.Label.Label;
 import com.expye.compiler2016.IR.YIR.YIR;
 import com.expye.compiler2016.Register.IRRegister;
 import com.expye.compiler2016.Register.Immediate;
+
+import java.util.List;
 
 /**
  * Created by expye(Zihao Ye) on 2016/3/30.
@@ -26,23 +29,23 @@ public class IfStmt extends StmtBase {
     }
 
     @Override
-    public void emit() {
-        condition.emit();
+    public void emit(List<Instruction> lst) {
+        condition.emit(lst);
         if (condition.reg instanceof Immediate) {
             boolean cond = (((Immediate) condition.reg).val != 0);
             if (cond)
-                stmt1.emit();
+                stmt1.emit(lst);
             return ;
         }
-        YIR.YIRInstance.addIns(
+        lst.add(
                 new Cbr((IRRegister) condition.reg, iT, iF)
         );
-        YIR.YIRInstance.addIns(iT);
-        if (stmt1 != null) stmt1.emit();
-        YIR.YIRInstance.addIns(new Jump(end));
-        YIR.YIRInstance.addIns(iF);
-        if (stmt2 != null) stmt2.emit();
-        YIR.YIRInstance.addIns(new Jump(end));
-        YIR.YIRInstance.addIns(end);
+        lst.add(iT);
+        if (stmt1 != null) stmt1.emit(lst);
+        lst.add(new JumpIns(end));
+        lst.add(iF);
+        if (stmt2 != null) stmt2.emit(lst);
+        lst.add(new JumpIns(end));
+        lst.add(end);
     }
 }

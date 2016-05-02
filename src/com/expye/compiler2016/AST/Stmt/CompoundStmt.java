@@ -1,5 +1,7 @@
 package com.expye.compiler2016.AST.Stmt;
 
+import com.expye.compiler2016.IR.YIR.Instruction;
+
 import java.util.List;
 
 /**
@@ -12,9 +14,9 @@ public class CompoundStmt extends StmtBase {
     }
 
     @Override
-    public void emit() {
+    public void emit(List<Instruction> lst) {
         for (Stmt stmt: stmts) {
-            stmt.emit();
+            stmt.emit(lst);
         }
     }
 }

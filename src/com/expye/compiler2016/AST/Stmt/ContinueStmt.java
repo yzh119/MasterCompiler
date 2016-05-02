@@ -1,7 +1,10 @@
 package com.expye.compiler2016.AST.Stmt;
 
-import com.expye.compiler2016.IR.YIR.ControlFlow.Jump;
+import com.expye.compiler2016.IR.YIR.ControlFlow.JumpIns;
+import com.expye.compiler2016.IR.YIR.Instruction;
 import com.expye.compiler2016.IR.YIR.YIR;
+
+import java.util.List;
 
 /**
  * Created by expye(Zihao Ye) on 2016/3/30.
@@ -12,7 +15,7 @@ public class ContinueStmt extends StmtBase {
         this.it = it;
     }
     @Override
-    public void emit() {
-        YIR.YIRInstance.addIns(new Jump(it.iM));
+    public void emit(List<Instruction> lst) {
+        lst.add(new JumpIns(it.iM));
     }
 }

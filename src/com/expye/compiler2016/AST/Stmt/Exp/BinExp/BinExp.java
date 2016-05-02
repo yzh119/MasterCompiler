@@ -2,7 +2,9 @@ package com.expye.compiler2016.AST.Stmt.Exp.BinExp;
 
 import com.expye.compiler2016.AST.Dec.ClassDec;
 import com.expye.compiler2016.AST.Stmt.Exp.Exp;
-import com.expye.compiler2016.Utility;
+import com.expye.compiler2016.IR.YIR.Instruction;
+
+import java.util.List;
 
 /**
  * Created by expye(Zihao Ye) on 2016/3/31.
@@ -17,8 +19,8 @@ public class BinExp extends Exp {
     }
 
     @Override
-    public void emit() {
-        lhs.emit();
-        rhs.emit();
+    public void emit(List<Instruction> lst) {
+        lhs.emit(lst);
+        rhs.emit(lst);
     }
 }

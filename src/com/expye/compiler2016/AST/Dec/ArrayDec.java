@@ -1,7 +1,10 @@
 package com.expye.compiler2016.AST.Dec;
 
 import com.expye.compiler2016.Environment.Scope;
-import com.expye.compiler2016.Utility;
+import com.expye.compiler2016.IR.YIR.Instruction;
+import com.expye.compiler2016.Utility.Utility;
+
+import java.util.List;
 
 /**
  * Created by expye(Zihao Ye) on 2016/4/6.
@@ -28,5 +31,5 @@ public class ArrayDec extends ClassDec{
     }
 
     @Override
-    public void emit() {}
+    public void emit(List<Instruction> lst) {}
 }

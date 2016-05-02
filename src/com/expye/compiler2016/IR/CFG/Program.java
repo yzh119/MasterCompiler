@@ -11,4 +11,5 @@ import java.util.List;
 public class Program {
     public static List<CFG> functions;
     public static List<Instruction> globalMem;
+    public static CFG preMain;
 }

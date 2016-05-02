@@ -1,6 +1,7 @@
 package com.expye.compiler2016.Parser;
 
 import com.expye.compiler2016.AST.ASTnode;
+import com.expye.compiler2016.AST.ConstructAST;
 import com.expye.compiler2016.AST.Dec.*;
 import com.expye.compiler2016.AST.Prog.Prog;
 import com.expye.compiler2016.AST.Stmt.Exp.SimpleVarExp;
@@ -9,7 +10,10 @@ import com.expye.compiler2016.AST.VarDec.VarDec;
 import com.expye.compiler2016.Environment.Scope;
 import com.expye.compiler2016.Exception.CompilationError;
 import com.expye.compiler2016.Exception.InternalError;
-import com.expye.compiler2016.Utility;
+import com.expye.compiler2016.Label.GlobalVarLabel;
+import com.expye.compiler2016.Register.Address;
+import com.expye.compiler2016.Register.IRRegister;
+import com.expye.compiler2016.Utility.MatchType;
 import com.expye.compiler2016.AST.Stmt.*;
 import com.expye.compiler2016.AST.Stmt.Exp.*;
 import com.expye.compiler2016.AST.Stmt.Exp.BinExp.*;
@@ -74,6 +78,7 @@ public class ThirdListener extends BaseListener {
 
     @Override
     public void enterFunction_def(MasterParser.Function_defContext ctx) {
+        IRRegister.reSetCounterToNewFunc();
         FuncDec now = (FuncDec)CST2AST.dict.get(ctx);
         scopes.add(now.currentScope);
         recentFuncDec.add(now);
@@ -91,6 +96,7 @@ public class ThirdListener extends BaseListener {
         }
         scopes.pop();
         recentFuncDec.pop();
+        IRRegister.reSetCounterToGlobal();
     }
 
     @Override
@@ -411,7 +417,7 @@ public class ThirdListener extends BaseListener {
         Exp rhs = (Exp) CST2AST.dict.get(ctx.expr(1));
         if (lhs == null || rhs == null)
             throw new InternalError("Something happened unfortunately!");
-        if (Utility.match(lhs.type, rhs.type) || Utility.match(rhs.type, lhs.type)) {
+        if (MatchType.match(lhs.type, rhs.type) || MatchType.match(rhs.type, lhs.type)) {
             if ((lhs instanceof IntExp && rhs instanceof IntExp)
                     || (lhs instanceof BoolExp && rhs instanceof BoolExp)
                     || (lhs instanceof StringExp && rhs instanceof StringExp)) {
@@ -565,7 +571,7 @@ public class ThirdListener extends BaseListener {
                 throw new CompilationError(currentPlace + "Arguments' number doesn't match!");
             for (int i = 0; i < ctx.param_list().expr().size(); i++) {
                 Exp thisPara = (Exp) CST2AST.dict.get(ctx.param_list().expr(i));
-                if (Utility.match(((FuncDec) func).para.get(i).cd, thisPara.type))
+                if (MatchType.match(((FuncDec) func).para.get(i).cd, thisPara.type))
                     para.add(thisPara);
                 else
                     throw new CompilationError(currentPlace + "Arguments' type doesn't match!");
@@ -630,7 +636,7 @@ public class ThirdListener extends BaseListener {
 
             for (int i = 0; i < l; i++) {
                 Exp thisPara = (Exp) CST2AST.dict.get(ctx.param_list().expr(i));
-                if (Utility.match(((FuncDec)next).para.get(i + 1).cd, thisPara.type))
+                if (MatchType.match(((FuncDec)next).para.get(i + 1).cd, thisPara.type))
                     para.add(thisPara);
                 else
                     throw new CompilationError(currentPlace + "Arguments' type doesn't match!");
@@ -655,7 +661,7 @@ public class ThirdListener extends BaseListener {
         Exp rhs = (Exp) CST2AST.dict.get(ctx.expr(1));
         if (!(lhs.isLvalue))
             throw new CompilationError(currentPlace + "Only lvalue can be assigned!");
-        if (!Utility.match(lhs.type, rhs.type)) {
+        if (!MatchType.match(lhs.type, rhs.type)) {
             throw new CompilationError(currentPlace + "Assignment must be implemented on the same type!");
         }
         CST2AST.dict.put(ctx, new AssignExp(lhs, rhs, lhs.type));
@@ -796,12 +802,12 @@ public class ThirdListener extends BaseListener {
         Dec recentDec = recentFuncDec.peek();
         if (recentDec instanceof FuncDec) {
             if (ret != null) {
-                if (Utility.match(((FuncDec) recentDec).retType, ret.type)) {
+                if (MatchType.match(((FuncDec) recentDec).retType, ret.type)) {
                     CST2AST.dict.put(ctx, new ReturnStmt(ret));
                     return;
                 }
             }   else    {
-                if (Utility.match(((FuncDec) recentDec).retType, ClassDec.nullClass)) {
+                if (MatchType.match(((FuncDec) recentDec).retType, ClassDec.nullClass)) {
                     CST2AST.dict.put(ctx, new ReturnStmt());
                     return;
                 }
@@ -853,13 +859,16 @@ public class ThirdListener extends BaseListener {
         if (type == ClassDec.nullClass)
             throw new CompilationError("Define a null is not welcomed!");
         Dec ask = currentScope.lookUpInThisScope(varName);
+        IRRegister reg = new IRRegister();
+        if (currentScope == ConstructAST.globalScope)
+            reg.addr = new Address(new GlobalVarLabel(varName));
         if (ask == null) {
             VarDec now;
             if (ctx.expr() == null)
-                now = new VarDec(type, varName);
+                now = new VarDec(type, varName, reg);
             else {
-                if (Utility.match(type, ((Exp) CST2AST.dict.get(ctx.expr())).type))
-                    now = new VarDec(type, varName, (Exp) CST2AST.dict.get(ctx.expr()));
+                if (MatchType.match(type, ((Exp) CST2AST.dict.get(ctx.expr())).type))
+                    now = new VarDec(type, varName, (Exp) CST2AST.dict.get(ctx.expr()), reg);
                 else
                     throw new CompilationError("Initial type must match!");
             }

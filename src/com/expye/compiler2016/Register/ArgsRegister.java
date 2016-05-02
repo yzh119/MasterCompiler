@@ -9,7 +9,14 @@ public class ArgsRegister extends IRRegister {
         aID = 0;
     }
 
-    public ArgsRegister() {
-        aID = aID++;
+
+    public ArgsRegister(int nop) {
+        super(nop);
+        uID = aID++;
+    }
+
+    @Override
+    public String toString() {
+        return "$a" + uID;
     }
 }

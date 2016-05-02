@@ -14,7 +14,7 @@ import org.antlr.v4.runtime.tree.ParseTreeWalker;
 /**
  * Created by expye(Zihao Ye) on 2016/4/20.
  */
-public class constructAST {
+public class ConstructAST {
     public static Scope globalScope;
     public static void main(String[] args) throws Exception{
         try {

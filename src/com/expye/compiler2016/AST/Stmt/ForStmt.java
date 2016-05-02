@@ -2,11 +2,14 @@ package com.expye.compiler2016.AST.Stmt;
 
 import com.expye.compiler2016.AST.Stmt.Exp.Exp;
 import com.expye.compiler2016.IR.YIR.ControlFlow.Cbr;
-import com.expye.compiler2016.IR.YIR.ControlFlow.Jump;
-import com.expye.compiler2016.IR.YIR.Label;
+import com.expye.compiler2016.IR.YIR.ControlFlow.JumpIns;
+import com.expye.compiler2016.IR.YIR.Instruction;
+import com.expye.compiler2016.Label.Label;
 import com.expye.compiler2016.IR.YIR.YIR;
 import com.expye.compiler2016.Register.IRRegister;
 import com.expye.compiler2016.Register.Immediate;
+
+import java.util.List;
 
 /**
  * Created by expye(Zihao Ye) on 2016/3/30.
@@ -26,8 +29,8 @@ public class ForStmt extends IterationStmt {
     }
 
     @Override
-    public void emit() {
-        if (exp1 != null) exp1.emit();
+    public void emit(List<Instruction> lst) {
+        if (exp1 != null) exp1.emit(lst);
         boolean noStop = false;
         if (exp2 == null) noStop = true;
         if (exp2 != null && exp2.reg instanceof Immediate) {
@@ -36,24 +39,24 @@ public class ForStmt extends IterationStmt {
             noStop = true;
         }
 
-        YIR.YIRInstance.addIns(ite);
-        if (!noStop) exp2.emit();
+        lst.add(ite);
+        if (!noStop) exp2.emit(lst);
 
         if (noStop) {
-            if (stmt != null) stmt.emit();
-            YIR.YIRInstance.addIns(iM);
-            if (exp3 != null) exp3.emit();
-            YIR.YIRInstance.addIns(new Jump(ite));
+            if (stmt != null) stmt.emit(lst);
+            lst.add(iM);
+            if (exp3 != null) exp3.emit(lst);
+            lst.add(new JumpIns(ite));
         } else {
-            YIR.YIRInstance.addIns(
+            lst.add(
                     new Cbr((IRRegister) exp2.reg, iT, end)
             );
-            YIR.YIRInstance.addIns(iT);
-            if (stmt != null) stmt.emit();
-            YIR.YIRInstance.addIns(iM);
-            if (exp3 != null) exp3.emit();
-            YIR.YIRInstance.addIns(new Jump(ite));
+            lst.add(iT);
+            if (stmt != null) stmt.emit(lst);
+            lst.add(iM);
+            if (exp3 != null) exp3.emit(lst);
+            lst.add(new JumpIns(ite));
         }
-        YIR.YIRInstance.addIns(end);
+        lst.add(end);
     }
 }

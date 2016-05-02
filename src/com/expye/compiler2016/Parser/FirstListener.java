@@ -2,15 +2,20 @@ package com.expye.compiler2016.Parser;
 
 import com.expye.compiler2016.AST.Dec.ClassDec;
 import com.expye.compiler2016.AST.Prog.Prog;
-import com.expye.compiler2016.AST.constructAST;
+import com.expye.compiler2016.AST.ConstructAST;
 import com.expye.compiler2016.Environment.Scope;
 import com.expye.compiler2016.Exception.CompilationError;
-import com.expye.compiler2016.IR.YIR.Label;
+import com.expye.compiler2016.IR.CFG.BasicBlock;
+import com.expye.compiler2016.IR.CFG.CFG;
+import com.expye.compiler2016.IR.CFG.Program;
+import com.expye.compiler2016.Label.FuncLabel;
+import com.expye.compiler2016.Label.Label;
 import com.expye.compiler2016.IR.YIR.YIR;
-import com.expye.compiler2016.Register.VirtualRegister;
-import com.expye.compiler2016.Utility;
+import com.expye.compiler2016.Register.IRRegister;
+import com.expye.compiler2016.Utility.Utility;
 import org.antlr.v4.runtime.tree.ParseTreeProperty;
 
+import java.util.ArrayList;
 import java.util.Stack;
 
 
@@ -24,13 +29,17 @@ public class FirstListener extends BaseListener {
     public void enterProgram(MasterParser.ProgramContext ctx) {
         Prog now = new Prog();
         Prog.ProgInstance = now;
-        constructAST.globalScope = new Scope(null);
+        IRRegister.init();
+        ConstructAST.globalScope = new Scope(null);
         CST2AST.dict = new ParseTreeProperty<>();
         YIR.YIRInstance = new YIR();
         Label.init();
-        VirtualRegister.init();
-
-        now.currentScope = constructAST.globalScope;
+        Program.functions = new ArrayList<>();
+        Program.globalMem = new ArrayList<>();
+        Program.preMain = new CFG(new FuncLabel(null, "main"),
+                new ArrayList<>());
+        Program.preMain.blockList.add(new BasicBlock(Label.funcStartLabel("main"), new ArrayList<>()));
+        now.currentScope = ConstructAST.globalScope;
         CST2AST.dict.put(ctx, now);
 
         now.currentScope.addEntry("int".intern(), ClassDec.intClass);
@@ -43,14 +52,23 @@ public class FirstListener extends BaseListener {
         now.currentScope.addEntry("getInt".intern(), Utility.getIntDec);
         now.currentScope.addEntry("toString".intern(), Utility.toStringDec);
 
+        now.currentScope.addEntry("string_concatenate".intern(), Utility.stringConcatenate);
+        now.currentScope.addEntry("string_equal_to".intern(), Utility.stringEq);
+        now.currentScope.addEntry("string_equal_to_or_greater_than".intern(), Utility.stringGeq);
+        now.currentScope.addEntry("string_greater_than".intern(), Utility.stringGt);
+        now.currentScope.addEntry("string_not_equal_to".intern(), Utility.stringNeq);
+        now.currentScope.addEntry("string_less_than".intern(), Utility.stringLt);
+        now.currentScope.addEntry("string_less_than_or_equal_to".intern(), Utility.stringLeq);
 
-        ClassDec.stringClass.currentScope = new Scope(constructAST.globalScope);
+
+
+        ClassDec.stringClass.currentScope = new Scope(ConstructAST.globalScope);
         ClassDec.stringClass.currentScope.addEntry("length".intern(), Utility.stringLength);
         ClassDec.stringClass.currentScope.addEntry("substring".intern(), Utility.stringSubstring);
         ClassDec.stringClass.currentScope.addEntry("parseInt".intern(), Utility.stringParseInt);
         ClassDec.stringClass.currentScope.addEntry("ord".intern(), Utility.stringOrd);
 
-        scopes.add(constructAST.globalScope);
+        scopes.add(ConstructAST.globalScope);
     }
 
     @Override

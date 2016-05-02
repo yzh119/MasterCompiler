@@ -7,12 +7,8 @@ import com.expye.compiler2016.Register.VirtualRegister;
  * Created by expye(Zihao Ye) on 2016/4/24.
  */
 public class SgeIns extends Comp {
-    IRRegister r1, rd;
-    VirtualRegister r2;
     public SgeIns(IRRegister rd, IRRegister r1, VirtualRegister r2) {
-        this.r1 = r1;
-        this.r2 = r2;
-        this.rd = rd;
+        super(rd, r1, r2);
     }
 
     @Override

@@ -6,7 +6,7 @@ import com.expye.compiler2016.Register.VirtualRegister;
  * Created by expye(Zihao Ye) on 2016/4/24.
  */
 public class RetIns extends ControlFlow {
-    VirtualRegister reg;
+    public VirtualRegister reg;
     public RetIns(VirtualRegister reg) {
         this.reg = reg;
     }

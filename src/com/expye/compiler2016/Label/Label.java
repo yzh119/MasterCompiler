@@ -8,7 +8,7 @@ import com.expye.compiler2016.IR.YIR.Instruction;
 public class Label extends Instruction {
     public String label;
     public static int endCnt = 0, ifTrueCnt = 0, ifFalseCnt = 0, beginCnt = 0, mergeCnt = 0;
-    protected Label(String label) {
+    public Label(String label) {
         this.label = label;
     }
 

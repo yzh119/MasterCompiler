@@ -4,41 +4,41 @@ import com.expye.compiler2016.AST.Dec.ClassDec;
 import com.expye.compiler2016.AST.Dec.Dec;
 import com.expye.compiler2016.AST.Stmt.Exp.*;
 import com.expye.compiler2016.AST.Stmt.Stmt;
-import com.expye.compiler2016.AST.constructAST;
-import com.expye.compiler2016.Environment.Scope;
-import com.expye.compiler2016.IR.YIR.Memory.Li;
+import com.expye.compiler2016.IR.CFG.Program;
+import com.expye.compiler2016.IR.YIR.Instruction;
+import com.expye.compiler2016.IR.YIR.Memory.LoadImmediate;
+import com.expye.compiler2016.IR.YIR.Memory.Store;
 import com.expye.compiler2016.IR.YIR.Move;
-import com.expye.compiler2016.IR.YIR.YIR;
-import com.expye.compiler2016.Register.GlobalRegister;
+import com.expye.compiler2016.IR.YIR.StaticWord;
 import com.expye.compiler2016.Register.Immediate;
 import com.expye.compiler2016.Register.IRRegister;
 import com.expye.compiler2016.Register.VirtualRegister;
-import com.expye.compiler2016.Utility;
+
+import java.util.List;
 
 /**
  * Created by expye(Zihao Ye) on 2016/3/31.
  */
 public class VarDec implements Dec, Stmt{
-    public VirtualRegister reg;
-    public Scope currentScope = null;
+    //public VirtualRegister reg;
+    public IRRegister reg;
+    public boolean isGlobal;
     public ClassDec cd;
     String name;
     public Exp init = null;
-    public VarDec(ClassDec cd, String name) {
+    public VarDec(ClassDec cd, String name, IRRegister reg) {
         this.cd = cd;
         this.name = name;
-        reg = new IRRegister();
+        this.reg = reg;
+        this.isGlobal = (reg.addr != null && reg.addr.staticVar != null);
     }
 
-    public VarDec(ClassDec cd, String name, Exp init) {
+    public VarDec(ClassDec cd, String name, Exp init, IRRegister reg) {
         this.cd = cd;
         this.name = name;
         this.init = init;
-        if (currentScope == constructAST.globalScope) {
-            reg = new GlobalRegister();
-        } else {
-            reg = new IRRegister();
-        }
+        this.reg = reg;
+        this.isGlobal = (reg.addr != null && reg.addr.staticVar != null);
     }
 
     @Override
@@ -47,16 +47,41 @@ public class VarDec implements Dec, Stmt{
     }
 
     @Override
-    public void emit() {
+    public void emit(List<Instruction> lst) {
+        if (this.isGlobal) {
+            Program.globalMem.add(
+                    new StaticWord(reg.addr.staticVar)
+            );
+            if (init != null && this.reg != init.reg) {
+                init.emit(Program.preMain.blockList.get(0).internal);
+                IRRegister reg = new IRRegister();
+                if (init.reg instanceof Immediate) {
+                    Program.preMain.blockList.get(0).internal.add(
+                            new LoadImmediate(reg, (Immediate) init.reg)
+                    );
+                    Program.preMain.blockList.get(0).internal.add(
+                            new Store(reg, this.reg.addr)
+                    );
+                } else {
+                    Program.preMain.blockList.get(0).internal.add(
+                            new Move(reg, (IRRegister) init.reg)
+                    );
+                    Program.preMain.blockList.get(0).internal.add(
+                            new Store(reg, this.reg.addr)
+                    );
+                }
+            }
+            return ;
+        }
         if (init != null && this.reg != init.reg) {
-            init.emit();
+            init.emit(lst);
             if (init.reg instanceof Immediate) {
-                YIR.YIRInstance.addIns(
-                        new Li((IRRegister) this.reg, (Immediate) init.reg)
+                lst.add(
+                        new LoadImmediate(this.reg, (Immediate) init.reg)
                 );
             } else {
-                YIR.YIRInstance.addIns(
-                        new Move((IRRegister) this.reg, (IRRegister) init.reg)
+                lst.add(
+                        new Move(this.reg, (IRRegister) init.reg)
                 );
             }
         }

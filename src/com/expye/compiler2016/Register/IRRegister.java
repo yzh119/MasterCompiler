@@ -6,9 +6,22 @@ package com.expye.compiler2016.Register;
 public class IRRegister extends VirtualRegister {
     int uID;
     public Address addr;
+    public static int cID = 0;
+    public static int gID = 0;
+    public static void init() {
+        cID = gID = 0;
+    }
+    public static void reSetCounterToNewFunc() {
+        gID = cID; cID = 0;
+    }
+    public static void reSetCounterToGlobal() { cID = gID; }
+
     public IRRegister() {
         uID = cID++;
     }
+
+    public IRRegister(int nop) {}
+
     public IRRegister(Address addr) {
         uID = cID++;
         this.addr = addr;

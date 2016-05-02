@@ -1,15 +1,14 @@
-package com.expye.compiler2016.IR.YIR.Arithmetic;
+package com.expye.compiler2016.IR.YIR.Arithmetic.UnaryIns;
 
+import com.expye.compiler2016.IR.YIR.Arithmetic.Arithmetic;
 import com.expye.compiler2016.Register.IRRegister;
 
 /**
  * Created by expye(Zihao Ye) on 2016/4/24.
  */
-public class NotIns extends Arithmetic {
-    IRRegister rs, rd;
+public class NotIns extends UnaryIns{
     public NotIns(IRRegister rd, IRRegister rs) {
-        this.rs = rs;
-        this.rd = rd;
+        super(rd, rs);
     }
 
     @Override

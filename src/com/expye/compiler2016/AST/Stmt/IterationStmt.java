@@ -1,6 +1,9 @@
 package com.expye.compiler2016.AST.Stmt;
 
-import com.expye.compiler2016.IR.YIR.Label;
+import com.expye.compiler2016.IR.YIR.Instruction;
+import com.expye.compiler2016.Label.Label;
+
+import java.util.List;
 
 /**
  * Created by expye(Zihao Ye) on 2016/4/24.
@@ -14,7 +17,5 @@ public class IterationStmt extends StmtBase {
     }
 
     @Override
-    public void emit() {
-        super.emit();
-    }
+    public void emit(List<Instruction> lst) {}
 }

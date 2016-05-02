@@ -1,7 +1,7 @@
 package com.expye.compiler2016.IR.CFG;
 
-import com.expye.compiler2016.IR.YIR.FuncLabel;
-import com.expye.compiler2016.IR.YIR.Label;
+import com.expye.compiler2016.Label.FuncLabel;
+import com.expye.compiler2016.Label.Label;
 
 import java.util.HashMap;
 import java.util.List;
@@ -13,7 +13,7 @@ public class CFG {
     int cnt = 0;
     public FuncLabel flable;
     public List<BasicBlock> blockList;
-    public HashMap<Label, Integer> map;
+    public HashMap<Label, Integer> map = new HashMap<>();
 
     public CFG(FuncLabel flabel, List<BasicBlock> blockList) {
         this.flable = flabel;

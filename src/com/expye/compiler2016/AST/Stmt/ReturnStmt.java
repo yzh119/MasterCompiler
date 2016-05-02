@@ -1,8 +1,11 @@
 package com.expye.compiler2016.AST.Stmt;
 
 import com.expye.compiler2016.AST.Stmt.Exp.Exp;
-import com.expye.compiler2016.IR.YIR.ControlFlow.Ret;
+import com.expye.compiler2016.IR.YIR.ControlFlow.RetIns;
+import com.expye.compiler2016.IR.YIR.Instruction;
 import com.expye.compiler2016.IR.YIR.YIR;
+
+import java.util.List;
 
 /**
  * Created by expye(Zihao Ye) on 2016/3/30.
@@ -15,8 +18,8 @@ public class ReturnStmt extends StmtBase {
     public ReturnStmt() {}
 
     @Override
-    public void emit() {
-        ret.emit();
-        YIR.YIRInstance.addIns(new Ret(ret.reg));
+    public void emit(List<Instruction> lst) {
+        ret.emit(lst);
+        lst.add(new RetIns(ret.reg));
     }
 }

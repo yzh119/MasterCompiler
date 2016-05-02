@@ -2,12 +2,14 @@ package com.expye.compiler2016.AST.Stmt.Exp.BinExp;
 
 import com.expye.compiler2016.AST.Dec.ClassDec;
 import com.expye.compiler2016.AST.Stmt.Exp.Exp;
-import com.expye.compiler2016.IR.YIR.Arithmetic.AndIns;
 import com.expye.compiler2016.IR.YIR.ControlFlow.Cbr;
-import com.expye.compiler2016.IR.YIR.Label;
+import com.expye.compiler2016.IR.YIR.Instruction;
+import com.expye.compiler2016.Label.Label;
 import com.expye.compiler2016.IR.YIR.Move;
 import com.expye.compiler2016.IR.YIR.YIR;
 import com.expye.compiler2016.Register.IRRegister;
+
+import java.util.List;
 
 /**
  * Created by expye(Zihao Ye) on 2016/3/31.
@@ -22,15 +24,15 @@ public class LogAndExp extends BinExp {
     }
 
     @Override
-    public void emit() {
-        lhs.emit();
-        YIR.YIRInstance.addIns(new Move((IRRegister) this.reg, (IRRegister) lhs.reg));
-        YIR.YIRInstance.addIns(
+    public void emit(List<Instruction> lst) {
+        lhs.emit(lst);
+        lst.add(new Move((IRRegister) this.reg, (IRRegister) lhs.reg));
+        lst.add(
                 new Cbr((IRRegister) lhs.reg, iT, end)
         );
-        YIR.YIRInstance.addIns(iT);
-        rhs.emit();
-        YIR.YIRInstance.addIns(new Move((IRRegister) this.reg, (IRRegister) rhs.reg));
-        YIR.YIRInstance.addIns(end);
+        lst.add(iT);
+        rhs.emit(lst);
+        lst.add(new Move((IRRegister) this.reg, (IRRegister) rhs.reg));
+        lst.add(end);
     }
 }
