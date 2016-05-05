@@ -5,136 +5,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f058b886-d1bc-433e-8f45-9c67b8bdd78d" name="Default" comment="Liveness Analysis and Register allocation">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/expye/compiler2016/builtin.s" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/expye/compiler2016/Translator/MIPS/RISCTranslator.java" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/expye/compiler2016/Translator/MIPS/CISCTranslator.java" afterPath="$PROJECT_DIR$/src/com/expye/compiler2016/Translator/MIPS/MIPSTranslator.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/com/expye/compiler2016/AST/Stmt/Exp/BinExp/GreaterExp.class" afterPath="$PROJECT_DIR$/out/production/MasterCompiler/com/expye/compiler2016/AST/Stmt/Exp/BinExp/GreaterExp.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/com/expye/compiler2016/AST/Stmt/Exp/BinExp/LessExp.class" afterPath="$PROJECT_DIR$/out/production/MasterCompiler/com/expye/compiler2016/AST/Stmt/Exp/BinExp/LessExp.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/com/expye/compiler2016/AST/Stmt/Exp/BinExp/NeqExp.class" afterPath="$PROJECT_DIR$/out/production/MasterCompiler/com/expye/compiler2016/AST/Stmt/Exp/BinExp/NeqExp.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/expye/compiler2016/AST/Stmt/Exp/BinExp/DivExp.java" afterPath="$PROJECT_DIR$/src/com/expye/compiler2016/AST/Stmt/Exp/BinExp/DivExp.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/expye/compiler2016/AST/Stmt/Exp/BinExp/GreaterExp.java" afterPath="$PROJECT_DIR$/src/com/expye/compiler2016/AST/Stmt/Exp/BinExp/GreaterExp.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/expye/compiler2016/AST/Stmt/Exp/BinExp/GreaterOrEqualExp.java" afterPath="$PROJECT_DIR$/src/com/expye/compiler2016/AST/Stmt/Exp/BinExp/GreaterOrEqualExp.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/expye/compiler2016/AST/Stmt/Exp/BinExp/LessExp.java" afterPath="$PROJECT_DIR$/src/com/expye/compiler2016/AST/Stmt/Exp/BinExp/LessExp.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/expye/compiler2016/AST/Stmt/Exp/BinExp/LessOrEqualThanExp.java" afterPath="$PROJECT_DIR$/src/com/expye/compiler2016/AST/Stmt/Exp/BinExp/LessOrEqualThanExp.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/expye/compiler2016/AST/Stmt/Exp/BinExp/LogAndExp.java" afterPath="$PROJECT_DIR$/src/com/expye/compiler2016/AST/Stmt/Exp/BinExp/LogAndExp.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/expye/compiler2016/AST/Stmt/Exp/BinExp/LogOrExp.java" afterPath="$PROJECT_DIR$/src/com/expye/compiler2016/AST/Stmt/Exp/BinExp/LogOrExp.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/expye/compiler2016/AST/Stmt/Exp/BinExp/LshiftExp.java" afterPath="$PROJECT_DIR$/src/com/expye/compiler2016/AST/Stmt/Exp/BinExp/LshiftExp.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/expye/compiler2016/AST/Stmt/Exp/BinExp/ModExp.java" afterPath="$PROJECT_DIR$/src/com/expye/compiler2016/AST/Stmt/Exp/BinExp/ModExp.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/expye/compiler2016/AST/Stmt/Exp/BinExp/NeqExp.java" afterPath="$PROJECT_DIR$/src/com/expye/compiler2016/AST/Stmt/Exp/BinExp/NeqExp.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/expye/compiler2016/AST/Stmt/Exp/BinExp/RshiftExp.java" afterPath="$PROJECT_DIR$/src/com/expye/compiler2016/AST/Stmt/Exp/BinExp/RshiftExp.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/expye/compiler2016/AST/Stmt/Exp/BinExp/SubExp.java" afterPath="$PROJECT_DIR$/src/com/expye/compiler2016/AST/Stmt/Exp/BinExp/SubExp.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/expye/compiler2016/AST/Stmt/Exp/FuncExp.java" afterPath="$PROJECT_DIR$/src/com/expye/compiler2016/AST/Stmt/Exp/FuncExp.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/expye/compiler2016/AST/Stmt/Exp/SimpleVarExp.java" afterPath="$PROJECT_DIR$/src/com/expye/compiler2016/AST/Stmt/Exp/SimpleVarExp.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/expye/compiler2016/AST/Stmt/Exp/SubscriptVarExp.java" afterPath="$PROJECT_DIR$/src/com/expye/compiler2016/AST/Stmt/Exp/SubscriptVarExp.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/expye/compiler2016/AST/Stmt/Exp/UnaryExp/LogNotExp.java" afterPath="$PROJECT_DIR$/src/com/expye/compiler2016/AST/Stmt/Exp/UnaryExp/LogNotExp.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/expye/compiler2016/AST/Stmt/Exp/newExp.java" afterPath="$PROJECT_DIR$/src/com/expye/compiler2016/AST/Stmt/Exp/newExp.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/expye/compiler2016/AST/Stmt/ReturnStmt.java" afterPath="$PROJECT_DIR$/src/com/expye/compiler2016/AST/Stmt/ReturnStmt.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/expye/compiler2016/AST/constructAST.java" afterPath="$PROJECT_DIR$/src/com/expye/compiler2016/AST/constructAST.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/expye/compiler2016/Allocator/Allocator.java" afterPath="$PROJECT_DIR$/src/com/expye/compiler2016/Allocator/Allocator.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/expye/compiler2016/Allocator/MachineRegister.java" afterPath="$PROJECT_DIR$/src/com/expye/compiler2016/Allocator/MachineRegister.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/expye/compiler2016/Allocator/MarvelousAllocator.java" afterPath="$PROJECT_DIR$/src/com/expye/compiler2016/Allocator/MarvelousAllocator.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/expye/compiler2016/IR/CFG/CFG.java" afterPath="$PROJECT_DIR$/src/com/expye/compiler2016/IR/CFG/CFG.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/expye/compiler2016/IR/YIR/Arithmetic/BinaryIns/AddIns.java" afterPath="$PROJECT_DIR$/src/com/expye/compiler2016/IR/YIR/Arithmetic/BinaryIns/AddIns.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/expye/compiler2016/IR/YIR/Arithmetic/BinaryIns/AndIns.java" afterPath="$PROJECT_DIR$/src/com/expye/compiler2016/IR/YIR/Arithmetic/BinaryIns/AndIns.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/expye/compiler2016/IR/YIR/Arithmetic/BinaryIns/DivIns.java" afterPath="$PROJECT_DIR$/src/com/expye/compiler2016/IR/YIR/Arithmetic/BinaryIns/DivIns.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/expye/compiler2016/IR/YIR/Arithmetic/BinaryIns/LShiftIns.java" afterPath="$PROJECT_DIR$/src/com/expye/compiler2016/IR/YIR/Arithmetic/BinaryIns/LShiftIns.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/expye/compiler2016/IR/YIR/Arithmetic/BinaryIns/MultIns.java" afterPath="$PROJECT_DIR$/src/com/expye/compiler2016/IR/YIR/Arithmetic/BinaryIns/MultIns.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/expye/compiler2016/IR/YIR/Arithmetic/BinaryIns/OrIns.java" afterPath="$PROJECT_DIR$/src/com/expye/compiler2016/IR/YIR/Arithmetic/BinaryIns/OrIns.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/expye/compiler2016/IR/YIR/Arithmetic/BinaryIns/RShiftIns.java" afterPath="$PROJECT_DIR$/src/com/expye/compiler2016/IR/YIR/Arithmetic/BinaryIns/RShiftIns.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/expye/compiler2016/IR/YIR/Arithmetic/BinaryIns/RemIns.java" afterPath="$PROJECT_DIR$/src/com/expye/compiler2016/IR/YIR/Arithmetic/BinaryIns/RemIns.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/expye/compiler2016/IR/YIR/Arithmetic/BinaryIns/SubIns.java" afterPath="$PROJECT_DIR$/src/com/expye/compiler2016/IR/YIR/Arithmetic/BinaryIns/SubIns.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/expye/compiler2016/IR/YIR/Arithmetic/BinaryIns/XorIns.java" afterPath="$PROJECT_DIR$/src/com/expye/compiler2016/IR/YIR/Arithmetic/BinaryIns/XorIns.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/expye/compiler2016/IR/YIR/Arithmetic/UnaryIns/NegIns.java" afterPath="$PROJECT_DIR$/src/com/expye/compiler2016/IR/YIR/Arithmetic/UnaryIns/NegIns.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/expye/compiler2016/IR/YIR/Arithmetic/UnaryIns/NotIns.java" afterPath="$PROJECT_DIR$/src/com/expye/compiler2016/IR/YIR/Arithmetic/UnaryIns/NotIns.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/expye/compiler2016/IR/YIR/Call.java" afterPath="$PROJECT_DIR$/src/com/expye/compiler2016/IR/YIR/Call.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/expye/compiler2016/IR/YIR/Comp/SeqIns.java" afterPath="$PROJECT_DIR$/src/com/expye/compiler2016/IR/YIR/Comp/SeqIns.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/expye/compiler2016/IR/YIR/Comp/SgeIns.java" afterPath="$PROJECT_DIR$/src/com/expye/compiler2016/IR/YIR/Comp/SgeIns.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/expye/compiler2016/IR/YIR/Comp/SgtIns.java" afterPath="$PROJECT_DIR$/src/com/expye/compiler2016/IR/YIR/Comp/SgtIns.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/expye/compiler2016/IR/YIR/Comp/SleIns.java" afterPath="$PROJECT_DIR$/src/com/expye/compiler2016/IR/YIR/Comp/SleIns.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/expye/compiler2016/IR/YIR/Comp/SltIns.java" afterPath="$PROJECT_DIR$/src/com/expye/compiler2016/IR/YIR/Comp/SltIns.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/expye/compiler2016/IR/YIR/Comp/SneIns.java" afterPath="$PROJECT_DIR$/src/com/expye/compiler2016/IR/YIR/Comp/SneIns.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/expye/compiler2016/IR/YIR/ControlFlow/Cbr.java" afterPath="$PROJECT_DIR$/src/com/expye/compiler2016/IR/YIR/ControlFlow/Cbr.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/expye/compiler2016/IR/YIR/ControlFlow/JumpIns.java" afterPath="$PROJECT_DIR$/src/com/expye/compiler2016/IR/YIR/ControlFlow/JumpIns.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/expye/compiler2016/IR/YIR/ControlFlow/RetIns.java" afterPath="$PROJECT_DIR$/src/com/expye/compiler2016/IR/YIR/ControlFlow/RetIns.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/expye/compiler2016/IR/YIR/Instruction.java" afterPath="$PROJECT_DIR$/src/com/expye/compiler2016/IR/YIR/Instruction.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/expye/compiler2016/IR/YIR/Memory/Allocate.java" afterPath="$PROJECT_DIR$/src/com/expye/compiler2016/IR/YIR/Memory/Allocate.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/expye/compiler2016/IR/YIR/Memory/Load.java" afterPath="$PROJECT_DIR$/src/com/expye/compiler2016/IR/YIR/Memory/Load.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/expye/compiler2016/IR/YIR/Memory/LoadAdress.java" afterPath="$PROJECT_DIR$/src/com/expye/compiler2016/IR/YIR/Memory/LoadAdress.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/expye/compiler2016/IR/YIR/Memory/LoadImmediate.java" afterPath="$PROJECT_DIR$/src/com/expye/compiler2016/IR/YIR/Memory/LoadImmediate.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/expye/compiler2016/IR/YIR/Memory/Store.java" afterPath="$PROJECT_DIR$/src/com/expye/compiler2016/IR/YIR/Memory/Store.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/expye/compiler2016/IR/YIR/Move.java" afterPath="$PROJECT_DIR$/src/com/expye/compiler2016/IR/YIR/Move.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/expye/compiler2016/IR/YIR/StaticString.java" afterPath="$PROJECT_DIR$/src/com/expye/compiler2016/IR/YIR/StaticString.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/expye/compiler2016/IR/YIR/StaticWord.java" afterPath="$PROJECT_DIR$/src/com/expye/compiler2016/IR/YIR/StaticWord.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/expye/compiler2016/IR/convertYIRtoCFG.java" afterPath="$PROJECT_DIR$/src/com/expye/compiler2016/IR/convertYIRtoCFG.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/expye/compiler2016/Label/FuncLabel.java" afterPath="$PROJECT_DIR$/src/com/expye/compiler2016/Label/FuncLabel.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/expye/compiler2016/Label/Label.java" afterPath="$PROJECT_DIR$/src/com/expye/compiler2016/Label/Label.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/expye/compiler2016/Main.java" afterPath="$PROJECT_DIR$/src/com/expye/compiler2016/Main.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/expye/compiler2016/Parser/FirstListener.java" afterPath="$PROJECT_DIR$/src/com/expye/compiler2016/Parser/FirstListener.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/expye/compiler2016/Parser/ThirdListener.java" afterPath="$PROJECT_DIR$/src/com/expye/compiler2016/Parser/ThirdListener.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/expye/compiler2016/Utility/StringLiteralIntern.java" afterPath="$PROJECT_DIR$/src/com/expye/compiler2016/Utility/StringLiteralIntern.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/expye/compiler2016/Utility/Utility.java" afterPath="$PROJECT_DIR$/src/com/expye/compiler2016/Utility/Utility.java" />
-    </list>
-    <list id="34438cf5-4ce4-4aeb-ab14-19d0b2c6411a" name="New changelist" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/com/expye/compiler2016/AST/Stmt/FieldMethodStmt.class" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/com/expye/compiler2016/AST/ASTnode.class" afterPath="$PROJECT_DIR$/out/production/MasterCompiler/com/expye/compiler2016/AST/ASTnode.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/com/expye/compiler2016/AST/Dec/ArrayDec.class" afterPath="$PROJECT_DIR$/out/production/MasterCompiler/com/expye/compiler2016/AST/Dec/ArrayDec.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/com/expye/compiler2016/AST/Dec/ClassDec.class" afterPath="$PROJECT_DIR$/out/production/MasterCompiler/com/expye/compiler2016/AST/Dec/ClassDec.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/com/expye/compiler2016/AST/Dec/DecBase.class" afterPath="$PROJECT_DIR$/out/production/MasterCompiler/com/expye/compiler2016/AST/Dec/DecBase.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/com/expye/compiler2016/AST/Dec/FuncDec.class" afterPath="$PROJECT_DIR$/out/production/MasterCompiler/com/expye/compiler2016/AST/Dec/FuncDec.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/com/expye/compiler2016/AST/Prog/Prog.class" afterPath="$PROJECT_DIR$/out/production/MasterCompiler/com/expye/compiler2016/AST/Prog/Prog.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/com/expye/compiler2016/AST/Stmt/BreakStmt.class" afterPath="$PROJECT_DIR$/out/production/MasterCompiler/com/expye/compiler2016/AST/Stmt/BreakStmt.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/com/expye/compiler2016/AST/Stmt/CompoundStmt.class" afterPath="$PROJECT_DIR$/out/production/MasterCompiler/com/expye/compiler2016/AST/Stmt/CompoundStmt.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/com/expye/compiler2016/AST/Stmt/ContinueStmt.class" afterPath="$PROJECT_DIR$/out/production/MasterCompiler/com/expye/compiler2016/AST/Stmt/ContinueStmt.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/com/expye/compiler2016/AST/Stmt/Exp/BinExp/AddExp.class" afterPath="$PROJECT_DIR$/out/production/MasterCompiler/com/expye/compiler2016/AST/Stmt/Exp/BinExp/AddExp.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/com/expye/compiler2016/AST/Stmt/Exp/BinExp/AssignExp.class" afterPath="$PROJECT_DIR$/out/production/MasterCompiler/com/expye/compiler2016/AST/Stmt/Exp/BinExp/AssignExp.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/com/expye/compiler2016/AST/Stmt/Exp/BinExp/BinExp.class" afterPath="$PROJECT_DIR$/out/production/MasterCompiler/com/expye/compiler2016/AST/Stmt/Exp/BinExp/BinExp.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/com/expye/compiler2016/AST/Stmt/Exp/BinExp/BitAndExp.class" afterPath="$PROJECT_DIR$/out/production/MasterCompiler/com/expye/compiler2016/AST/Stmt/Exp/BinExp/BitAndExp.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/com/expye/compiler2016/AST/Stmt/Exp/BinExp/BitOrExp.class" afterPath="$PROJECT_DIR$/out/production/MasterCompiler/com/expye/compiler2016/AST/Stmt/Exp/BinExp/BitOrExp.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/com/expye/compiler2016/AST/Stmt/Exp/BinExp/BitXorExp.class" afterPath="$PROJECT_DIR$/out/production/MasterCompiler/com/expye/compiler2016/AST/Stmt/Exp/BinExp/BitXorExp.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/com/expye/compiler2016/AST/Stmt/Exp/BinExp/DivExp.class" afterPath="$PROJECT_DIR$/out/production/MasterCompiler/com/expye/compiler2016/AST/Stmt/Exp/BinExp/DivExp.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/com/expye/compiler2016/AST/Stmt/Exp/BinExp/LogAndExp.class" afterPath="$PROJECT_DIR$/out/production/MasterCompiler/com/expye/compiler2016/AST/Stmt/Exp/BinExp/LogAndExp.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/com/expye/compiler2016/AST/Stmt/Exp/BinExp/LogOrExp.class" afterPath="$PROJECT_DIR$/out/production/MasterCompiler/com/expye/compiler2016/AST/Stmt/Exp/BinExp/LogOrExp.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/com/expye/compiler2016/AST/Stmt/Exp/BinExp/LshiftExp.class" afterPath="$PROJECT_DIR$/out/production/MasterCompiler/com/expye/compiler2016/AST/Stmt/Exp/BinExp/LshiftExp.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/com/expye/compiler2016/AST/Stmt/Exp/BinExp/ModExp.class" afterPath="$PROJECT_DIR$/out/production/MasterCompiler/com/expye/compiler2016/AST/Stmt/Exp/BinExp/ModExp.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/com/expye/compiler2016/AST/Stmt/Exp/BinExp/MulExp.class" afterPath="$PROJECT_DIR$/out/production/MasterCompiler/com/expye/compiler2016/AST/Stmt/Exp/BinExp/MulExp.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/com/expye/compiler2016/AST/Stmt/Exp/BinExp/RshiftExp.class" afterPath="$PROJECT_DIR$/out/production/MasterCompiler/com/expye/compiler2016/AST/Stmt/Exp/BinExp/RshiftExp.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/com/expye/compiler2016/AST/Stmt/Exp/BinExp/SubExp.class" afterPath="$PROJECT_DIR$/out/production/MasterCompiler/com/expye/compiler2016/AST/Stmt/Exp/BinExp/SubExp.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/com/expye/compiler2016/AST/Stmt/Exp/BoolExp.class" afterPath="$PROJECT_DIR$/out/production/MasterCompiler/com/expye/compiler2016/AST/Stmt/Exp/BoolExp.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/com/expye/compiler2016/AST/Stmt/Exp/ClassFieldExp.class" afterPath="$PROJECT_DIR$/out/production/MasterCompiler/com/expye/compiler2016/AST/Stmt/Exp/ClassFieldExp.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/com/expye/compiler2016/AST/Stmt/Exp/Exp.class" afterPath="$PROJECT_DIR$/out/production/MasterCompiler/com/expye/compiler2016/AST/Stmt/Exp/Exp.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/com/expye/compiler2016/AST/Stmt/Exp/FuncExp.class" afterPath="$PROJECT_DIR$/out/production/MasterCompiler/com/expye/compiler2016/AST/Stmt/Exp/FuncExp.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/com/expye/compiler2016/AST/Stmt/Exp/IntExp.class" afterPath="$PROJECT_DIR$/out/production/MasterCompiler/com/expye/compiler2016/AST/Stmt/Exp/IntExp.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/com/expye/compiler2016/AST/Stmt/Exp/NullExp.class" afterPath="$PROJECT_DIR$/out/production/MasterCompiler/com/expye/compiler2016/AST/Stmt/Exp/NullExp.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/com/expye/compiler2016/AST/Stmt/Exp/SimpleVarExp.class" afterPath="$PROJECT_DIR$/out/production/MasterCompiler/com/expye/compiler2016/AST/Stmt/Exp/SimpleVarExp.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/com/expye/compiler2016/AST/Stmt/Exp/StringExp.class" afterPath="$PROJECT_DIR$/out/production/MasterCompiler/com/expye/compiler2016/AST/Stmt/Exp/StringExp.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/com/expye/compiler2016/AST/Stmt/Exp/SubscriptVarExp.class" afterPath="$PROJECT_DIR$/out/production/MasterCompiler/com/expye/compiler2016/AST/Stmt/Exp/SubscriptVarExp.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/com/expye/compiler2016/AST/Stmt/Exp/UnaryExp/BitNotExp.class" afterPath="$PROJECT_DIR$/out/production/MasterCompiler/com/expye/compiler2016/AST/Stmt/Exp/UnaryExp/BitNotExp.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/com/expye/compiler2016/AST/Stmt/Exp/UnaryExp/LogNotExp.class" afterPath="$PROJECT_DIR$/out/production/MasterCompiler/com/expye/compiler2016/AST/Stmt/Exp/UnaryExp/LogNotExp.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/com/expye/compiler2016/AST/Stmt/Exp/UnaryExp/MinusExp.class" afterPath="$PROJECT_DIR$/out/production/MasterCompiler/com/expye/compiler2016/AST/Stmt/Exp/UnaryExp/MinusExp.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/com/expye/compiler2016/AST/Stmt/Exp/UnaryExp/PosDecExp.class" afterPath="$PROJECT_DIR$/out/production/MasterCompiler/com/expye/compiler2016/AST/Stmt/Exp/UnaryExp/PosDecExp.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/com/expye/compiler2016/AST/Stmt/Exp/UnaryExp/PosIncExp.class" afterPath="$PROJECT_DIR$/out/production/MasterCompiler/com/expye/compiler2016/AST/Stmt/Exp/UnaryExp/PosIncExp.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/com/expye/compiler2016/AST/Stmt/Exp/UnaryExp/PreDecExp.class" afterPath="$PROJECT_DIR$/out/production/MasterCompiler/com/expye/compiler2016/AST/Stmt/Exp/UnaryExp/PreDecExp.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/com/expye/compiler2016/AST/Stmt/Exp/UnaryExp/PreIncExp.class" afterPath="$PROJECT_DIR$/out/production/MasterCompiler/com/expye/compiler2016/AST/Stmt/Exp/UnaryExp/PreIncExp.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/com/expye/compiler2016/AST/Stmt/Exp/UnaryExp/UnaryExp.class" afterPath="$PROJECT_DIR$/out/production/MasterCompiler/com/expye/compiler2016/AST/Stmt/Exp/UnaryExp/UnaryExp.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/com/expye/compiler2016/AST/Stmt/Exp/newExp.class" afterPath="$PROJECT_DIR$/out/production/MasterCompiler/com/expye/compiler2016/AST/Stmt/Exp/newExp.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/com/expye/compiler2016/AST/Stmt/ExprStmt.class" afterPath="$PROJECT_DIR$/out/production/MasterCompiler/com/expye/compiler2016/AST/Stmt/ExprStmt.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/com/expye/compiler2016/AST/Stmt/ForStmt.class" afterPath="$PROJECT_DIR$/out/production/MasterCompiler/com/expye/compiler2016/AST/Stmt/ForStmt.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/com/expye/compiler2016/AST/Stmt/IfStmt.class" afterPath="$PROJECT_DIR$/out/production/MasterCompiler/com/expye/compiler2016/AST/Stmt/IfStmt.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/com/expye/compiler2016/AST/Stmt/ReturnStmt.class" afterPath="$PROJECT_DIR$/out/production/MasterCompiler/com/expye/compiler2016/AST/Stmt/ReturnStmt.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/com/expye/compiler2016/AST/Stmt/StmtBase.class" afterPath="$PROJECT_DIR$/out/production/MasterCompiler/com/expye/compiler2016/AST/Stmt/StmtBase.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/com/expye/compiler2016/AST/Stmt/WhileStmt.class" afterPath="$PROJECT_DIR$/out/production/MasterCompiler/com/expye/compiler2016/AST/Stmt/WhileStmt.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/com/expye/compiler2016/AST/VarDec/VarDec.class" afterPath="$PROJECT_DIR$/out/production/MasterCompiler/com/expye/compiler2016/AST/VarDec/VarDec.class" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/midtermvars.sh" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/expye/compiler2016/builtin.s" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/com/expye/compiler2016/Main.class" afterPath="$PROJECT_DIR$/out/production/MasterCompiler/com/expye/compiler2016/Main.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/com/expye/compiler2016/Parser/FirstListener.class" afterPath="$PROJECT_DIR$/out/production/MasterCompiler/com/expye/compiler2016/Parser/FirstListener.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/MasterCompiler/com/expye/compiler2016/Parser/ThirdListener.class" afterPath="$PROJECT_DIR$/out/production/MasterCompiler/com/expye/compiler2016/Parser/ThirdListener.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Makefile" afterPath="$PROJECT_DIR$/Makefile" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/builtin.s" afterPath="$PROJECT_DIR$/lib/builtin.s" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/expye/compiler2016/AST/constructAST.java" afterPath="$PROJECT_DIR$/src/com/expye/compiler2016/AST/constructAST.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/expye/compiler2016/Allocator/MarvelousAllocator.java" afterPath="$PROJECT_DIR$/src/com/expye/compiler2016/Allocator/MarvelousAllocator.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/expye/compiler2016/IR/YIR/Call.java" afterPath="$PROJECT_DIR$/src/com/expye/compiler2016/IR/YIR/Call.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/expye/compiler2016/IR/convertYIRtoCFG.java" afterPath="$PROJECT_DIR$/src/com/expye/compiler2016/IR/convertYIRtoCFG.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/expye/compiler2016/Main.java" afterPath="$PROJECT_DIR$/src/com/expye/compiler2016/Main.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/expye/compiler2016/Translator/MIPS/MIPSTranslator.java" afterPath="$PROJECT_DIR$/src/com/expye/compiler2016/Translator/MIPS/MIPSTranslator.java" />
     </list>
+    <list id="34438cf5-4ce4-4aeb-ab14-19d0b2c6411a" name="New changelist" comment="" />
     <ignored path="MasterCompiler.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path=".idea/dataSources.local.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
-    <file path="$PROJECT_DIR$/.idea/workspace.xml" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -151,12 +40,14 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="600">
-      <file leaf-file-name="SubExp.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/expye/compiler2016/AST/Stmt/Exp/BinExp/SubExp.java">
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/expye/compiler2016/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="544">
-              <caret line="25" column="21" selection-start-line="25" selection-start-column="21" selection-end-line="25" selection-end-column="21" />
-              <folding />
+            <state relative-caret-position="748">
+              <caret line="22" column="19" selection-start-line="22" selection-start-column="19" selection-end-line="22" selection-end-column="19" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -164,48 +55,68 @@
       <file leaf-file-name="MIPSTranslator.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/expye/compiler2016/Translator/MIPS/MIPSTranslator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="442">
-              <caret line="24" column="5" selection-start-line="24" selection-start-column="5" selection-end-line="24" selection-end-column="5" />
+            <state relative-caret-position="2278">
+              <caret line="78" column="26" selection-start-line="78" selection-start-column="26" selection-end-line="78" selection-end-column="26" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LogAndExp.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/expye/compiler2016/AST/Stmt/Exp/BinExp/LogAndExp.java">
+      <file leaf-file-name="ConstructAST.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/expye/compiler2016/AST/ConstructAST.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="728">
-              <caret line="50" column="31" selection-start-line="50" selection-start-column="31" selection-end-line="50" selection-end-column="31" />
+            <state relative-caret-position="612">
+              <caret line="27" column="25" selection-start-line="27" selection-start-column="25" selection-end-line="27" selection-end-column="25" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/expye/compiler2016/Main.java">
+      <file leaf-file-name="builtin.s" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/builtin.s">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="816">
-              <caret line="31" column="9" selection-start-line="31" selection-start-column="9" selection-end-line="31" selection-end-column="9" />
+            <state relative-caret-position="476">
+              <caret line="14" column="24" selection-start-line="14" selection-start-column="24" selection-end-line="14" selection-end-column="24" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LogOrExp.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="StaticString.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/expye/compiler2016/IR/YIR/StaticString.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="714">
+              <caret line="22" column="11" selection-start-line="22" selection-start-column="11" selection-end-line="22" selection-end-column="11" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LogOrExp.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/expye/compiler2016/AST/Stmt/Exp/BinExp/LogOrExp.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="536">
-              <caret line="43" column="20" selection-start-line="43" selection-start-column="20" selection-end-line="43" selection-end-column="20" />
+            <state relative-caret-position="510">
+              <caret line="27" column="5" selection-start-line="27" selection-start-column="5" selection-end-line="27" selection-end-column="5" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BitAndExp.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/expye/compiler2016/AST/Stmt/Exp/BinExp/BitAndExp.java">
+      <file leaf-file-name="Allocator.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/expye/compiler2016/Allocator/Allocator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+            <state relative-caret-position="1054">
+              <caret line="49" column="14" selection-start-line="49" selection-start-column="14" selection-end-line="49" selection-end-column="14" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Call.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/expye/compiler2016/IR/YIR/Call.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="4556">
+              <caret line="147" column="33" selection-start-line="147" selection-start-column="33" selection-end-line="147" selection-end-column="33" />
               <folding />
             </state>
           </provider>
@@ -214,38 +125,18 @@
       <file leaf-file-name="MarvelousAllocator.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/expye/compiler2016/Allocator/MarvelousAllocator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3312">
-              <caret line="347" column="17" selection-start-line="347" selection-start-column="17" selection-end-line="347" selection-end-column="17" />
+            <state relative-caret-position="714">
+              <caret line="41" column="13" selection-start-line="41" selection-start-column="13" selection-end-line="41" selection-end-column="13" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Move.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/expye/compiler2016/IR/YIR/Move.java">
+      <file leaf-file-name="convertYIRtoCFG.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/expye/compiler2016/IR/convertYIRtoCFG.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="26" column="25" selection-start-line="26" selection-start-column="25" selection-end-line="26" selection-end-column="25" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="LshiftExp.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/expye/compiler2016/AST/Stmt/Exp/BinExp/LshiftExp.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="816">
-              <caret line="33" column="14" selection-start-line="33" selection-start-column="14" selection-end-line="33" selection-end-column="14" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="GreaterOrEqualExp.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/expye/compiler2016/AST/Stmt/Exp/BinExp/GreaterOrEqualExp.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="850">
-              <caret line="40" column="18" selection-start-line="40" selection-start-column="18" selection-end-line="40" selection-end-column="18" />
+            <state relative-caret-position="1802">
+              <caret line="72" column="11" selection-start-line="72" selection-start-column="11" selection-end-line="72" selection-end-column="11" />
               <folding />
             </state>
           </provider>
@@ -271,14 +162,11 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/com/expye/compiler2016/IR/YIR/Memory/LoadImmediate.java" />
-        <option value="$PROJECT_DIR$/src/com/expye/compiler2016/IR/YIR/Memory/Allocate.java" />
         <option value="$PROJECT_DIR$/src/com/expye/compiler2016/AST/Stmt/Exp/FuncExp.java" />
         <option value="$PROJECT_DIR$/src/com/expye/compiler2016/Utility/Utility.java" />
         <option value="$PROJECT_DIR$/src/com/expye/compiler2016/AST/Stmt/Exp/BinExp/NeqExp.java" />
         <option value="$PROJECT_DIR$/src/com/expye/compiler2016/Allocator/MachineRegister.java" />
         <option value="$PROJECT_DIR$/src/com/expye/compiler2016/IR/YIR/StaticString.java" />
-        <option value="$PROJECT_DIR$/lib/builtin.s" />
         <option value="$PROJECT_DIR$/src/com/expye/compiler2016/IR/YIR/Arithmetic/BinaryIns/AddIns.java" />
         <option value="$PROJECT_DIR$/src/com/expye/compiler2016/IR/YIR/Arithmetic/BinaryIns/AndIns.java" />
         <option value="$PROJECT_DIR$/src/com/expye/compiler2016/IR/YIR/Arithmetic/BinaryIns/DivIns.java" />
@@ -302,8 +190,6 @@
         <option value="$PROJECT_DIR$/src/com/expye/compiler2016/IR/YIR/Memory/Store.java" />
         <option value="$PROJECT_DIR$/src/com/expye/compiler2016/AST/Stmt/Exp/SimpleVarExp.java" />
         <option value="$PROJECT_DIR$/src/com/expye/compiler2016/AST/Stmt/Exp/SubscriptVarExp.java" />
-        <option value="$PROJECT_DIR$/src/com/expye/compiler2016/IR/convertYIRtoCFG.java" />
-        <option value="$PROJECT_DIR$/src/com/expye/compiler2016/IR/YIR/Call.java" />
         <option value="$PROJECT_DIR$/src/com/expye/compiler2016/AST/Stmt/Exp/newExp.java" />
         <option value="$PROJECT_DIR$/src/com/expye/compiler2016/AST/Stmt/Exp/UnaryExp/LogNotExp.java" />
         <option value="$PROJECT_DIR$/src/com/expye/compiler2016/Parser/ThirdListener.java" />
@@ -317,11 +203,16 @@
         <option value="$PROJECT_DIR$/src/com/expye/compiler2016/AST/Stmt/Exp/BinExp/ModExp.java" />
         <option value="$PROJECT_DIR$/src/com/expye/compiler2016/AST/Stmt/Exp/BinExp/RshiftExp.java" />
         <option value="$PROJECT_DIR$/src/com/expye/compiler2016/IR/YIR/Move.java" />
-        <option value="$PROJECT_DIR$/src/com/expye/compiler2016/Translator/MIPS/MIPSTranslator.java" />
-        <option value="$PROJECT_DIR$/src/com/expye/compiler2016/Allocator/MarvelousAllocator.java" />
-        <option value="$PROJECT_DIR$/src/com/expye/compiler2016/Main.java" />
         <option value="$PROJECT_DIR$/src/com/expye/compiler2016/AST/Stmt/Exp/BinExp/LogAndExp.java" />
         <option value="$PROJECT_DIR$/src/com/expye/compiler2016/AST/Stmt/Exp/BinExp/LogOrExp.java" />
+        <option value="$PROJECT_DIR$/src/com/expye/compiler2016/IR/YIR/Call.java" />
+        <option value="$PROJECT_DIR$/src/com/expye/compiler2016/IR/convertYIRtoCFG.java" />
+        <option value="$PROJECT_DIR$/src/com/expye/compiler2016/Allocator/MarvelousAllocator.java" />
+        <option value="$PROJECT_DIR$/src/com/expye/compiler2016/builtin.s" />
+        <option value="$PROJECT_DIR$/lib/builtin.s" />
+        <option value="$PROJECT_DIR$/src/com/expye/compiler2016/AST/ConstructAST.java" />
+        <option value="$PROJECT_DIR$/src/com/expye/compiler2016/Translator/MIPS/MIPSTranslator.java" />
+        <option value="$PROJECT_DIR$/src/com/expye/compiler2016/Main.java" />
       </list>
     </option>
   </component>
@@ -390,6 +281,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -724,9 +616,8 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
-      <pane id="PackagesPane" />
       <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -739,7 +630,7 @@
     <property name="$PROJECT_DIR$/src/master/parser/Master.g4::/auto-gen" value="false" />
     <property name="$PROJECT_DIR$/src/master/parser/Master.g4::/gen-listener" value="true" />
     <property name="$PROJECT_DIR$/src/master/parser/Master.g4::/gen-visitor" value="false" />
-    <property name="SearchEverywhereHistoryKey" value="Move&#9;FILE&#9;file://C:/Users/叶子豪/IdeaProjects/MasterCompiler/src/com/expye/compiler2016/IR/YIR/Move.java&#10;MIPS&#9;FILE&#9;file://C:/Users/叶子豪/IdeaProjects/MasterCompiler/src/com/expye/compiler2016/Translator/MIPS/MIPSTranslator.java&#10;Call&#9;FILE&#9;file://C:/Users/叶子豪/IdeaProjects/MasterCompiler/src/com/expye/compiler2016/IR/YIR/Call.java&#10;marve&#9;FILE&#9;file://C:/Users/叶子豪/IdeaProjects/MasterCompiler/src/com/expye/compiler2016/Allocator/MarvelousAllocator.java&#10;static&#9;PSI&#9;JAVA://com.expye.compiler2016.IR.YIR.StaticWord&#10;allocator&#9;PSI&#9;JAVA://com.expye.compiler2016.Allocator.Allocator&#10;conver&#9;FILE&#9;file://C:/Users/叶子豪/IdeaProjects/MasterCompiler/src/com/expye/compiler2016/IR/convertYIRtoCFG.java&#10;c&#9;FILE&#9;file://C:/Users/叶子豪/IdeaProjects/MasterCompiler/src/com/expye/compiler2016/IR/YIR/Call.java&#10;Machine&#9;FILE&#9;file://C:/Users/叶子豪/IdeaProjects/MasterCompiler/src/com/expye/compiler2016/Allocator/MachineRegister.java&#10;marv&#9;FILE&#9;file://C:/Users/叶子豪/IdeaProjects/MasterCompiler/src/com/expye/compiler2016/Allocator/MarvelousAllocator.java&#10;VarDec&#9;FILE&#9;file://C:/Users/叶子豪/IdeaProjects/MasterCompiler/src/com/expye/compiler2016/AST/VarDec/VarDec.java&#10;Marve&#9;FILE&#9;file://C:/Users/叶子豪/IdeaProjects/MasterCompiler/src/com/expye/compiler2016/Allocator/MarvelousAllocator.java&#10;Allocator&#9;FILE&#9;file://C:/Users/叶子豪/IdeaProjects/MasterCompiler/src/com/expye/compiler2016/Allocator/Allocator.java&#10;Main&#9;FILE&#9;file://C:/Users/叶子豪/IdeaProjects/MasterCompiler/src/com/expye/compiler2016/Main.java&#10;NullExp&#9;PSI&#9;JAVA://com.expye.compiler2016.AST.Stmt.Exp.NullExp&#10;ReturnS&#9;FILE&#9;file://C:/Users/叶子豪/IdeaProjects/MasterCompiler/src/com/expye/compiler2016/AST/Stmt/ReturnStmt.java&#10;Static&#9;FILE&#9;file://C:/Users/叶子豪/IdeaProjects/MasterCompiler/src/com/expye/compiler2016/IR/YIR/StaticString.java&#10;StringExp&#9;FILE&#9;file://C:/Users/叶子豪/IdeaProjects/MasterCompiler/src/com/expye/compiler2016/AST/Stmt/Exp/StringExp.java&#10;Marv&#9;FILE&#9;file://C:/Users/叶子豪/IdeaProjects/MasterCompiler/src/com/expye/compiler2016/Allocator/MarvelousAllocator.java&#10;RetIns&#9;FILE&#9;file://C:/Users/叶子豪/IdeaProjects/MasterCompiler/src/com/expye/compiler2016/IR/YIR/ControlFlow/RetIns.java&#10;mar&#9;FILE&#9;file://C:/Users/叶子豪/IdeaProjects/MasterCompiler/src/com/expye/compiler2016/Allocator/MarvelousAllocator.java&#10;Alloc&#9;FILE&#9;file://C:/Users/叶子豪/IdeaProjects/MasterCompiler/src/com/expye/compiler2016/Allocator/Allocator.java&#10;Label&#9;FILE&#9;file://C:/Users/叶子豪/IdeaProjects/MasterCompiler/src/com/expye/compiler2016/Label/Label.java&#10;convert&#9;FILE&#9;file://C:/Users/叶子豪/IdeaProjects/MasterCompiler/src/com/expye/compiler2016/IR/convertYIRtoCFG.java&#10;IRR&#9;FILE&#9;file://C:/Users/叶子豪/IdeaProjects/MasterCompiler/src/com/expye/compiler2016/Register/IRRegister.java&#10;StaticString&#9;PSI&#9;JAVA://com.expye.compiler2016.IR.YIR.StaticString&#10;xor&#9;PSI&#9;JAVA://com.expye.compiler2016.IR.YIR.Arithmetic.BinaryIns.XorIns&#10;Ma&#9;FILE&#9;file://C:/Users/叶子豪/IdeaProjects/MasterCompiler/src/com/expye/compiler2016/Main.java&#10;Mar&#9;FILE&#9;file://C:/Users/叶子豪/IdeaProjects/MasterCompiler/src/com/expye/compiler2016/Allocator/MarvelousAllocator.java&#10;main&#9;FILE&#9;file://C:/Users/叶子豪/IdeaProjects/MasterCompiler/src/com/expye/compiler2016/Main.java&#10;funcLa&#9;FILE&#9;file://C:/Users/叶子豪/IdeaProjects/MasterCompiler/src/com/expye/compiler2016/Label/FuncLabel.java&#10;funcla&#9;PSI&#9;JAVA://com.expye.compiler2016.Label.FuncLabel&#10;Constr&#9;FILE&#9;file://C:/Users/叶子豪/IdeaProjects/MasterCompiler/src/com/expye/compiler2016/IR/constructYIR.java&#10;func&#9;PSI&#9;JAVA://com.expye.compiler2016.AST.Dec.FuncDec" />
+    <property name="SearchEverywhereHistoryKey" value="Static&#9;PSI&#9;JAVA://com.expye.compiler2016.IR.YIR.StaticString&#10;RetIns&#9;PSI&#9;JAVA://com.expye.compiler2016.IR.YIR.ControlFlow.RetIns&#10;marve&#9;FILE&#9;file://C:/Users/叶子豪/IdeaProjects/MasterCompiler/src/com/expye/compiler2016/Allocator/MarvelousAllocator.java&#10;call&#9;FILE&#9;file://C:/Users/叶子豪/IdeaProjects/MasterCompiler/src/com/expye/compiler2016/IR/YIR/Call.java&#10;allocsize&#9;PSI&#9;JAVA://com.expye.compiler2016.Allocator.Allocator#allocSize&#10;Move&#9;FILE&#9;file://C:/Users/叶子豪/IdeaProjects/MasterCompiler/src/com/expye/compiler2016/IR/YIR/Move.java&#10;MIPS&#9;FILE&#9;file://C:/Users/叶子豪/IdeaProjects/MasterCompiler/src/com/expye/compiler2016/Translator/MIPS/MIPSTranslator.java&#10;Call&#9;FILE&#9;file://C:/Users/叶子豪/IdeaProjects/MasterCompiler/src/com/expye/compiler2016/IR/YIR/Call.java&#10;static&#9;PSI&#9;JAVA://com.expye.compiler2016.IR.YIR.StaticWord&#10;allocator&#9;PSI&#9;JAVA://com.expye.compiler2016.Allocator.Allocator&#10;conver&#9;FILE&#9;file://C:/Users/叶子豪/IdeaProjects/MasterCompiler/src/com/expye/compiler2016/IR/convertYIRtoCFG.java&#10;c&#9;FILE&#9;file://C:/Users/叶子豪/IdeaProjects/MasterCompiler/src/com/expye/compiler2016/IR/YIR/Call.java&#10;Machine&#9;FILE&#9;file://C:/Users/叶子豪/IdeaProjects/MasterCompiler/src/com/expye/compiler2016/Allocator/MachineRegister.java&#10;marv&#9;FILE&#9;file://C:/Users/叶子豪/IdeaProjects/MasterCompiler/src/com/expye/compiler2016/Allocator/MarvelousAllocator.java&#10;VarDec&#9;FILE&#9;file://C:/Users/叶子豪/IdeaProjects/MasterCompiler/src/com/expye/compiler2016/AST/VarDec/VarDec.java&#10;Marve&#9;FILE&#9;file://C:/Users/叶子豪/IdeaProjects/MasterCompiler/src/com/expye/compiler2016/Allocator/MarvelousAllocator.java&#10;Allocator&#9;FILE&#9;file://C:/Users/叶子豪/IdeaProjects/MasterCompiler/src/com/expye/compiler2016/Allocator/Allocator.java&#10;Main&#9;FILE&#9;file://C:/Users/叶子豪/IdeaProjects/MasterCompiler/src/com/expye/compiler2016/Main.java&#10;NullExp&#9;PSI&#9;JAVA://com.expye.compiler2016.AST.Stmt.Exp.NullExp&#10;ReturnS&#9;FILE&#9;file://C:/Users/叶子豪/IdeaProjects/MasterCompiler/src/com/expye/compiler2016/AST/Stmt/ReturnStmt.java&#10;StringExp&#9;FILE&#9;file://C:/Users/叶子豪/IdeaProjects/MasterCompiler/src/com/expye/compiler2016/AST/Stmt/Exp/StringExp.java&#10;Marv&#9;FILE&#9;file://C:/Users/叶子豪/IdeaProjects/MasterCompiler/src/com/expye/compiler2016/Allocator/MarvelousAllocator.java&#10;mar&#9;FILE&#9;file://C:/Users/叶子豪/IdeaProjects/MasterCompiler/src/com/expye/compiler2016/Allocator/MarvelousAllocator.java&#10;Alloc&#9;FILE&#9;file://C:/Users/叶子豪/IdeaProjects/MasterCompiler/src/com/expye/compiler2016/Allocator/Allocator.java&#10;Label&#9;FILE&#9;file://C:/Users/叶子豪/IdeaProjects/MasterCompiler/src/com/expye/compiler2016/Label/Label.java&#10;convert&#9;FILE&#9;file://C:/Users/叶子豪/IdeaProjects/MasterCompiler/src/com/expye/compiler2016/IR/convertYIRtoCFG.java&#10;IRR&#9;FILE&#9;file://C:/Users/叶子豪/IdeaProjects/MasterCompiler/src/com/expye/compiler2016/Register/IRRegister.java&#10;StaticString&#9;PSI&#9;JAVA://com.expye.compiler2016.IR.YIR.StaticString&#10;xor&#9;PSI&#9;JAVA://com.expye.compiler2016.IR.YIR.Arithmetic.BinaryIns.XorIns&#10;Ma&#9;FILE&#9;file://C:/Users/叶子豪/IdeaProjects/MasterCompiler/src/com/expye/compiler2016/Main.java&#10;Mar&#9;FILE&#9;file://C:/Users/叶子豪/IdeaProjects/MasterCompiler/src/com/expye/compiler2016/Allocator/MarvelousAllocator.java&#10;main&#9;FILE&#9;file://C:/Users/叶子豪/IdeaProjects/MasterCompiler/src/com/expye/compiler2016/Main.java&#10;funcLa&#9;FILE&#9;file://C:/Users/叶子豪/IdeaProjects/MasterCompiler/src/com/expye/compiler2016/Label/FuncLabel.java&#10;funcla&#9;PSI&#9;JAVA://com.expye.compiler2016.Label.FuncLabel&#10;Constr&#9;FILE&#9;file://C:/Users/叶子豪/IdeaProjects/MasterCompiler/src/com/expye/compiler2016/IR/constructYIR.java&#10;func&#9;PSI&#9;JAVA://com.expye.compiler2016.AST.Dec.FuncDec" />
     <property name="$PROJECT_DIR$/src/master/Parser/Master.g4::/auto-gen" value="false" />
     <property name="$PROJECT_DIR$/src/master/Parser/Master.g4::/output-dir" value="C:\Users\叶子豪\IdeaProjects\MasterCompiler\src" />
     <property name="$PROJECT_DIR$/src/master/Parser/Master.g4::/gen-listener" value="true" />
@@ -1278,7 +1169,9 @@
       <workItem from="1462249515205" duration="28114000" />
       <workItem from="1462327380661" duration="46550000" />
       <workItem from="1462422048748" duration="58000" />
-      <workItem from="1462422354246" duration="11167000" />
+      <workItem from="1462422354246" duration="11782000" />
+      <workItem from="1462443004116" duration="11757000" />
+      <workItem from="1462469553154" duration="56000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1459069552195</created>
@@ -1449,7 +1342,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="555234000" />
+    <option name="totallyTimeSpent" value="567662000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1472,14 +1365,13 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32718894" sideWeight="0.505283" order="11" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32982224" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26793945" sideWeight="0.49471697" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26793945" sideWeight="0.49471697" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3285056" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29660377" sideWeight="0.49280575" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30566037" sideWeight="0.49280575" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Statistic" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32521397" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32784727" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="ANTLR Preview" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31599736" sideWeight="0.49245283" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24981132" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1493,6 +1385,7 @@
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Thumbnails" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32982224" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32784727" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1563,34 +1456,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/com/expye/compiler2016/IR/YIR/Arithmetic/BinaryIns/OrIns.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="558">
-          <caret line="66" column="111" selection-start-line="66" selection-start-column="111" selection-end-line="66" selection-end-column="111" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/expye/compiler2016/IR/YIR/Arithmetic/BinaryIns/RemIns.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="558">
-          <caret line="66" column="111" selection-start-line="66" selection-start-column="111" selection-end-line="66" selection-end-column="111" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/expye/compiler2016/IR/YIR/Arithmetic/BinaryIns/RShiftIns.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="558">
-          <caret line="66" column="111" selection-start-line="66" selection-start-column="111" selection-end-line="66" selection-end-column="111" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/expye/compiler2016/IR/YIR/Comp/SgeIns.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="558">
-          <caret line="65" column="111" selection-start-line="65" selection-start-column="111" selection-end-line="65" selection-end-column="111" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/expye/compiler2016/IR/YIR/Comp/SgtIns.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="558">
@@ -1654,20 +1519,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/expye/compiler2016/builtin.s">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/out.s">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="14" column="12" selection-start-line="14" selection-start-column="12" selection-end-line="14" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/out.s" />
     <entry file="file://$PROJECT_DIR$/src/com/expye/compiler2016/AST/Stmt/ReturnStmt.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="612">
@@ -1679,13 +1531,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="408">
           <caret line="13" column="35" selection-start-line="13" selection-start-column="35" selection-end-line="13" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/expye/compiler2016/Allocator/Allocator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="37" column="31" selection-start-line="37" selection-start-column="31" selection-end-line="37" selection-end-column="31" />
         </state>
       </provider>
     </entry>
@@ -1745,24 +1590,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/expye/compiler2016/IR/convertYIRtoCFG.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="490">
-          <caret line="40" column="17" selection-start-line="40" selection-start-column="17" selection-end-line="40" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/expye/compiler2016/AST/Stmt/Exp/SimpleVarExp.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="680">
           <caret line="34" column="24" selection-start-line="34" selection-start-column="24" selection-end-line="34" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/expye/compiler2016/IR/YIR/Call.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="128" column="9" selection-start-line="128" selection-start-column="9" selection-end-line="128" selection-end-column="9" />
         </state>
       </provider>
     </entry>
@@ -1777,7 +1608,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="643">
           <caret line="235" column="29" selection-start-line="235" selection-start-column="26" selection-end-line="235" selection-end-column="29" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1806,7 +1636,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="816">
           <caret line="33" column="14" selection-start-line="33" selection-start-column="14" selection-end-line="33" selection-end-column="14" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1814,7 +1643,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
           <caret line="23" column="13" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1822,7 +1650,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="816">
           <caret line="33" column="14" selection-start-line="33" selection-start-column="14" selection-end-line="33" selection-end-column="14" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1830,7 +1657,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="884">
           <caret line="39" column="18" selection-start-line="39" selection-start-column="18" selection-end-line="39" selection-end-column="18" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1838,7 +1664,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="850">
           <caret line="40" column="18" selection-start-line="40" selection-start-column="18" selection-end-line="40" selection-end-column="18" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1846,7 +1671,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
           <caret line="15" column="3" selection-start-line="15" selection-start-column="3" selection-end-line="15" selection-end-column="3" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1854,7 +1678,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="20" column="31" selection-start-line="20" selection-start-column="31" selection-end-line="20" selection-end-column="31" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1862,15 +1685,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="544">
           <caret line="25" column="21" selection-start-line="25" selection-start-column="21" selection-end-line="25" selection-end-column="21" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/expye/compiler2016/IR/YIR/Move.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
+        <state relative-caret-position="714">
           <caret line="26" column="25" selection-start-line="26" selection-start-column="25" selection-end-line="26" selection-end-column="25" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1878,7 +1699,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="816">
           <caret line="33" column="14" selection-start-line="33" selection-start-column="14" selection-end-line="33" selection-end-column="14" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1886,31 +1706,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="850">
           <caret line="40" column="18" selection-start-line="40" selection-start-column="18" selection-end-line="40" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/expye/compiler2016/Translator/MIPS/MIPSTranslator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="24" column="5" selection-start-line="24" selection-start-column="5" selection-end-line="24" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/expye/compiler2016/Allocator/MarvelousAllocator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3312">
-          <caret line="347" column="17" selection-start-line="347" selection-start-column="17" selection-end-line="347" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/expye/compiler2016/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="816">
-          <caret line="31" column="9" selection-start-line="31" selection-start-column="9" selection-end-line="31" selection-end-column="9" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1918,23 +1713,103 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
           <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/expye/compiler2016/AST/Stmt/Exp/BinExp/LogAndExp.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="728">
+        <state relative-caret-position="1292">
           <caret line="50" column="31" selection-start-line="50" selection-start-column="31" selection-end-line="50" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/expye/compiler2016/IR/YIR/ControlFlow/RetIns.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="626">
+          <caret line="29" column="33" selection-start-line="29" selection-start-column="33" selection-end-line="29" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/expye/compiler2016/Allocator/Allocator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1054">
+          <caret line="49" column="14" selection-start-line="49" selection-start-column="14" selection-end-line="49" selection-end-column="14" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/expye/compiler2016/AST/Stmt/Exp/BinExp/LogOrExp.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="536">
-          <caret line="43" column="20" selection-start-line="43" selection-start-column="20" selection-end-line="43" selection-end-column="20" />
+        <state relative-caret-position="510">
+          <caret line="27" column="5" selection-start-line="27" selection-start-column="5" selection-end-line="27" selection-end-column="5" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/expye/compiler2016/IR/convertYIRtoCFG.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1802">
+          <caret line="72" column="11" selection-start-line="72" selection-start-column="11" selection-end-line="72" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/expye/compiler2016/builtin.s" />
+    <entry file="file://$PROJECT_DIR$/src/com/expye/compiler2016/Allocator/MarvelousAllocator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="714">
+          <caret line="41" column="13" selection-start-line="41" selection-start-column="13" selection-end-line="41" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/expye/compiler2016/IR/YIR/Call.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4556">
+          <caret line="147" column="33" selection-start-line="147" selection-start-column="33" selection-end-line="147" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/builtin.s">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="14" column="24" selection-start-line="14" selection-start-column="24" selection-end-line="14" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/expye/compiler2016/IR/YIR/StaticString.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="714">
+          <caret line="22" column="11" selection-start-line="22" selection-start-column="11" selection-end-line="22" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/expye/compiler2016/AST/ConstructAST.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="612">
+          <caret line="27" column="25" selection-start-line="27" selection-start-column="25" selection-end-line="27" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/expye/compiler2016/Translator/MIPS/MIPSTranslator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2278">
+          <caret line="78" column="26" selection-start-line="78" selection-start-column="26" selection-end-line="78" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/expye/compiler2016/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="748">
+          <caret line="22" column="19" selection-start-line="22" selection-start-column="19" selection-end-line="22" selection-end-column="19" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

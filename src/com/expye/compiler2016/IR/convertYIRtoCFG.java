@@ -80,5 +80,6 @@ public class convertYIRtoCFG {
 
             if (basicBlock != null) basicBlock.add(ins);
         }
+        if (basicBlock != null) basicBlock.add(new RetIns(null));
     }
 }

@@ -137,97 +137,55 @@ func_getInt:
 	syscall
 	jr $ra
 
-# int arg in $a0
-###### Checked ######
-# Bug fixed(5/2): when the arg is a neg number
-# used $a0, $t0, $t1, $t2, $t3, $t5, $v0, $v1
 func_toString:
-	# subu $sp, $sp, 4
-	# sw $ra, 0($sp)
-    subu    $sp,    $sp,    20
-    sw      $t0,    0($sp)
-    sw      $t1,    4($sp)
-    sw      $t2,    8($sp)
-    sw      $t3,    12($sp)
-    sw      $t5,    16($sp)
-
-	# first count the #digits
-	li $t0, 0			# $t0 = 0 if the number is a negnum
-	bgez $a0, _skip_set_less_than_zero
-	li $t0, 1			# now $t0 must be 1
-	neg $a0, $a0
-	_skip_set_less_than_zero:
-	beqz $a0, _set_zero
-
-	li $t1, 0			# the #digits is in $t1
-	move $t2, $a0
-	move $t3, $a0
-	li $t5, 10
-
-	_begin_count_digit:
-	div $t2, $t5
-	mflo $v0			# get the quotient
-	mfhi $v1			# get the remainder
-	bgtz $v0 _not_yet
-	bgtz $v1 _not_yet
-	j _yet
-	_not_yet:
-	add $t1, $t1, 1
-	move $t2, $v0
-	j _begin_count_digit
-
-	_yet:
-	beqz $t0, _skip_reserve_neg
-	add $t1, $t1, 1
-	_skip_reserve_neg:
-	add $a0, $t1, 5
-	li $v0, 9
+Label12_ToString:
+	move $a1 $a0
+	li $a0 16
+	li $v0 9
 	syscall
-	sw $t1, 0($v0)
-	add $v0, $v0, 4
-	add $t1, $t1, $v0
-	sb $zero, 0($t1)
-	sub $t1, $t1, 1
-
-	_continue_toString:
-	div $t3, $t5
-	mfhi $v1
-	add $v1, $v1, 48	# in ascii 48 = '0'
-	sb $v1, 0($t1)
-	sub $t1, $t1, 1
-	mflo $t3
-	# bge $t1, $v0, _continue_toString
-	bnez $t3, _continue_toString
-
-	beqz $t0, _skip_place_neg
-	li $v1, 45
-	sb $v1, 0($t1)
-	_skip_place_neg:
-	# lw $ra, 0($sp)
-	# addu $sp, $sp, 4
-	lw      $t0,    0($sp)
-    lw      $t1,    4($sp)
-    lw      $t2,    8($sp)
-    lw      $t3,    12($sp)
-    lw      $t5,    16($sp)
-    addu    $sp,    $sp,    20
-	jr $ra
-
-	_set_zero:
-	li $a0, 6
-	li $v0, 9
-	syscall
-	li $a0, 1
-	sw $a0, 0($v0)
-	add $v0, $v0, 4
-	li $a0, 48
-	sb $a0, 0($v0)
-    lw      $t0,    0($sp)
-    lw      $t1,    4($sp)
-    lw      $t2,    8($sp)
-    lw      $t3,    12($sp)
-    lw      $t5,    16($sp)
-    addu    $sp,    $sp,    20
+	bnez $a1 Label12_NotZero
+	lb $0 5($v0)
+	li $a0 48
+	sb $a0 4($v0)
+	li $a0 1
+	sb $a0 ($v0)
+	j Label12_EndToString
+Label12_NotZero:
+	slt $v1 $a1 0
+	add $a2 $v0 15
+	sb $0 ($a2)
+Label12_Cond:
+	beqz $a1 Label12_EndLoop
+	rem $a0 $a1 10
+	div $a1 $a1 10
+	beqz $v1 Label12_LoadChar
+	ble $a0 0 Label12_ToNeg
+	add $a0 $a0 -10
+Label12_ToNeg:
+	neg $a0 $a0
+Label12_LoadChar:
+	add $a0 $a0 48
+	add $a2 $a2 -1
+	sb $a0 ($a2)
+	j Label12_Cond
+Label12_EndLoop:
+	beqz $v1 Label12_Copy
+	li $a0 45
+	add $a2 $a2 -1
+	sb $a0 ($a2)
+Label12_Copy:
+	sub $v1 $v0 $a2
+	add $v1 $v1 16
+	sw $v1 ($v0)
+	add $v1 $v0 4
+Label12_CopyCond:
+	lb $a0 ($a2)
+	sb $a0 ($v1)
+	add $a2 $a2 1
+	add $v1 $v1 1
+	bnez $a0 Label12_CopyCond
+Label12_EndToString:
+	add $v0 $v0 4
 	jr $ra
 
 
@@ -333,52 +291,34 @@ func_size:
 	lw $v0, -4($a0)
 	jr $ra
 
-# string1 in $a0, string2 in $a1
-###### Checked ######
-# used $a0, $a1, $t0, $t1, $t2, $t3, $t4, $t5, $v0
 func_stringConcatenate:
-
-	subu $sp, $sp, 28
-	sw $ra, 0($sp)
-	sw $t0, 4($sp)
-	sw $t1, 8($sp)
-	sw $t2, 12($sp)
-	sw $t3, 16($sp)
-	sw $t4, 20($sp)
-	sw $t5, 24($sp)
-
-	move $t2, $a0
-	move $t3, $a1
-
-	lw $t0, -4($a0)		# $t0 is the length of lhs
-	lw $t1, -4($a1)		# $t1 is the length of rhs
-	add $t5, $t0, $t1
-	add $a0, $t5, 5
-	li $v0, 9
+	move $v1 $a0
+	lw $v0 -4($a0)
+	lw $a0 -4($a1)
+	add $a0 $a0 $v0
+	move $a2 $a0
+	add $a0 $a0 5
+	li $v0 9
 	syscall
-	sw $t5, 0($v0)
-	add $v0, $v0, 4
-	move $t4, $v0
-
-	move $a0, $t2
-	move $a1, $t4
-	jal _string_copy
-
-	move $a0, $t3
-	add $a1, $t4, $t0
-	# add $a1, $a1, 1
-	jal _string_copy
-
-	move $v0, $t4
-
-	lw $t0, 4($sp)
-	lw $t1, 8($sp)
-	lw $t2, 12($sp)
-	lw $t3, 16($sp)
-	lw $t4, 20($sp)
-	lw $t5, 24($sp)
-	lw $ra, 0($sp)
-	addu $sp, $sp, 28
+	sw $a2 ($v0)
+	add $v0 $v0 4
+	move $a0 $v0
+Label5_CopyFirst:
+	lb $a2 ($v1)
+	beqz $a2 Label5_CopySecond
+	sb $a2 ($a0)
+	add $a0 $a0 1
+	add $v1 $v1 1
+	j Label5_CopyFirst
+Label5_CopySecond:
+	lb $v1 ($a1)
+	beqz $v1 Label5_End
+	sb $v1 ($a0)
+	add $a0 $a0 1
+	add $a1 $a1 1
+	j Label5_CopySecond
+Label5_End:
+	sb $0 ($a0)
 	jr $ra
 
 # string1 in $a0, string2 in $a1

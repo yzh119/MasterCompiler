@@ -36,6 +36,5 @@ public class ConstructAST {
             e.printStackTrace();
             System.exit(1);
         }
-        System.out.println("Semantic check successful!");
     }
 }

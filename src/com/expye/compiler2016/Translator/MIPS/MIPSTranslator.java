@@ -41,7 +41,7 @@ public class MIPSTranslator extends Translator{
                 StringLiteralIntern.table.forEach(
                         (stringLiteral, stringLabel) -> {
                             out.println("la  $v0, " + stringLabel.label);
-                            out.println("li  $v1, " + stringLiteral.length());
+                            out.println("li  $v1, " + realLength(stringLiteral));
                             out.println("sw  $v1, -4($v0)");
                         }
                 );
@@ -62,6 +62,17 @@ public class MIPSTranslator extends Translator{
             }
             out.println();
         }
+    }
+
+    private int realLength(String stringLiteral) {
+        int ret = 0;
+        for (int i = 0; i < stringLiteral.length(); i++) {
+            ret++;
+            if (stringLiteral.charAt(i) == '\\') {
+                i++;
+            }
+        }
+        return ret;
     }
 
     @Override

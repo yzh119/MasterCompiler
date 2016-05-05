@@ -12,6 +12,9 @@ import com.expye.compiler2016.Utility.Utility;
 import java.util.ArrayList;
 import java.util.List;
 
+import static java.lang.Integer.max;
+import static java.lang.Integer.min;
+
 /**
  * Created by expye(Zihao Ye) on 2016/4/23.
  */
@@ -36,10 +39,10 @@ public class Call extends Instruction {
     @Override
     public String toMIPS(Allocator alloc) {
         StringBuilder ret = new StringBuilder();
-        int callerSave = arguments.size() * 4;
+        int callerSave = max(arguments.size() - 3, 0) * 4;
         if (callerSave != 0)
             ret.append("add $sp, $sp, -").append(callerSave).append("\n");
-
+/*
         boolean isBuiltin = false;
         if (l.prototype != null) {
             if (l.prototype == Utility.getIntDec || l.prototype == Utility.getStringDec) {
@@ -110,8 +113,26 @@ public class Call extends Instruction {
             }
         }
 
-        if (!isBuiltin)
-        for (int i = 0; i < arguments.size(); i++) {
+        if (!isBuiltin) */
+        for (int i = 0; i < min(arguments.size(), 3); i++)
+            if (arguments.get(i) instanceof Immediate) {
+                ret.append("li ").append(MachineRegister.builtinArgRegister[i])
+                        .append(", ").append(arguments.get(i)).append("\n");
+            } else {
+                boolean argH =
+                        alloc.realRegs[alloc.table.get(arguments.get(i))] != null;
+                if (argH) {
+                    ret.append("move ").append(MachineRegister.builtinArgRegister[i])
+                            .append(", ").append(alloc.realRegs[alloc.table.get(arguments.get(i))]).append("\n");
+                } else {
+                    ret.append("lw  ").append(MachineRegister.builtinArgRegister[i])
+                            .append(", ").append(alloc.offsetOfEachRegister.get(
+                            alloc.table.get(arguments.get(i))
+                    ) + callerSave).append("($sp)\n");
+                }
+            }
+
+        for (int i = 3; i < arguments.size(); i++) {
             VirtualRegister arg = arguments.get(i);
             if (arg instanceof IRRegister) {
                 boolean argH =
@@ -121,10 +142,10 @@ public class Call extends Instruction {
                 } else {
                     ret.append("lw  $v0, ").append(alloc.offsetOfEachRegister.get(alloc.table.get(arg)) + callerSave)
                             .append("($sp)\n")
-                            .append("sw  $v0, ").append(4 * i).append("($sp)\n");
+                            .append("sw  $v0, ").append(4 * (i - 3)).append("($sp)\n");
                 }
             } else {
-                ret.append("li  $v0, ").append(arg).append("\n").append("sw  $v0, ").append(4 * i).append("($sp)\n");
+                ret.append("li  $v0, ").append(arg).append("\n").append("sw  $v0, ").append(4 * (i - 3)).append("($sp)\n");
             }
         }
 

@@ -20,6 +20,8 @@ import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
 
+import static java.lang.Integer.min;
+
 /**
  * Created by expye(Zihao Ye) on 2016/5/1.
  */
@@ -260,6 +262,10 @@ public class MarvelousAllocator extends Allocator {
 
     private void greedyColoringAlgorithm() {
         Boolean[] used = new Boolean[regs.size()];
+        Integer[] deg = new Integer[regs.size()];
+        for (int i = 0; i < regs.size(); i++)
+            deg[i] = edge.get(i).size();
+
         for (int i = 0; i < regs.size(); i++)
             used[i] = false;
 
@@ -267,11 +273,16 @@ public class MarvelousAllocator extends Allocator {
             int minDeg = Integer.MAX_VALUE, j = -1;
             for (int i = 0; i < regs.size(); i++) {
                 if (used[i]) continue;
-                if (edge.get(i).size() < minDeg) {
-                    minDeg = edge.get(i).size();
+                if (deg[i] < minDeg) {
+                    minDeg = deg[i];
                     j = i;
                 }
             }
+
+            for (Integer v: edge.get(j)) {
+                deg[v]--;
+            }
+
             used[j] = true;
             for (int candidates = 0; candidates < MachineRegister.virginRegister.length; candidates++) {
                 boolean ok = true;
@@ -319,15 +330,28 @@ public class MarvelousAllocator extends Allocator {
                 ret.append("sw  ").append(MachineRegister.virginRegister[i]).append(", ").append(offset).append("($sp)\n");
         }
 
-        for (int i = 0; i < args.size(); i++) {
+        for (int i = 0; i < min(args.size(), 3); i++) {
+            ArgsRegister arg = args.get(i);
+            if (realRegs[table.get(arg)] != null) {
+                ret.append("move ").
+                        append(realRegs[table.get(arg)]).append(", ").
+                        append(MachineRegister.builtinArgRegister[i]).append("\n");
+            } else {
+                ret.append("sw  ").append(MachineRegister.builtinArgRegister[i]).
+                        append(", ").
+                        append(offsetOfEachRegister.get(table.get(arg))).append("($sp)\n");
+            }
+        }
+
+        for (int i = 3; i < args.size(); i++) {
             ArgsRegister arg = args.get(i);
             if (realRegs[table.get(arg)] != null) {
                 ret.append("lw  ").
                         append(realRegs[table.get(arg)]).append(", ").
-                        append(allocSize + i * 4).append("($sp)\n");
+                        append(allocSize + (i - 3) * 4).append("($sp)\n");
             } else {
                 ret.append("lw  $v0, ").
-                        append(allocSize + i * 4).append("($sp)\n");
+                        append(allocSize + (i - 3) * 4).append("($sp)\n");
                 ret.append("sw  $v0, ").
                         append(offsetOfEachRegister.get(table.get(arg))).append("($sp)\n");
             }
