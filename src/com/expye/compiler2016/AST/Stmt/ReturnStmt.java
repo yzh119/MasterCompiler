@@ -19,7 +19,7 @@ public class ReturnStmt extends StmtBase {
 
     @Override
     public void emit(List<Instruction> lst) {
-        ret.emit(lst);
-        lst.add(new RetIns(ret.reg));
+        if (ret != null) ret.emit(lst);
+        lst.add(new RetIns((ret != null ? ret.reg: null)));
     }
 }

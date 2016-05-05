@@ -19,10 +19,10 @@ public class SimpleVarExp extends Exp {
         this.pt = pt;
         this.type = pt.cd;
         this.isLvalue = true;
-        if (((IRRegister)pt.reg).addr == null)
+        if (pt.reg.addr == null)
             this.reg = pt.reg;
         else
-            this.reg = new IRRegister(((IRRegister)pt.reg).addr);
+            this.reg = new IRRegister(pt.reg.addr);
     }
 
     @Override

@@ -28,7 +28,10 @@ public class LshiftExp extends BinExp {
             lst.add(
                     new LoadImmediate(newReg, (Immediate) lhs.reg)
             );
-        }
+            lst.add(
+                    new LShiftIns((IRRegister) this.reg, newReg, rhs.reg)
+            );
+        } else
         lst.add(
                 new LShiftIns((IRRegister) this.reg, (IRRegister) lhs.reg, rhs.reg)
         );

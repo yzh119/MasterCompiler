@@ -40,19 +40,11 @@ public class Utility {
     public final static FuncDec stringOrd = new FuncDec(ClassDec.intClass, Arrays.asList(strDec1, intDec1), null, "ord");
 
     public final static FuncDec stringEq = new FuncDec(ClassDec.boolClass, Arrays.asList(strDec1, strDec2), null,
-            "string_equal_to");
-    public final static FuncDec stringNeq = new FuncDec(ClassDec.boolClass, Arrays.asList(strDec1, strDec2), null,
-            "string_not_equal_to");
-    public final static FuncDec stringGt = new FuncDec(ClassDec.boolClass, Arrays.asList(strDec1, strDec2), null,
-            "string_greater_than");
-    public final static FuncDec stringGeq = new FuncDec(ClassDec.boolClass, Arrays.asList(strDec1, strDec2), null,
-            "string_greater_than_or_equal_to");
+            "stringIsEqual");
     public final static FuncDec stringLt = new FuncDec(ClassDec.boolClass, Arrays.asList(strDec1, strDec2), null,
-            "string_less_than");
-    public final static FuncDec stringLeq = new FuncDec(ClassDec.boolClass, Arrays.asList(strDec1, strDec2), null,
-            "string_less_than_or_equal_to");
+            "stringLess");
     public final static FuncDec stringConcatenate = new FuncDec(ClassDec.stringClass, Arrays.asList(strDec1, strDec2),
-            null, "string_concatenate");
+            null, "stringConcatenate");
     static {
         ArgsRegister.init();
     }

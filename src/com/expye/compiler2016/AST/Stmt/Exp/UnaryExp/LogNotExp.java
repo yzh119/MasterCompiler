@@ -1,9 +1,11 @@
 package com.expye.compiler2016.AST.Stmt.Exp.UnaryExp;
 
 import com.expye.compiler2016.AST.Stmt.Exp.Exp;
+import com.expye.compiler2016.IR.YIR.Arithmetic.BinaryIns.XorIns;
 import com.expye.compiler2016.IR.YIR.Arithmetic.UnaryIns.NotIns;
 import com.expye.compiler2016.IR.YIR.Instruction;
 import com.expye.compiler2016.Register.IRRegister;
+import com.expye.compiler2016.Register.Immediate;
 
 import java.util.List;
 
@@ -20,7 +22,7 @@ public class LogNotExp extends UnaryExp {
     public void emit(List<Instruction> lst) {
         super.emit(lst);
         lst.add(
-                new NotIns((IRRegister) this.reg, (IRRegister) op.reg)
+                new XorIns((IRRegister) this.reg, (IRRegister) op.reg, new Immediate(1))
         );
     }
 }

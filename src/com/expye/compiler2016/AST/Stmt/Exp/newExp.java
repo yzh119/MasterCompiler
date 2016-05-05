@@ -43,7 +43,7 @@ public class newExp extends Exp {
                 );
                 IRRegister allocSizeReg = new IRRegister();
                 lst.add(
-                        new LoadImmediate(allocSizeReg, allocSize)
+                        new LoadImmediate(allocSizeReg, new Immediate(((Immediate)size.reg).val))
                 );
                 lst.add(
                         new Store(allocSizeReg, new Address((IRRegister) this.reg, new Immediate(0)))
@@ -64,7 +64,7 @@ public class newExp extends Exp {
                         new Allocate((IRRegister) this.reg, allocSizeRegWithSize)
                 );
                 lst.add(
-                        new Store(allocSizeRegWithSize, new Address((IRRegister) this.reg, new Immediate(0)))
+                        new Store((IRRegister) size.reg, new Address((IRRegister) this.reg, new Immediate(0)))
                 );
                 lst.add(
                         new AddIns((IRRegister) this.reg, (IRRegister) this.reg, new Immediate(4))

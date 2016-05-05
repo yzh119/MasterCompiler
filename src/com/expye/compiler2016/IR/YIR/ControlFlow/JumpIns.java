@@ -1,5 +1,6 @@
 package com.expye.compiler2016.IR.YIR.ControlFlow;
 
+import com.expye.compiler2016.Allocator.Allocator;
 import com.expye.compiler2016.Label.Label;
 
 /**
@@ -14,5 +15,10 @@ public class JumpIns extends ControlFlow {
     @Override
     public String toString() {
         return "jump " + label.toString();
+    }
+
+    @Override
+    public String toMIPS(Allocator alloc) {
+        return "j " + label.toMIPS(alloc);
     }
 }

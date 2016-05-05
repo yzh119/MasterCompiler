@@ -1,0 +1,18 @@
+class pair{
+	int x;
+	int y;
+}
+int main() {
+	int n = 100;
+	pair[] a = new pair[n];
+	int i;
+	for (i = 0; i < n; i++) {
+		a[i] = new pair;
+		a[i].x = i;
+		a[i].y = n - i;
+	}
+	return a[5].x + a[5].y;
+}
+/*! assert: exitcode
+100
+*/

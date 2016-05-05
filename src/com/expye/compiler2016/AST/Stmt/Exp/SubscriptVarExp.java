@@ -42,7 +42,10 @@ public class SubscriptVarExp extends Exp {
                 new Move(currentReg, (IRRegister) le.reg)
         );
         for (int i = 0; i < offset.size(); i++) {
+            tmp = Utility.ldsdL0R1;
+            Utility.ldsdL0R1 = 1;
             offset.get(i).emit(lst);
+            Utility.ldsdL0R1 = tmp;
             if (offset.get(i).reg instanceof Immediate) {
                 currentAddr = new Address(currentReg, new Immediate(((Immediate) offset.get(i).reg).val * Utility.i32));
                 if (i != offset.size() - 1)

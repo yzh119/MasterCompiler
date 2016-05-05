@@ -3,8 +3,10 @@ package com.expye.compiler2016.AST.Stmt.Exp.BinExp;
 import com.expye.compiler2016.AST.Dec.ClassDec;
 import com.expye.compiler2016.AST.Stmt.Exp.Exp;
 import com.expye.compiler2016.AST.Stmt.Exp.IntExp;
+import com.expye.compiler2016.IR.YIR.Arithmetic.BinaryIns.XorIns;
 import com.expye.compiler2016.IR.YIR.Call;
 import com.expye.compiler2016.IR.YIR.Comp.SgeIns;
+import com.expye.compiler2016.IR.YIR.ControlFlow.Cbr;
 import com.expye.compiler2016.IR.YIR.Instruction;
 import com.expye.compiler2016.IR.YIR.Memory.LoadImmediate;
 import com.expye.compiler2016.Label.FuncLabel;
@@ -33,7 +35,10 @@ public class GreaterOrEqualExp extends BinExp {
                 lst.add(
                         new LoadImmediate(newReg, (Immediate) lhs.reg)
                 );
-            }
+                lst.add(
+                        new SgeIns((IRRegister) this.reg, newReg, rhs.reg)
+                );
+            } else
             lst.add(
                     new SgeIns((IRRegister) this.reg, (IRRegister) lhs.reg, rhs.reg)
             );
@@ -41,8 +46,13 @@ public class GreaterOrEqualExp extends BinExp {
             if (lhs.type == ClassDec.stringClass) {
                 lst.add(
                         new Call((IRRegister) this.reg,
-                                Utility.stringGeq.label,
+                                Utility.stringLt.label,
                                 Arrays.asList(lhs.reg, rhs.reg))
+                );
+                lst.add(
+                        new XorIns((IRRegister) this.reg,
+                                (IRRegister) this.reg,
+                                new Immediate(1))
                 );
             }
         }

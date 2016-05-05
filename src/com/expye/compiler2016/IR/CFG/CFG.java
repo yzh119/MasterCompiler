@@ -14,7 +14,6 @@ public class CFG {
     public FuncLabel flable;
     public List<BasicBlock> blockList;
     public HashMap<Label, Integer> map = new HashMap<>();
-
     public CFG(FuncLabel flabel, List<BasicBlock> blockList) {
         this.flable = flabel;
         this.blockList = blockList;

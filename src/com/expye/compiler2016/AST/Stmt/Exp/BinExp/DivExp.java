@@ -28,7 +28,10 @@ public class DivExp extends BinExp {
             lst.add(
                     new LoadImmediate(newReg, (Immediate) lhs.reg)
             );
-        }
+            lst.add(
+                    new DivIns((IRRegister) this.reg, newReg, rhs.reg)
+            );
+        } else
         lst.add(
                 new DivIns((IRRegister) this.reg, (IRRegister) lhs.reg, rhs.reg)
         );

@@ -12,6 +12,7 @@ import com.expye.compiler2016.IR.YIR.Memory.Load;
 import com.expye.compiler2016.IR.YIR.Memory.LoadAdress;
 import com.expye.compiler2016.IR.YIR.Memory.LoadImmediate;
 import com.expye.compiler2016.IR.YIR.Move;
+import com.expye.compiler2016.Register.ArgsRegister;
 import com.expye.compiler2016.Register.IRRegister;
 
 import java.io.PrintStream;
@@ -23,17 +24,25 @@ import java.util.Map;
  * Created by expye(Zihao Ye) on 2016/5/1.
  */
 public class Allocator {
-    ArrayList<IRRegister> regs = new ArrayList<>();
-    MachineRegister[] realRegs;
-    Map<IRRegister, Integer> table = new HashMap<>();
+    public ArrayList<IRRegister> regs = new ArrayList<>();
+    public ArrayList<ArgsRegister> args = new ArrayList<>();
+    public Map<MachineRegister, Integer> machineRegToOffset =
+            new HashMap<>();
+    public MachineRegister[] realRegs;
+    public Map<IRRegister, Integer> table = new HashMap<>();
     CFG cfg;
+    public int allocSize;
+    public ArrayList<Integer> offsetOfEachRegister = new ArrayList<>();
+    public String frameStart;
+    public String frameEnd;
     public Allocator(CFG cfg) {
         this.cfg = cfg;
         if (cfg.flable.prototype != null)
         cfg.flable.prototype.para.forEach(
                 dec -> {
-                    table.put((IRRegister)dec.reg, regs.size());
-                    regs.add((IRRegister)dec.reg);
+                    table.put(dec.reg, regs.size());
+                    regs.add(dec.reg);
+                    args.add((ArgsRegister) dec.reg);
                 }
         );
         for (BasicBlock basicBlock: cfg.blockList) {

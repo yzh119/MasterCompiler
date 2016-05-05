@@ -18,7 +18,7 @@ public class StringLiteralIntern {
     public static GlobalVarLabel find(String strLiteral) {
         GlobalVarLabel ret = table.get(strLiteral);
         if (ret == null) {
-            ret = new GlobalVarLabel(strLiteral.hashCode());
+            ret = new GlobalVarLabel(strLiteral.hashCode() & 0x7FFFFFFF);
             Program.globalMem.add(
                     new StaticString(ret, strLiteral)
             );

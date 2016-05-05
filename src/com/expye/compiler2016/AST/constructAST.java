@@ -34,6 +34,7 @@ public class ConstructAST {
             walker.walk(tl, tree);
         } catch (Error | Exception e) {
             e.printStackTrace();
+            System.exit(1);
         }
         System.out.println("Semantic check successful!");
     }

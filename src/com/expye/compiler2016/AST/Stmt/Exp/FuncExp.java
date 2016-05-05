@@ -31,7 +31,7 @@ public class FuncExp extends Exp {
         }
 
         YIR.YIRInstance.addIns(
-                new Call((this.reg != null) ? (IRRegister) this.reg: null, fd.label ,
+                new Call((this.reg != null ? (IRRegister) this.reg: null), fd.label ,
                         paraList.stream().map((x)->(x.reg)).collect(Collectors.toList())));
     }
 }

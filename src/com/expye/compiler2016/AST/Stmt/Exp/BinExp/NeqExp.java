@@ -5,6 +5,7 @@ import com.expye.compiler2016.AST.Stmt.Exp.BoolExp;
 import com.expye.compiler2016.AST.Stmt.Exp.Exp;
 import com.expye.compiler2016.AST.Stmt.Exp.IntExp;
 import com.expye.compiler2016.AST.Stmt.Exp.NullExp;
+import com.expye.compiler2016.IR.YIR.Arithmetic.BinaryIns.XorIns;
 import com.expye.compiler2016.IR.YIR.Call;
 import com.expye.compiler2016.IR.YIR.Comp.SneIns;
 import com.expye.compiler2016.IR.YIR.Instruction;
@@ -46,8 +47,13 @@ public class NeqExp extends BinExp {
             if (lhs.type == ClassDec.stringClass) {
                 lst.add(
                         new Call((IRRegister) this.reg,
-                                Utility.stringNeq.label,
+                                Utility.stringEq.label,
                                 Arrays.asList(lhs.reg, rhs.reg))
+                );
+                lst.add(
+                        new XorIns((IRRegister) this.reg,
+                                (IRRegister) this.reg,
+                                new Immediate(1))
                 );
             } else {
                 lst.add(

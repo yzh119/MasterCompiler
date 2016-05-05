@@ -1,5 +1,6 @@
 package com.expye.compiler2016.Label;
 
+import com.expye.compiler2016.Allocator.Allocator;
 import com.expye.compiler2016.IR.YIR.Instruction;
 
 /**
@@ -47,5 +48,13 @@ public class Label extends Instruction {
     @Override
     public String toString() {
         return label;
+    }
+
+    @Override
+    public String toMIPS(Allocator alloc) {
+        if (label.startsWith("%"))
+            return "__" + label.substring(1);
+        else
+            return label;
     }
 }

@@ -42,37 +42,38 @@ import java.util.ArrayList;
  */
 public class MachineRegister {
     public static MachineRegister[] virginRegister = new MachineRegister[]{
-            new MachineRegister(4, "$a0"),
-            new MachineRegister(5, "$a1"),
-            new MachineRegister(6, "$a2"),
-            new MachineRegister(7, "$a3"),
-            new MachineRegister(8, "$t0"),
-            new MachineRegister(9, "$t1"),
-            new MachineRegister(10, "$t2"),
-            new MachineRegister(11, "$t3"),
-            new MachineRegister(12, "$t4"),
-            new MachineRegister(13, "$t5"),
-            new MachineRegister(14, "$t6"),
-            new MachineRegister(15, "$t7"),
-            new MachineRegister(16, "$s0"),
-            new MachineRegister(17, "$s1"),
-            new MachineRegister(18, "$s2"),
-            new MachineRegister(19, "$s3"),
-            new MachineRegister(20, "$s4"),
-            new MachineRegister(21, "$s5"),
-            new MachineRegister(22, "$s6"),
-            new MachineRegister(23, "$s7"),
-            new MachineRegister(24, "$t8"),
-            new MachineRegister(25, "$t9"),
-            new MachineRegister(26, "$k0"),
-            new MachineRegister(27, "$k1"),
-            new MachineRegister(30, "$fp")
+            new MachineRegister("$a3"),
+            new MachineRegister("$t0"),
+            new MachineRegister("$t1"),
+            new MachineRegister("$t2"),
+            new MachineRegister("$t3"),
+            new MachineRegister("$t4"),
+            new MachineRegister("$t5"),
+            new MachineRegister("$t6"),
+            new MachineRegister("$t7"),
+            new MachineRegister("$s0"),
+            new MachineRegister("$s1"),
+            new MachineRegister("$s2"),
+            new MachineRegister("$s3"),
+            new MachineRegister("$s4"),
+            new MachineRegister("$s5"),
+            new MachineRegister("$s6"),
+            new MachineRegister("$s7"),
+            new MachineRegister("$t8"),
+            new MachineRegister("$t9"),
+            new MachineRegister("$k0"),
+            new MachineRegister("$k1"),
+            new MachineRegister("$fp"),
+            new MachineRegister("$gp")
+    };
+    public static MachineRegister[] builtinArgRegister = new MachineRegister[]{
+            new MachineRegister("$a0"),
+            new MachineRegister("$a1"),
+            new MachineRegister("$a2")
     };
 
     String name;
-    int iD;
-    private MachineRegister(int iD, String name) {
-        this.iD = iD;
+    private MachineRegister(String name) {
         this.name = name;
     }
 

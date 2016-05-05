@@ -34,7 +34,10 @@ public class LessExp extends BinExp {
                 lst.add(
                         new LoadImmediate(newReg, (Immediate) lhs.reg)
                 );
-            }
+                lst.add(
+                        new SltIns((IRRegister) this.reg, newReg, rhs.reg)
+                );
+            } else
             lst.add(
                     new SltIns((IRRegister) this.reg, (IRRegister) lhs.reg, rhs.reg)
             );

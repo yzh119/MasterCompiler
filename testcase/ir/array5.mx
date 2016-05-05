@@ -1,0 +1,25 @@
+int main() {
+	int[][] f = new int [11][];
+	int i;
+	int j;
+	for (i = 0; i < 11; i++)
+		f[i] = new int[11];
+
+	for (i = 0; i < 11; i++)
+		for (j = 0; j < 11; j++) {
+			f[i][j] = 0;
+		}
+	
+	f[0][0] = 1;
+	for (i = 1; i < 11; i++)
+		for (j = 0; j < 11; j++) {
+			if (j != 0)
+				f[i][j] = f[i - 1][j] + f[i - 1][j - 1];
+			else
+				f[i][j] = f[i - 1][j];
+		}
+	return f[10][5];
+}
+/*! assert: exitcode
+252
+*/

@@ -124,6 +124,7 @@ public class ThirdListener extends BaseListener {
                                 new IntExp(((IntExp) lhs).val - ((IntExp) rhs).val)
                 );
             else {
+                if (ctx.op.getType() == MasterParser.ADD)
                 if (lhs instanceof IntExp) {
                     Exp tmp = lhs;
                     lhs = rhs;

@@ -10,8 +10,10 @@ import com.expye.compiler2016.IR.YIR.*;
 import com.expye.compiler2016.IR.YIR.ControlFlow.ControlFlow;
 import com.expye.compiler2016.IR.YIR.ControlFlow.JumpIns;
 import com.expye.compiler2016.IR.YIR.ControlFlow.RetIns;
+import com.expye.compiler2016.IR.YIR.Memory.Load;
 import com.expye.compiler2016.Label.FuncLabel;
 import com.expye.compiler2016.Label.Label;
+import com.expye.compiler2016.Register.IRRegister;
 import com.expye.compiler2016.Register.Immediate;
 import com.expye.compiler2016.Register.VirtualRegister;
 
@@ -28,21 +30,8 @@ public class convertYIRtoCFG {
         for (Instruction ins: Program.globalMem) {
             out.println("\t" + ins);
         }
-/*
-        out.println("func " + Program.preMain.flable);
-        Allocator na = new NaiveAllocator(Program.preMain);
-        out.println();
-        for (BasicBlock bb: Program.preMain.blockList) {
-            out.println(bb.label + ":");
-            for (Instruction ins: bb.internal) {
-                out.println("\t" + ins);
-            }
-            out.println();
-        }*/
 
         for (CFG cfg: Program.functions) {
-            Allocator na = new MarvelousAllocator(cfg);
-            out.println();
             out.println("func " + cfg.flable +
                     ((cfg.flable.prototype != null) ? cfg.flable.prototype.para.stream().map(x -> x.reg.toString()).reduce("", (x, y)-> x + " " + y) + " {": ""));
             for (BasicBlock bb: cfg.blockList) {
@@ -52,19 +41,20 @@ public class convertYIRtoCFG {
                 }
                 out.println();
             }
-            out.println("}\n");
+            out.println("}");
         }
     }
 
     public static void main(String[] args) {
         List<Instruction> basicBlock = null;
         List<BasicBlock> thisFunction = null;
-        Program.preMain.blockList.get(0).internal.add(new Call(null, (FuncLabel) YIR.YIRInstance.Linear.get(0), new ArrayList<>()));
+        Program.preMain.blockList.get(0).internal.add(new Call(null, FuncLabel.originLabel , new ArrayList<>()));
         Program.preMain.blockList.get(0).internal.add(new RetIns(new Immediate(0)));
         Program.functions.add(Program.preMain);
         for (Instruction ins: YIR.YIRInstance.Linear) {
-
             if (ins instanceof FuncLabel) {
+                if (basicBlock != null)
+                    basicBlock.add(new RetIns(null));
                 basicBlock = null;
                 thisFunction = new ArrayList<>();
                 Program.functions.add(new CFG((FuncLabel) ins, thisFunction));

@@ -34,6 +34,7 @@ public class FirstListener extends BaseListener {
         CST2AST.dict = new ParseTreeProperty<>();
         YIR.YIRInstance = new YIR();
         Label.init();
+        FuncLabel.originLabel = null;
         Program.functions = new ArrayList<>();
         Program.globalMem = new ArrayList<>();
         Program.preMain = new CFG(new FuncLabel(null, "main"),
@@ -54,13 +55,7 @@ public class FirstListener extends BaseListener {
 
         now.currentScope.addEntry("string_concatenate".intern(), Utility.stringConcatenate);
         now.currentScope.addEntry("string_equal_to".intern(), Utility.stringEq);
-        now.currentScope.addEntry("string_equal_to_or_greater_than".intern(), Utility.stringGeq);
-        now.currentScope.addEntry("string_greater_than".intern(), Utility.stringGt);
-        now.currentScope.addEntry("string_not_equal_to".intern(), Utility.stringNeq);
         now.currentScope.addEntry("string_less_than".intern(), Utility.stringLt);
-        now.currentScope.addEntry("string_less_than_or_equal_to".intern(), Utility.stringLeq);
-
-
 
         ClassDec.stringClass.currentScope = new Scope(ConstructAST.globalScope);
         ClassDec.stringClass.currentScope.addEntry("length".intern(), Utility.stringLength);

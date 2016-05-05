@@ -1,5 +1,6 @@
 package com.expye.compiler2016.IR.YIR;
 
+import com.expye.compiler2016.Allocator.Allocator;
 import com.expye.compiler2016.Label.GlobalVarLabel;
 
 /**
@@ -13,5 +14,10 @@ public class StaticWord extends Instruction {
     @Override
     public String toString() {
         return staticVar + ": .word 0";
+    }
+
+    @Override
+    public String toMIPS(Allocator alloc) {
+        return "";
     }
 }
