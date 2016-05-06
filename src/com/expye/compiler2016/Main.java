@@ -29,7 +29,6 @@ public class Main {
         ConstructAST.main(null);
         constructYIR.main(null);
         convertYIRtoCFG.main(null);
-        convertYIRtoCFG.printIR(System.out);
         Translator trans =
             new MIPSTranslator(Program.globalMem, Program.functions);
         trans.printObjectCode(out);
