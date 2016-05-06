@@ -11,10 +11,8 @@ import java.util.List;
  */
 public class BasicBlock {
     public Label label;
-    public int inDeg;
     public List<Instruction> internal = new ArrayList<>();
     public BasicBlock(Label label, List<Instruction> internal) {
-        inDeg = 0;
         this.label = label;
         this.internal = internal;
     }

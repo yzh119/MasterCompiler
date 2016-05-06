@@ -7,6 +7,7 @@ import com.expye.compiler2016.IR.CFG.CFG;
 import com.expye.compiler2016.IR.CFG.BasicBlock;
 import com.expye.compiler2016.IR.CFG.Program;
 import com.expye.compiler2016.IR.YIR.*;
+import com.expye.compiler2016.IR.YIR.ControlFlow.Cbr;
 import com.expye.compiler2016.IR.YIR.ControlFlow.ControlFlow;
 import com.expye.compiler2016.IR.YIR.ControlFlow.JumpIns;
 import com.expye.compiler2016.IR.YIR.ControlFlow.RetIns;
@@ -18,8 +19,11 @@ import com.expye.compiler2016.Register.Immediate;
 import com.expye.compiler2016.Register.VirtualRegister;
 
 import java.io.PrintStream;
+import java.security.PrivateKey;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 /**
  * Created by expye(Zihao Ye) on 2016/4/20.
@@ -81,5 +85,41 @@ public class convertYIRtoCFG {
             if (basicBlock != null) basicBlock.add(ins);
         }
         if (basicBlock != null) basicBlock.add(new RetIns(null));
+        trivialOptimize();
+    }
+
+    public static Map<Label, Label> realLinkedTo = new HashMap<>();
+
+    public static Label find(CFG cfg, Label lb) {
+        Label ret = realLinkedTo.get(lb);
+        if (ret == null) {
+            int x = cfg.getPosition(lb);
+            if (cfg.blockList.get(x).internal.size() > 1) {
+                ret = lb;
+                realLinkedTo.put(lb, lb);
+            } else {
+                if (cfg.blockList.get(x).internal.get(0) instanceof JumpIns) {
+                    ret = find(cfg, ((JumpIns) cfg.blockList.get(x).internal.get(0)).label);
+                    realLinkedTo.put(lb, ret);
+                } else ret = lb;
+            }
+        }
+        return ret;
+    }
+
+    private static void trivialOptimize() {
+        for (CFG cfg: Program.functions) {
+            realLinkedTo.clear();
+            for (BasicBlock basicblock : cfg.blockList) {
+                Instruction ins = basicblock.internal.get(basicblock.internal.size() - 1);
+                if (ins instanceof Cbr) {
+                    ((Cbr) ins).ifFalse = find(cfg, ((Cbr) ins).ifFalse);
+                    ((Cbr) ins).ifTrue = find(cfg, ((Cbr) ins).ifTrue);
+                }
+                if (ins instanceof JumpIns) {
+                    ((JumpIns) ins).label = find(cfg, ((JumpIns) ins).label);
+                }
+            }
+        }
     }
 }

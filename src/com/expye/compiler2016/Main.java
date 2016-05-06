@@ -24,13 +24,15 @@ public class Main {
     }
 
     public static void main(String[] args) throws Exception {
-        loadBuiltinLib(System.out);
+        PrintStream out = System.out;
+        loadBuiltinLib(out);
         ConstructAST.main(null);
         constructYIR.main(null);
         convertYIRtoCFG.main(null);
+        convertYIRtoCFG.printIR(System.out);
         Translator trans =
             new MIPSTranslator(Program.globalMem, Program.functions);
-        trans.printObjectCode(System.out);
+        trans.printObjectCode(out);
         System.out.close();
     }
 }

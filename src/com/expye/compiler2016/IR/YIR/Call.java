@@ -138,7 +138,7 @@ public class Call extends Instruction {
                 boolean argH =
                         alloc.realRegs[alloc.table.get(arg)] != null;
                 if (argH) {
-                    ret.append("sw  ").append(alloc.realRegs[alloc.table.get(arg)]).append(", ").append(4 * i).append("($sp)\n");
+                    ret.append("sw  ").append(alloc.realRegs[alloc.table.get(arg)]).append(", ").append(4 * (i - 3)).append("($sp)\n");
                 } else {
                     ret.append("lw  $v0, ").append(alloc.offsetOfEachRegister.get(alloc.table.get(arg)) + callerSave)
                             .append("($sp)\n")
