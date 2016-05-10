@@ -20,7 +20,7 @@ import java.util.Stack;
  */
 public class SecondListener extends BaseListener {
     private Stack<Scope> scopes = new Stack<>();
-
+    private Stack<ClassDec> currentClass = new Stack<>();
     @Override
     public void enterProgram(MasterParser.ProgramContext ctx) {
         scopes.add(((Prog)CST2AST.dict.get(ctx)).currentScope);
@@ -34,11 +34,13 @@ public class SecondListener extends BaseListener {
     @Override
     public void enterClass_def(MasterParser.Class_defContext ctx) {
         scopes.add(((ClassDec)CST2AST.dict.get(ctx)).currentScope);
+        currentClass.add((ClassDec)CST2AST.dict.get(ctx));
     }
 
     @Override
     public void exitClass_def(MasterParser.Class_defContext ctx) {
         scopes.pop();
+        currentClass.pop();
     }
 
     @Override
@@ -99,6 +101,10 @@ public class SecondListener extends BaseListener {
 
         ClassDec retType = (ClassDec)type;
         List<VarDec> paraList = new ArrayList<>();
+        if (!currentClass.empty())
+            paraList.add(
+                    new VarDec(currentClass.peek(), "this".intern(), new ArgsRegister(0))
+            );
         if (ctx.parameter_list() != null)
             for (MasterParser.Parameter_declContext paraDecl: ctx.parameter_list().parameter_decl()) {
                 type = CST2AST.dict.get(paraDecl.type_specifier());
@@ -106,7 +112,8 @@ public class SecondListener extends BaseListener {
                     throw new InternalError("Something happened unfortunately!");
                 paraList.add(new VarDec((ClassDec)type, paraDecl.ID().getText().intern(), new ArgsRegister(0)));
             }
-        FuncDec now = new FuncDec(retType, paraList, null, funcName);
+        FuncDec now = new FuncDec(retType, paraList, null,
+                (currentClass.empty() ? funcName: currentClass.peek().getName() + "_" + funcName));
         CST2AST.dict.put(ctx, now);
         now.currentScope = new Scope(currentScope);
         for (VarDec para: paraList) {
@@ -115,5 +122,7 @@ public class SecondListener extends BaseListener {
             else throw new CompilationError("Parameters with the same id!");
         }
         currentScope.addEntry(funcName, now);
+        if (!currentClass.empty())
+            Prog.ProgInstance.list.add(now);
     }
 }

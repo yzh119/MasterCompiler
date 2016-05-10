@@ -42,78 +42,7 @@ public class Call extends Instruction {
         int callerSave = max(arguments.size() - 3, 0) * 4;
         if (callerSave != 0)
             ret.append("add $sp, $sp, -").append(callerSave).append("\n");
-/*
-        boolean isBuiltin = false;
-        if (l.prototype != null) {
-            if (l.prototype == Utility.getIntDec || l.prototype == Utility.getStringDec) {
-                isBuiltin = true;
-            }
-            if (l.prototype == Utility.printDec || l.prototype == Utility.printlnDec
-                    || l.prototype == Utility.sizeDec || l.prototype ==  Utility.stringLength
-                    || l.prototype == Utility.toStringDec || l.prototype == Utility.stringParseInt) {
-                if (arguments.get(0) instanceof Immediate) {
-                    ret.append("li ").append(MachineRegister.builtinArgRegister[0])
-                            .append(", ").append(arguments.get(0)).append("\n");
-                } else {
-                    boolean argH =
-                            alloc.realRegs[alloc.table.get(arguments.get(0))] != null;
-                    if (argH) {
-                        ret.append("move ").append(MachineRegister.builtinArgRegister[0])
-                                .append(", ").append(alloc.realRegs[alloc.table.get(arguments.get(0))]).append("\n");
-                    } else {
-                        ret.append("lw  ").append(MachineRegister.builtinArgRegister[0])
-                                .append(", ").append(alloc.offsetOfEachRegister.get(
-                                alloc.table.get(arguments.get(0))
-                        ) + callerSave).append("($sp)\n");
-                    }
-                }
-                isBuiltin = true;
-            }
 
-            if (l.prototype == Utility.stringConcatenate || l.prototype == Utility.stringEq
-                    || l.prototype == Utility.stringLt || l.prototype == Utility.stringOrd) {
-                for (int i = 0; i < 2; i++)
-                    if (arguments.get(i) instanceof Immediate) {
-                        ret.append("li ").append(MachineRegister.builtinArgRegister[i])
-                                .append(", ").append(arguments.get(i)).append("\n");
-                    } else {
-                        boolean argH =
-                                alloc.realRegs[alloc.table.get(arguments.get(i))] != null;
-                        if (argH) {
-                            ret.append("move ").append(MachineRegister.builtinArgRegister[i])
-                                    .append(", ").append(alloc.realRegs[alloc.table.get(arguments.get(i))]).append("\n");
-                        } else {
-                            ret.append("lw  ").append(MachineRegister.builtinArgRegister[i])
-                                    .append(", ").append(alloc.offsetOfEachRegister.get(
-                                    alloc.table.get(arguments.get(i))
-                            ) + callerSave).append("($sp)\n");
-                        }
-                    }
-                isBuiltin = true;
-            }
-            if (l.prototype == Utility.stringSubstring) {
-                for (int i = 0; i < 3; i++)
-                    if (arguments.get(i) instanceof Immediate) {
-                        ret.append("li ").append(MachineRegister.builtinArgRegister[i])
-                                .append(", ").append(arguments.get(i)).append("\n");
-                    } else {
-                        boolean argH =
-                                alloc.realRegs[alloc.table.get(arguments.get(i))] != null;
-                        if (argH) {
-                            ret.append("move ").append(MachineRegister.builtinArgRegister[i])
-                                    .append(", ").append(alloc.realRegs[alloc.table.get(arguments.get(i))]).append("\n");
-                        } else {
-                            ret.append("lw  ").append(MachineRegister.builtinArgRegister[i])
-                                    .append(", ").append(alloc.offsetOfEachRegister.get(
-                                    alloc.table.get(arguments.get(i))
-                            ) + callerSave).append("($sp)\n");
-                        }
-                    }
-                isBuiltin = true;
-            }
-        }
-
-        if (!isBuiltin) */
         for (int i = 0; i < min(arguments.size(), 3); i++)
             if (arguments.get(i) instanceof Immediate) {
                 ret.append("li ").append(MachineRegister.builtinArgRegister[i])

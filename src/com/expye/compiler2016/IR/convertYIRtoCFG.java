@@ -37,7 +37,7 @@ public class convertYIRtoCFG {
 
         for (CFG cfg: Program.functions) {
             out.println("func " + cfg.flable +
-                    ((cfg.flable.prototype != null) ? cfg.flable.prototype.para.stream().map(x -> x.reg.toString()).reduce("", (x, y)-> x + " " + y) + " {": ""));
+                    ((cfg.flable.prototype != null) ? cfg.flable.prototype.para.stream().map(x -> x.reg.toString()).reduce("", (x, y)-> x + " " + y): "") + " {");
             for (BasicBlock bb: cfg.blockList) {
                 out.println(bb.label + ":");
                 for (Instruction ins: bb.internal) {

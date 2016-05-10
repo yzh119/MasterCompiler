@@ -3,6 +3,8 @@ package IRtest;
 import com.expye.compiler2016.IR.constructYIR;
 import com.expye.compiler2016.IR.convertYIRtoCFG;
 import com.expye.compiler2016.Parser.*;
+import com.expye.compiler2016.Register.ArgsRegister;
+import com.expye.compiler2016.Register.IRRegister;
 import com.expye.compiler2016.TestKits.TeeOutputStream;
 import com.sun.xml.internal.messaging.saaj.util.ByteInputStream;
 import org.antlr.v4.runtime.ANTLRInputStream;

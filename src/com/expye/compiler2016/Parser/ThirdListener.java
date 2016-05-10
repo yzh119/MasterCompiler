@@ -31,7 +31,7 @@ public class ThirdListener extends BaseListener {
     Stack<Scope> scopes = new Stack<>();
     Stack<Dec> recentFuncDec = new Stack<>();
     Stack<IterationStmt> recentIteration = new Stack<>();
-
+    Stack<ClassDec> currentClass = new Stack<>();
     @Override
     public void enterProgram(MasterParser.ProgramContext ctx) {
         Prog now = (Prog)CST2AST.dict.get(ctx);
@@ -60,6 +60,7 @@ public class ThirdListener extends BaseListener {
     public void enterClass_def(MasterParser.Class_defContext ctx) {
         ClassDec now = (ClassDec)CST2AST.dict.get(ctx);
         scopes.add(now.currentScope);
+        currentClass.add(now);
     }
 
     @Override
@@ -69,11 +70,13 @@ public class ThirdListener extends BaseListener {
         for (ParseTree child: ctx.class_body().children) {
             ASTnode ask = CST2AST.dict.get(child);
             if (ask == null) throw new InternalError("Something happened unfortunately!");
-            if (!(ask instanceof VarDec))
-                throw new CompilationError(currentPlace + "I haven't support nested method or function, I'm angry!");
-            now.addDecl((VarDec)ask);
+            if (ask instanceof ClassDec)
+                throw new CompilationError(currentPlace + "Nested class is not supported, I'm angry!");
+    /*        if (ask instanceof VarDec)
+                now.addDecl((VarDec)ask);*/
         }
         scopes.pop();
+        currentClass.pop();
     }
 
     @Override
@@ -875,6 +878,8 @@ public class ThirdListener extends BaseListener {
             }
             currentScope.addEntry(varName, now);
             CST2AST.dict.put(ctx, now);
+            if (!currentClass.empty())
+                currentClass.peek().addDecl(now);
             return ;
         }
         throw new CompilationError(currentPlace + "Variable name already used!");
