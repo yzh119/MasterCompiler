@@ -1,16 +1,11 @@
 package com.expye.compiler2016.Utility;
 
-import com.expye.compiler2016.AST.Dec.ArrayDec;
 import com.expye.compiler2016.AST.Dec.ClassDec;
 import com.expye.compiler2016.AST.Dec.FuncDec;
 import com.expye.compiler2016.AST.VarDec.VarDec;
 import com.expye.compiler2016.Register.ArgsRegister;
-import com.expye.compiler2016.Register.IRRegister;
 
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.IdentityHashMap;
-import java.util.List;
 
 /**
  * Created by expye(Zihao Ye) on 2016/4/5.

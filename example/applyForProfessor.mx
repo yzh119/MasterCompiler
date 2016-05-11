@@ -1,0 +1,47 @@
+class Report {
+	string reportname;
+	void init(string name) {
+		this.reportname = name;
+	}
+	void print() {
+		println(this.reportname);
+	}
+}
+
+int n = 100;
+
+class Professor {
+	Report report;
+	string attitude;
+	void init(Report report, int attitude) {
+		this.report = report;
+		if (attitude == 0) {
+			this.attitude = "Accept!";
+		}
+		if (attitude == 1) {
+			this.attitude = "Excited!";
+		}
+		if (attitude > 1) {
+			this.attitude = "Sunny!";
+		}
+	}
+	void print() {
+		println(this.attitude);
+	}
+}
+
+int main() {
+	Report reportOfProfessorJiang = new Report;
+	reportOfProfessorJiang.init("Trends in the Development of Energy Resources and Major Approaches to Their Economization.");
+	reportOfProfessorJiang.print();
+	Professor[] aHundredProfessorInSJTU = new Professor[n];
+	int i;
+	for (i = 0; i < 100; i++) {
+		aHundredProfessorInSJTU[i] = new Professor;
+		aHundredProfessorInSJTU[i].init(reportOfProfessorJiang, i % 3);
+	}
+	for (i = 0; i < 100; i++) {
+		aHundredProfessorInSJTU[i].print();
+	}
+	return 0;
+}

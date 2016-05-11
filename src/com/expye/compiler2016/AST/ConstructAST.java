@@ -1,14 +1,11 @@
 package com.expye.compiler2016.AST;
 
-import com.expye.compiler2016.AST.Prog.Prog;
 import com.expye.compiler2016.Environment.Scope;
-import com.expye.compiler2016.IR.YIR.YIR;
 import com.expye.compiler2016.Parser.*;
 import org.antlr.v4.runtime.ANTLRInputStream;
 import org.antlr.v4.runtime.BailErrorStrategy;
 import org.antlr.v4.runtime.CommonTokenStream;
 import org.antlr.v4.runtime.tree.ParseTree;
-import org.antlr.v4.runtime.tree.ParseTreeProperty;
 import org.antlr.v4.runtime.tree.ParseTreeWalker;
 
 /**

@@ -6,9 +6,8 @@ import com.expye.compiler2016.IR.YIR.ControlFlow.Cbr;
 import com.expye.compiler2016.IR.YIR.ControlFlow.JumpIns;
 import com.expye.compiler2016.IR.YIR.Instruction;
 import com.expye.compiler2016.IR.YIR.Memory.LoadImmediate;
-import com.expye.compiler2016.Label.Label;
 import com.expye.compiler2016.IR.YIR.Move;
-import com.expye.compiler2016.IR.YIR.YIR;
+import com.expye.compiler2016.Label.Label;
 import com.expye.compiler2016.Register.IRRegister;
 import com.expye.compiler2016.Register.Immediate;
 

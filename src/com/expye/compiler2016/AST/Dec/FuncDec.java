@@ -4,9 +4,8 @@ import com.expye.compiler2016.AST.Stmt.Stmt;
 import com.expye.compiler2016.AST.VarDec.VarDec;
 import com.expye.compiler2016.IR.YIR.Instruction;
 import com.expye.compiler2016.IR.YIR.YIR;
-import com.expye.compiler2016.Label.Label;
 import com.expye.compiler2016.Label.FuncLabel;
-import com.expye.compiler2016.Register.VirtualRegister;
+import com.expye.compiler2016.Label.Label;
 
 import java.util.List;
 

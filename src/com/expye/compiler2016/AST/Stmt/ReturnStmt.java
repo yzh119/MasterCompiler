@@ -3,7 +3,6 @@ package com.expye.compiler2016.AST.Stmt;
 import com.expye.compiler2016.AST.Stmt.Exp.Exp;
 import com.expye.compiler2016.IR.YIR.ControlFlow.RetIns;
 import com.expye.compiler2016.IR.YIR.Instruction;
-import com.expye.compiler2016.IR.YIR.YIR;
 
 import java.util.List;
 

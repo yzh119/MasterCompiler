@@ -4,7 +4,6 @@ import com.expye.compiler2016.IR.CFG.Program;
 import com.expye.compiler2016.IR.YIR.StaticString;
 import com.expye.compiler2016.Label.GlobalVarLabel;
 
-import java.io.PrintStream;
 import java.util.IdentityHashMap;
 
 /**

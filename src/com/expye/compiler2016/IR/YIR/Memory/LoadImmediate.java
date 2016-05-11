@@ -1,9 +1,8 @@
 package com.expye.compiler2016.IR.YIR.Memory;
 
 import com.expye.compiler2016.Allocator.Allocator;
-import com.expye.compiler2016.IR.YIR.Instruction;
-import com.expye.compiler2016.Register.Immediate;
 import com.expye.compiler2016.Register.IRRegister;
+import com.expye.compiler2016.Register.Immediate;
 
 /**
  * Created by expye(Zihao Ye) on 2016/4/24.

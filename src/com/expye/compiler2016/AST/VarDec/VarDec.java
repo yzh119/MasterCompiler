@@ -2,7 +2,7 @@ package com.expye.compiler2016.AST.VarDec;
 
 import com.expye.compiler2016.AST.Dec.ClassDec;
 import com.expye.compiler2016.AST.Dec.Dec;
-import com.expye.compiler2016.AST.Stmt.Exp.*;
+import com.expye.compiler2016.AST.Stmt.Exp.Exp;
 import com.expye.compiler2016.AST.Stmt.Stmt;
 import com.expye.compiler2016.IR.CFG.Program;
 import com.expye.compiler2016.IR.YIR.Instruction;
@@ -10,9 +10,8 @@ import com.expye.compiler2016.IR.YIR.Memory.LoadImmediate;
 import com.expye.compiler2016.IR.YIR.Memory.Store;
 import com.expye.compiler2016.IR.YIR.Move;
 import com.expye.compiler2016.IR.YIR.StaticWord;
-import com.expye.compiler2016.Register.Immediate;
 import com.expye.compiler2016.Register.IRRegister;
-import com.expye.compiler2016.Register.VirtualRegister;
+import com.expye.compiler2016.Register.Immediate;
 
 import java.util.List;
 

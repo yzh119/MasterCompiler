@@ -1,13 +1,11 @@
 package com.expye.compiler2016.IR.YIR;
 
-import com.expye.compiler2016.AST.Dec.ClassDec;
 import com.expye.compiler2016.Allocator.Allocator;
 import com.expye.compiler2016.Allocator.MachineRegister;
 import com.expye.compiler2016.Label.FuncLabel;
 import com.expye.compiler2016.Register.IRRegister;
 import com.expye.compiler2016.Register.Immediate;
 import com.expye.compiler2016.Register.VirtualRegister;
-import com.expye.compiler2016.Utility.Utility;
 
 import java.util.ArrayList;
 import java.util.List;

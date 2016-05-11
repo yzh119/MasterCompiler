@@ -1,8 +1,5 @@
 package com.expye.compiler2016.Allocator;
 
-import javax.crypto.Mac;
-import java.util.ArrayList;
-
 /**
  * Created by expye(Zihao Ye) on 2016/4/28.
  */

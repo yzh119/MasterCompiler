@@ -1,7 +1,6 @@
 package com.expye.compiler2016.IR.YIR.ControlFlow;
 
 import com.expye.compiler2016.Allocator.Allocator;
-import com.expye.compiler2016.Register.IRRegister;
 import com.expye.compiler2016.Register.Immediate;
 import com.expye.compiler2016.Register.VirtualRegister;
 

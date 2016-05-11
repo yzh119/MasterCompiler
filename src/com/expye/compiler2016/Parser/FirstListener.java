@@ -1,16 +1,16 @@
 package com.expye.compiler2016.Parser;
 
+import com.expye.compiler2016.AST.ConstructAST;
 import com.expye.compiler2016.AST.Dec.ClassDec;
 import com.expye.compiler2016.AST.Prog.Prog;
-import com.expye.compiler2016.AST.ConstructAST;
 import com.expye.compiler2016.Environment.Scope;
 import com.expye.compiler2016.Exception.CompilationError;
 import com.expye.compiler2016.IR.CFG.BasicBlock;
 import com.expye.compiler2016.IR.CFG.CFG;
 import com.expye.compiler2016.IR.CFG.Program;
+import com.expye.compiler2016.IR.YIR.YIR;
 import com.expye.compiler2016.Label.FuncLabel;
 import com.expye.compiler2016.Label.Label;
-import com.expye.compiler2016.IR.YIR.YIR;
 import com.expye.compiler2016.Register.IRRegister;
 import com.expye.compiler2016.Utility.Utility;
 import org.antlr.v4.runtime.tree.ParseTreeProperty;

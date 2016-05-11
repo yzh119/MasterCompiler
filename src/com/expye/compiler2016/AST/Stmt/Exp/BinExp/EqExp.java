@@ -9,7 +9,6 @@ import com.expye.compiler2016.IR.YIR.Call;
 import com.expye.compiler2016.IR.YIR.Comp.SeqIns;
 import com.expye.compiler2016.IR.YIR.Instruction;
 import com.expye.compiler2016.IR.YIR.Memory.LoadImmediate;
-import com.expye.compiler2016.Label.FuncLabel;
 import com.expye.compiler2016.Register.IRRegister;
 import com.expye.compiler2016.Register.Immediate;
 import com.expye.compiler2016.Utility.Utility;

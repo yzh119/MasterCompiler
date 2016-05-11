@@ -1,7 +1,6 @@
 package com.expye.compiler2016.IR.YIR.Arithmetic.BinaryIns;
 
 import com.expye.compiler2016.Allocator.Allocator;
-import com.expye.compiler2016.IR.YIR.Arithmetic.Arithmetic;
 import com.expye.compiler2016.Register.IRRegister;
 import com.expye.compiler2016.Register.VirtualRegister;
 

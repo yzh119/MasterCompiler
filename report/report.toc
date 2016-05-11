@@ -1,1 +1,6 @@
 \beamer@endinputifotherversion {3.36pt}
+\beamer@sectionintoc {1}{Structure}{3}{0}{1}
+\beamer@sectionintoc {2}{Front End}{4}{0}{2}
+\beamer@sectionintoc {3}{Back End}{9}{0}{3}
+\beamer@sectionintoc {4}{Example}{13}{0}{4}
+\beamer@sectionintoc {5}{Thanks}{15}{0}{5}

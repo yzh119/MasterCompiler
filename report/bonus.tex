@@ -1,0 +1,70 @@
+\documentclass[12pt]{article}
+\usepackage{amsmath}
+\usepackage{xeCJK}
+\usepackage{amsbsy}
+\usepackage{amsthm}
+\usepackage{listings}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage[colorlinks,linkcolor=red]{hyperref}
+\usepackage{graphicx}
+\usepackage[top=1in, bottom=1in, left=1in, right=1in]{geometry}
+\author{Zihao Ye}
+\title{\textbf{Bonus}}
+\newtheorem{thm}{Theorem}
+\newfontfamily\cons{Consolas}
+\newcommand{\ud}{\mathrm{d}}
+\newcounter{exer}
+\setmainfont{Cambria}
+\setCJKmainfont{Microsoft YaHei}
+\providecommand{\abs}[1]{\left\lvert#1\right\rvert}
+\providecommand{\norm}[1]{\left\lVert#1\right\rVert}
+\providecommand{\floor}[1]{\left\lfloor#1\right\rfloor}
+\providecommand{\set}[1]{\left\{#1\right\}}
+
+\newenvironment{problem}[1]
+    {   \stepcounter{exer}
+        \noindent
+        \large
+        \textbf{Problem \theexer . #1}
+        \normalsize
+        \smallskip
+        
+    }
+   {}
+\begin{document}
+\maketitle
+\section{成员方法} % (fold)
+\label{sec:成员方法}
+
+% section 成员方法 (end)
+
+支持成员函数(方法), 但是没有构造函数/继承/多态。
+
+\subsection{再现方式} % (fold)
+\label{sec:再现方式}
+
+% section 再现方式 (end) 
+
+成员函数的例子: example/applyForProfessor.mx
+
+\noindent
+期望结果: example/example.out
+
+\subsection{编译方式} % (fold)
+\label{sec:编译方式}
+
+% section 编译 (end)
+
+\centering
+\begin{lstlisting}[language=bash,
+        basicstyle=\small\cons]
+make 
+cp example/applyForProfessor.mx bin
+cp example/example.out bin
+cd bin
+java -jar Master.jar < applyForProfessor > assem.s
+spim -file assem.s > applyForProfessor.out
+diff example.out applyForProfessor.out
+\end{lstlisting}
+\end{document}

@@ -1,6 +1,5 @@
 package com.expye.compiler2016.Allocator;
 
-import com.expye.compiler2016.IR.CFG.BasicBlock;
 import com.expye.compiler2016.IR.CFG.CFG;
 import com.expye.compiler2016.IR.YIR.Arithmetic.BinaryIns.BinaryIns;
 import com.expye.compiler2016.IR.YIR.Arithmetic.UnaryIns.UnaryIns;
@@ -18,7 +17,6 @@ import com.expye.compiler2016.Register.IRRegister;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
-import java.util.Map;
 
 import static java.lang.Integer.min;
 

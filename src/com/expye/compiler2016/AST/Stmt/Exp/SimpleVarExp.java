@@ -4,7 +4,6 @@ import com.expye.compiler2016.AST.VarDec.VarDec;
 import com.expye.compiler2016.IR.YIR.Instruction;
 import com.expye.compiler2016.IR.YIR.Memory.Load;
 import com.expye.compiler2016.IR.YIR.Memory.Store;
-import com.expye.compiler2016.Register.Address;
 import com.expye.compiler2016.Register.IRRegister;
 import com.expye.compiler2016.Utility.Utility;
 

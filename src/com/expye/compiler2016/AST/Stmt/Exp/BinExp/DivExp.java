@@ -6,8 +6,8 @@ import com.expye.compiler2016.AST.Stmt.Exp.IntExp;
 import com.expye.compiler2016.IR.YIR.Arithmetic.BinaryIns.DivIns;
 import com.expye.compiler2016.IR.YIR.Instruction;
 import com.expye.compiler2016.IR.YIR.Memory.LoadImmediate;
-import com.expye.compiler2016.Register.Immediate;
 import com.expye.compiler2016.Register.IRRegister;
+import com.expye.compiler2016.Register.Immediate;
 
 import java.util.List;
 

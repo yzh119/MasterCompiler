@@ -6,9 +6,9 @@ import com.expye.compiler2016.AST.Dec.ClassDec;
 import com.expye.compiler2016.AST.Dec.FuncDec;
 import com.expye.compiler2016.AST.Prog.Prog;
 import com.expye.compiler2016.AST.VarDec.VarDec;
+import com.expye.compiler2016.Environment.Scope;
 import com.expye.compiler2016.Exception.CompilationError;
 import com.expye.compiler2016.Exception.InternalError;
-import com.expye.compiler2016.Environment.Scope;
 import com.expye.compiler2016.Register.ArgsRegister;
 
 import java.util.ArrayList;

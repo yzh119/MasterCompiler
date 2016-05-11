@@ -1,25 +1,20 @@
 package com.expye.compiler2016.IR;
 
-import com.expye.compiler2016.Allocator.Allocator;
-import com.expye.compiler2016.Allocator.MarvelousAllocator;
-import com.expye.compiler2016.Allocator.NaiveAllocator;
-import com.expye.compiler2016.IR.CFG.CFG;
 import com.expye.compiler2016.IR.CFG.BasicBlock;
+import com.expye.compiler2016.IR.CFG.CFG;
 import com.expye.compiler2016.IR.CFG.Program;
-import com.expye.compiler2016.IR.YIR.*;
+import com.expye.compiler2016.IR.YIR.Call;
 import com.expye.compiler2016.IR.YIR.ControlFlow.Cbr;
 import com.expye.compiler2016.IR.YIR.ControlFlow.ControlFlow;
 import com.expye.compiler2016.IR.YIR.ControlFlow.JumpIns;
 import com.expye.compiler2016.IR.YIR.ControlFlow.RetIns;
-import com.expye.compiler2016.IR.YIR.Memory.Load;
+import com.expye.compiler2016.IR.YIR.Instruction;
+import com.expye.compiler2016.IR.YIR.YIR;
 import com.expye.compiler2016.Label.FuncLabel;
 import com.expye.compiler2016.Label.Label;
-import com.expye.compiler2016.Register.IRRegister;
 import com.expye.compiler2016.Register.Immediate;
-import com.expye.compiler2016.Register.VirtualRegister;
 
 import java.io.PrintStream;
-import java.security.PrivateKey;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;

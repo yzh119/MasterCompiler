@@ -7,7 +7,10 @@ import com.expye.compiler2016.IR.convertYIRtoCFG;
 import com.expye.compiler2016.Translator.MIPS.MIPSTranslator;
 import com.expye.compiler2016.Translator.Translator;
 
-import java.io.*;
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+import java.io.PrintStream;
 
 /**
  * Created by expye(Zihao Ye) on 2016/4/1.
