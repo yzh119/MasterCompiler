@@ -9,7 +9,7 @@ import com.expye.compiler2016.Register.VirtualRegister;
  */
 public class Allocate extends Memory {
     public IRRegister rd;
-    VirtualRegister size;
+    public VirtualRegister size;
     public Allocate(IRRegister rd, VirtualRegister size) {
         this.rd = rd;
         this.size = size;

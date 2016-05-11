@@ -180,6 +180,8 @@ public class MarvelousAllocator extends Allocator {
                                     }
                                     if (ins instanceof Allocate) {
                                         def.get(ins).add(table.get(((Allocate) ins).rd));
+                                        if (((Allocate) ins).size instanceof IRRegister)
+                                            use.get(ins).add(table.get(((Allocate) ins).size));
                                     }
                                     if (ins instanceof Load) {
                                         def.get(ins).add(table.get(((Load) ins).rd));
