@@ -13,7 +13,7 @@ cd bin
 # Report
 My report is [here](https://github.com/yzh119/MasterCompiler/blob/master/report/report.pdf).
 
-# Addition Feature
+# Additional features
 * Member function is allowed.
 * Declaring a new variable in a for-loop is allowed:
 	`for (int i = 0; i < n; i++)`
