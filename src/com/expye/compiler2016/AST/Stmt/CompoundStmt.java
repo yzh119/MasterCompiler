@@ -8,7 +8,7 @@ import java.util.List;
  * Created by expye(Zihao Ye) on 2016/3/30.
  */
 public class CompoundStmt extends StmtBase {
-    List<Stmt> stmts = null;
+    public List<Stmt> stmts = null;
     public CompoundStmt(List<Stmt> stmts) {
         this.stmts = stmts;
     }

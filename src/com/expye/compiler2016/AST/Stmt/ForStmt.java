@@ -14,13 +14,13 @@ import java.util.List;
  * Created by expye(Zihao Ye) on 2016/3/30.
  */
 public class ForStmt extends IterationStmt {
-    public Exp exp1;
+    public Stmt stmt1;
     public Exp exp2;
     public Exp exp3;
     public Stmt stmt;
-    public ForStmt(Exp exp1, Exp exp2, Exp exp3, Stmt stmt) {
+    public ForStmt(Stmt stmt1, Exp exp2, Exp exp3, Stmt stmt) {
         super();
-        this.exp1 = exp1;
+        this.stmt1 = stmt1;
         this.exp2 = exp2;
         this.exp3 = exp3;
         this.stmt = stmt;
@@ -29,7 +29,7 @@ public class ForStmt extends IterationStmt {
 
     @Override
     public void emit(List<Instruction> lst) {
-        if (exp1 != null) exp1.emit(lst);
+        if (stmt1 != null) stmt1.emit(lst);
         boolean noStop = false;
         if (exp2 == null) noStop = true;
         if (exp2 != null && exp2.reg instanceof Immediate) {

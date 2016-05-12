@@ -327,6 +327,16 @@ public interface MasterListener extends ParseTreeListener {
 	 */
 	void exitVariable_decl(MasterParser.Variable_declContext ctx);
 	/**
+	 * Enter a parse tree produced by {@link MasterParser#single_var}.
+	 * @param ctx the parse tree
+	 */
+	void enterSingle_var(MasterParser.Single_varContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link MasterParser#single_var}.
+	 * @param ctx the parse tree
+	 */
+	void exitSingle_var(MasterParser.Single_varContext ctx);
+	/**
 	 * Enter a parse tree produced by the {@code arrayType}
 	 * labeled alternative in {@link MasterParser#type_specifier}.
 	 * @param ctx the parse tree

@@ -33,8 +33,10 @@ public class ThirdListener extends BaseListener {
     Stack<Dec> recentFuncDec = new Stack<>();
     Stack<IterationStmt> recentIteration = new Stack<>();
     Stack<ClassDec> currentClass = new Stack<>();
+    boolean inFunction;
     @Override
     public void enterProgram(MasterParser.ProgramContext ctx) {
+        inFunction = false;
         Prog now = (Prog)CST2AST.dict.get(ctx);
         scopes.add(now.currentScope);
     }
@@ -45,7 +47,13 @@ public class ThirdListener extends BaseListener {
         for (ParseTree child: ctx.children) {
             ASTnode ask = CST2AST.dict.get(child);
             if (ask == null) throw new InternalError("Something happened unfortunately!");
-            now.list.add((Dec) ask);
+            if (ask instanceof CompoundStmt) {
+                for (Stmt stmt: ((CompoundStmt) ask).stmts) {
+                    if (!(stmt instanceof VarDec))
+                        throw new InternalError("Something happened unfortunately!");
+                    else now.list.add((Dec) stmt);
+                }
+            } else now.list.add((Dec) ask);
         }
         Dec MAIN = scopes.peek().lookUp("main".intern());
         if (MAIN == null)
@@ -82,6 +90,7 @@ public class ThirdListener extends BaseListener {
 
     @Override
     public void enterFunction_def(MasterParser.Function_defContext ctx) {
+        inFunction = true;
         IRRegister.reSetCounterToNewFunc();
         FuncDec now = (FuncDec)CST2AST.dict.get(ctx);
         scopes.add(now.currentScope);
@@ -101,6 +110,7 @@ public class ThirdListener extends BaseListener {
         scopes.pop();
         recentFuncDec.pop();
         IRRegister.reSetCounterToGlobal();
+        inFunction = false;
     }
 
     @Override
@@ -758,15 +768,15 @@ public class ThirdListener extends BaseListener {
 
     @Override
     public void exitForIteration(MasterParser.ForIterationContext ctx) {
-        Exp exp1 = (Exp) CST2AST.dict.get(ctx.expr1);
+        Stmt stmt1 = (Stmt) CST2AST.dict.get(ctx.stmt1);
         Exp exp2 = (Exp) CST2AST.dict.get(ctx.expr2);
         Exp exp3 = (Exp) CST2AST.dict.get(ctx.expr3);
-        Stmt stmt = (Stmt) CST2AST.dict.get(ctx.stmt());
+        Stmt stmt = (Stmt) CST2AST.dict.get(ctx.stmt2);
         if (exp2 != null)
             if (exp2.type != ClassDec.boolClass)
                 throw new CompilationError(currentPlace + "Conditions must be booleans!");
         ForStmt now = (ForStmt) CST2AST.dict.get(ctx);
-        now.exp1 = exp1;
+        now.stmt1 = stmt1;
         now.exp2 = exp2;
         now.exp3 = exp3;
         now.stmt = stmt;
@@ -859,30 +869,32 @@ public class ThirdListener extends BaseListener {
     @Override
     public void exitVariable_decl(MasterParser.Variable_declContext ctx) {
         Scope currentScope = scopes.peek();
-        String varName = ctx.ID().getText().intern();
-        ClassDec type = (ClassDec) CST2AST.dict.get(ctx.type_specifier());
-        if (type == ClassDec.nullClass)
-            throw new CompilationError("Define a null is not welcomed!");
-        Dec ask = currentScope.lookUpInThisScope(varName);
-        IRRegister reg = new IRRegister();
-        if (currentScope == ConstructAST.globalScope)
-            reg.addr = new Address(new GlobalVarLabel(varName));
-        if (ask == null) {
-            VarDec now;
-            if (ctx.expr() == null)
-                now = new VarDec(type, varName, reg);
-            else {
-                if (MatchType.match(type, ((Exp) CST2AST.dict.get(ctx.expr())).type))
-                    now = new VarDec(type, varName, (Exp) CST2AST.dict.get(ctx.expr()), reg);
-                else
-                    throw new CompilationError("Initial type must match!");
-            }
-            currentScope.addEntry(varName, now);
-            CST2AST.dict.put(ctx, now);
-            if (!currentClass.empty())
-                currentClass.peek().addDecl(now);
-            return ;
+        List<Stmt> vars = new ArrayList<>();
+        for (int i = 0; i < ctx.single_var().size(); i++) {
+            String varName = ctx.single_var().get(i).ID().getText().intern();
+            ClassDec type = (ClassDec) CST2AST.dict.get(ctx.type_specifier());
+            if (type == ClassDec.nullClass)
+                throw new CompilationError("Define a null is not welcomed!");
+            Dec ask = currentScope.lookUpInThisScope(varName);
+            IRRegister reg = new IRRegister();
+            if (currentScope == ConstructAST.globalScope)
+                reg.addr = new Address(new GlobalVarLabel(varName));
+            if (ask == null) {
+                VarDec now;
+                if (ctx.single_var().get(i).expr() == null)
+                    now = new VarDec(type, varName, reg);
+                else {
+                    if (MatchType.match(type, ((Exp) CST2AST.dict.get(ctx.single_var().get(i).expr())).type))
+                        now = new VarDec(type, varName, (Exp) CST2AST.dict.get(ctx.single_var().get(i).expr()), reg);
+                    else
+                        throw new CompilationError("Initial type must match!");
+                }
+                currentScope.addEntry(varName, now);
+                vars.add(now);
+                if (!currentClass.empty() && !inFunction)
+                    currentClass.peek().addDecl(now);
+            } else throw new CompilationError(currentPlace + "Variable name already used!");
         }
-        throw new CompilationError(currentPlace + "Variable name already used!");
+        CST2AST.dict.put(ctx, new CompoundStmt(vars));
     }
 }

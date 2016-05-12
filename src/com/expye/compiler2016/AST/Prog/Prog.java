@@ -7,6 +7,8 @@ import com.expye.compiler2016.Environment.Scope;
 import com.expye.compiler2016.IR.YIR.Instruction;
 
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 
 /**

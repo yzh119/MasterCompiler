@@ -351,6 +351,18 @@ public class MasterBaseListener implements MasterListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
+	@Override public void enterSingle_var(MasterParser.Single_varContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitSingle_var(MasterParser.Single_varContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
 	@Override public void enterArrayType(MasterParser.ArrayTypeContext ctx) { }
 	/**
 	 * {@inheritDoc}

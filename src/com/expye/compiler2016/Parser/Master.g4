@@ -40,7 +40,8 @@ expr
 
 dim_expr: (LBRACKET expr RBRACKET)+ (LBRACKET RBRACKET)*;
 
-variable_decl: type_specifier ID (ASSIGN expr)? SEMICOLON;
+variable_decl: type_specifier single_var (COMMA single_var)* SEMICOLON;
+single_var: ID (ASSIGN expr)? ;
 
 type_specifier
     : INTEGER                                                           #integerType
@@ -72,7 +73,7 @@ selection_stmt: IF LPAREN expr RPAREN stmt (ELSE stmt)?;
 
 iteration_stmt
     : WHILE LPAREN expr RPAREN stmt                                                                   #whileIteration
-    | FOR LPAREN (expr1 = expr)? SEMICOLON (expr2 = expr)? SEMICOLON (expr3 = expr)? RPAREN stmt      #forIteration
+    | FOR LPAREN stmt1 = stmt (expr2 = expr)? SEMICOLON (expr3 = expr)? RPAREN stmt2 = stmt           #forIteration
     ;
 
 jump_stmt
