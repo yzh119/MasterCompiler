@@ -2,7 +2,7 @@
 It's a compiler from Mx\* to MIPS written in Java, the language reference of Mx\* is [here](http://acm.sjtu.edu.cn/w/images/9/93/Mx_language_manual.pdf).
 
 # Prerequisite
-JDK is needed.
+JDK is required.
 
 # Compile
 ```
